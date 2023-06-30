@@ -101,7 +101,11 @@ const config = {
               },
               {
                 label: 'Twitter',
-                href: 'https://twitter.com/QuaiNetwork',
+                href: 'https://twitter.com/QuaiNetwork/',
+              },
+              {
+                label: 'Telegram',
+                href: 'https://t.me/QuaiNetwork/',
               },
             ],
           },
