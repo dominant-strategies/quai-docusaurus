@@ -65,9 +65,21 @@ const config = {
         items: [
           {
             type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
+            sidebarId: 'learnSidebar',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Learn',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'participateSidebar',
+            position: 'left',
+            label: 'Participate',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'developSidebar',
+            position: 'left',
+            label: 'Develop',
           },
           {
             href: 'https://github.com/facebook/docusaurus',
@@ -83,8 +95,16 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: 'Learn',
+                to: '/docs/learn/intro',
+              },
+              {
+                label: 'Participate',
+                to: '/docs/participate/intro',
+              },
+              {
+                label: 'Develop',
+                to: '/docs/develop/intro',
               },
             ],
           },
