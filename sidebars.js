@@ -37,7 +37,7 @@ const sidebars = {
   participateSidebar: [
 		{
 			type: 'doc',
-			id: 'participate/intro',
+			id: 'participate/participateintro',
 		},
 		{
 			type: 'category',
