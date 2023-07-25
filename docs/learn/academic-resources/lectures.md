@@ -7,5 +7,3 @@ sidebar_position: 2
 ---
 
 # Lectures & Presentations
-
-hello
