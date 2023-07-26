@@ -1,7 +1,7 @@
 ---
-title: Node Overview
+title: Run A Node
 description: Overview of the implemenation of a Quai Network node.
-slug: /node-overview
+slug: /run-a-node
 hide_table_of_contents: true
 sidebar_position: 1
 ---
