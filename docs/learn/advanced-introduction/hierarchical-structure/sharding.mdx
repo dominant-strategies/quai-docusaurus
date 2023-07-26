@@ -1,0 +1,51 @@
+---
+title: Sharding
+description: How sharding is used to scale in Quai Network.
+slug: /sharding
+hide_table_of_contents: true
+sidebar_position: 1
+---
+
+# Sharding
+
+Sharding allows blockchains to increase throughput by splitting state and/or execution across many threads. Quai uses sharding to create the first multithreaded blockchain execution environment in which all threads share objective security.
+
+## What is Sharding?
+
+The tradeoffs and benefits of sharding databases are well understood in information science. Sharding is a method of partitioning a database into smaller, more manageable pieces called shards. Each shard is a separate database which stores a subset of data on a separate server in a different location. Sharding allows large databases to service many requests beyond the limits imposed by read/write operations of data storage media. By distributing the data across multiple servers, sharding can help to reduce the load on any one server and improve the overall performance and availability of the database.
+
+## Sharding in Quai
+
+Quai Network utilizes sharding to improve the performance of a decentralized database in largely the same way that sharding is used to improve centralized databases. In a single-threaded, unsharded blockchain, all nodes must maintain the state of the entire network, and all transactions must pass through the same single execution thread. Quai Network, as a multithreaded blockchain, allows for nodes to choose to only maintain shards of the Network rather than the entire state. Lower node resource requirements reduces the barrier to participation in the network. Further, each shard within Quai acts as a unique execution thread, which enables data partitioning, allowing the optimization of network performance through the introduction of shard-specific subnets.
+
+## Sharded Address Space
+
+Quai Network utilizes a sharded address space to allow nodes and wallets to quickly identify which Quai blockchain an address resides on. The set of address prefixes currently occupies a byte prefix for each blockchain in the network.
+
+Example Addresses:
+
+- Cyprus 1: **0x0C**b37826665e1Cc1f932299a9A55E52A2d20438F
+- Paxos 2: **0x78**07cbFE272fa78EC2e95e727936bBdB79bEB49D
+- Hydra 3: **0xE8**0b659E16F6273CCc9Ae870D5B9E288e1fF3715
+
+<br />
+
+| Chain    | Number Range | Bytecode Prefix | Chain ID |
+| -------- | ------------ | --------------- | -------- |
+| Cyprus 1 | 0-29         | 0x00 - 0x1D     | 9000     |
+| Cyprus 2 | 30-58        | 0x1E - 0x3A     | 9000     |
+| Cyprus 3 | 59-87        | 0x3B - 0x57     | 9000     |
+| Paxos 1  | 88-115       | 0x58 - 0x73     | 9000     |
+| Paxos 2  | 116-143      | 0x74 - 0x8F     | 9000     |
+| Paxos 3  | 144-171      | 0x90 - 0xAB     | 9000     |
+| Hydra 1  | 172-199      | 0xAC - 0xC7     | 9000     |
+| Hydra 2  | 200-227      | 0xC8 - 0xE3     | 9000     |
+| Hydra 3  | 228-255      | 0xE4 - 0xFF     | 9000     |
+
+<br />
+
+As the network dynamically shards, this address space will be modified to include newly added Zones. An address that exists in Cyprus 1 prior to a dynamic sharding event could end up located in a different Zone after the dynamic sharding event; if this occurs, the account will maintain all state (balance, transaction history), and will simply be located on a different shard.
+
+## Shared Network Security Between Shards
+
+The major barrier to the adoption of sharding in distributed ledger technology has been the splitting of network security across shards. Quai Network utilizes merge-mined hash linked references, known as coincident blocks, in order to maintain shared, full-network security within each shard. Quai functions by organizing shards into a hierarchical structure, with hash linked references between shards produced through merged mining. These hash linked references, produced in coincident blocks, enforce atomic chain progression and rollbacks across the entire network.
