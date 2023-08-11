@@ -10,11 +10,13 @@ sidebar_position: 2
 
 A miner is a computer performing complex mathematical calculations, known as hashing, in a competition to add the next block to a Quai blockchain. These ongoing competitions allow the network to reach consensus through the hierarchical longest chain rule (HLCR). Quai Network utilizes merged mining, which allows each miner to secure three Quai blockchains simultaneously. Further, Quai miners self-select the contexts they wish to mine, incentivizing reduced network latency via topological organization.
 
-## BLAKE3 Hashing Algorithm
+## ProgPoW Hashing Algorithm
 
-The specific type of mathematical calculation being done by a miner is referred to as the hashing algorithm of the network. Quai Network utilizes the BLAKE3 hashing algorithm, an evolution of BLAKE2, a hashing algorithm utilized by other cryptocurrencies.
+The specific types of mathematical calculations being done by a miner is referred to as the hashing algorithm of the network. Quai Network utilizes the ProgPoW hashing algorithm, an evolution of Ethash designed for improved ASIC resistance.
 
-BLAKE3 is both GPU and ASIC mineable. BLAKE3 encourages innovation of mining hardware and the production of dedicated Quai mining machinery which will reinforce the security of the chain.
+The ProgPoW algorithm was chosen due to the difficulty of creating application-specific integrated circuits (ASICs) that can mine ProgPoW. The use of ASIC-able algorithms such as SHA-256 quickly renders consumer-grade hardware impractical, resulting in large barrier to entry for competitive mining. 
+
+ProgPoW was developed as an EIP to replace Ethash, but was discarded due to the merge. The original ProgPoW EIP (EIP-1057) can be found [here](https://github.com/ethereum/EIPs/pull/1057). Additional information on ProgPoW can be found on the ETH Magicians forum [here](https://ethereum-magicians.org/t/progpow-a-compilation-of-reference-material/3040/4).
 
 ## Implementation of Merged Mining
 

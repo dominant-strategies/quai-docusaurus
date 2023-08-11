@@ -8,7 +8,7 @@ sidebar_position: 3
 
 # Merged Mining
 
-Merged mining is mining a combined header generated from multiple blockchains. The idea of merged mining was [first conceived by the pseudoanonymous Satoshi Nakamoto in December 2010](https://qu.ai). Quai has extended Satoshi's concept with the implementation of merged mining in a network of blockchains which have the same shared protocol. This implementation allows all Quai chains to share security through the eventual commitment of all network hashpower. In addition, the process of merged mining leads to the automatic creation of hash linked references between Quai chains which enable trustless cross-chain state transitions. By using merged mining to create a multithreaded execution environment, [Quai makes Proof-of-Work over 10,000 times more energy efficient than Bitcoin](https://qu.ai)\*.
+Merged mining is mining a combined header generated from multiple blockchains. The idea of merged mining was [first conceived by the pseudoanonymous Satoshi Nakamoto in December 2010](https://bitcointalk.org/index.php?topic=1790.msg28696#msg28696). Quai has extended Satoshi's concept with the implementation of merged mining in a network of blockchains which have the same shared protocol. This implementation allows all Quai chains to share security through the eventual commitment of all network hashpower. In addition, the process of merged mining leads to the automatic creation of hash linked references between Quai chains which enable trustless cross-chain state transitions. By using merged mining to create a multithreaded execution environment, [Quai makes Proof-of-Work over 10,000 times more energy efficient than Bitcoin](./energy-efficiency.mdx)\*.
 
 ## What is Merged Mining?
 
@@ -18,7 +18,7 @@ Merged mining can be conducted only between blockchains utilizing the same hashi
 
 ## Coincident Blocks
 
-[Coincident blocks](https://qu.ai) are blocks that are valid in multiple Quai blockchains. Coincident blocks create atomic, hash linked references between chains. When merged mining multiple blockchains, miners will occasionally find nonces that fulfill the difficulty requirements of multiple blockchains. Thus, coincident blocks are a natural byproduct of merged mining, and require no mechanism outside of Proof-of-Work mining to be created.
+[Coincident blocks](./coincident-blocks.mdx) are blocks that are valid in multiple Quai blockchains. Coincident blocks create atomic, hash linked references between chains. When merged mining multiple blockchains, miners will occasionally find nonces that fulfill the difficulty requirements of multiple blockchains. Thus, coincident blocks are a natural byproduct of merged mining, and require no mechanism outside of Proof-of-Work mining to be created.
 
 Coincident blocks keep all Quai blockchains interlinked by periodically pegging subordinate chains to the work of the Prime chain, and allow for data to be transmitted between chains in a trustless environment through the creation of hash linked references.
 
@@ -28,7 +28,7 @@ Merged mining enables Quai to utilize miners at much greater efficiency, reducin
 
 ## Merge-Mined Parachains
 
-Quai allows [merge-mined parachains](https://qu.ai) to derive security from Quai Network. While Quai's merged mining focuses on merge-mining many Quai-specific chains simultaneously, any blockchain that utilizes the Blake3 hashing algorithm can bootstrap security and trustless bridging by enabling merged mining with Quai.
+Quai allows [merge-mined parachains](./parachains.md) to derive security from Quai Network. While Quai's merged mining focuses on merge-mining many Quai-specific chains simultaneously, any blockchain that utilizes the Blake3 hashing algorithm can bootstrap security and trustless bridging by enabling merged mining with Quai.
 
 All Quai block headers contain data fields for Prime, Region, and Zone in addition to a single empty data field. This empty field allows Quai miners to insert the block header of a parachain into a Quai block header, creating a valid Quai block and a valid parachain block simultaneously. The parachain coincident block serves the same purpose as intra-network coincident blocks, in that it provides a hash linked reference between chains, facilitating trustless state transfers.
 
