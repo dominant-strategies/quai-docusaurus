@@ -2,7 +2,7 @@
 title: Instantaneous Fork Resolution
 description: How blocks are compared in Quai Network.
 slug: /fork-resolution
-hide_table_of_contents: true
+hide_table_of_contents: false
 sidebar_position: 1
 ---
 

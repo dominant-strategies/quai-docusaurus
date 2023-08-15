@@ -1,8 +1,8 @@
 ---
 title: Networks
 description: Network specification for development and testing environments.
-slug: /networks
-hide_table_of_contents: true
+slug: /develop
+hide_table_of_contents: false
 ---
 
 # Networks
@@ -21,7 +21,7 @@ For each of these testnets, our team expects to run both a testnet and devnet an
 
 ### Mainnet
 
-Quai Network has not launched a live mainnet.
+**Quai Network has not launched a live mainnet.**
 
 ### Testnet
 
@@ -41,12 +41,12 @@ NETWORK=colosseum
 - `chainId`: 9000
 - Colosseum Faucet
 - RPC endpoints:
-  - Link Structure: `https://rpc.SHARDNAME.quaiscan.io
+  - Link Structure: `https://rpc.SHARDNAME.quaiscan.io`
   - rpc.prime.quaiscan.io
   - rpc.hydra.quaiscan.io
   - rpc.paxos2.quaiscan.io
 - Explorer:
-  - Link Structure: `https://SHARDNAME.quaiscan.io
+  - Link Structure: `https://SHARDNAME.quaiscan.io`
   - Cyprus 1 Block Explorer (Will be live on testnet launch)
 
 ### Devnet
@@ -93,7 +93,6 @@ After changing the network flag, you can spin up a local node and miner as norma
 
 #### Important Links and Specs
 
-chainId: 1337
-Local RPC Endpoints:
-http://127.0.0.1:SHARD-PORT-NUMBER or
-http://localhost:SHARD-PORT-NUMBER
+- chainId: 1337
+- Local RPC Endpoints:
+  - `http://127.0.0.1:SHARD-PORT-NUMBER` or `http://localhost:SHARD-PORT-NUMBER`
