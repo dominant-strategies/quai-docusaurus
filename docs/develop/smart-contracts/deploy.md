@@ -26,7 +26,7 @@ To deploy a smart contract on Quai, you'll need a few things:
 
 Smart contracts on Quai Network can be deployed using a number of different methods. The most straightforward and widely used methods are using deployment tools like Hardhat. Contracts can also be deployed using the quais.js library, which offers increased flexibility and the ability to deploy via frontend or simple script.
 
-The steps to deployment will vary based on the tooling you choose to use. For detailed tutorials and examples on how to deploy your smart contract, checkout the [Deploy a Simple Smart Contract with Hardhat](../../develop/tutorials/deploy-with-hardhat.md) tutorial.
+The steps to deployment will vary based on the tooling you choose to use. For detailed tutorials and examples on how to deploy your smart contract, checkout the [Deploy a Simple Smart Contract with Hardhat](../../archive/deploy-with-hardhat.md) tutorial.
 
 ## Cross-Chain Smart Contracts
 

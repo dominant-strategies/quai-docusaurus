@@ -2,7 +2,7 @@
 title: Interoperability
 description: How cross-chain interactions are facilitated in Quai
 slug: /interoperability
-hide_table_of_contents: true
+hide_table_of_contents: false
 sidebar_position: 5
 ---
 

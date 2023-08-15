@@ -2,7 +2,7 @@
 title: Latency
 description: How latency is minimized within Quai Network.
 slug: /latency
-hide_table_of_contents: true
+hide_table_of_contents: false
 sidebar_position: 2
 ---
 
