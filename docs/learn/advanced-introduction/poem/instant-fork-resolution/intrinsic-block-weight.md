@@ -14,6 +14,8 @@ In conventional Proof-of-Work systems, block validity is solely determined by wh
 
 Measuring intrinsic block weight gives a more precise view of the actual energy expended when a block is created. By measuring this weight, nodes using the PoEM consensus method can tell any competing blocks apart based on the entropy they remove. Comparing the entropy taken out by each block allows all system nodes to make the same objective decision when picking the next block for the blockchain. Therefore, given the same data, all network nodes will always agree on the same canonical chain.
 
+![PoEMHashOverview](../../../../../static/img/PoEMHashOverview.png)
+
 ## Calculate Bits of Entropy Removed From System From Intrinsic Block Weight
 
 - **_n_** = Bits of entropy removed from total bit field (approximately: number of leading zeroes found in hash)

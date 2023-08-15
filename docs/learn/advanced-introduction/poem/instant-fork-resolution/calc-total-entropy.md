@@ -16,6 +16,8 @@ Total entropy is a better measure of accumulated energy expenditure than total d
 
 The starting point for the calculation of entropy change is the bits of entropy removed from a block. This is computed using a measure of [intrinsic block weight](./intrinsic-block-weight.md).
 
+![TotalEntropy](../../../../../static/img/TotalEntropy.png)
+
 ## Calculate Change in Entropy
 
 - **_ΔS_** = Number of possible states removed from the macrostate (simply: change in entropy)
