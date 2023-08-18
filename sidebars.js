@@ -36,10 +36,6 @@ const sidebars = {
 	],
 	participateSidebar: [
 		{
-			type: 'doc',
-			id: 'participate/participateintro',
-		},
-		{
 			type: 'category',
 			label: 'Use Quai',
 			collapsed: false,
