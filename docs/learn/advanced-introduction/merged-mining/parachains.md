@@ -6,6 +6,7 @@ hide_table_of_contents: false
 sidebar_position: 3
 ---
 
+
 # Merge-Mined Parachains
 
 A merge-mined parachain is a distinct, non-Quai blockchain that uses merged mining with Quai to bootstrap hashpower and liveliness. Merge-mined parachains are distinct from merge-mined sidechains in that they not only inherit security from Quai, but are also hash linked to and interoperable with the canonical network.

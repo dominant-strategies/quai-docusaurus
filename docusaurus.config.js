@@ -12,16 +12,15 @@ const config = {
 	tagline: 'Own your future',
 	favicon: 'img/favicon.ico',
 
-	// Set the production url of your site here
+	// Production site url
 	url: 'https://qu.ai/',
-	// Set the /<baseUrl>/ pathname under which your site is served
-	// For GitHub pages deployment, it is often '/<projectName>/'
+	// base url under which site is served
 	baseUrl: '/docs/',
 
 	// GitHub pages deployment config.
 	// If you aren't using GitHub pages, you don't need these.
-	organizationName: 'dominant-strategies', // Usually your GitHub org/user name.
-	projectName: 'quai-docs', // Usually your repo name.
+	// organizationName: 'dominant-strategies', // Usually your GitHub org/user name.
+	// projectName: 'quai-docs', // Usually your repo name.
 
 	onBrokenLinks: 'throw',
 	onBrokenMarkdownLinks: 'warn',
@@ -42,10 +41,10 @@ const config = {
 				docs: {
 					routeBasePath: '/',
 					sidebarPath: require.resolve('./sidebars.js'),
-					// Please change this to your repo.
-					// Remove this to remove the "edit this page" links.
 					editUrl:
-						'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+						'https://github.com/dominant-strategies/quai-docs/tree/main/',
+					showLastUpdateAuthor:true,
+					showLastUpdateTime:true,
 					remarkPlugins: [math],
 					rehypePlugins: [katex],
 				},
@@ -68,7 +67,6 @@ const config = {
 	themeConfig:
 		/** @type {import('@docusaurus/preset-classic').ThemeConfig} */
 		({
-			// Replace with your project's social card
 			image: 'img/quai-social-card.jpg',
 			navbar: {
 				title: 'Quai Documentation',
