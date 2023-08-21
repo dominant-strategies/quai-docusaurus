@@ -7,3 +7,5 @@ sidebar_position: 2
 ---
 
 # GPU Miner
+
+This page is currently **under development**. Check back for updates.

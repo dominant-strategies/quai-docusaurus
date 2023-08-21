@@ -14,14 +14,16 @@ Here, we'll be installing and running go-quai, the Go implementation of a Quai N
 
 ### Install Dependencies
 
-This article is tailored for Linux Distributions and MacOS systems. If you're running Windows, this tutorial
-is largely the same if you're using the
-[Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10) to run a Linux
-distribution.
+To run an instage of go-quai, you'll need to install a few dependencies. The following dependencies are required to run a node:
 
-// TODO: ADD INSTRUCTIONS FOR GO INSTALL ACROSS DIFFERENT OS TYPES
-
-// TODO: MOVE C COMPILER INSTALL TO DEPENDENCIES
+- Golang v1.21.0 or higher
+  - [Linux Installation](https://snapcraft.io/install/go/ubuntu#install)
+  - [MacOS Installation](https://formulae.brew.sh/formula/go)
+  - [Windows Installation](https://medium.com/@benzbraunstein/how-to-install-and-setup-golang-development-under-wsl-2-4b8ca7720374)
+- C Compiler
+  - [Linux Installation](https://itsfoss.com/build-essential-ubuntu/)
+  - [MacOS Installation](https://formulae.brew.sh/formula/make)
+  - Windows Installation (same as Linux with WSL2)
 
 ### Install go-quai
 

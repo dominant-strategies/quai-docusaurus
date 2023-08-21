@@ -21,8 +21,8 @@ Under PoEM, all nodes immediately agree on the next block as soon as they become
 
 PoEM's "perpetual consensus" provides a variety of benefits over existing consensus mechanisms like Proof-of-Work and Proof-of-Stake, including instantaneous fork resolution and faster finality. **These properties give PoEM the unique ability to remain in consensus while coordinating an infinite number of execution shards.**
 
-[Instantaneous Fork Resolution](./instant-fork-resolution/): Given the same set of information, every node in the system will always make the same decision on the next block in the sequence.
+[**Instantaneous Fork Resolution**](./instant-fork-resolution/): Given the same set of information, every node in the system will always make the same decision on the next block in the sequence.
 
-[Faster Finality](./finality/): Proof-of-Entropy-Minima offers a faster mathematical guarantee of on-chain inclusion than all existing consensus mechanisms.
+[**Faster Finality**](./finality/): Proof-of-Entropy-Minima offers a faster mathematical guarantee of on-chain inclusion than all existing consensus mechanisms.
 
-[Coordinating Infinite Execution Shards](./infinite-execution-shards/): Perpetual consensus is a prerequisite to coordinating an infinite number of execution shards. Mechanisms that take any time to resolve contention in consensus are ineffective at coordinating more than one chain.
+[**Coordinating Infinite Execution Shards**](./infinite-execution-shards/): Perpetual consensus is a prerequisite to coordinating an infinite number of execution shards. Mechanisms that take any time to resolve contention in consensus are ineffective at coordinating more than one chain.
