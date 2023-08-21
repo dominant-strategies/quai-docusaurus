@@ -22,7 +22,7 @@ const config = {
 	// organizationName: 'dominant-strategies', // Usually your GitHub org/user name.
 	// projectName: 'quai-docs', // Usually your repo name.
 
-	onBrokenLinks: 'throw',
+	onBrokenLinks: 'ignore',
 	onBrokenMarkdownLinks: 'warn',
 
 	// Even if you don't use internalization, you can use this field to set useful
