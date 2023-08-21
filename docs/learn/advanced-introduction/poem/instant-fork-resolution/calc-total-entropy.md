@@ -18,7 +18,7 @@ The starting point for the calculation of entropy change is the bits of entropy 
 
 ![TotalEntropy](../../../../../static/img/TotalEntropy.png)
 
-## Calculate Change in Entropy
+### Calculate Change in Entropy
 
 - **_ΔS_** = Number of possible states removed from the macrostate (simply: change in entropy)
 - **_n_** = Bits of entropy removed from total bit field (approximately: number of leading zeroes found in hash)
@@ -27,7 +27,7 @@ $$
 \Delta S = \frac{1}{2^{n}}
 $$
 
-## Calculate Total Entropy
+### Calculate Total Entropy
 
 - **Sₖ** = Total number of possible states removed from the macrostate at block k (simply: total entropy at block k)
 - **Sₖ₋₁** = Total number of possible states removed from the macrostate at block k-1 (simply: total entropy at block k-1)
@@ -37,7 +37,7 @@ $$
 S_{k} = S_{k-1} * \Delta S_{k}
 $$
 
-## Calculate Total Entropy Using Bits
+### Calculate Total Entropy Using Bits
 
 In reality, cumulatively measuring and storing Sₖ (the full value of total entropy) is impractical due to its exponential growth. Within only a few blocks, Sₖ becomes difficult for nodes to store and manipulate. Thus, in Quai Network, the calculation of entropy is represented in bits. In practice, entropy is calculated by taking a summation of logs, which allows total entropy to be stored as a linearly-growing value instead of an exponentially-growing value.
 

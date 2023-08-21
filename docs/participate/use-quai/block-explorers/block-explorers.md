@@ -12,8 +12,8 @@ Block explorers allow users to view block data, transactions, and smart contract
 
 ## QuaiScan
 
+[QuaiScan](https://cyprus1.colosseum.quaiscan.io/) allows users to view data from all Quai blockchains without running a node.
+
 :::info
 QuaiScan will be availaible with the launch of the Iron Age Testnet.
 :::
-
-[QuaiScan](https://cyprus1.colosseum.quaiscan.io/) allows users to view data from all Quai blockchains without running a node.
