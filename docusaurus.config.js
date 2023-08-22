@@ -16,6 +16,7 @@ const config = {
 	url: 'https://qu.ai/',
 	// base url under which site is served
 	baseUrl: '/docs/',
+	//baseUrl: '/',
 
 	// GitHub pages deployment config.
 	// If you aren't using GitHub pages, you don't need these.
