@@ -28,5 +28,5 @@ spec:
             name: {{ $name }}
             port:
               name: http
-        path: /api
+        path: /docs
         pathType: Prefix
