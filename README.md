@@ -17,15 +17,11 @@ For help contributing to this repository or to discuss proposed changes, you can
 ## How To Contribute
 To contribute to the Quai documentation, you'll need to [fork the repository](https://docs.github.com/en/get-started/quickstart/fork-a-repo), [make your changes on a branch](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-and-deleting-branches-within-your-repository), [commit your changes to the branch](https://docs.github.com/en/get-started/using-git/pushing-commits-to-a-remote-repository), and [create an upstream pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork) with your changes. This will allow for open-sourced, collaborative review of all changes before they are merged into the main branch. 
 
-It may also be useful to use [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/) to preview your changes in a webpage view before making a commit. 
+It may also be useful to use [npm](https://www.npmjs.com/) to preview your changes in a webpage view before making a commit. 
 
-To use npm:
-`npm install`
-`npm start`
-
-To use yarn:
-`yarn install`
-`yarn start`
+To use npm:<br>
+`npm install`<br>
+`npm start`<br>
 
 ### Docs Architecture
 This documentation runs off of the [Docusaurus 2.0 framwork](https://docusaurus.io/).
