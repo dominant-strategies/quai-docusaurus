@@ -15,8 +15,7 @@ const config = {
 	// Production site url
 	url: 'https://qu.ai/',
 	// base url under which site is served
-	baseUrl: '/docs/',
-	//baseUrl: '/',
+	baseUrl: 'quai-docs',
 
 	// GitHub pages deployment config.
 	// If you aren't using GitHub pages, you don't need these.
