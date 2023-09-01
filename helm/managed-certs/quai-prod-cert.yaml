@@ -1,8 +1,0 @@
-apiVersion: networking.gke.io/v1
-kind: ManagedCertificate
-metadata:
-  name: quai-docs-prod
-  namespace: quai-prod
-spec:
-  domains:
-  - qu.ai
