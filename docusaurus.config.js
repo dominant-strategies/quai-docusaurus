@@ -22,7 +22,8 @@ const config = {
 	// If you aren't using GitHub pages, you don't need these.
 	organizationName: 'dominant-strategies', // Usually your GitHub org/user name.
 	projectName: 'quai-docs', // Usually your repo name.
-	deploymentBranch: 'main', // Branch responsible for deployment.
+	deploymentBranch: 'gh-pages', // Branch responsible for deployment.
+	trailingSlash: false,
 
 	onBrokenLinks: 'ignore',
 	onBrokenMarkdownLinks: 'warn',
