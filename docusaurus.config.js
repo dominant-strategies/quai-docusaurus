@@ -15,13 +15,14 @@ const config = {
 	// Production site url
 	url: 'https://qu.ai/',
 	// base url under which site is served
-	baseUrl: '/docs/',
-	//baseUrl: '/',
+	baseUrl: 'quai-docs',
 
 	// GitHub pages deployment config.
 	// If you aren't using GitHub pages, you don't need these.
-	// organizationName: 'dominant-strategies', // Usually your GitHub org/user name.
-	// projectName: 'quai-docs', // Usually your repo name.
+	organizationName: 'dominant-strategies', // Usually your GitHub org/user name.
+	projectName: 'quai-docs', // Usually your repo name.
+	deploymentBranch: 'gh-pages', // Branch responsible for deployment.
+	trailingSlash: false,
 
 	onBrokenLinks: 'ignore',
 	onBrokenMarkdownLinks: 'warn',
