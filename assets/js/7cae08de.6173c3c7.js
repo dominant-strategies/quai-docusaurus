@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkquai_docs=self.webpackChunkquai_docs||[]).push([[3867],{6:t=>{t.exports=JSON.parse('{"title":"Smart Contracts","slug":"/category/smart-contracts","permalink":"/docs/category/smart-contracts","navigation":{"previous":{"title":"Networks","permalink":"/docs/develop"},"next":{"title":"Opcode Additions","permalink":"/docs/opcode-additions"}}}')}}]);
