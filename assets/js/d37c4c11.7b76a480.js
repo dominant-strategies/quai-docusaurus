@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkquai_docs=self.webpackChunkquai_docs||[]).push([[7650],{6574:e=>{e.exports=JSON.parse('{"title":"APIs","slug":"/category/apis","permalink":"/category/apis","navigation":{"previous":{"title":"Deploy","permalink":"/deploy"},"next":{"title":"JSON-RPC API","permalink":"/json-rpc-api"}}}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkquai_docs=self.webpackChunkquai_docs||[]).push([[9874],{469:e=>{e.exports=JSON.parse('{"title":"Use Quai","slug":"/category/use-quai","permalink":"/quai-docs/category/use-quai","navigation":{"next":{"title":"User Overview","permalink":"/quai-docs/use-quai"}}}')}}]);
