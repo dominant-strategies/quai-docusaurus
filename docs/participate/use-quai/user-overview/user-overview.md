@@ -15,7 +15,7 @@ Within Quai Network, each address "lives" on one of the Zone chains. The first b
 
 **From a user perspective, this means that you need at least one Quai address that "lives" on each Quai blockchain you want to interact with.** For example, if you want to hold NFTs on Zone 1, buy NFTs on Zone 2, and hold Quai on Zone 3, you'll need three accounts.
 
-When creating a new account in a wallet that supports Quai Network, you'll have the option to choose which Zone you want that account to "live" in.
+When creating a new account in a wallet that supports Quai Network, you'll usually have the option to choose which Zone you want that account to "live" in.
 
 ## Internal & External Transactions
 When sending a transaction to an address in the same Zone as the originating address, an "internal transaction" occurs. Internal transactions are transactions that modify the state of one Zone in a way that doesn't impact the state of any other Zones. Internal transactions are the quickest type of transaction within Quai Network, as they only require local consensus (within the Zone) to settle.
