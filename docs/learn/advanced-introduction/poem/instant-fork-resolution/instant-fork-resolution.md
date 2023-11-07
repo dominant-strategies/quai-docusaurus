@@ -1,6 +1,6 @@
 ---
 title: Instantaneous Fork Resolution
-description: How blocks are compared in Quai Network.
+description: How the PoEM consensus mechanism eliminated consensus-based forks.
 slug: /fork-resolution
 hide_table_of_contents: false
 sidebar_position: 1

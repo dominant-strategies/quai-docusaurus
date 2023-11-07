@@ -10,9 +10,9 @@ sidebar_position: 1
 
 ## Convenience Libraries
 
-While some developers may opt to interact directly with the JSON-RPC API detailed below, there are also a number of Javascript based convenience libraries designed to make data interaction much easier. Convenience libraries abstract much of the complexity of direct API calls out into simple one-line methods. These methods are also easily portable into decentralized applications and help make backend logic more concise and readable. The primary convenience library used to interact with Quai Network is [quais.js](https://qu.ai).
+While some developers may opt to interact directly with the JSON-RPC API detailed below, there are also a number of Javascript based convenience libraries designed to make data interaction much easier. Convenience libraries abstract much of the complexity of direct API calls out into simple one-line methods. These methods are also easily portable into decentralized applications and help make backend logic more concise and readable. The primary convenience library used to interact with Quai Network is [quais.js](https://github.com/dominant-strategies/quais-5.js).
 
-A [postman](https://qu.ai) library containing templates for all of the RPC methods detailed below is also available at the [Quai API workspace](https://qu.ai).
+A [postman](https://www.postman.com/) library containing templates for all of the RPC methods detailed below is also available at the [Quai API workspace](https://documenter.getpostman.com/view/19820580/2s935iv7GU).
 
 ## Conventions
 

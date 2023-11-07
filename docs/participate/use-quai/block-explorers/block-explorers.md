@@ -12,8 +12,16 @@ Block explorers allow users to view block data, transactions, and smart contract
 
 ## QuaiScan
 
-[QuaiScan](https://cyprus1.colosseum.quaiscan.io/) allows users to view data from all Quai blockchains without running a node.
+[QuaiScan](https://cyprus1.colosseum.quaiscan.io/), based on the [BlockScout infrastructure](https://www.blockscout.com/), allows users to view data from all Quai blockchains without running a node. Each Zone within Quai Network has a unique block explorer link -- the search functionality will automatically route users to the correct Zone explorer, creating a seamless user experience.
 
-:::info
-QuaiScan will be availaible with the launch of the Iron Age Testnet.
-:::
+| Zone Name | Zone Index | QuaiScan Link                          |
+| --------  | ---------- | -------------------------------------- |
+| Cyprus-1  | [0 0]      | https://cyprus1.colosseum.quaiscan.io/ |
+| Cyprus-2  | [0 1]      | https://cyprus2.colosseum.quaiscan.io/ |
+| Cyprus-3  | [0 2]      | https://cyprus3.colosseum.quaiscan.io/ |
+| Paxos-1   | [1 0]      | https://paxos1.colosseum.quaiscan.io/  |
+| Paxos-2   | [1 1]      | https://paxos2.colosseum.quaiscan.io/  |
+| Paxos-3   | [1 2]      | https://paxos3.colosseum.quaiscan.io/  |
+| Hydra-1   | [2 0]      | https://hydra1.colosseum.quaiscan.io/  |
+| Hydra-2   | [2 1]      | https://hydra2.colosseum.quaiscan.io/  |
+| Hydra-3   | [2 2]      | https://hydra3.colosseum.quaiscan.io/  |

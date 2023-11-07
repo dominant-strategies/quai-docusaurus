@@ -17,20 +17,12 @@ Wallets are user-friendly pieces of software that help users manage blockchain a
 
 As an open-source project, independent audits/contributions for Pelagus are always welcome. To contribute to Pelagus, check out the [Pelagus Github Repository](https://github.com/PelagusWallet).
 
-The Pelagus Wallet browser extension will be able to be downloaded and installed from the Chrome Web Store when it is live.
-
-:::info
-Pelagus wallet is not currently available in the Chrome Web Store. This section will be updated when Pelagus is available for download.
-:::
+Pelagus Wallet can be downloaded from the [Chrome Web Store](https://chrome.google.com/webstore/detail/pelagus/gaegollnpijhedifeeeepdoffkgfcmbc).
 
 ## Koala Wallet
 
 **[Koala Wallet](https://koalawallet.io/) is a multi-chain mobile and browser extension wallet built by [Eucalyptus Labs](https://eucalyptuslabs.com/).**
 
-Koala Wallet originated as a Kadena-native wallet, and will be adding multi-chain support for a variety of different blockchains, including Quai Network.
+Koala Wallet originated as a Kadena-native wallet, and has added multi-chain support for a variety of different blockchains, including Quai Network.
 
 The Koala Wallet can be downloaded from the [iOS App Store](https://apps.apple.com/us/app/koala-wallet/id1627486259), the [Google Play Store](https://play.google.com/store/apps/details?id=com.eucalyptuslabs.kowallet&pli=1), and/or the [Chrome Web Store](https://chrome.google.com/webstore/detail/koala-wallet/lnnnmfcpbkafcpgdilckhmhbkkbpkmid). 
-
-:::info
-Koala Wallet does not currently have support for Quai Network. This section will be updated when Koala Wallet adds supports for Quai Network.
-:::
