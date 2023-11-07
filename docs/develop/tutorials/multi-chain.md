@@ -22,7 +22,7 @@ If you want to skip basic environment setup for contract deployment, the [hardha
 
 To deploy multi-chain smart contracts, we'll need a few tool-kits and dependencies.
 
-Here's an **overview of all of the dependencies** we'll install in the [Environment Setup section](multi-chain.md#environment-setup):
+Here's an **overview of all of the dependencies** we'll install in the [Environment Setup section](#environment-setup):
 
 * [**Hardhat**](https://hardhat.org/) **+** [**Quai-Hardhat**](https://github.com/dominant-strategies/quai-hardhat)**:** An EVM development environment toolkit with bundled support for Quai Network opcodes and contracts.
 * [**SolidityX**](https://github.com/dominant-strategies/SolidityX)**:** Quai Network's implementation of Solidity with support for [cross-chain opcodes](../smart-contracts/opcode-additions.md).
@@ -137,7 +137,7 @@ In this environment file, we've introduced private keys and RPC endpoint URLs fo
 
 **You'll need to change the chain specific keys and RPC endpoint URLs** for each of the chains you plan to deploy a contract on, i.e. if you want to deploy on Cyprus 1 and Paxos 2, you'll need to change the `CYRPUS1PK`, `PAXOS2PK`,  `CYPRUS1URL`, and `PAXOS2URL` to deploy to those chains.
 
-Information on endpoints can be found on the [Node Overview page](../../participate/node/node-overview/#networking) for **local nodes** and the [Network Specification](../developintro.mdx) page for **remote nodes**.
+Information on endpoints can be found on the [Node Overview page](../../participate/node/node-overview/node-overview.md#networking-and-conventions) for **local nodes** and the [Network Specification](../networks.mdx#important-links-and-specs) page for **remote nodes**.
 
 ### Hardhat Configuration
 
@@ -475,7 +475,7 @@ The script composes the contract interaction transaction by:
 
 Now that we've set up our script, we're ready to link our two deployed contracts.
 
-Start by grabbing the addresses of the two contracts we deployed in the [Deploy section](multi-chain.md#deploy-your-contracts).
+Start by grabbing the addresses of the two contracts we deployed in the [Deploy section](#deploy-your-contracts).
 
 ```
 Cyprus 1 contract address: 0x1A3fA2C0B9c490a07a421d2b169E034C1bFcA601

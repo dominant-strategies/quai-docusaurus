@@ -1,6 +1,6 @@
 ---
 title: External Transactions (ETXs)
-description: Cross-chain transactions in Quai Network.
+description: How cross-chain transactions are processed in Quai Network.
 slug: /etxs
 hide_table_of_contents: false
 ---

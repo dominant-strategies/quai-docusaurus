@@ -24,6 +24,8 @@ sidebar_position: 4
 | Near-Coordinate | Yes          | A transaction where the originating Zone and the destination Zone are different, but are subordinate to the same Region.  | ~300s            |
 | Far-Coordinate  | Yes          | A transaction where the originating Zone and the destination zone are different, and are subordinate to different Regions.| ~3300s.          |
 
+*† Settlement time is given in averages. Block production in Quai Network is a stochastic process, meaning that real-world settlement times will have minor variance.*
+
 ## Installing Pelagus
 
 **Where can I install Pelagus?**

@@ -75,7 +75,7 @@ const sidebars = {
 	developSidebar: [
 		{
 			type: 'doc',
-			id: 'develop/developintro',
+			id: 'develop/networks',
 		},
 		{
 			type: 'category',

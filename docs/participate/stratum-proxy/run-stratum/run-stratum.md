@@ -30,7 +30,10 @@ Prefer a video tutorial? Check out a video walkthrough on setting up a stratum p
 
 ### Common Troubleshooting Resources
 
-Methods to troubleshoot common issues and answers to frquently asked questions can be found in the [Stratum Proxy FAQ](../stratum-faq/stratum-faq.md).
+* [What machine to run the Stratum Proxy on](../stratum-faq/stratum-faq.md#keep-proxy-running)
+* [How to keep Stratum running](../stratum-faq/stratum-faq.md#keep-proxy-running)
+* [How to find the IP of the Stratum Proxy](../stratum-faq/stratum-faq.md#stratum-ip-address)
+* [How to run multiple Stratum Proxies at once](../stratum-faq/stratum-faq.md#multiple-proxies-to-node)
 
 ## Environment Setup
 
@@ -127,7 +130,7 @@ make quai-stratum
 
 Now that we've built the source, we can start our proxy. We recommend using a process manager like tmux or screen to run the proxy.
 
-To run the proxy, you'll need to select a shard to run against. More information on how and why to select shards can be found in the [GPU Miner FAQ](../../mining/gpu-miner/gpu-miner-faq/gpu-miner-faq.md).
+To run the proxy, you'll need to select a shard to run against. More information on how and why to select shards can be found in the [GPU Miner FAQ](../../mining/gpu-miner/gpu-miner-faq/gpu-miner-faq.md#slice-choice).
 
 Start the proxy by passing either the corresponding **web socket ports** or **chain names** for the region and zone you've selected to run. Run with chain names using this command:
 
@@ -149,20 +152,20 @@ Available options for `REGION-NAME`, `ZONE-NAME`, `REGION-PORT`, and `ZONE-PORT`
 
 If you're running a version of `go-quai-stratum` prior to [v0.9.0-rc.0](https://github.com/dominant-strategies/go-quai-stratum/releases/tag/v0.9.0-rc.0), you'll need to pass in the corresponding web socket ports as chain names are not supported prior to this version.
 
-| Chain Name | Type   | Chain Index | Web Socket Port |
-| ---------- | ------ | ----------- | --------------- |
-| Cyprus     | Region |             | 8579            |
-| Paxos      | Region |             | 8581            |
-| Hydra      | Region |             | 8583            |
-| Cyprus-1   | Zone   | [0 0]       | 8611            |
-| Cyprus-2   | Zone   | [0 1]       | 8643            |
-| Cyprus-3   | Zone   | [0 2]       | 8675            |
-| Paxos-1    | Zone   | [1 0]       | 8613            |
-| Paxos-2    | Zone   | [1 1]       | 8645            |
-| Paxos-3    | Zone   | [1 2]       | 8677            |
-| Hydra-1    | Zone   | [2 0]       | 8615            |
-| Hydra-2    | Zone   | [2 1]       | 8647            |
-| Hydra-3    | Zone   | [2 2]       | 8679            |
+| Chain Name | Type   | Chain Index | Web Socket Port | Stratum Command                                         |
+| ---------- | ------ | ----------- | --------------- | ------------------------------------------------------- |
+| Cyprus     | Region |             | 8579            |                                                         |
+| Paxos      | Region |             | 8581            |                                                         |
+| Hydra      | Region |             | 8583            |                                                         |
+| Cyprus-1   | Zone   | [0 0]       | 8611            | ./build/bin/quai-stratum --region=cyprus --zone=cyprus1 |
+| Cyprus-2   | Zone   | [0 1]       | 8643            | ./build/bin/quai-stratum --region=cyprus --zone=cyprus2 |
+| Cyprus-3   | Zone   | [0 2]       | 8675            | ./build/bin/quai-stratum --region=cyprus --zone=cyprus3 |
+| Paxos-1    | Zone   | [1 0]       | 8613            | ./build/bin/quai-stratum --region=paxos --zone=paxos1   |
+| Paxos-2    | Zone   | [1 1]       | 8645            | ./build/bin/quai-stratum --region=paxos --zone=paxos2   |
+| Paxos-3    | Zone   | [1 2]       | 8677            | ./build/bin/quai-stratum --region=paxos --zone=paxos3   |
+| Hydra-1    | Zone   | [2 0]       | 8615            | ./build/bin/quai-stratum --region=hydra --zone=hydra1   |
+| Hydra-2    | Zone   | [2 1]       | 8647            | ./build/bin/quai-stratum --region=hydra --zone=hydra2   |
+| Hydra-3    | Zone   | [2 2]       | 8679            | ./build/bin/quai-stratum --region=hydra --zone=hydra3   |
 
 :::danger
 **Do not open the above web socket ports except** in the specific case where your miner is on a different network than your node/stratum (and even then, be sure to only open the port to the necessary machine). You may be putting your local network security at risk.

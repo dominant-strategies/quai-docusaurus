@@ -1,6 +1,6 @@
 ---
 title: One-Click Deployments
-description: Deploy a Quai node in a single click.
+description: The different one-click node deployments for Quai Network.
 slug: /one-click
 hide_table_of_contents: false
 sidebar_position: 3
@@ -12,4 +12,4 @@ One-click deployments are scripts that allow for heavily simplified deployment o
 
 Currently, one-click deploy scripts are available for the following platform(s):
 
-* [Google Cloud Platform (GCP)](../one-click/gcp/gcp.md)
+* [Google Cloud Platform (GCP)](./gcp)

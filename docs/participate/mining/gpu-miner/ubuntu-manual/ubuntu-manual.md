@@ -37,7 +37,13 @@ In order to run the quai-gpu-miner on Ubuntu 20.04 and mine valid blocks, you'll
 
 ### Common Troubleshooting Resources
 
-Answers to commonly asked questions can be found in the [GPU Miner FAQ](../gpu-miner-faq/gpu-miner-faq.md).
+* [How to find the IP of a Stratum Proxy](../../../stratum-proxy/stratum-faq/stratum-faq.md#stratum-ip-address)
+* ["No usable mining devices found" error](../gpu-miner-faq/gpu-miner-faq.md#no-opencl-platforms-found--no-usable-mining-devices)
+* ["SIGSEGV encountered" error](../gpu-miner-faq/gpu-miner-faq.md#sigsegv)
+* [Low hashrate on AMD cards](../gpu-miner-faq/gpu-miner-faq.md#amd-low-hashrate)
+* [Error on make and/or build step](../gpu-miner-faq/gpu-miner-faq.md#error-on-make-andor-build)
+
+Additional troubleshooting resources are available in the [GPU Miner FAQ](../gpu-miner-faq/gpu-miner-faq.md).
 
 ## Environment Setup
 
@@ -123,22 +129,22 @@ Running this command may take a while to complete.
 
 To run the miner, you'll need a quai-stratum-proxy to connect to. Visit the [quai-stratum-proxy](../../../stratum-proxy/run-stratum/run-stratum.md) docs for information on how to install and configure it. The proxy configuration will determine which shard your gpu-miner is running on and the address payouts are awarded to.
 
-First, you'll need to [obtain the IP Address](../../../stratum-proxy/stratum-faq/stratum-faq.md) and port your proxy is running on. The default port is `3333`.
+First, you'll need to [obtain the IP Address](../../../stratum-proxy/stratum-faq/stratum-faq.md#stratum-ip-address) and port your proxy is running on. The default port is `3333`.
 
 Once you have the address and port and are in the `build` directory, run the following command to start the miner:
 
 :::info
-Replace `PROXYIPADDRESS` with the IP address of your proxy. Replace `STRATUMPORT` with the websocket port of your proxy, which is default set to `3333`
+Replace `PROXYIPADDRESS` with the IP address of your proxy. Replace `STRATUMPORT` with the websocket port of your proxy, which is [default set to `3333`](../../../stratum-proxy/stratum-faq/stratum-faq.md#stratum-port)
 :::
 
 ```bash
 ./ethcoreminer/ethcoreminer -G -P stratum://PROXYIPADRESS:STRATUMPORT
 ```
 
-The quai-gpu-miner should now be running and outputting logs to the terminal. Now that your miner is running, [learn how to optimize your miner in the FAQ](../gpu-miner-faq/gpu-miner-faq.md)!
+The quai-gpu-miner should now be running and outputting logs to the terminal. Now that your miner is running, [learn how to optimize your miner in the FAQ](../gpu-miner-faq/gpu-miner-faq.md#optimization)!
 
 :::danger
-Do not start the miner prior to confirming your node has [fully synced](../../../node/node-faq/node-faq.md). Mining while your node is not synced will result in the mining of **invalid blocks** and **wasted hash**.
+Do not start the miner prior to confirming your node has [fully synced](../../../node/node-faq/node-faq.md#check-sync-status). Mining while your node is not synced will result in the mining of **invalid blocks** and **wasted hash**.
 :::
 
 ### Stop

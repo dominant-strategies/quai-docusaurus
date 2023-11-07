@@ -1,6 +1,6 @@
 ---
 title: Networks
-description: Network specification for development and testing environments.
+description: Network specifications for development and testing environments.
 slug: /networks
 hide_table_of_contents: false
 sidebar_position: 1
@@ -43,14 +43,22 @@ NETWORK=colosseum
 - `chainId`: 9000
 - `NONCE`: 5926993
 - [Colosseum Faucet](https://faucet.quai.network)
-- RPC endpoints:
-  - Link Structure: \`https://rpc.\[SHARDNAME].quaiscan.io
-  - [rpc.prime.colosseum.quaiscan.io](https://rpc.prime.colosseum.quaiscan.io)
-  - [rpc.hydra.colosseum.quaiscan.io](https://rpc.hydra.colosseum.quaiscan.io)
-  - [rpc.paxos2.colosseum.quaiscan.io](https://rpc.paxos2.colosseum.quaiscan.io)
 - Explorer:
   - Link Structure: \`https://\[SHARDNAME].colosseum.quaiscan.io
   - [Cyprus1 Block Explorer](https://cyprus1.colosseum.quaiscan.io/)
+- RPC Endpoints:
+
+| Zone Name | Zone Index | RPC Endpoint                              |
+| --------  | ---------- | ----------------------------------------- |
+| Cyprus-1  | [0 0]      | https://rpc.cyprus1.colosseum.quaiscan.io |
+| Cyprus-2  | [0 1]      | https://rpc.cyprus2.colosseum.quaiscan.io |
+| Cyprus-3  | [0 2]      | https://rpc.cyprus3.colosseum.quaiscan.io |
+| Paxos-1   | [1 0]      | https://rpc.paxos1.colosseum.quaiscan.io  |
+| Paxos-2   | [1 1]      | https://rpc.paxos2.colosseum.quaiscan.io  |
+| Paxos-3   | [1 2]      | https://rpc.paxos3.colosseum.quaiscan.io  |
+| Hydra-1   | [2 0]      | https://rpc.hydra1.colosseum.quaiscan.io  |
+| Hydra-2   | [2 1]      | https://rpc.hydra2.colosseum.quaiscan.io  |
+| Hydra-3   | [2 2]      | https://rpc.hydra3.colosseum.quaiscan.io  |
 
 ### Devnet
 

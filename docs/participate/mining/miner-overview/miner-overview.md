@@ -13,7 +13,7 @@ A miner is a computer performing complex mathematical calculations, known as has
 Mining in Quai Network can be performed via CPU miner or GPU miner. GPUs have a significant advantage in efficiency over CPUs when mining Quai.
 
 * [Learn how to set up a GPU Miner](../gpu-miner/gpu-miner.md)
-* [Learn how to connect multiple miners to one node with the Stratum Proxy](../../stratum-proxy/run-stratum/run-stratum.md)
+* [Learn how to connect a GPU miner to a node with the Stratum Proxy](../../stratum-proxy/run-stratum/run-stratum.md)
 
 ## ProgPoW Hashing Algorithm
 

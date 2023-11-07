@@ -45,19 +45,22 @@ Yes. In order for your GPU miner to be able to use the stratum proxy to connect 
 
 To properly run this command, you'll need to replace `REGION-WS-PORT` and `ZONE-WS-PORT` with the correct ports for the slice you wish the proxy to run.
 
-To find the correct WS ports, you can either check the [Node Overview page of the docs](../../node/node-overview/node-overview.md), or alternatively use the following table to immediately find the correct command:
+To find the correct WS ports, you can either check the ["Starting and Running a Stratum Proxy" page of the docs](../run-stratum/run-stratum.md#run), or alternatively use the following table to immediately find the correct command:
 
-| Chain Name | Chain Index | Stratum Command                                         |
-| ---------- | ----------- | ------------------------------------------------------- |
-| Cyprus-1   | [0 0]       | ./build/bin/quai-stratum --region=cyprus --zone=cyprus1 |
-| Cyprus-2   | [0 1]       | ./build/bin/quai-stratum --region=cyprus --zone=cyprus2 |
-| Cyprus-3   | [0 2]       | ./build/bin/quai-stratum --region=cyprus --zone=cyprus3 |
-| Paxos-1    | [1 0]       | ./build/bin/quai-stratum --region=paxos  --zone=paxos1  |
-| Paxos-2    | [1 1]       | ./build/bin/quai-stratum --region=paxos  --zone=paxos2  |
-| Paxos-3    | [1 2]       | ./build/bin/quai-stratum --region=paxos  --zone=paxos3  |
-| Hydra-1    | [2 0]       | ./build/bin/quai-stratum --region=hydra  --zone=hydra1  |
-| Hydra-2    | [2 1]       | ./build/bin/quai-stratum --region=hydra  --zone=hydra2  |
-| Hydra-3    | [2 2]       | ./build/bin/quai-stratum --region=hydra  --zone=hydra3  |
+| Chain Name | Type   | Chain Index | Web Socket Port | Stratum Command                                         |
+| ---------- | ------ | ----------- | --------------- | ------------------------------------------------------- |
+| Cyprus     | Region |             | 8579            |                                                         |
+| Paxos      | Region |             | 8581            |                                                         |
+| Hydra      | Region |             | 8583            |                                                         |
+| Cyprus-1   | Zone   | [0 0]       | 8611            | ./build/bin/quai-stratum --region=cyprus --zone=cyprus1 |
+| Cyprus-2   | Zone   | [0 1]       | 8643            | ./build/bin/quai-stratum --region=cyprus --zone=cyprus2 |
+| Cyprus-3   | Zone   | [0 2]       | 8675            | ./build/bin/quai-stratum --region=cyprus --zone=cyprus3 |
+| Paxos-1    | Zone   | [1 0]       | 8613            | ./build/bin/quai-stratum --region=paxos --zone=paxos1   |
+| Paxos-2    | Zone   | [1 1]       | 8645            | ./build/bin/quai-stratum --region=paxos --zone=paxos2   |
+| Paxos-3    | Zone   | [1 2]       | 8677            | ./build/bin/quai-stratum --region=paxos --zone=paxos3   |
+| Hydra-1    | Zone   | [2 0]       | 8615            | ./build/bin/quai-stratum --region=hydra --zone=hydra1   |
+| Hydra-2    | Zone   | [2 1]       | 8647            | ./build/bin/quai-stratum --region=hydra --zone=hydra2   |
+| Hydra-3    | Zone   | [2 2]       | 8679            | ./build/bin/quai-stratum --region=hydra --zone=hydra3   |
 
 ## Advanced Setup
 

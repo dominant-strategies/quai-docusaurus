@@ -31,7 +31,7 @@ Prefer a video tutorial? Check it out here:
 ### Requirements
 
 :::info 
-Quai consists of many "slices," or execution shards, that work together to form an overarching network. A **global node** runs all of these slices, while a **slice node** runs only a single slice. Our team at Dominant Strategies recommends a **slice node** for the vast majority of users. If you're split on which kind of node to run, [read this](https://docs.quai.network/introduction/faq#global-v.-slice-node).
+Quai consists of many "slices," or execution shards, that work together to form an overarching network. A **global node** runs all of these slices, while a **slice node** runs only a single slice. Our team at Dominant Strategies recommends a **slice node** for the vast majority of users. If you're split on which kind of node to run, [read this](../node-faq/node-faq.md#global-v-slice-node).
 :::
 
 To run a **global node** during the Iron Age Testnet, you'll need a MacOS or Ubuntu machine with the following specifications:
@@ -50,7 +50,11 @@ To run a **slice node** during the Iron Age Testnet, you'll need a MacOS or Ubun
 
 ### Common Troubleshooting Resources
 
-Find answers to commonly asked questions about setting up, maintaining, and running a Quai node in the [Node FAQ](../node-faq/node-faq.md).
+* [Resolving UPnP Errors](../node-faq/node-faq.md#upnp-issues)
+* [Troubleshooting node not appending blocks](../node-faq/node-faq.md#node-not-appending)
+* [Determining node sync status](../node-faq/node-faq.md#check-sync-status)
+
+Additional troubleshooting resources are available in the [Node FAQ](../node-faq/node-faq.md).
 
 ## Install Dependencies
 
@@ -173,11 +177,11 @@ If you do not replace the addresses in the `network.env` with Quai addresses you
 
 Set the `NETWORK` variable to the network you plan on running. Available network options can be found in the [network specifications page](../../../develop/developintro.mdx).
 
-Set the `SLICES` parameter to whichever slices of the network you would like to run. To learn more about [running setups other than a global node, check out the FAQ](../node-faq/node-faq.md).
+Set the `SLICES` parameter to whichever slices of the network you would like to run. To learn more about [running setups other than a global node, check out the FAQ](../node-faq/node-faq.md#configuring-slices).
 
 ### Router Configuration
 
-In order to connect directly to peers in the network, you'll need to make sure the [peering ports](../node-overview/node-overview.md) on your router are forwarded or externally accessible.
+In order to connect directly to peers in the network, you'll need to make sure the [peering ports](../node-overview/node-overview.md#networking-and-conventions) on your router are forwarded or externally accessible.
 
 The easiest way to ensure the peering ports are forwarded on your router is to **enable the universal plug and play (UPNP) option on your router**. General information on how to enable UPNP for *multiple different types of routers* can be found in [this article](https://www.lifewire.com/enable-upnp-on-a-router-5206124). If your router *is not covered in this article*, you may have to search for UPNP instructions for your specific model.
 
@@ -197,7 +201,7 @@ Set `ENABLE_NAT` to true, and replace the placeholder for `EXT_IP` above with yo
 
 Make sure to uncomment the `EXT_IP` line (i.e. remove the `#` from the beginning of the line).
 
-If you're having issues with this step, make sure to check out the [FAQ router troubleshooting guide](../node-faq/node-faq.md).
+If you're having issues with this step, make sure to check out the [FAQ router troubleshooting guide](../node-faq/node-faq.md#networking).
 
 ## Starting a Node
 
@@ -211,7 +215,7 @@ make go-quai
 
 ### Start
 
-Now that we've built the source, we need to decide which type of node to run. As detailed in the [Node Overview](../node-overview/node-overview.md) page, users **can opt for either a** [**global node or slice node**](../node-faq/node-faq.md) **depending on individual use case and hardware.**
+Now that we've built the source, we need to decide which type of node to run. As detailed in the [Node Overview](../node-overview/node-overview.md#node-types) page, users **can opt for either a** [**global node or slice node**](../node-faq/node-faq.md#global-v-slice-node) **depending on individual use case and hardware.**
 
 #### Run a Global Node
 
@@ -223,9 +227,9 @@ make run
 
 #### Run a Slice Node
 
-Slice nodes run what is called a "slice" of Quai Network. A slice is a subset of the network that validates prime, one region, and one zone chain. In the codebase, a slice is identified by its [region and zone index](../node-overview/node-overview.md). Region and zone indices are 0-indexed and range from 0-2.
+Slice nodes run what is called a "slice" of Quai Network. A slice is a subset of the network that validates prime, one region, and one zone chain. In the codebase, a slice is identified by its [region and zone index](../node-overview/node-overview.md#networking-and-conventions). Region and zone indices are 0-indexed and range from 0-2.
 
-To spin up a slice node, **you'll need to edit the `network.env` file to specify the slices you want to run**. [Slice specification](../node-faq/node-faq.md) can be done by editing the `SLICES` variable, which is default set to run all slices in the network.
+To spin up a slice node, **you'll need to edit the `network.env` file to specify the slices you want to run**. [Slice specification](../node-faq/node-faq.md#configuring-slices) can be done by editing the `SLICES` variable, which is default set to run all slices in the network.
 
 For example, if you wanted to run two slices, you would change `SLICES` to the following (replace the corresponding `INDEX` variables for your desired slices):
 
@@ -261,7 +265,7 @@ tail -f nodelogs/region-2.log
 tail -f nodelogs/zone-0-0.log
 ```
 
-Checking the node logs output is the *best way* to [*verify that your full node is running correctly*](../node-faq/node-faq.md). You can also easily view node logs in your favorite IDE or text editor.
+Checking the node logs output is the *best way* to [*verify that your full node is running correctly*](../node-faq/node-faq.md#checking-nodelogs). You can also easily view node logs in your favorite IDE or text editor.
 
 The outputs of a node that has **started correctly** should look similar to below.
 
@@ -285,7 +289,7 @@ Depending on what your node is currently doing, your logs may not look **exactly
 
 ### Syncing
 
-If your node has started correctly, it will begin syncing chain state from peers. There are a few ways to [check the progress of the sync](../node-faq/node-faq.md).
+If your node has started correctly, it will begin syncing chain state from peers. There are a few ways to [check the progress of the sync](../node-faq/node-faq.md#check-sync-status).
 
 From the **command line**, we can run the following command(s) to print the list of blocks that have been appended. **Replace** `location-to-print-here.log` **with the file name of the logs you'd like to print**.
 
@@ -311,9 +315,9 @@ INFO   [09-18|10:18:18.511] Appended new block                       number=[102
 
 **To check the progress of your node's sync, compare the number of the latest block output from the above command to the current height of the chain you're running on the** [**Quai node stats page**](https://stats.quai.network/).
 
-You can also check the progress of your node's sync using the **client JSON RPC API**. The [quai_syncing](../../../develop/apis/json-rpc-api.md) API method can be used easily in the [Quai Postman Workspace](https://documenter.getpostman.com/view/19820580/2s935iv7GU) or via the command line.
+You can also check the progress of your node's sync using the **client JSON RPC API**. The [quai_syncing](../../../develop/apis/json-rpc-api.md#quai_syncing) API method can be used easily in the [Quai Postman Workspace](https://documenter.getpostman.com/view/19820580/2s935iv7GU) or via the command line.
 
-To check the sync status of all of your nodes at once, you can use the script provided in the[ FAQ](../node-faq/node-faq.md).
+To check the sync status of all of your nodes at once, you can use the script provided in the[ FAQ](../node-faq/node-faq.md#global-sync-status).
 
 :::warning
 If your node temporarily stops appending during sync, do not stop it. Allow it to continue running, and only reach out for support if the node has not appended a block for over 1 hour.
@@ -466,7 +470,7 @@ cp -r quai_backup ~/Library/Quai
 Resetting your node and clearing your database will remove any state you have synced. This is a non-reversible action and any commands noted below should be utilized with caution.
 :::
 
-Developers and node runners may find that situations arise where they need to completely clear your node of synced state or do a full reset in the case of an issue or bug.  [A full reset of a node](../node-faq/node-faq.md) involves stopping the node, clearing the current nodelogs, and removing all synced state.
+Developers and node runners may find that situations arise where they need to completely clear your node of synced state or do a full reset in the case of an issue or bug.  [A full reset of a node](../node-faq/node-faq.md#resetting-a-node) involves stopping the node, clearing the current nodelogs, and removing all synced state.
 
 **Reminder, resetting your node is non-reversible and should only be done if you understand the implications of removing all synced state.**
 

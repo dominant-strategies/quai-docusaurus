@@ -1,9 +1,8 @@
 ---
 title: One-Click GCP Deployment
-description: Deploy a Quai node on GCP in a single click.
+description: One-click deployment for a Quai node on GCP.
 slug: /gcp
 hide_table_of_contents: false
-sidebar_position: 3
 ---
 
 # One-Click GCP Deployment
@@ -151,4 +150,4 @@ Navigate to your Compute Engine dashboard and locate your deployment instance.
 
 On the right of you instance, there should be an SSH button. Click the button to open an SSH-in-browser connection to your VM.
 
-**Once the SSH connection has loaded, you can follow the** [**Run A Node tutorial**](../../start-a-node/start-a-node.md) **and** [**Run a Stratum Proxy tutorial**](../../../mining/stratum-proxy/stratum-proxy.md) **to start your node and proxy.**
+**Once the SSH connection has loaded, you can follow the** [**Run A Node tutorial**](../../start-a-node/start-a-node.md) **and** [**Run a Stratum Proxy tutorial**](../../../stratum-proxy/run-stratum/run-stratum.md) **to start your node and proxy.**
