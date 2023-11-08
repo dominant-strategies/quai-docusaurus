@@ -26,7 +26,7 @@ To use npm:<br>
 ### Docs Architecture
 This documentation runs off of the [Docusaurus 2.0 framwork](https://docusaurus.io/).
 
-The Quai documentation is divided into three seperate **tabs**: Learn, Participate, and Develop. The Learn tab focuses on general information and explanations, while the Participate tab focuses on hardware (nodes/miners) and the Develop tab focuses on software (smart contracts/APIs). Each of these tabs has a variety of **docs** within them.
+The Quai documentation is divided into three seperate **tabs**: Learn, Participate, and Develop. The Learn tab focuses on general information and explanations, while the Participate tab focuses on using Quai and running hardware and the Develop tab focuses on software (smart contracts/APIs). Each of these tabs has a variety of **docs** within them.
 
 Most contributions to this repository will not require the creation of a new doc, and will focus on editing existing docs; however, if your proposed changes do require a new doc, you can learn how to create one in the [Docusaurus documentation](https://docusaurus.io/docs/create-doc). While there are no strict guidelines for the organization of docs within tabs, proposed changes should follow the existing docs structure as closely as possible. 
 
