@@ -54,4 +54,4 @@ Wave 1 of applications are open for [Quai Genesis, a Quai Network grants program
 
 The goal of Wave 1 is to incentivize and support the creation of foundational services/tooling on Quai. Later waves of the Genesis program will focus more broadly on smart contract creation and dApp deployment. Full details on how to apply to the Quai Genesis grants program can be found [on the Quai website](https://qu.ai/genesis/).
 
-Learn how to start developing on Quai in the [developer documentation](../develop/smart-contracts/deploy.md)
+Learn how to start developing on Quai in the [developer documentation](../develop/smart-contracts/deploy.md).

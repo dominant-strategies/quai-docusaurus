@@ -29,7 +29,7 @@ The word Quai derives its origin from the word kuai (块 – kuài). "Kuai" is a
 
 ### Merged-Mined Hierarchy
 
-All of Quai blockchains are organized into a three-tiered network hierarchy. Each miner must mine three blockchains within the network simultaneously. Merged mining allows miners to increase throughput while also reusing hash to secure multiple blockchains, making mining up to [10,000 times more energy efficient](../learn/advanced-introduction/merged-mining/energy-efficiency.mdx)*.
+All of Quai blockchains are organized into a three-tiered network hierarchy. Each miner must mine three blockchains within the network simultaneously. Merged mining allows miners to increase throughput while also reusing hash to secure multiple blockchains, making mining up to [10,000 times more energy efficient](../learn/advanced-introduction/merged-mining/energy-efficiency.mdx#energy-calculation)†.
 
 ### Multithreaded
 
@@ -41,4 +41,14 @@ Through the use of multithreaded execution, Quai Network is able to process upwa
 
 Through the use of the [Proof-of-Entropy-Minima consensus mechanism](../learn/advanced-introduction/poem/poem.md), which eliminates all contention from consensus, Quai Network is able to remain in consensus while [coordinating an infinitely growing number of execution shards](../learn/advanced-introduction/poem/infinite-execution-shards/infinite-execution-shards.md). This property allows Quai Network to algorithmically add execution shards to the network in order to meet perpetually growing demand. The only tradeoff to adding execution shards to Quai (and thus increasing throughput) is an [increased time to global settlement](../learn/advanced-introduction/poem/infinite-execution-shards/dynamic-sharding.mdx).
 
-**Per transaction, assuming full transactional load and the same number of miners on both Quai Network and the Bitcoin Network*.
+## Testnets
+
+Currently, Quai Network is in the **testnet and development phase**. The roadmap for Quai Network includes three remaining testnets prior to Mainnet launch:
+
+1. [Iron Age Testnet (currently live)](../participate/iron-age-testnet.md)
+2. Golden Age Testnet
+3. Silicon Age Testnet
+
+For each of these Testnets, our team at [Dominant Strategies](https://dominantstrategies.io) expects to run both a Testnet and Devnet, in addition to providing tools such as [block explorers](../participate/use-quai/block-explorers/block-explorers.md), [network statistics pages](https://stats.quai.network), and [faucets](../participate/use-quai/testnet-faucet/testnet-faucet.md).
+
+†[*Per transaction, assuming full transactional load and the same number of miners on both Quai Network and the Bitcoin Network*](../learn/advanced-introduction/merged-mining/energy-efficiency.mdx#energy-calculation).

@@ -146,11 +146,23 @@ const config = {
 						],
 					},
 					{
-						title: 'More',
+						title: 'GitHub Repositories',
 						items: [
 							{
-								label: 'GitHub',
-								href: 'https://github.com/dominant-strategies',
+								label: 'Node Client',
+								href: 'https://github.com/dominant-strategies/go-quai',
+							},
+							{
+								label: 'GPU Miner',
+								href: 'https://github.com/dominant-strategies/quai-gpu-miner',
+							},
+							{
+								label: 'Pelagus Wallet',
+								href: 'https://github.com/PelagusWallet/pelagus-extension',
+							},
+							{
+								label: 'Quai Docs',
+								href: 'https://github.com/dominant-strategies/quai-docs',
 							},
 						],
 					},

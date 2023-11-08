@@ -175,7 +175,7 @@ ZONE_2_2_COINBASE=0xF39E7d05B5A1a2F934cC43221383f29e4794c822 # hydra3
 If you do not replace the addresses in the `network.env` with Quai addresses you generate and hold the private keys for, you will not receive any mining rewards.
 :::
 
-Set the `NETWORK` variable to the network you plan on running. Available network options can be found in the [network specifications page](../../../develop/developintro.mdx).
+Set the `NETWORK` variable to the network you plan on running. Available network options can be found in the [network specifications page](../../../develop/networks.mdx#important-links-and-specs).
 
 Set the `SLICES` parameter to whichever slices of the network you would like to run. To learn more about [running setups other than a global node, check out the FAQ](../node-faq/node-faq.md#configuring-slices).
 
