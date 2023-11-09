@@ -1,12 +1,9 @@
 ---
 title: Stratum Proxy FAQ
 description: Answers to commonly asked questions about the Stratum Proxy.
-slug: /stratum-faq
 hide_table_of_contents: false
 sidebar_position: 3
 ---
-
-# Stratum Proxy FAQ
 
 ## Setup & Config
 
@@ -45,7 +42,7 @@ Yes. In order for your GPU miner to be able to use the stratum proxy to connect 
 
 To properly run this command, you'll need to replace `REGION-WS-PORT` and `ZONE-WS-PORT` with the correct ports for the slice you wish the proxy to run.
 
-To find the correct WS ports, you can either check the ["Starting and Running a Stratum Proxy" page of the docs](../run-stratum/run-stratum.md#run), or alternatively use the following table to immediately find the correct command:
+To find the correct WS ports, you can either check the ["Starting and Running a Stratum Proxy" page of the docs](./run-stratum.md#run), or alternatively use the following table to immediately find the correct command:
 
 | Chain Name | Type   | Chain Index | Web Socket Port | Stratum Command                                         |
 | ---------- | ------ | ----------- | --------------- | ------------------------------------------------------- |

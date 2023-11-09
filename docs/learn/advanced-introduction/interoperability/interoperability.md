@@ -1,7 +1,6 @@
 ---
 title: Interoperability
 description: How cross-chain interactions are processed in Quai Network.
-slug: /interoperability
 hide_table_of_contents: false
 sidebar_position: 5
 ---

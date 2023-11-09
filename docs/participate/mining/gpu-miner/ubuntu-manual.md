@@ -1,15 +1,12 @@
 ---
 title: Ubuntu Installation
 description: How to install and run a Quai Network GPU miner on Ubuntu.
-slug: /ubuntu
 hide_table_of_contents: false
 sidebar_position: 3
 ---
 
-# Ubuntu Installation
-
 :::warning
-You must have an instance of the [quai stratum proxy](../../../stratum-proxy/run-stratum/run-stratum.md) before running a GPU miner.
+You must have an instance of the [quai stratum proxy](../../stratum-proxy/run-stratum.md) before running a GPU miner.
 :::
 
 :::warning
@@ -28,22 +25,22 @@ If you are mining for Testnet Rewards, be sure to **KEEP THE PRIVATE KEYS OF THE
 
 In order to run the quai-gpu-miner on Ubuntu 20.04 and mine valid blocks, you'll need the following:
 
-* [A synced go-quai node](../../../node/start-a-node/start-a-node.md)
-* [A stratum proxy connected to your go-quai node](../../../stratum-proxy/run-stratum/run-stratum.md)
-* A machine running Ubuntu 20.04 with:
-  * At least one AMD or Nvidia GPU
-  * An AMD or Intel CPU
-  * 4GB+ of RAM
+- [A synced go-quai node](../../node/start-a-node.md)
+- [A stratum proxy connected to your go-quai node](../../stratum-proxy/run-stratum.md)
+- A machine running Ubuntu 20.04 with:
+  - At least one AMD or Nvidia GPU
+  - An AMD or Intel CPU
+  - 4GB+ of RAM
 
 ### Common Troubleshooting Resources
 
-* [How to find the IP of a Stratum Proxy](../../../stratum-proxy/stratum-faq/stratum-faq.md#stratum-ip-address)
-* ["No usable mining devices found" error](../gpu-miner-faq/gpu-miner-faq.md#no-opencl-platforms-found--no-usable-mining-devices)
-* ["SIGSEGV encountered" error](../gpu-miner-faq/gpu-miner-faq.md#sigsegv)
-* [Low hashrate on AMD cards](../gpu-miner-faq/gpu-miner-faq.md#amd-low-hashrate)
-* [Error on make and/or build step](../gpu-miner-faq/gpu-miner-faq.md#error-on-make-andor-build)
+- [How to find the IP of a Stratum Proxy](../../stratum-proxy/stratum-faq.md#stratum-ip-address)
+- ["No usable mining devices found" error](./gpu-miner-faq.md#no-opencl-platforms-found--no-usable-mining-devices)
+- ["SIGSEGV encountered" error](./gpu-miner-faq.md#sigsegv)
+- [Low hashrate on AMD cards](./gpu-miner-faq.md#amd-low-hashrate)
+- [Error on make and/or build step](./gpu-miner-faq.md#error-on-make-andor-build)
 
-Additional troubleshooting resources are available in the [GPU Miner FAQ](../gpu-miner-faq/gpu-miner-faq.md).
+Additional troubleshooting resources are available in the [GPU Miner FAQ](./gpu-miner-faq.md).
 
 ## Environment Setup
 
@@ -53,7 +50,7 @@ To run the quai-gpu-miner, you'll first need to install and configure Ubuntu v20
 
 Compatible Version Download:
 
-* [Ubuntu v20.04](https://releases.ubuntu.com/20.04/)
+- [Ubuntu v20.04](https://releases.ubuntu.com/20.04/)
 
 :::warning
 If you'd like to run the GPU miner on Ubuntu v22.04, you'll need to compile the binaries on Ubuntu v20.04 first and run them on the newer version OS.
@@ -71,11 +68,11 @@ sudo apt update && sudo apt upgrade -y
 
 After Ubuntu has updated, we can begin installing the following dependencies:
 
-* `git`
-* `cmake`
-* `build-essential`
-* `mesa-common-dev`
-* `nvidia-driver-535`
+- `git`
+- `cmake`
+- `build-essential`
+- `mesa-common-dev`
+- `nvidia-driver-535`
 
 Install all dependencies using the following command:
 
@@ -127,24 +124,24 @@ Running this command may take a while to complete.
 
 ### Run
 
-To run the miner, you'll need a quai-stratum-proxy to connect to. Visit the [quai-stratum-proxy](../../../stratum-proxy/run-stratum/run-stratum.md) docs for information on how to install and configure it. The proxy configuration will determine which shard your gpu-miner is running on and the address payouts are awarded to.
+To run the miner, you'll need a quai-stratum-proxy to connect to. Visit the [quai-stratum-proxy](../../stratum-proxy/run-stratum.md) docs for information on how to install and configure it. The proxy configuration will determine which shard your gpu-miner is running on and the address payouts are awarded to.
 
-First, you'll need to [obtain the IP Address](../../../stratum-proxy/stratum-faq/stratum-faq.md#stratum-ip-address) and port your proxy is running on. The default port is `3333`.
+First, you'll need to [obtain the IP Address](../../stratum-proxy/stratum-faq.md#stratum-ip-address) and port your proxy is running on. The default port is `3333`.
 
 Once you have the address and port and are in the `build` directory, run the following command to start the miner:
 
 :::info
-Replace `PROXYIPADDRESS` with the IP address of your proxy. Replace `STRATUMPORT` with the websocket port of your proxy, which is [default set to `3333`](../../../stratum-proxy/stratum-faq/stratum-faq.md#stratum-port)
+Replace `PROXYIPADDRESS` with the IP address of your proxy. Replace `STRATUMPORT` with the websocket port of your proxy, which is [default set to `3333`](../../stratum-proxy/stratum-faq.md#stratum-port)
 :::
 
 ```bash
 ./ethcoreminer/ethcoreminer -G -P stratum://PROXYIPADRESS:STRATUMPORT
 ```
 
-The quai-gpu-miner should now be running and outputting logs to the terminal. Now that your miner is running, [learn how to optimize your miner in the FAQ](../gpu-miner-faq/gpu-miner-faq.md#optimization)!
+The quai-gpu-miner should now be running and outputting logs to the terminal. Now that your miner is running, [learn how to optimize your miner in the FAQ](./gpu-miner-faq.md#optimization)!
 
 :::danger
-Do not start the miner prior to confirming your node has [fully synced](../../../node/node-faq/node-faq.md#check-sync-status). Mining while your node is not synced will result in the mining of **invalid blocks** and **wasted hash**.
+Do not start the miner prior to confirming your node has [fully synced](../../node/node-faq.md#check-sync-status). Mining while your node is not synced will result in the mining of **invalid blocks** and **wasted hash**.
 :::
 
 ### Stop

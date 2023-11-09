@@ -1,42 +1,37 @@
 // @ts-check
 
+// docusaurus type definitions
 import type { Config } from '@docusaurus/types'
 import type * as Preset from '@docusaurus/preset-classic'
+
+// prism configuration
 const { themes } = require('prism-react-renderer')
 const lightTheme = themes.github
 const darkTheme = themes.dracula
+
+// remark and rehype plugins for math
 const math = require('remark-math')
 const katex = require('rehype-katex')
 
 /** @type {import('@docusaurus/types').Config} */
-const config = {
-	title: 'Quai Documentation',
-	tagline: 'Own your future',
+const config: Config = {
+	title: 'Quai Network Documentation',
+	tagline: 'The open-source documentation of the Quai Network protocol.',
 	favicon: 'img/favicon.ico',
-
-	// Production site url
 	url: 'https://qu.ai/',
-	// base url under which site is served
-	baseUrl: 'quai-docs',
-
-	// GitHub pages deployment config.
-	// If you aren't using GitHub pages, you don't need these.
-	organizationName: 'dominant-strategies', // Usually your GitHub org/user name.
-	projectName: 'quai-docs', // Usually your repo name.
-	deploymentBranch: 'gh-pages', // Branch responsible for deployment.
-	trailingSlash: false,
-
-	onBrokenLinks: 'ignore',
+	baseUrl: '/docs/',
+	// organizationName: 'dominant-strategies',
+	// deploymentBranch: 'main',
+	projectName: 'quai-docs',
+	trailingSlash: true,
+	onBrokenLinks: 'warn',
 	onBrokenMarkdownLinks: 'warn',
-
-	// Even if you don't use internalization, you can use this field to set useful
-	// metadata like html lang. For example, if your site is Chinese, you may want
-	// to replace "en" with "zh-Hans".
+	onDuplicateRoutes: 'warn',
 	i18n: {
 		defaultLocale: 'en',
 		locales: ['en'],
 	},
-
+	baseUrlIssueBanner: true,
 	presets: [
 		[
 			'classic',
@@ -57,7 +52,6 @@ const config = {
 			} satisfies Preset.Options,
 		],
 	],
-
 	stylesheets: [
 		{
 			href: 'https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css',
@@ -66,7 +60,6 @@ const config = {
 			crossorigin: 'anonymous',
 		},
 	],
-
 	themeConfig:
 		/** @type {import('@docusaurus/preset-classic').ThemeConfig} */
 		{
@@ -99,10 +92,21 @@ const config = {
 					},
 					{
 						href: 'https://github.com/dominant-strategies/quai-docs',
-						label: 'GitHub',
 						position: 'right',
+						className: 'header-github-link',
 					},
 				],
+			},
+			// algolia: {
+			// 	appId: '',
+			// 	// Public API key: it is safe to commit it
+			// 	apiKey: '',
+			// 	indexName: 'quaidocs',
+			// },
+			colorMode: {
+				defaultMode: 'light',
+				disableSwitch: false,
+				respectPrefersColorScheme: true,
 			},
 			footer: {
 				style: 'dark',

@@ -1,12 +1,9 @@
 ---
 title: GPU Miner FAQ
 description: Answers to frequently asked questions about the Quai GPU miner.
-slug: /gpu-miner-faq
 hide_table_of_contents: false
 sidebar_position: 4
 ---
-
-# GPU Miner FAQ
 
 ## Setup & Config
 
@@ -24,16 +21,16 @@ ProgPoW was developed as an EIP to replace Ethash, but was discarded due to the 
 
 To run a GPU miner, you’ll need:
 
-* A node running a stratum proxy to connect to
-* An AMD or Nvidia GPU
-* An AMD or Intel CPU
-* 4 GB+ of RAM
+- A node running a stratum proxy to connect to
+- An AMD or Nvidia GPU
+- An AMD or Intel CPU
+- 4 GB+ of RAM
 
 ### Coinbase Addresses
 
 **Can I input the same address to mine to for all of the coinbase addresses in my node's network.env?**
 
-No. Within any node's network.env, each coinbase address must be unique and properly map to the shard it has been inputted for. You can learn more about how Quai Network uses a sharded address structure [here](../../../../learn/advanced-introduction/hierarchical-structure/sharding.mdx).
+No. Within any node's network.env, each coinbase address must be unique and properly map to the shard it has been inputted for. You can learn more about how Quai Network uses a sharded address structure [here](../../../learn/advanced-introduction/hierarchical-structure/sharding.mdx).
 
 ### Mining OS
 
@@ -95,8 +92,8 @@ The most common cause of errors on the make and/or build step of setting up the 
 
 There are two likely causes of this error on bare-metal:
 
-* You're running your miner in a virtual machine on top of Windows. Virtual machines on Windows don’t have access to the GPU or its drivers. To get the miner to work, you'll have to boot Linux or Hive, not run a VM.
-* You're dual booting using secure boot. If you are dual booting, be sure you've turned off secure boot in your BIOS to ensure that both operating systems can access your GPU.
+- You're running your miner in a virtual machine on top of Windows. Virtual machines on Windows don’t have access to the GPU or its drivers. To get the miner to work, you'll have to boot Linux or Hive, not run a VM.
+- You're dual booting using secure boot. If you are dual booting, be sure you've turned off secure boot in your BIOS to ensure that both operating systems can access your GPU.
 
 If the issue is on a VPS rather than bare-metal, installing `nvidia-cuda-toolkit` may help detect the GPU(s).
 
@@ -104,7 +101,7 @@ If the issue is on a VPS rather than bare-metal, installing `nvidia-cuda-toolkit
 2. `sudo apt update && sudo apt upgrade -y`
 3. `sudo apt install -y git cmake build-essential mesa-common-dev`
 4. `sudo reboot`
-5. Re-join the mining guide starting from [configure and run](../hive-manual/hive-manual.md).
+5. Re-join the mining guide starting from [configure and run](./hive-manual.md).
 
 ### SIGSEGV
 
@@ -114,9 +111,9 @@ The Dominant Strategies team is actively investigating the source of this error/
 
 Some notes on troubleshooting this issue while we continue to investigate:
 
-* Try upping the voltage and dropping the core clock of your GPU(s). This will cause your GPU(s) to run in a more stable state, but also reduce the efficiency of the miner. It may be worth testing to see if running in a less-efficient, more-stable manner resolves the issue.
-* If you are still experiencing the SIGSEGV issue while running at high voltage and low core clock speeds, you should start looking into your GPU's drivers.
-* If you are not able to resolve the issue via the above suggestions, get in contact with our team via the [Quai Dev Discord](https://discord.gg/s8y8asPwNC) to share more information about your specific issue.
+- Try upping the voltage and dropping the core clock of your GPU(s). This will cause your GPU(s) to run in a more stable state, but also reduce the efficiency of the miner. It may be worth testing to see if running in a less-efficient, more-stable manner resolves the issue.
+- If you are still experiencing the SIGSEGV issue while running at high voltage and low core clock speeds, you should start looking into your GPU's drivers.
+- If you are not able to resolve the issue via the above suggestions, get in contact with our team via the [Quai Dev Discord](https://discord.gg/s8y8asPwNC) to share more information about your specific issue.
 
 ### AMD Low Hashrate
 
@@ -140,32 +137,32 @@ This flight sheet was created and is maintained by a Quai community member, not 
 
 1. In the "workers" menu, click "wallets".
 
-![Workers Menu](../../../../../static/img/FS1.png)
+![Workers Menu](/img/FS1.png)
 
 2. On the right side of the page, click "add wallet".
 
-![Add Wallet](../../../../../static/img/FS2.png)
+![Add Wallet](/img/FS2.png)
 
 3. On "Coin" field, type "Quai" then click on "Create Quai" in the drop-down menu.
 4. On "Address" field, copy/paste your wallet address.
 5. On "Name" field, type a name for your wallet.
 6. On bottom right corner, click "Create".
 
-![Create](../../../../../static/img/FS3.png)
+![Create](/img/FS3.png)
 
 7. In the "workers" menu, click "flight sheets".
 
-![Flight Sheets](../../../../../static/img/FS4.png)
+![Flight Sheets](/img/FS4.png)
 
-8. On "Miner name", type "quai\_custom".
-9. On "Installation URL", copy/paste "[https://quai-gpu-releases.s3.eu-west-1.amazonaws.com/quai\_custom-0.0.13.tar.gz](https://quai-gpu-releases.s3.eu-west-1.amazonaws.com/quai\_custom-0.0.13.tar.gz)".
+8. On "Miner name", type "quai_custom".
+9. On "Installation URL", copy/paste "[https://quai-gpu-releases.s3.eu-west-1.amazonaws.com/quai_custom-0.0.13.tar.gz](https://quai-gpu-releases.s3.eu-west-1.amazonaws.com/quai_custom-0.0.13.tar.gz)".
 10. On "Hash algorithm", type "progpow".
-11. On "Wallet and worker template", type "%WAL%.%WORKER\_NAME%".
+11. On "Wallet and worker template", type "%WAL%.%WORKER_NAME%".
 12. On "Pool URL", type "stratum://EXTERNALIPADDRESS:PORT".
 13. On "Extra config arguments", type "-G -HWON 1 -P stratum://EXTERNALIPADDRESS:PORT".
 14. On bottom right corner, click "Apply Changes".
 
-![Apply Changes](../../../../../static/img/FS5.png)
+![Apply Changes](/img/FS5.png)
 
 15. Deploy flight sheet.
 
@@ -185,9 +182,9 @@ There are two major factors that miners should consider when deciding which slic
 :::danger
 Tuning GPUs has certain risks you should be aware of:
 
-* Improperly tuned GPUs can result in crashes and system instability.
-* Tuning/changing certain settings may void the warranty of your GPU.
-* Tuning improperly can cause damage to your GPUs. Always research the limits and specs of your specific cards.
+- Improperly tuned GPUs can result in crashes and system instability.
+- Tuning/changing certain settings may void the warranty of your GPU.
+- Tuning improperly can cause damage to your GPUs. Always research the limits and specs of your specific cards.
 
 Proceed with tuning at your own risk!
 :::

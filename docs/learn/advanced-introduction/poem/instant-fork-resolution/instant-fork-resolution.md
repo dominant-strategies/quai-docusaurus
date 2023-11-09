@@ -1,7 +1,6 @@
 ---
 title: Instantaneous Fork Resolution
 description: How the PoEM consensus mechanism eliminated consensus-based forks.
-slug: /fork-resolution
 hide_table_of_contents: false
 sidebar_position: 1
 ---
@@ -20,13 +19,13 @@ Proof-of-Entropy-Minima (PoEM) employs the concept of [intrinsic block weight](.
 
 Furthermore, PoEM ensures that only a single proof ever needs to be propagated throughout the network to achieve consensus. In contrast, Proof-of-Work requires a second proof to be shared before the network can reach consensus in a fork scenario. Proof-of-Stake consensus necessitates multiple rounds of propagation for each block to achieve consensus, as each proof must collect a specific number of social approvals to be considered valid. **By eliminating consensus-based forks, PoEM ensures that consensus can always be reached by propagating a single proof. This approach ensures that miners are always certain of the block that all nodes will agree upon as the "tip" or "head" of the blockchain, resulting in the most efficient possible utilization of computational resources.**
 
-![NodesForkResolution](../../../../../static/img/NodesForkResolution.png)
+![NodesForkResolution](/img/NodesForkResolution.png)
 
 The PoEM mechanism, by removing the impact of latency, fundamentally changes the concept of "consensus." Traditional Proof-of-Work and Proof-of-Stake blockchains periodically attempt to reach consensus among all nodes at each block production point. In contrast, PoEM achieves "perpetual consensus" by eliminating all contention from consensus. All nodes in the system always agree on the "tip" of the blockchain simply by adhering to the Proof-of-Entropy-Minima algorithm. **PoEM always has a preference between any blocks or chains of blocks. Therefore, if two nodes are running PoEM, they will always agree, even if they do not have complete information about the system.**
 
 ## Example Fork Resolution: PoW vs. PoEM
 
-![ExampleForkResolution](../../../../../static/img/ExampleForkResolution.png)
+![ExampleForkResolution](/img/ExampleForkResolution.png)
 
 - Block Height: 1
 - Difficulty Threshold: 16 (0x0000...)

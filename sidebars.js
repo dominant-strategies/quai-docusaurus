@@ -103,6 +103,6 @@ const sidebars = {
 			id: 'develop/develop-faq',
 		},
 	],
-};
+}
 
-module.exports = sidebars;
+module.exports = sidebars

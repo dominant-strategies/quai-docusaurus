@@ -1,17 +1,26 @@
 ---
 title: Networks
-description: Network specifications for development and testing environments.
+description: Network specification for development and testing environments.
 hide_table_of_contents: false
-sidebar_position: 1
 ---
 
 # Networks
+
+## Overview
+
+Currently, Quai Network is in the **testnet and development phase**. The roadmap for Quai Network includes three remaining testnets prior to Mainnet launch. These testnets will be called:
+
+1. Iron Age Testnet
+2. Golden Age Testnet
+3. Silicon Age Testnet
+
+For each of these testnets, our team expects to run both a testnet and devnet and provide tools such as block explorers, network statistics pages, and faucets.&#x20;
 
 ## Public Networks
 
 ### Mainnet
 
-Quai Network has not yet been launched into a live Mainnet.
+Quai Network has not launched a live mainnet.
 
 ### Testnet
 
@@ -32,22 +41,14 @@ NETWORK=colosseum
 - `chainId`: 9000
 - `NONCE`: 5926993
 - [Colosseum Faucet](https://faucet.quai.network)
+- RPC endpoints:
+  - Link Structure: \`https://rpc.\[SHARDNAME].quaiscan.io
+  - [rpc.prime.colosseum.quaiscan.io](https://rpc.prime.colosseum.quaiscan.io)
+  - [rpc.hydra.colosseum.quaiscan.io](https://rpc.hydra.colosseum.quaiscan.io)
+  - [rpc.paxos2.colosseum.quaiscan.io](https://rpc.paxos2.colosseum.quaiscan.io)
 - Explorer:
   - Link Structure: \`https://\[SHARDNAME].colosseum.quaiscan.io
   - [Cyprus1 Block Explorer](https://cyprus1.colosseum.quaiscan.io/)
-- RPC Endpoints:
-
-| Zone Name | Zone Index | RPC Endpoint                              |
-| --------  | ---------- | ----------------------------------------- |
-| Cyprus-1  | [0 0]      | https://rpc.cyprus1.colosseum.quaiscan.io |
-| Cyprus-2  | [0 1]      | https://rpc.cyprus2.colosseum.quaiscan.io |
-| Cyprus-3  | [0 2]      | https://rpc.cyprus3.colosseum.quaiscan.io |
-| Paxos-1   | [1 0]      | https://rpc.paxos1.colosseum.quaiscan.io  |
-| Paxos-2   | [1 1]      | https://rpc.paxos2.colosseum.quaiscan.io  |
-| Paxos-3   | [1 2]      | https://rpc.paxos3.colosseum.quaiscan.io  |
-| Hydra-1   | [2 0]      | https://rpc.hydra1.colosseum.quaiscan.io  |
-| Hydra-2   | [2 1]      | https://rpc.hydra2.colosseum.quaiscan.io  |
-| Hydra-3   | [2 2]      | https://rpc.hydra3.colosseum.quaiscan.io  |
 
 ### Devnet
 
@@ -180,4 +181,4 @@ Do not open the above HTTP ports for any reason. You will be putting your local 
 - `chainId`: 1337
 - `NONCE`: 0
 - Local Node Endpoints:
-  - `http://127.0.0.1:[SHARD-PORT-NUMBER]`
+  - `http://127.0.0.1:[SHARD-PORT-NUMBER]` or&#x20;

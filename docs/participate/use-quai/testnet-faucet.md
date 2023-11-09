@@ -1,12 +1,9 @@
 ---
 title: Testnet Faucet
 description: Get some testnet Quai tokens.
-slug: /testnet-faucet
 hide_table_of_contents: false
 sidebar_position: 4
 ---
-
-# Testnet Faucet
 
 The [Quai Faucet](https://dashboard.quai.network/faucet) allows all Testnet participants to receive small amounts of testnet Quai at no cost.
 

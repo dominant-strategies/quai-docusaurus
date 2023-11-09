@@ -1,12 +1,9 @@
 ---
-title: The Iron Age Testnet
+title: Iron Age Testnet
 description: A hub of links and resources for Quai Network's Iron Age Testnet.
-slug: /iron-age-testnet
 hide_table_of_contents: false
 sidebar_position: 2
 ---
-
-# Iron Age Testnet
 
 ## Important Links
 
@@ -20,8 +17,8 @@ The Iron Age Testnet is the third public test of the Quai protocol. The followin
 | [**Dominant Strategies Github**](https://github.com/dominant-strategies)                                           | The home of all Dominant Strategies repositories, including go-quai, quai-gpu-miner, and go-quai-stratum.  |
 | [**Testnet Schedule & Incentives Article**](https://qu.ai/blog/iron-age-testnet-schedule/)                         | A detailed schedule of the Iron Age Testnet.                                                               |
 | [**Network Stats Page**](https://stats.quai.network/)                                                              | An invite-only node stats page for RPC/infrastructure providers.                                           |
-| [**Node Setup Tutorial**](../participate/node/start-a-node/start-a-node.md)                                        | Learn how to run a Testnet node.                                                                           |
-| [**GPU Miner Setup Tutorial**](../participate/mining/gpu-miner/gpu-miner.md)                                       | Learn how to run a GPU miner and connect it to a stratum proxy.                                            |
+| [**Node Setup Tutorial**](./node/start-a-node.md)                                                                  | Learn how to run a Testnet node.                                                                           |
+| [**GPU Miner Setup Tutorial**](./mining/gpu-miner/gpu-miner.md)                                                    | Learn how to run a GPU miner and connect it to a stratum proxy.                                            |
 | [**Contract Deployment Tutorial(s)**](../develop/tutorials/single-chain.md)                                        | Learn how to deploy single-chain or multi-chain smart contracts.                                           |
 | [**Testnet Terms of Use**](./iron-age-testnet-tos.md)                                                              | Disclaimers and policies for interacting with Quai Network testnets.                                       |
 
@@ -31,7 +28,7 @@ The Iron Age Testnet offers incentives in Mainnet Quai tokens to [Quai miners wh
 
 ### Miners
 
-8 million Mainnet Quai tokens will be distributed to individuals who mine valid blocks on canonical Quai Network chains throughout the Iron Age Testnet. 
+8 million Mainnet Quai tokens will be distributed to individuals who mine valid blocks on canonical Quai Network chains throughout the Iron Age Testnet.
 
 The Mainnet rewards earned by each address will be determined by calculating what proportion of total Testnet blocks were mined by the address. For example, if a Zone 1 address mined 10 blocks and a total of 1,000 blocks were mined for the duration of the Iron Age Testnet in Zone 1, that address would receive 1% of mining rewards for Zone 1, or 8,888.889 Quai. All rewards will be tracked, calculated, and distributed via on-chain data – be sure to hold onto the private keys for the address(es) you use to mine!
 
@@ -43,14 +40,14 @@ No individual mining address will be able to receive more than 5% of the mining 
 IMPORTANT NOTE FOR TESTNET MINERS: The Iron Age Testnet will support the creation of mining pools; however, our team at Dominant Strategies will not be maintaining or recommending any mining pools for this Testnet. Due to the way mining rewards are tracked and calculated, allocating your hashpower to a pool that you don’t control will lead to your mining rewards being earned by the pool operator.
 :::
 
-Learn how to start mining Quai in the [GPU miner documentation](../participate/mining/miner-overview/miner-overview.md).
+Learn how to start mining Quai in the [GPU miner documentation](../participate/mining/miner-overview.md).
 
 ### Developers
 
 Wave 1 of applications are open for [Quai Genesis, a Quai Network grants program](https://qu.ai/genesis). Within Wave 1 of the Genesis grants program, two teams will be selected to work closely with the Dominant Strategies team to deploy their project on Quai in exchange for a grant in Mainnet Quai tokens. One or more teams will be selected and incentivized to build in each of the following categories:
 
-* Decentralized Exchange
-* Wallet
+- Decentralized Exchange
+- Wallet
 
 The goal of Wave 1 is to incentivize and support the creation of foundational services/tooling on Quai. Later waves of the Genesis program will focus more broadly on smart contract creation and dApp deployment. Full details on how to apply to the Quai Genesis grants program can be found [on the Quai website](https://qu.ai/genesis/).
 

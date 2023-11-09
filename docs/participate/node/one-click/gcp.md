@@ -1,11 +1,8 @@
 ---
 title: One-Click GCP Deployment
 description: One-click deployment for a Quai node on GCP.
-slug: /gcp
 hide_table_of_contents: false
 ---
-
-# One-Click GCP Deployment
 
 ## Introduction
 
@@ -15,8 +12,8 @@ In this tutorial, we'll be covering a one-click deploy method for a Quai Network
 
 To use the GCP one-click deploy, you'll need:
 
-* [Google Cloud account](https://cloud.google.com/)
-* [Google Cloud SDK](https://cloud.google.com/cli?)
+- [Google Cloud account](https://cloud.google.com/)
+- [Google Cloud SDK](https://cloud.google.com/cli?)
 
 To install the Google Cloud CLI SDK, follow the [installation guide](https://cloud.google.com/sdk/docs/install-sdk/) for your specific operating system.
 
@@ -52,9 +49,9 @@ This will walk you through authenticating your Google Cloud account as well as d
 
 You'll need to have a few config variables prior to deploying either node type. Make sure you've collected:
 
-* `coinbase-addresses`: to deploy a node, you'll need an address for every chain. Generate one address for each chain via the "Add Address" button in [Pelagus Wallet](https://chrome.google.com/webstore/detail/pelagus/gaegollnpijhedifeeeepdoffkgfcmbc)'s accounts page.
-* `gcp-region`: you can find region options on [GCP's available regions page](https://cloud.google.com/compute/docs/regions-zones). If you're not sure which region to select, a solid default is `us-central1.`
-* `project-id`: this is the project you'll be deploying your node to. Your project name be easily by clicking the dropdown menu at the top left of your [GCP Console page](https://console.cloud.google.com/).
+- `coinbase-addresses`: to deploy a node, you'll need an address for every chain. Generate one address for each chain via the "Add Address" button in [Pelagus Wallet](https://chrome.google.com/webstore/detail/pelagus/gaegollnpijhedifeeeepdoffkgfcmbc)'s accounts page.
+- `gcp-region`: you can find region options on [GCP's available regions page](https://cloud.google.com/compute/docs/regions-zones). If you're not sure which region to select, a solid default is `us-central1.`
+- `project-id`: this is the project you'll be deploying your node to. Your project name be easily by clicking the dropdown menu at the top left of your [GCP Console page](https://console.cloud.google.com/).
 
 The one-click deploy command will automatically configure.
 
@@ -64,15 +61,15 @@ The following command is used to deploy a Quai Network global node to a GCP Comp
 
 You'll need to replace:
 
-* `deployment-name`: replace `<deployment-name>` with the name of your choice.
-  * **Example:** `deployments create quai-node-deployment`
-* `gcp-region`: replace `<gcp-region>`with the region of your choice.
-  * **Example:** `region-param: us-central1`
-* `coinbase-address`: replace each of the coinbase addresses with your own, but **remove the "0x" from the front of the address**.
-  * **Example:** My Cyprus1 address is 0x0000000000000000000000000000000000000000, so I would remove the "0x" and put it in place of `<zone-0-0-address>`
-  * `zone-0-0-coinbase-address: 0000000000000000000000000000000000000000`
-* `project-id`: replace `<project-id>` with your project ID.
-  * **Example:** `--project voltaic-genie-374321`
+- `deployment-name`: replace `<deployment-name>` with the name of your choice.
+  - **Example:** `deployments create quai-node-deployment`
+- `gcp-region`: replace `<gcp-region>`with the region of your choice.
+  - **Example:** `region-param: us-central1`
+- `coinbase-address`: replace each of the coinbase addresses with your own, but **remove the "0x" from the front of the address**.
+  - **Example:** My Cyprus1 address is 0x0000000000000000000000000000000000000000, so I would remove the "0x" and put it in place of `<zone-0-0-address>`
+  - `zone-0-0-coinbase-address: 0000000000000000000000000000000000000000`
+- `project-id`: replace `<project-id>` with your project ID.
+  - **Example:** `--project voltaic-genie-374321`
 
 ```bash
 gcloud deployment-manager deployments create <deployment-name>
@@ -103,18 +100,18 @@ The following command is used to deploy a Quai Network slice node to a GCP Compu
 
 You'll need to replace:
 
-* `slice-type`: replace `<slice-type>` with the slice you'd like to run.
-  * Specify the slice type with the format: `zone-<region-index>-<zone-index>`
-  * **Example:** `slice-type: zone-0-0` (Cyprus1)
-* `deployment-name`: replace `<deployment-name>` with the name of your choice.
-  * **Example:** `deployments create quai-node-deployment`
-* `gcp-region`: replace `<gcp-region>`with the region of your choice.
-  * **Example:** `region-param: us-central1`
-* `coinbase-address`: replace each of the coinbase addresses with your own, but **remove the "0x" from the front of the address**.
-  * **Example:** My Cyprus1 address is 0x0000000000000000000000000000000000000000, so I would remove the "0x" and put it in place of `<zone-0-0-address>`
-  * `zone-0-0-coinbase-address: 0000000000000000000000000000000000000000`
-* `project-id`: replace `<project-id>` with your project ID.
-  * **Example:** `--project voltaic-genie-374321`
+- `slice-type`: replace `<slice-type>` with the slice you'd like to run.
+  - Specify the slice type with the format: `zone-<region-index>-<zone-index>`
+  - **Example:** `slice-type: zone-0-0` (Cyprus1)
+- `deployment-name`: replace `<deployment-name>` with the name of your choice.
+  - **Example:** `deployments create quai-node-deployment`
+- `gcp-region`: replace `<gcp-region>`with the region of your choice.
+  - **Example:** `region-param: us-central1`
+- `coinbase-address`: replace each of the coinbase addresses with your own, but **remove the "0x" from the front of the address**.
+  - **Example:** My Cyprus1 address is 0x0000000000000000000000000000000000000000, so I would remove the "0x" and put it in place of `<zone-0-0-address>`
+  - `zone-0-0-coinbase-address: 0000000000000000000000000000000000000000`
+- `project-id`: replace `<project-id>` with your project ID.
+  - **Example:** `--project voltaic-genie-374321`
 
 ```bash
 gcloud deployment-manager deployments create <deployment-name>
@@ -146,8 +143,8 @@ Now that your node and proxy are deployed to a GCP Compute Engine project, we're
 
 Navigate to your Compute Engine dashboard and locate your deployment instance.
 
-![GCP Deployment](../../../../../static/img/gcp-tutorial.png)
+![GCP Deployment](/img/gcp-tutorial.png)
 
 On the right of you instance, there should be an SSH button. Click the button to open an SSH-in-browser connection to your VM.
 
-**Once the SSH connection has loaded, you can follow the** [**Run A Node tutorial**](../../start-a-node/start-a-node.md) **and** [**Run a Stratum Proxy tutorial**](../../../stratum-proxy/run-stratum/run-stratum.md) **to start your node and proxy.**
+**Once the SSH connection has loaded, you can follow the** [**Run A Node tutorial**](../start-a-node.md) **and** [**Run a Stratum Proxy tutorial**](../../stratum-proxy/run-stratum.md) **to start your node and proxy.**

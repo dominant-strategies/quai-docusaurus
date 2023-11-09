@@ -1,7 +1,6 @@
 ---
 title: Multi-Chain Deployment Tutorial
 description: A guide to deploying a multi-chain smart contract on Quai.
-slug: /multi-chain-deploy
 hide_table_of_contents: false
 sidebar_position: 2
 ---

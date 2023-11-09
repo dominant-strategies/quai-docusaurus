@@ -1,18 +1,15 @@
 ---
 title: Starting and Running A Node
 description: How to start and run a Quai Network node.
-slug: /start-a-node
 hide_table_of_contents: false
 sidebar_position: 2
 ---
-
-# Starting and Running A Node
 
 ## Introduction
 
 Here, we'll be installing go-quai, the Go implementation of Quai Network. This tutorial is focused on Linux distributions and MacOS systems.
 
-:::warning 
+:::warning
 Running go-quai on Windows or WSL2 is not currently supported.
 :::
 
@@ -30,31 +27,31 @@ Prefer a video tutorial? Check it out here:
 
 ### Requirements
 
-:::info 
-Quai consists of many "slices," or execution shards, that work together to form an overarching network. A **global node** runs all of these slices, while a **slice node** runs only a single slice. Our team at Dominant Strategies recommends a **slice node** for the vast majority of users. If you're split on which kind of node to run, [read this](../node-faq/node-faq.md#global-v-slice-node).
+:::info
+Quai consists of many "slices," or execution shards, that work together to form an overarching network. A **global node** runs all of these slices, while a **slice node** runs only a single slice. Our team at Dominant Strategies recommends a **slice node** for the vast majority of users. If you're split on which kind of node to run, [read this](./node-faq.md#global-v-slice-node).
 :::
 
 To run a **global node** during the Iron Age Testnet, you'll need a MacOS or Ubuntu machine with the following specifications:
 
-* Fast CPU with 8+ cores
-* 32GB+ RAM
-* Fast SSD with at least 3TB free space
-* 10+ MBit/sec download Internet service
+- Fast CPU with 8+ cores
+- 32GB+ RAM
+- Fast SSD with at least 3TB free space
+- 10+ MBit/sec download Internet service
 
 To run a **slice node** during the Iron Age Testnet, you'll need a MacOS or Ubuntu machine with the following specifications:
 
-* CPU with 4+ cores
-* 16GB RAM
-* 1TB free storage space to sync
-* 10+ MBit/sec download Internet service
+- CPU with 4+ cores
+- 16GB RAM
+- 1TB free storage space to sync
+- 10+ MBit/sec download Internet service
 
 ### Common Troubleshooting Resources
 
-* [Resolving UPnP Errors](../node-faq/node-faq.md#upnp-issues)
-* [Troubleshooting node not appending blocks](../node-faq/node-faq.md#node-not-appending)
-* [Determining node sync status](../node-faq/node-faq.md#check-sync-status)
+- [Resolving UPnP Errors](./node-faq.md#upnp-issues)
+- [Troubleshooting node not appending blocks](./node-faq.md#node-not-appending)
+- [Determining node sync status](./node-faq.md#check-sync-status)
 
-Additional troubleshooting resources are available in the [Node FAQ](../node-faq/node-faq.md).
+Additional troubleshooting resources are available in the [Node FAQ](./node-faq.md).
 
 ## Install Dependencies
 
@@ -62,7 +59,7 @@ To run an instance of go-quai, you'll need to install a few dependencies. You ca
 
 #### Go v1.21.0+
 
-Ubuntu Snap Install (*snap is not default installed on all Linux Distros*):
+Ubuntu Snap Install (_snap is not default installed on all Linux Distros_):
 
 ```bash
 # install snapd if you don't have it already
@@ -105,7 +102,7 @@ git clone https://github.com/dominant-strategies/go-quai
 cd go-quai
 ```
 
-This command installs the *main branch* to your local machine. Unless you intend to develop, you must checkout the latest *release*.
+This command installs the _main branch_ to your local machine. Unless you intend to develop, you must checkout the latest _release_.
 
 You can find the latest release on the [go-quai releases page](https://github.com/dominant-strategies/go-quai/tags). Then, check out the latest release with:
 
@@ -116,7 +113,7 @@ git checkout put-latest-release-here
 For example (this not the latest release, check the releases page for the latest release number)
 
 ```bash
-git checkout v1.2.3-rc.4 
+git checkout v1.2.3-rc.4
 ```
 
 ## Node Configuration
@@ -129,19 +126,19 @@ cp network.env.dist network.env
 
 The `network.env` file houses a number of important parameters that we will configure to run our node correctly. The variables listed below will need to be set correctly for every experience level.
 
-* `COINBASE`: the address in each chain (location) that mining rewards are paid to. Note that there is one coinbase address per shard.
-* `NETWORK`: the network (testnet, devnet, etc.) your node is running on.
-* `SLICES`: the slices of the network that the node will run. Note that the default configuration is for a global node, and that this parameter must be modified to run a slice node.
+- `COINBASE`: the address in each chain (location) that mining rewards are paid to. Note that there is one coinbase address per shard.
+- `NETWORK`: the network (testnet, devnet, etc.) your node is running on.
+- `SLICES`: the slices of the network that the node will run. Note that the default configuration is for a global node, and that this parameter must be modified to run a slice node.
 
-:::info 
-This file also contains a number of more advanced parameters that *will not be covered* in this article.
+:::info
+This file also contains a number of more advanced parameters that _will not be covered_ in this article.
 :::
 
 Open the config file in your favorite text editor or IDE.
 
-* [vim](https://www.vim.org/)
-* [nano](https://www.nano-editor.org/)
-* [Visual Studio Code](https://visualstudio.microsoft.com/)
+- [vim](https://www.vim.org/)
+- [nano](https://www.nano-editor.org/)
+- [Visual Studio Code](https://visualstudio.microsoft.com/)
 
 ```bash
 # edit network.env with nano
@@ -154,7 +151,7 @@ code .
 vim network.env
 ```
 
-If you are mining, **replace the default coinbase addresses** below with your own for the chains that you intend to mine. You can generate addresses for each shard easily with [Pelagus Wallet or Koala Wallet](../../use-quai/wallets/wallets.md).
+If you are mining, **replace the default coinbase addresses** below with your own for the chains that you intend to mine. You can generate addresses for each shard easily with [Pelagus Wallet or Koala Wallet](../use-quai/wallets.md).
 
 You must generate a unique address for each `COINBASE` that is maps to a shard, i.e. generate a Cyprus-1 address with Pelagus and set it as the `ZONE_0_0_COINBASE` below. Follow the same process for each chain you want to mine.
 
@@ -175,15 +172,15 @@ ZONE_2_2_COINBASE=0xF39E7d05B5A1a2F934cC43221383f29e4794c822 # hydra3
 If you do not replace the addresses in the `network.env` with Quai addresses you generate and hold the private keys for, you will not receive any mining rewards.
 :::
 
-Set the `NETWORK` variable to the network you plan on running. Available network options can be found in the [network specifications page](../../../develop/networks.mdx#important-links-and-specs).
+Set the `NETWORK` variable to the network you plan on running. Available network options can be found in the [network specifications page](../../develop/networks.mdx#important-links-and-specs).
 
-Set the `SLICES` parameter to whichever slices of the network you would like to run. To learn more about [running setups other than a global node, check out the FAQ](../node-faq/node-faq.md#configuring-slices).
+Set the `SLICES` parameter to whichever slices of the network you would like to run. To learn more about [running setups other than a global node, check out the FAQ](./node-faq.md#configuring-slices).
 
 ### Router Configuration
 
-In order to connect directly to peers in the network, you'll need to make sure the [peering ports](../node-overview/node-overview.md#networking-and-conventions) on your router are forwarded or externally accessible.
+In order to connect directly to peers in the network, you'll need to make sure the [peering ports](./node-overview.md#networking-and-conventions) on your router are forwarded or externally accessible.
 
-The easiest way to ensure the peering ports are forwarded on your router is to **enable the universal plug and play (UPNP) option on your router**. General information on how to enable UPNP for *multiple different types of routers* can be found in [this article](https://www.lifewire.com/enable-upnp-on-a-router-5206124). If your router *is not covered in this article*, you may have to search for UPNP instructions for your specific model.
+The easiest way to ensure the peering ports are forwarded on your router is to **enable the universal plug and play (UPNP) option on your router**. General information on how to enable UPNP for _multiple different types of routers_ can be found in [this article](https://www.lifewire.com/enable-upnp-on-a-router-5206124). If your router _is not covered in this article_, you may have to search for UPNP instructions for your specific model.
 
 :::warning
 If your router does not have UPNP or port-forwarding enabled, your node will return an error when starting and immediately stop running.
@@ -201,7 +198,7 @@ Set `ENABLE_NAT` to true, and replace the placeholder for `EXT_IP` above with yo
 
 Make sure to uncomment the `EXT_IP` line (i.e. remove the `#` from the beginning of the line).
 
-If you're having issues with this step, make sure to check out the [FAQ router troubleshooting guide](../node-faq/node-faq.md#networking).
+If you're having issues with this step, make sure to check out the [FAQ router troubleshooting guide](./node-faq.md#networking).
 
 ## Starting a Node
 
@@ -215,7 +212,7 @@ make go-quai
 
 ### Start
 
-Now that we've built the source, we need to decide which type of node to run. As detailed in the [Node Overview](../node-overview/node-overview.md#node-types) page, users **can opt for either a** [**global node or slice node**](../node-faq/node-faq.md#global-v-slice-node) **depending on individual use case and hardware.**
+Now that we've built the source, we need to decide which type of node to run. As detailed in the [Node Overview](./node-overview.md#node-types) page, users **can opt for either a** [**global node or slice node**](./node-faq.md#global-v-slice-node) **depending on individual use case and hardware.**
 
 #### Run a Global Node
 
@@ -227,9 +224,9 @@ make run
 
 #### Run a Slice Node
 
-Slice nodes run what is called a "slice" of Quai Network. A slice is a subset of the network that validates prime, one region, and one zone chain. In the codebase, a slice is identified by its [region and zone index](../node-overview/node-overview.md#networking-and-conventions). Region and zone indices are 0-indexed and range from 0-2.
+Slice nodes run what is called a "slice" of Quai Network. A slice is a subset of the network that validates prime, one region, and one zone chain. In the codebase, a slice is identified by its [region and zone index](./node-overview.md#networking-and-conventions). Region and zone indices are 0-indexed and range from 0-2.
 
-To spin up a slice node, **you'll need to edit the `network.env` file to specify the slices you want to run**. [Slice specification](../node-faq/node-faq.md#configuring-slices) can be done by editing the `SLICES` variable, which is default set to run all slices in the network.
+To spin up a slice node, **you'll need to edit the `network.env` file to specify the slices you want to run**. [Slice specification](./node-faq.md#configuring-slices) can be done by editing the `SLICES` variable, which is default set to run all slices in the network.
 
 For example, if you wanted to run two slices, you would change `SLICES` to the following (replace the corresponding `INDEX` variables for your desired slices):
 
@@ -251,7 +248,7 @@ This will start up your slice node with the slices specified in your `network.en
 
 Node operators should self-select the slice least latent to them, in order to minimize their uncle rate and maximize network bandwidth. Providing an initial suggestion for geographic organization will expidite the minimization of latency.
 
-![Latency Map](../../../../static/img/LatencyMap.png)
+![Latency Map](/img/LatencyMap.png)
 
 ### Logs
 
@@ -265,15 +262,15 @@ tail -f nodelogs/region-2.log
 tail -f nodelogs/zone-0-0.log
 ```
 
-Checking the node logs output is the *best way* to [*verify that your full node is running correctly*](../node-faq/node-faq.md#checking-nodelogs). You can also easily view node logs in your favorite IDE or text editor.
+Checking the node logs output is the _best way_ to [_verify that your full node is running correctly_](./node-faq.md#checking-nodelogs). You can also easily view node logs in your favorite IDE or text editor.
 
 The outputs of a node that has **started correctly** should look similar to below.
 
 ```log
-INFO [01-30|19:55:15.397] Starting Quai 0.1.0-pre.0 on local testnet 
+INFO [01-30|19:55:15.397] Starting Quai 0.1.0-pre.0 on local testnet
 INFO [01-30|19:55:15.414] Maximum peer count                       ETH=50 total=50
-WARN [01-30|19:55:15.460] Disable transaction unindexing for archive node 
-INFO [01-30|19:55:15.460] Enabling recording of key preimages since archive mode is used 
+WARN [01-30|19:55:15.460] Disable transaction unindexing for archive node
+INFO [01-30|19:55:15.460] Enabling recording of key preimages since archive mode is used
 INFO [01-30|19:55:15.460] Set global gas cap                       cap=50,000,000
 INFO [01-30|19:55:15.460] Allocated trie memory caches             clean=307.00MiB dirty=0.00B
 INFO [01-30|19:55:15.461] Allocated cache and file handles         database=/Users/user/Library/Quai/local/zone-0-0/quai/chaindata cache=512.00MiB handles=5120
@@ -289,7 +286,7 @@ Depending on what your node is currently doing, your logs may not look **exactly
 
 ### Syncing
 
-If your node has started correctly, it will begin syncing chain state from peers. There are a few ways to [check the progress of the sync](../node-faq/node-faq.md#check-sync-status).
+If your node has started correctly, it will begin syncing chain state from peers. There are a few ways to [check the progress of the sync](./node-faq.md#check-sync-status).
 
 From the **command line**, we can run the following command(s) to print the list of blocks that have been appended. **Replace** `location-to-print-here.log` **with the file name of the logs you'd like to print**.
 
@@ -315,9 +312,9 @@ INFO   [09-18|10:18:18.511] Appended new block                       number=[102
 
 **To check the progress of your node's sync, compare the number of the latest block output from the above command to the current height of the chain you're running on the** [**Quai node stats page**](https://stats.quai.network/).
 
-You can also check the progress of your node's sync using the **client JSON RPC API**. The [quai_syncing](../../../develop/apis/json-rpc-api.md#quai_syncing) API method can be used easily in the [Quai Postman Workspace](https://documenter.getpostman.com/view/19820580/2s935iv7GU) or via the command line.
+You can also check the progress of your node's sync using the **client JSON RPC API**. The [quai_syncing](../../develop/apis/json-rpc-api.md#quai_syncing) API method can be used easily in the [Quai Postman Workspace](https://documenter.getpostman.com/view/19820580/2s935iv7GU) or via the command line.
 
-To check the sync status of all of your nodes at once, you can use the script provided in the[ FAQ](../node-faq/node-faq.md#global-sync-status).
+To check the sync status of all of your nodes at once, you can use the script provided in the[ FAQ](./node-faq.md#global-sync-status).
 
 :::warning
 If your node temporarily stops appending during sync, do not stop it. Allow it to continue running, and only reach out for support if the node has not appended a block for over 1 hour.
@@ -339,7 +336,7 @@ If you're running a miner, running `make stop` will not work. You must kill the 
 
 ## Maintaining a Node
 
-Making sure your node is *running correctly* is crucial to both the functionality of any dependent infrastructure and the network as a whole.
+Making sure your node is _running correctly_ is crucial to both the functionality of any dependent infrastructure and the network as a whole.
 
 ### Updating
 
@@ -358,7 +355,7 @@ git fetch --all
 Checkout the [latest release of go-quai](https://github.com/dominant-strategies/go-quai/tags):
 
 ```bash
-git checkout put-latest-release-here 
+git checkout put-latest-release-here
 ```
 
 Finally, rebuild the source using:
@@ -375,9 +372,9 @@ To archive/backup your node's database you'll first need to **stop your node** b
 
 Common reasons for backing up your node's database include:
 
-* Importing/exporting node database
-* Changing machines
-* Wiping the drive the database is stored on
+- Importing/exporting node database
+- Changing machines
+- Wiping the drive the database is stored on
 
 Common reasons for syncing from a snapshot/database include:
 
@@ -385,8 +382,8 @@ Common reasons for syncing from a snapshot/database include:
 Please be aware that when you are syncing from a snapshot, you are trusting the contents of the snapshot. For your node to fully verify the network, you have to sync from genesis.
 :::
 
-* Reducing syncing times
-* Restarting a node on a new machine/drive
+- Reducing syncing times
+- Restarting a node on a new machine/drive
 
 **Linux Machines**
 
@@ -415,9 +412,9 @@ To restore your database from a snapshot on **Linux**, use:
 # Stop node
 make stop
 
-# Remove current db 
+# Remove current db
 # This command will permanently delete all state that you have synced thus far
-rm -rf ~/.quai 
+rm -rf ~/.quai
 
 # Expand compressed db into node
 tar -xzvf quai_backup.tar.gz
@@ -470,7 +467,7 @@ cp -r quai_backup ~/Library/Quai
 Resetting your node and clearing your database will remove any state you have synced. This is a non-reversible action and any commands noted below should be utilized with caution.
 :::
 
-Developers and node runners may find that situations arise where they need to completely clear your node of synced state or do a full reset in the case of an issue or bug.  [A full reset of a node](../node-faq/node-faq.md#resetting-a-node) involves stopping the node, clearing the current nodelogs, and removing all synced state.
+Developers and node runners may find that situations arise where they need to completely clear your node of synced state or do a full reset in the case of an issue or bug. [A full reset of a node](./node-faq.md#resetting-a-node) involves stopping the node, clearing the current nodelogs, and removing all synced state.
 
 **Reminder, resetting your node is non-reversible and should only be done if you understand the implications of removing all synced state.**
 
