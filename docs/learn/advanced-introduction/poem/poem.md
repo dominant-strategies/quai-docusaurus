@@ -7,7 +7,7 @@ sidebar_position: 1
 
 # Proof-of-Entropy-Minima
 
-**NOTE: Proof-of-Entropy-Minima is based heavily off of Proof-of-Work Nakamoto Consensus. A strong understanding of Proof-of-Work consensus is highly recommended before reading the PoEM documentation. A detailed explanation of Nakamoto Consensus can be found** [**here**](https://courses.grainger.illinois.edu/ece598pv/sp2021/lectureslides2021/ECE\_598\_PV\_course\_notes3.pdf)**. The formal Proof-of-Entropy-Minima research paper can be found** [**here**](https://arxiv.org/abs/2303.04305)**.**&#x20;
+**NOTE: Proof-of-Entropy-Minima is based heavily off of Proof-of-Work Nakamoto Consensus. A strong understanding of Proof-of-Work consensus is highly recommended before reading the PoEM documentation. A detailed explanation of Nakamoto Consensus can be found** [**here**](https://courses.grainger.illinois.edu/ece598pv/sp2021/lectureslides2021/ECE_598_PV_course_notes3.pdf)**. The formal Proof-of-Entropy-Minima research paper can be found** [**here**](https://arxiv.org/abs/2303.04305)**.**
 
 Blockchain nodes work together to agree on a list of transactions and the order in which they should be recorded. How these nodes come to agreement, called a consensus mechanism, is crucial for ensuring that the blockchain is reliable and censorship-resistant.
 
