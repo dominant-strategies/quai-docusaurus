@@ -54,17 +54,17 @@ Using the script is the recommended way to install and build the miner due to it
 
 There is a script to build the miner supported on HiveOS. To use the script, you can run the following commands in your HiveOS terminal:
 
-```bash
+```shell
 sudo selfupgrade
 ```
 
-```bash
-curl -fsSL https://raw.githubusercontent.com/dominant-strategies/quai-gpu-miner/main/miner_deploy_script.sh | bash
+```shell
+curl -fsSL https://raw.githubusercontent.com/dominant-strategies/quai-gpu-miner/main/miner_deploy_script.sh | shell
 ```
 
 Running this command will install and build all the necessary prerequisites for the miner. After this script has finished running, you can move into the build directory with the following command:
 
-```bash
+```shell
 cd /home/user/quai-gpu-miner/build
 ```
 
@@ -84,7 +84,7 @@ Once you have the address and port and are in the `build` directory, run the fol
 Replace `PROXYIPADDRESS` with the IP address of your proxy. Replace `STRATUMPORT` with the websocket port of your proxy, which is [default set to `3333`](../../stratum-proxy/stratum-faq.md#stratum-port)
 :::
 
-```bash
+```shell
 ./ethcoreminer/ethcoreminer -G -P stratum://PROXYIPADRESS:STRATUMPORT
 ```
 

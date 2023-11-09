@@ -93,7 +93,7 @@ const config: Config = {
 					{
 						href: 'https://github.com/dominant-strategies/quai-docs',
 						position: 'right',
-						className: 'header-github-link',
+						className: 'header-github-link header-icon',
 					},
 				],
 			},
@@ -176,7 +176,7 @@ const config: Config = {
 			prism: {
 				theme: lightTheme,
 				darkTheme: darkTheme,
-				additionalLanguages: ['solidity', 'bash', 'diff', 'json'],
+				additionalLanguages: ['solidity', 'diff', 'json'],
 			},
 		} satisfies Preset.ThemeConfig,
 }

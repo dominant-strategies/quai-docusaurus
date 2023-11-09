@@ -23,20 +23,20 @@ If you are mining for Testnet Rewards, be sure to **KEEP THE PRIVATE KEYS OF THE
 
 In order to run the quai-gpu-miner on HiveOS and mine valid blocks, you'll need the following:
 
-* [A synced go-quai node](../../node/start-a-node.md)
-* [A stratum proxy connected to your go-quai node](../../stratum-proxy/run-stratum.md)
-* A machine running HiveOS with:
-  * At least one AMD or Nvidia GPU
-  * An AMD or Intel CPU
-  * 4GB+ of RAM
+- [A synced go-quai node](../../node/start-a-node.md)
+- [A stratum proxy connected to your go-quai node](../../stratum-proxy/run-stratum.md)
+- A machine running HiveOS with:
+  - At least one AMD or Nvidia GPU
+  - An AMD or Intel CPU
+  - 4GB+ of RAM
 
 ### Common Troubleshooting Resources
 
-* [How to find the IP of a Stratum Proxy](../../stratum-proxy/stratum-faq.md#stratum-ip-address)
-* ["No usable mining devices found" error](./gpu-miner-faq.md#no-opencl-platforms-found--no-usable-mining-devices)
-* ["SIGSEGV encountered" error](./gpu-miner-faq.md#sigsegv)
-* [Low hashrate on AMD cards](./gpu-miner-faq.md#amd-low-hashrate)
-* [Error on make and/or build step](./gpu-miner-faq.md#error-on-make-andor-build)
+- [How to find the IP of a Stratum Proxy](../../stratum-proxy/stratum-faq.md#stratum-ip-address)
+- ["No usable mining devices found" error](./gpu-miner-faq.md#no-opencl-platforms-found--no-usable-mining-devices)
+- ["SIGSEGV encountered" error](./gpu-miner-faq.md#sigsegv)
+- [Low hashrate on AMD cards](./gpu-miner-faq.md#amd-low-hashrate)
+- [Error on make and/or build step](./gpu-miner-faq.md#error-on-make-andor-build)
 
 Additional troubleshooting resources are available in the [GPU Miner FAQ](./gpu-miner-faq.md).
 
@@ -58,25 +58,25 @@ Once you've installed and set up HiveOS on your rig, you'll need to update drive
 
 Prior to starting updates and installs, we need to switch users. Do this by running:
 
-```bash
+```shell
 sudo su user
 ```
 
 To upgrade HiveOS, run:
 
-```bash
+```shell
 sudo selfupgrade
 ```
 
 To update and install necessary graphics card drivers, run:
 
-```bash
+```shell
 sudo nvidia-driver-update
 ```
 
 Once drivers have been installed and updated, we'll need to install OpenCL:
 
-```bash
+```shell
 sudo amd-ocl-install 22.20
 ```
 
@@ -84,26 +84,26 @@ sudo amd-ocl-install 22.20
 
 Prior to installing any dependencies, you'll first want to make sure the system is up to date. We can do this by running:
 
-```bash
+```shell
 sudo apt update && sudo apt upgrade -y
 ```
 
 After Ubuntu has updated, we can begin installing the following dependencies:
 
-* `git`
-* `cmake`
-* `build-essential`
-* `mesa-common-dev`
+- `git`
+- `cmake`
+- `build-essential`
+- `mesa-common-dev`
 
 Install all dependencies using the following command:
 
-```bash
+```shell
 sudo apt install -y git cmake build-essential mesa-common-dev
 ```
 
 Finally, after installing all necessary dependencies and drivers, reboot your machine to ensure all updates are applied correctly using:
 
-```bash
+```shell
 sreboot
 ```
 
@@ -113,19 +113,19 @@ Now that the **environment and dependencies** are fully configured, we can start
 
 First, make sure you're in the home directory for the correct user. You can do this by running:
 
-```bash
+```shell
 sudo su user -
 ```
 
 Now, clone the `quai-gpu-miner` and navigate to the `quai-gpu-miner` directory:
 
-```bash
+```shell
 git clone https://github.com/dominant-strategies/quai-gpu-miner && cd quai-gpu-miner
 ```
 
 To install and update external repository dependencies, run the following:
 
-```bash
+```shell
 git submodule update --init --recursive
 ```
 
@@ -135,13 +135,13 @@ This will ensure that all the submodules referenced in the repository are **prop
 
 Start by making a directory named `build` and navigating to it:
 
-```bash
+```shell
 mkdir build && cd build
 ```
 
 Inside of the build directory, we'll need to install all of the build dependencies using `cmake` and then build and compile the miner:
 
-```bash
+```shell
 cmake .. && cmake --build .
 ```
 
@@ -163,7 +163,7 @@ Once you have the address and port and are in the `build` directory, run the fol
 Replace `PROXYIPADDRESS` with the IP address of your proxy. Replace `STRATUMPORT` with the websocket port of your proxy, which is [default set to `3333`](../../stratum-proxy/stratum-faq.md#stratum-port)
 :::
 
-```bash
+```shell
 ./ethcoreminer/ethcoreminer -G -P stratum://PROXYIPADRESS:STRATUMPORT
 ```
 

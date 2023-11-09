@@ -48,6 +48,6 @@ Currently, Quai Network is in the **testnet and development phase**. The roadmap
 2. Golden Age Testnet
 3. Silicon Age Testnet
 
-For each of these Testnets, our team at [Dominant Strategies](https://dominantstrategies.io) expects to run both a Testnet and Devnet, in addition to providing tools such as [block explorers](../participate/use-quai/block-explorers/block-explorers.md), [network statistics pages](https://stats.quai.network), and [faucets](../participate/use-quai/testnet-faucet/testnet-faucet.md).
+For each of these Testnets, our team at [Dominant Strategies](https://dominantstrategies.io) expects to run both a Testnet and Devnet, in addition to providing tools such as [block explorers](../participate/use-quai/block-explorers.md), [network statistics pages](https://stats.quai.network), and [faucets](../participate/use-quai/testnet-faucet.md).
 
 †[_Per transaction, assuming full transactional load and the same number of miners on both Quai Network and the Bitcoin Network_](../learn/advanced-introduction/merged-mining/energy-efficiency.mdx#energy-calculation).
