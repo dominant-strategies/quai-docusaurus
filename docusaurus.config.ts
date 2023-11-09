@@ -69,7 +69,7 @@ const config: Config = {
 				logo: {
 					alt: 'Quai Network Logo',
 					src: 'img/quai-logo.png',
-					href: '/docs/introduction',
+					href: '/docs/',
 				},
 				items: [
 					{
@@ -109,7 +109,6 @@ const config: Config = {
 				respectPrefersColorScheme: true,
 			},
 			footer: {
-				style: 'dark',
 				links: [
 					{
 						title: 'Docs',

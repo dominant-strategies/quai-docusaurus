@@ -25,7 +25,7 @@ To deploy a smart contract on Quai, you'll need a few things:
 
 Smart contracts on Quai Network can be deployed using a number of different methods. The most straightforward and widely used methods are using deployment tools like Hardhat. Contracts can also be deployed using the quais.js library, which offers increased flexibility and the ability to deploy via frontend or simple script.
 
-Information on how to deploy a simple smart contract with hardhat can be found in the [Single-Chain Deployment Tutorial](../tutorials/single-chain.md)
+Information on how to deploy a simple smart contract with hardhat can be found in the [Single-Chain Deployment Tutorial](../tutorials/single-chain.md).
 
 ## Cross-Chain Smart Contracts
 
@@ -41,4 +41,4 @@ Sister contracts are created by deploying contracts across all chains that the p
 
 Contracts intended to function across many chains will contain initially empty slots for the addresses of its sisters. If a contract intends to maintain functionality across the initial network of 13 chains, 12 slots are required for all 12 sister contracts to be referenced.
 
-Information on how to deploy a multi-chain smart contracts with hardhat can be found in the [Multi-Chain Deployment Tutorial](../tutorials/multi-chain.md)
+Information on how to deploy a multi-chain smart contracts with hardhat can be found in the [Multi-Chain Deployment Tutorial](../tutorials/multi-chain.md).
