@@ -1,7 +1,6 @@
 ---
 title: Single-Chain Deployment Tutorial
 description: A guide to deploying a single-chain smart contract on Quai.
-slug: /single-chain-deploy
 hide_table_of_contents: false
 sidebar_position: 1
 ---

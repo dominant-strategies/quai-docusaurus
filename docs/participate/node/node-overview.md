@@ -1,12 +1,9 @@
 ---
 title: Node Overview
 description: Overview of the implemenation of a Quai Network node.
-slug: /node-overview
 hide_table_of_contents: false
 sidebar_position: 1
 ---
-
-# Node Overview
 
 A node is a computer running an instance of Quai that communicates (peers) with other nodes. The web of communication between nodes makes up Quai Network.
 
@@ -14,7 +11,7 @@ Nodes are responsible for validating and propagating transactions across Quai Ne
 
 There are 4 unique kinds of nodes that exist within Quai Network that manage different subsets of data, serve different purposes, and have differing hardware requirements.
 
-If you're ready to start setting up your node now, check out [the written tutorial in the Quai docs](../start-a-node/start-a-node.md), or [the video tutorial on the Quai YouTube](https://www.youtube.com/watch?v=eKk8b5-7TMk).
+If you're ready to start setting up your node now, check out [the written tutorial in the Quai docs](./start-a-node.md), or [the video tutorial on the Quai YouTube](https://www.youtube.com/watch?v=eKk8b5-7TMk).
 
 ## Node Types
 
@@ -24,10 +21,10 @@ A global node on Quai Network maintains the ledger and generates proposed blocks
 
 The hardware requirement to run a global node during the Iron Age Testnet:
 
-* Fast CPU with 8+ cores
-* 32GB+ RAM
-* Fast SSD with at least 3TB free space
-* 10+ MBit/sec download Internet service
+- Fast CPU with 8+ cores
+- 32GB+ RAM
+- Fast SSD with at least 3TB free space
+- 10+ MBit/sec download Internet service
 
 ### Slice Node
 
@@ -35,10 +32,10 @@ A slice node on the network is a subset of a global node that validates Prime, a
 
 The hardware requirement to run a slice node:
 
-* CPU with 4+ cores
-* 16GB RAM
-* 1TB free storage space to sync
-* 10+ MBit/sec download Internet service
+- CPU with 4+ cores
+- 16GB RAM
+- 1TB free storage space to sync
+- 10+ MBit/sec download Internet service
 
 ### Multi-Slice Node
 
@@ -54,18 +51,18 @@ Watcher nodes are not currently a pre-set configuration.
 
 ## Networking and Conventions
 
-|  Chain Name | Chain Index | Peering Port (TCP/UDP) |
-| ----------- | ----------- | ---------------------- |
-| Prime       |             | 30303                  |
-| Cyprus      |             | 30304                  |
-| Paxos       |             | 30305                  |
-| Hydra       |             | 30306                  |
-| Cyprus-1    | [0 0]       | 30307                  |
-| Cyprus-2    | [0 1]       | 30308                  |
-| Cyprus-3    | [0 2]       | 30309                  |
-| Paxos-1     | [1 0]       | 30310                  |
-| Paxos-2     | [1 1]       | 30311                  |
-| Paxos-3     | [1 2]       | 30312                  |
-| Hydra-1     | [2 0]       | 30313                  |
-| Hydra-2     | [2 1]       | 30314                  |
-| Hydra-3     | [2 2]       | 30315                  |
+| Chain Name | Chain Index | Peering Port (TCP/UDP) |
+| ---------- | ----------- | ---------------------- |
+| Prime      |             | 30303                  |
+| Cyprus     |             | 30304                  |
+| Paxos      |             | 30305                  |
+| Hydra      |             | 30306                  |
+| Cyprus-1   | [0 0]       | 30307                  |
+| Cyprus-2   | [0 1]       | 30308                  |
+| Cyprus-3   | [0 2]       | 30309                  |
+| Paxos-1    | [1 0]       | 30310                  |
+| Paxos-2    | [1 1]       | 30311                  |
+| Paxos-3    | [1 2]       | 30312                  |
+| Hydra-1    | [2 0]       | 30313                  |
+| Hydra-2    | [2 1]       | 30314                  |
+| Hydra-3    | [2 2]       | 30315                  |

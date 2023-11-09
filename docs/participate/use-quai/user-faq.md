@@ -1,12 +1,9 @@
 ---
 title: User FAQ
 description: See the answers to frequently-asked-questions about Quai.
-slug: /user-faq
 hide_table_of_contents: false
 sidebar_position: 4
 ---
-
-# User FAQ
 
 ## TX Processing Times
 

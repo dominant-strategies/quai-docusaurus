@@ -1,7 +1,6 @@
 ---
 title: Introduction
 description: The basics of Quai Network.
-slug: /introduction
 hide_table_of_contents: false
 ---
 
@@ -19,7 +18,7 @@ While blockchain technology has shown its potential to enable a widely-used digi
 
 Quai addresses issues with scalability while maintaining decentralization to create an un-censorable network which can be ubiquitously used as money.
 
-![Hierarchical Structure](../../static/img/HierarchicalStructure.jpg)
+![Hierarchical Structure](/img/HierarchicalStructure.jpg)
 
 ## What does "Quai" mean?
 
@@ -51,4 +50,4 @@ Currently, Quai Network is in the **testnet and development phase**. The roadmap
 
 For each of these Testnets, our team at [Dominant Strategies](https://dominantstrategies.io) expects to run both a Testnet and Devnet, in addition to providing tools such as [block explorers](../participate/use-quai/block-explorers/block-explorers.md), [network statistics pages](https://stats.quai.network), and [faucets](../participate/use-quai/testnet-faucet/testnet-faucet.md).
 
-†[*Per transaction, assuming full transactional load and the same number of miners on both Quai Network and the Bitcoin Network*](../learn/advanced-introduction/merged-mining/energy-efficiency.mdx#energy-calculation).
+†[_Per transaction, assuming full transactional load and the same number of miners on both Quai Network and the Bitcoin Network_](../learn/advanced-introduction/merged-mining/energy-efficiency.mdx#energy-calculation).

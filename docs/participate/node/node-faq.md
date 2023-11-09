@@ -1,12 +1,9 @@
 ---
 title: Node FAQ
 description: Answers to commonly asked questions about Quai nodes.
-slug: /node-faq
 hide_table_of_contents: false
 sidebar_position: 4
 ---
-
-# Node FAQ
 
 ## Setup & Config
 
@@ -16,17 +13,17 @@ sidebar_position: 4
 
 The hardware requirement to run a slice node during the Iron Age Testnet:
 
-* CPU with 4+ cores
-* 16GB RAM
-* 1TB free storage space to sync
-* 10+ MBit/sec download Internet service
+- CPU with 4+ cores
+- 16GB RAM
+- 1TB free storage space to sync
+- 10+ MBit/sec download Internet service
 
 The hardware requirement to run a global node during the Iron Age Testnet:
 
-* Fast CPU with 8+ cores
-* 32GB+ RAM
-* Fast SSD with at least 3TB free space
-* 10+ MBit/sec download Internet service
+- Fast CPU with 8+ cores
+- 32GB+ RAM
+- Fast SSD with at least 3TB free space
+- 10+ MBit/sec download Internet service
 
 ### VPS / vGPU
 
@@ -44,17 +41,17 @@ Many users have experienced issues specifically with Contabo VPNs. We recommend 
 
 The go-quai client currently supports full nodes (nodes that store the entire state of the network, and verify each new state transition from genesis) of the following constructions:
 
-*Single-Slice (or just Slice):* A node running the Prime chain, a self-selected Region chain, and a self-selected Zone chain.
+_Single-Slice (or just Slice):_ A node running the Prime chain, a self-selected Region chain, and a self-selected Zone chain.
 
-*Multi-Slice:* A node running the Prime chain, one or more self-selected Region chains, and two or more self-selected Zone chains.
+_Multi-Slice:_ A node running the Prime chain, one or more self-selected Region chains, and two or more self-selected Zone chains.
 
-*Global:* A node running the Prime chain, all Region chains, and all Zone chains.
+_Global:_ A node running the Prime chain, all Region chains, and all Zone chains.
 
 The go-quai client currently does not support the following node types:
 
-*Light Node:* A node that only verifies new state transitions and does not retain historical state.
+_Light Node:_ A node that only verifies new state transitions and does not retain historical state.
 
-*Archive Node:* A node that verifies new state transitions and maintains the entire historical state of the network, taking and storing a snapshot of state block by block.
+_Archive Node:_ A node that verifies new state transitions and maintains the entire historical state of the network, taking and storing a snapshot of state block by block.
 
 | go-quai          | Single-Slice       | Multi-Slice              | Global (All Slices) |
 | ---------------- | ------------------ | ------------------------ | ------------------- |
@@ -78,25 +75,25 @@ A slice node will be sufficient to trustlessly interact with the network in all 
 
 The `network.env` file can be thought of as the configuration file for your node. When starting, your node will look at the `network.env` file to know which slices to run, which network to run on (colosseum, garden, etc.), where mining rewards should be paid out to, and more.
 
-* `COINBASE` : The address in each chain (slice) that mining rewards are paid to. Note that there is one coinbase address per chain.
-* `NETWORK` : the network (testnet [colosseum], devnet [garden], etc.) your node is running on.
-* `SLICES` : This parameter determines which slices of the network the node will run (i.e. determines whether the node will be a slice node, a multi-slice node, or a global node).
+- `COINBASE` : The address in each chain (slice) that mining rewards are paid to. Note that there is one coinbase address per chain.
+- `NETWORK` : the network (testnet [colosseum], devnet [garden], etc.) your node is running on.
+- `SLICES` : This parameter determines which slices of the network the node will run (i.e. determines whether the node will be a slice node, a multi-slice node, or a global node).
 
-The [“Starting and Running a Node”](../start-a-node/start-a-node.md) page contains information on the most important things to change in this file.
+The [“Starting and Running a Node”](./start-a-node.md) page contains information on the most important things to change in this file.
 
 The `network.env` file can be edited with the following IDEs:
 
-* [vim](https://www.vim.org/)
-* [nano](https://www.nano-editor.org/)
-* [Visual Studio Code](https://visualstudio.microsoft.com/)
+- [vim](https://www.vim.org/)
+- [nano](https://www.nano-editor.org/)
+- [Visual Studio Code](https://visualstudio.microsoft.com/)
 
 ### Networks
 
 **What networks are available to run?**
 
-* `NETWORK=colosseum` The main network of the Iron Age Testnet
-* `NETWORK=garden` The development network of the Iron Age Testnet
-* `NETWORK=local` The local development environment
+- `NETWORK=colosseum` The main network of the Iron Age Testnet
+- `NETWORK=garden` The development network of the Iron Age Testnet
+- `NETWORK=local` The local development environment
 
 :::warning
 The Garden developer network operates on the BLAKE3 hashing algorithm at low difficulty, meaning the Garden developer network has a significantly higher chance of reorgs than the main Colosseum network.
@@ -108,19 +105,19 @@ The Garden developer network operates on the BLAKE3 hashing algorithm at low dif
 
 In the codebase, a slice is identified by its region and zone index. Region and zone indices are 0-indexed and range from 0-2.
 
-| Region    | Zone   | Chain Name | Chain Index |
-| --------- | ------ | ---------- | ----------- |
-| Region-1  | Zone-1 | Cyprus-1   | [0 0]       |
-| Region-1  | Zone-2 | Cyprus-2   | [0 1]       |
-| Region-1  | Zone-3 | Cyprus-3   | [0 2]       |
-| Region-2  | Zone-1 | Paxos-1    | [1 0]       |
-| Region-2  | Zone-2 | Paxos-2    | [1 1]       |
-| Region-2  | Zone-3 | Paxos-3    | [1 2]       |
-| Region-3  | Zone-1 | Hydra-1    | [2 0]       |
-| Region-3  | Zone-2 | Hydra-2    | [2 1]       |
-| Region-3  | Zone-3 | Hydra-3    | [2 2]       |
+| Region   | Zone   | Chain Name | Chain Index |
+| -------- | ------ | ---------- | ----------- |
+| Region-1 | Zone-1 | Cyprus-1   | [0 0]       |
+| Region-1 | Zone-2 | Cyprus-2   | [0 1]       |
+| Region-1 | Zone-3 | Cyprus-3   | [0 2]       |
+| Region-2 | Zone-1 | Paxos-1    | [1 0]       |
+| Region-2 | Zone-2 | Paxos-2    | [1 1]       |
+| Region-2 | Zone-3 | Paxos-3    | [1 2]       |
+| Region-3 | Zone-1 | Hydra-1    | [2 0]       |
+| Region-3 | Zone-2 | Hydra-2    | [2 1]       |
+| Region-3 | Zone-3 | Hydra-3    | [2 2]       |
 
-The `SLICES` parameter of the network.env file determines which slices of the network the node will run (i.e. determines whether the node will be a slice node, a multi-slice node, or a global node). To spin up a slice node, edit the network.env file to modify the slices you want to run. For example, if you wanted to run two slices, you would change the_ `SLICES` line to the following (be aware of spacing):
+The `SLICES` parameter of the network.env file determines which slices of the network the node will run (i.e. determines whether the node will be a slice node, a multi-slice node, or a global node). To spin up a slice node, edit the network.env file to modify the slices you want to run. For example, if you wanted to run two slices, you would change the\_ `SLICES` line to the following (be aware of spacing):
 
 ```bash
 SLICES="[FIRST_REGION_NUM FIRST_ZONE_NUM],[SECOND_REGION_NUM SECOND_ZONE_NUM]"
@@ -152,7 +149,7 @@ To stream your nodelogs for a specific chain, you can run the following (to exit
 
 ```go
 // This command will display a stream of logs from Cyprus-1.
-// To edit which chain's logs will display, edit the chain index. 
+// To edit which chain's logs will display, edit the chain index.
 tail -f nodelogs/zone-0-0.log
 ```
 
@@ -160,7 +157,7 @@ To show the most recent blocks your node appended in a specific chain, run the f
 
 ```go
 // This command will display recent logs containing "Appended" from Cyprus-1.
-// To edit which chain's logs will display, edit the chain index. 
+// To edit which chain's logs will display, edit the chain index.
 cat nodelogs/zone-0-0.log | grep Appended
 ```
 
@@ -172,11 +169,11 @@ To display an ongoing stream of logs showing which blocks are being appended, ru
 tail -f nodelogs/zone-0-0.log | grep Appended
 ```
 
-If you are running a global node and/or want to check the logs of all chains simultaneously to see which blocks are being appended, the chain index can be replaced with *:
+If you are running a global node and/or want to check the logs of all chains simultaneously to see which blocks are being appended, the chain index can be replaced with \*:
 
 ```go
 // This command will display a stream of logs from Cyprus-1.
-// To edit which chain's logs will display, edit the chain index. 
+// To edit which chain's logs will display, edit the chain index.
 tail -f nodelogs/zone-0-0.log
 ```
 
@@ -184,6 +181,7 @@ tail -f nodelogs/zone-0-0.log
 // This command will display a stream of logs containing "Appended" from all chains.
 tail -f nodelogs/*.log | grep Appended
 ```
+
 ### Nodelogs By Chain
 
 **What is the difference between checking Prime, Region, and Zone nodelogs? Which nodelogs should I check?**
@@ -201,6 +199,7 @@ First, stop your existing node:
 ```go
 make stop
 ```
+
 Next, pull the latest code to your machine:
 
 ```go
@@ -236,7 +235,7 @@ You can check the status of your node using the previously mentioned nodelogs co
 Do not do this without good reason! There should be no need to clear state for the vast majority of users participating in Testnet. Resetting a node is a NON-REVERSABLE PROCESS -- after you clear your database, you will need to completely re-sync your node from genesis.
 :::
 
-Developers and node runners may find that situations arise where they need to completely clear their node of synced state and/or do a full reset in the case of an issue or bug.  A full reset of a node involves stopping the node, clearing the current nodelogs, and removing all synced state.
+Developers and node runners may find that situations arise where they need to completely clear their node of synced state and/or do a full reset in the case of an issue or bug. A full reset of a node involves stopping the node, clearing the current nodelogs, and removing all synced state.
 
 As a final reminder, resetting your node is non-reversible and should only be done if you fully understand the implications of removing all synced state.
 
@@ -244,7 +243,7 @@ For **Linux Machines**, we'll remove the `nodelogs` directory and the base `.qua
 
 ```
 // Remove nodelogs
-rm -rf nodelogs 
+rm -rf nodelogs
 // Remove go-quai database
 rm -rf ~/.quai
 ```
@@ -252,8 +251,8 @@ rm -rf ~/.quai
 For **MacOS machines**, we'll use a different command to remove the same directories:
 
 ```
-// Remove nodelogs 
-rm -rf nodelogs 
+// Remove nodelogs
+rm -rf nodelogs
 // Remove go-quai database
 rm -rf ~/Library/Quai
 ```
@@ -268,7 +267,7 @@ After running one of the two above commands, the node has been fully reset and i
 
 If you got this error, it means your router does not have UPNP enabled. Enabling UPNP (Universal Plug and Play) allows other devices (namely other Quai nodes) to discover your node and establish proper networking.
 
-While each router has a different protocol for enabling UPNP, [this guide](https://www.lifewire.com/enable-upnp-on-a-router-5206124) covers how to enable UPNP on routers from many common ISPs. You can also get help turning on UPNP on your router in the [Starting and Running a Node page](../start-a-node/start-a-node.md#router-configuration).
+While each router has a different protocol for enabling UPNP, [this guide](https://www.lifewire.com/enable-upnp-on-a-router-5206124) covers how to enable UPNP on routers from many common ISPs. You can also get help turning on UPNP on your router in the [Starting and Running a Node page](./start-a-node.md#router-configuration).
 
 If you do not want to enable UPNP on your router, you can specifically open peering ports 30303 through 30315 for both TCP and UDP. You can learn how to open specific ports on your router [here](https://nordvpn.com/blog/open-ports-on-router/). If you decide not to enable UPNP, you will need to modify your `network.env` file to reflect `ENABLE_NAT=true` and specify your external IP address in `EXT_IP`.
 
@@ -288,7 +287,7 @@ To show the most recent blocks your node appended in a specific chain, run the f
 
 ```go
 // This command will display recent logs containing "Appended" from Cyprus-1.
-// To edit which chain's logs will display, edit the chain index. 
+// To edit which chain's logs will display, edit the chain index.
 cat nodelogs/zone-0-0.log | grep Appended
 // Ex. for viewing appended blocks for zone-1-1
 cat nodelogs/zone-1-1.log | grep Appended
@@ -302,10 +301,10 @@ To display an ongoing stream of logs showing which blocks are being appended, ru
 tail -f nodelogs/zone-0-0.log | grep Appended
 ```
 
-If you are running a global node and/or want to check the logs of all chains simultaneously to see which blocks are being appended, the chain index can be replaced with *:
+If you are running a global node and/or want to check the logs of all chains simultaneously to see which blocks are being appended, the chain index can be replaced with \*:
 
 ```go
-// This command will display recent logs containing "Appended" from all chains. 
+// This command will display recent logs containing "Appended" from all chains.
 cat nodelogs/*.log | grep Appended
 ```
 
@@ -314,7 +313,7 @@ cat nodelogs/*.log | grep Appended
 tail -f nodelogs/*.log | grep Appended
 ```
 
-You can also check the progress of your node's sync using the **client JSON RPC API**. The [quai_syncing](../../../develop/apis/json-rpc-api.md#quai_syncing) API method can be used easily in the [Quai Postman Workspace](https://documenter.getpostman.com/view/19820580/2s935iv7GU) or via the command line. If the API returns `false`, your node has synced to the current tip of the chain.
+You can also check the progress of your node's sync using the **client JSON RPC API**. The [quai_syncing](../../develop/apis/json-rpc-api.md#quai_syncing) API method can be used easily in the [Quai Postman Workspace](https://documenter.getpostman.com/view/19820580/2s935iv7GU) or via the command line. If the API returns `false`, your node has synced to the current tip of the chain.
 
 Once you’ve determined what block your node has most recently appended, check whether the block height on your node corresponds to the latest maximal block height for the same chain on the Kibana dashboard or Quaiscan. If they are the same, your node has synced! If your node’s block height is less than the block height of Kibana/Quaiscan, you are still syncing.
 
@@ -322,11 +321,11 @@ Once you’ve determined what block your node has most recently appended, check 
 Your node may briefly stop appending blocks for certain periods of time — this is normal, and does not require a restart of the client. Reach out for support if your node has not appended any blocks in any slice for over an hour.
 :::
 
-* Quai Stats Dashboard: [https://stats.quai.network](https://stats.quai.network)
-* Quaiscan Explorers:
+- Quai Stats Dashboard: [https://stats.quai.network](https://stats.quai.network)
+- Quaiscan Explorers:
 
 | Zone Name | Zone Index | QuaiScan Link                          |
-| --------  | ---------- | -------------------------------------- |
+| --------- | ---------- | -------------------------------------- |
 | Cyprus-1  | [0 0]      | https://cyprus1.colosseum.quaiscan.io/ |
 | Cyprus-2  | [0 1]      | https://cyprus2.colosseum.quaiscan.io/ |
 | Cyprus-3  | [0 2]      | https://cyprus3.colosseum.quaiscan.io/ |
@@ -413,10 +412,10 @@ The "detected unclean shutdown" message means your node detected an abnormal shu
 
 This is a broad question, but here are some things you can check. Generally, an issue with blocks no longer appending points to a networking issue:
 
-* Ensure you either have UPNP enabled or ports 30303-30315 opened.
-* If you fail to port forward correctly but still set an EXT_IP, your node will bypass the UPNP error but will eventually be dropped by all peers.
-* Ensure if you are port forwarding that you have properly configured the ENABLE_NAT flag to equal true and the EXT_IP flag to equal your external IP.
-* There is a difference between an internal and external IP; make sure you are inputting your external IP to the EXT_IP flag.
+- Ensure you either have UPNP enabled or ports 30303-30315 opened.
+- If you fail to port forward correctly but still set an EXT_IP, your node will bypass the UPNP error but will eventually be dropped by all peers.
+- Ensure if you are port forwarding that you have properly configured the ENABLE_NAT flag to equal true and the EXT_IP flag to equal your external IP.
+- There is a difference between an internal and external IP; make sure you are inputting your external IP to the EXT_IP flag.
 
 If none of these fixes address your issue, send a message in the [Quai Discord](https://discord.gg/quai/) to receive personalized support.
 

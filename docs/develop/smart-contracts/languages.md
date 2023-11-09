@@ -1,7 +1,6 @@
 ---
 title: Languages
 description: Smart contract development languages supported on Quai Network.
-slug: /languages
 sidebar_position: 2
 ---
 

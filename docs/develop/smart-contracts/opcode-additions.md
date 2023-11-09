@@ -1,7 +1,6 @@
 ---
 title: Opcode Additions
 description: Specification and implementation of Quai specific opcodes.
-slug: /opcode-additions
 sidebar_position: 1
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: Calculating Total Entropy
 description: How total entropy accumulates in Quai Network.
-slug: /total-entropy
 hide_table_of_contents: false
 sidebar_position: 2
 ---
@@ -16,7 +15,7 @@ Total entropy is a better measure of accumulated energy expenditure than total d
 
 The starting point for the calculation of entropy change is the bits of entropy removed from a block. This is computed using a measure of [intrinsic block weight](./intrinsic-block-weight.md).
 
-![TotalEntropy](../../../../../static/img/TotalEntropy.png)
+![TotalEntropy](/img/TotalEntropy.png)
 
 ### Calculate Change in Entropy
 

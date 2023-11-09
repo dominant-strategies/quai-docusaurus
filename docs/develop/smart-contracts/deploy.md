@@ -1,7 +1,6 @@
 ---
 title: Deploy
 description: How to deploy a smart contract to the Quai Network.
-slug: /deploy
 sidebar_position: 3
 ---
 

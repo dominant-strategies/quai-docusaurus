@@ -1,7 +1,6 @@
 ---
 title: CPU Miner
 description: How to install and run a Quai Network GPU miner.
-slug: /cpu-miner
 hide_table_of_contents: false
 sidebar_position: 1
 ---
@@ -16,7 +15,7 @@ Here, we'll be installing quai-cpu-miner, the Go implementation of a Quai Networ
 
 To run an instance of quai-cpu-miner, you'll need to have installed and configured a Quai node. The [prerequisites](../node-overview/run-a-node.md#install-dependencies) to install and run the miner are the same as a node.
 
-If you haven't set up your node, we recommend going through the [Run A Node page](../node-overview/run-a-node.md) before proceeding.
+If you haven't set up your node, we recommend going through the [Run A Node page](../../participate/node/start-a-node/start-a-node.md) before proceeding.
 
 ### Install quai-cpu-miner
 

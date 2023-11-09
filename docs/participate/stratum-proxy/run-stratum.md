@@ -1,12 +1,9 @@
 ---
 title: Starting and Running a Stratum Proxy
 description: A guide on configuring, starting, and running a Stratum Proxy.
-slug: /run-stratum
 hide_table_of_contents: false
 sidebar_position: 2
 ---
-
-# Starting and Running a Stratum Proxy
 
 ## Introduction
 
@@ -30,10 +27,10 @@ Prefer a video tutorial? Check out a video walkthrough on setting up a stratum p
 
 ### Common Troubleshooting Resources
 
-* [What machine to run the Stratum Proxy on](../stratum-faq/stratum-faq.md#keep-proxy-running)
-* [How to keep Stratum running](../stratum-faq/stratum-faq.md#keep-proxy-running)
-* [How to find the IP of the Stratum Proxy](../stratum-faq/stratum-faq.md#stratum-ip-address)
-* [How to run multiple Stratum Proxies at once](../stratum-faq/stratum-faq.md#multiple-proxies-to-node)
+- [What machine to run the Stratum Proxy on](./stratum-faq.md#keep-proxy-running)
+- [How to keep Stratum running](./stratum-faq.md#keep-proxy-running)
+- [How to find the IP of the Stratum Proxy](./stratum-faq.md#stratum-ip-address)
+- [How to run multiple Stratum Proxies at once](./stratum-faq.md#multiple-proxies-to-node)
 
 ## Environment Setup
 
@@ -49,7 +46,7 @@ If you've already installed go-quai, you already have all the necessary dependen
 
 #### Go v1.21.0+
 
-Snap Install (*snapd is not installed by default on all Linux Distros*):
+Snap Install (_snapd is not installed by default on all Linux Distros_):
 
 ```bash
 # install snapd if you don't have it already
@@ -92,7 +89,7 @@ git clone https://github.com/dominant-strategies/go-quai-stratum
 cd go-quai-stratum
 ```
 
-This command installs the *main branch* to your local machine. Unless you intend to develop, you must checkout the latest *release*.
+This command installs the _main branch_ to your local machine. Unless you intend to develop, you must checkout the latest _release_.
 
 You can find the latest release on the [go-quai-stratum releases page](https://github.com/dominant-strategies/go-quai-stratum/tags). Then, check out the latest release with:
 
@@ -103,7 +100,7 @@ git checkout put-latest-release-here
 For example (this not the latest release, check the releases page for the latest release number):
 
 ```bash
-git checkout v01.2.3-rc.4 
+git checkout v01.2.3-rc.4
 ```
 
 ## Configuration
@@ -130,7 +127,7 @@ make quai-stratum
 
 Now that we've built the source, we can start our proxy. We recommend using a process manager like tmux or screen to run the proxy.
 
-To run the proxy, you'll need to select a shard to run against. More information on how and why to select shards can be found in the [GPU Miner FAQ](../../mining/gpu-miner/gpu-miner-faq/gpu-miner-faq.md#slice-choice).
+To run the proxy, you'll need to select a shard to run against. More information on how and why to select shards can be found in the [GPU Miner FAQ](../mining/gpu-miner/gpu-miner-faq.md#slice-choice).
 
 Start the proxy by passing either the corresponding **web socket ports** or **chain names** for the region and zone you've selected to run. Run with chain names using this command:
 
@@ -181,7 +178,7 @@ The proxy by default listens for miner connections on the `3333` port. You can c
 Changing the proxy listening port is useful for running multiple proxies on a single full node. If you're only mining on a single shard, there is no need to change the listening port.
 :::
 
-The proxy should begin streaming logs to the terminal that *look similar to below*.
+The proxy should begin streaming logs to the terminal that _look similar to below_.
 
 ```bash
 WARN[0000] One ethash cache must always be in memory requested=0
@@ -201,4 +198,4 @@ WARN[0000] One ethash cache must always be in memory requested=0
 
 **To stop the proxy, use CTRL+C in your terminal.**
 
-After configuring and pointing your proxy at a shard, you're now ready to point a [GPU miner](../../mining/gpu-miner/gpu-miner.md) at it and start mining.
+After configuring and pointing your proxy at a shard, you're now ready to point a [GPU miner](../mining/gpu-miner.md) at it and start mining.

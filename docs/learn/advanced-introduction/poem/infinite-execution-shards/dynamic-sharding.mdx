@@ -1,7 +1,6 @@
 ---
 title: Dynamic Sharding
 description: The process of adding shards to Quai Network.
-slug: /dynamic-sharding
 hide_table_of_contents: false
 ---
 
@@ -9,7 +8,7 @@ hide_table_of_contents: false
 
 Proof-of-Entropy-Minima (PoEM) allows Quai Network to coordinate infinite execution shards, with the network able to dynamically increase capacity to meet endless demand. **Dynamic sharding involves adding more execution shards to the network as needed to process a higher volume of transactions. This is handled by the protocol itself**. In Quai Network, dynamic sharding is done by creating the first blocks of a new Region chain and its related Zones, then connecting them to the network's overall consensus. Additionally, when dynamic sharding occurs, all existing Region chains will gain an additional subordinate Zone.
 
-![DynamicSharding](../../../../../static/img/DynamicSharding.png)
+![DynamicSharding](/img/DynamicSharding.png)
 
 Two network properties help the Quai protocol know when to add execution shards: the rate of uncle blocks, and the gas limit.
 
@@ -45,15 +44,15 @@ $$
 <br></br>
 <br></br>
 
-| Number of Regions | Number of Zones per Region | Time to Regional Settlement†     | Time to Global Settlement†     |
-| ----------------- | -------------------------- | -------------------------------- | ------------------------------ |
-| 3                 | 9                          | 300s                             | 3,300s                         |
-| 4                 | 16                         | 400s                             | 4,400s                         |
-| 5                 | 25                         | 500s                             | 5,500s                         |
-| 6                 | 36                         | 600s                             | 6,600s                         |
-| 7                 | 49                         | 700s                             | 7,700s                         |
-| 8                 | 64                         | 800s                             | 8,800s                         |
-| 9                 | 81                         | 900s                             | 9,900s                         |
-| 10                | 100                        | 1,000s                           | 11,000s                        |
+| Number of Regions | Number of Zones per Region | Time to Regional Settlement† | Time to Global Settlement† |
+| ----------------- | -------------------------- | ---------------------------- | -------------------------- |
+| 3                 | 9                          | 300s                         | 3,300s                     |
+| 4                 | 16                         | 400s                         | 4,400s                     |
+| 5                 | 25                         | 500s                         | 5,500s                     |
+| 6                 | 36                         | 600s                         | 6,600s                     |
+| 7                 | 49                         | 700s                         | 7,700s                     |
+| 8                 | 64                         | 800s                         | 8,800s                     |
+| 9                 | 81                         | 900s                         | 9,900s                     |
+| 10                | 100                        | 1,000s                       | 11,000s                    |
 
 † _Time to Regional and Global settlement are given in averages. Block production in Quai Network is a stochastic process, meaning that real-world settlement times will have minor variance._

@@ -1,7 +1,6 @@
 ---
 title: JSON-RPC API
 description: Detailed specification of the Quai Network JSON-RPC API.
-slug: /json-rpc-api
 hide_table_of_contents: false
 sidebar_position: 1
 ---
