@@ -65,14 +65,14 @@ You might encounter an error message related to the content type, as the --data 
 
 A complete curl request including these additional data would look like:
 
-```bash
+```shell
 curl -X POST \
 http://127.0.0.1:8512 \
 -H 'Content-Type: application/json' \
 --data '{
-    "jsonrpc": "2.0",
-    "method": "quai_syncing",
-    "params": [],
+    "jsonrpc": "2.0", 
+    "method": "quai_gasPrice", 
+    "params": [], 
     "id": 1
 }'
 ```
@@ -189,6 +189,10 @@ Returns the fee history for a specific range of blocks.
 ### quai_syncing
 
 Returns an indicator of whether the client is actively syncing.
+
+:::warning
+`quai_syncing` will only return correct data for the Prime chain. If it returns false for Prime, the node is synced in Prime, but may not be synced in all other regions and zones. Always check the sync progress of all chains against the current tip.
+:::
 
 #### Input Parameters
 

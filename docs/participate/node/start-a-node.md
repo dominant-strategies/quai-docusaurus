@@ -61,7 +61,7 @@ To run an instance of go-quai, you'll need to install a few dependencies. You ca
 
 Ubuntu Snap Install (_snap is not default installed on all Linux Distros_):
 
-```bash
+```shell
 # install snapd if you don't have it already
 sudo apt install snapd
 
@@ -71,7 +71,7 @@ sudo snap install go --classic
 
 MacOS Install:
 
-```bash
+```shell
 brew install go
 ```
 
@@ -81,13 +81,13 @@ If you're not on Ubuntu or MacOS, instructions on how to install go directly can
 
 Linux install:
 
-```bash
+```shell
 sudo apt install git make
 ```
 
 MacOS install:
 
-```bash
+```shell
 brew install git make
 ```
 
@@ -97,7 +97,7 @@ Now that you've installed the base dependencies, we can go ahead and [clone the 
 
 To clone the go-quai repo and navigate to it, run the following commands:
 
-```bash
+```shell
 git clone https://github.com/dominant-strategies/go-quai
 cd go-quai
 ```
@@ -106,13 +106,13 @@ This command installs the _main branch_ to your local machine. Unless you intend
 
 You can find the latest release on the [go-quai releases page](https://github.com/dominant-strategies/go-quai/tags). Then, check out the latest release with:
 
-```bash
+```shell
 git checkout put-latest-release-here
 ```
 
 For example (this not the latest release, check the releases page for the latest release number)
 
-```bash
+```shell
 git checkout v1.2.3-rc.4
 ```
 
@@ -120,7 +120,7 @@ git checkout v1.2.3-rc.4
 
 After you've successfully installed go-quai, you'll need to configure your node. The `network.env.dist` is a boilerplate node configuration file. Copy the boilerplate file into `network.env` so that we can create our own custom config.
 
-```bash
+```shell
 cp network.env.dist network.env
 ```
 
@@ -140,7 +140,7 @@ Open the config file in your favorite text editor or IDE.
 - [nano](https://www.nano-editor.org/)
 - [Visual Studio Code](https://visualstudio.microsoft.com/)
 
-```bash
+```shell
 # edit network.env with nano
 nano network.env
 
@@ -188,7 +188,7 @@ If your router does not have UPNP or port-forwarding enabled, your node will ret
 
 If your local router doesn't support UPNP and **you're port forwarding** or you're **setting up on a server (VPS/VDS)**, you'll need to configure a few variables in the Networking Variables section in your `network.env`.
 
-```bash
+```shell
 # Networking Variables
 ENABLE_NAT=true
 EXT_IP=SERVER IP or WAN IP
@@ -206,7 +206,7 @@ If you're having issues with this step, make sure to check out the [FAQ router t
 
 To start the node, we first need to build the source. You can build via Makefile by running the following command:
 
-```bash
+```shell
 make go-quai
 ```
 
@@ -218,7 +218,7 @@ Now that we've built the source, we need to decide which type of node to run. As
 
 Global nodes validate all of the chains within Quai Network. To spin up a global node run:
 
-```bash
+```shell
 make run
 ```
 
@@ -230,13 +230,13 @@ To spin up a slice node, **you'll need to edit the `network.env` file to specify
 
 For example, if you wanted to run two slices, you would change `SLICES` to the following (replace the corresponding `INDEX` variables for your desired slices):
 
-```bash
+```shell
 SLICES="[FIRST_REGION_INDEX FIRST_ZONE_INDEX],[SECOND_REGION_INDEX SECOND_ZONE_INDEX]"
 ```
 
 After configuring the slices you'd like to run in your `network.env`, start your node using the same command by running:
 
-```bash
+```shell
 make run
 ```
 
@@ -254,7 +254,7 @@ Node operators should self-select the slice least latent to them, in order to mi
 
 Starting a node will run all instances of go-quai in the background and create a directory named nodelogs. Outputs from the node will be piped to a context specific `.log` file inside of nodelogs. To view the log output for a specific location, use:
 
-```bash
+```shell
 tail -f nodelogs/prime.log
 # OR
 tail -f nodelogs/region-2.log
@@ -290,7 +290,7 @@ If your node has started correctly, it will begin syncing chain state from peers
 
 From the **command line**, we can run the following command(s) to print the list of blocks that have been appended. **Replace** `location-to-print-here.log` **with the file name of the logs you'd like to print**.
 
-```bash
+```shell
 # Print all appended blocks
 cat nodelogs/location-to-print-here.log | grep Appended
 
@@ -303,7 +303,7 @@ tail -f nodelogs/* | grep Appended
 
 The output should look similar to below:
 
-```bash
+```shell
 INFO   [09-18|10:18:17.273] Appended new block                       number=[102 1934 40392] hash=0x0000067368b679ce7994dbd6e3dfe93a5e5fe16642a6083604fd405556836cbe difficulty=405369 uncles=0 txs=0 etxs=0 gas=0 gasLimit=5000000 root=0x7df4c77d1463a5e4c7d5f5446476e34df01cf14b6226b7d83ccab072bc302edc order=2 location=[0 0] elapsed=2.019ms
 INFO   [09-18|10:18:17.736] Appended new block                       number=[102 1934 40393] hash=0x0000285b7ffa020c8f9f5f8832381593170d1d7618ad2fae8202350a0d81acac difficulty=405875 uncles=0 txs=0 etxs=0 gas=0 gasLimit=5000000 root=0x81954cf5d93a979890641acffe7496965ff4602ad2b24d24ab5356ba52072c39 order=2 location=[0 0] elapsed=1.933ms
 INFO   [09-18|10:18:17.803] Appended new block                       number=[102 1934 40394] hash=0x00000d6f0d100a8d254088090876a6ab911720af7e7bc6454f5d1a01417f786f difficulty=406382 uncles=0 txs=0 etxs=0 gas=0 gasLimit=5000000 root=0x8eb0b430e2df8f91a180b6f29fea46430c9014ccde42fa538df62bf3251dff03 order=2 location=[0 0] elapsed=2.005ms
@@ -324,7 +324,7 @@ If your node temporarily stops appending during sync, do not stop it. Allow it t
 
 Stopping your node should be done any time you make changes to your config file or prior to shutting your machine down. A node instance can be terminated by running:
 
-```bash
+```shell
 make stop
 ```
 
@@ -348,19 +348,19 @@ To update a node, first **make sure to kill all instances of go-quai** using the
 
 After stopping the node, you should pull any updated code using:
 
-```bash
+```shell
 git fetch --all
 ```
 
 Checkout the [latest release of go-quai](https://github.com/dominant-strategies/go-quai/tags):
 
-```bash
+```shell
 git checkout put-latest-release-here
 ```
 
 Finally, rebuild the source using:
 
-```bash
+```shell
 make go-quai
 ```
 
@@ -389,7 +389,7 @@ Please be aware that when you are syncing from a snapshot, you are trusting the 
 
 You can backup your node's database by running:
 
-```bash
+```shell
 # Stop node
 make stop
 
@@ -408,7 +408,7 @@ tar -czvf quai_backup_$(date +%Y.%m.%d_%H.%M.%S).tar.gz .quai
 
 To restore your database from a snapshot on **Linux**, use:
 
-```bash
+```shell
 # Stop node
 make stop
 
@@ -427,7 +427,7 @@ cp -r quai_backup ~/.quai
 
 Following a similar process as above with a different file structure:
 
-```bash
+```shell
 # Stop node
 make stop
 
@@ -446,7 +446,7 @@ tar -czvf quai_backup_$(date +%Y.%m.%d_%H.%M.%S).tar.gz ~/Library/Quai
 
 To restore your database from a snapshot on on **MacOS**, use:
 
-```bash
+```shell
 # Stop node
 make stop
 
@@ -473,13 +473,13 @@ Developers and node runners may find that situations arise where they need to co
 
 For **Linux Machines**, we'll remove the `nodelogs` directory and the base `.quai` directory which contains all synced state. To do this, run the following command:
 
-```bash
+```shell
 rm -rf nodelogs ~/.quai
 ```
 
 For **MacOS machines**, we'll use a different command to remove the same directories:
 
-```bash
+```shell
 rm -rf nodelogs ~/Library/Quai
 ```
 

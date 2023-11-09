@@ -44,21 +44,21 @@ Currently, Ubuntu (Version 20.04) and HiveOS are the only operating systems supp
 
 There is a script to build the miner supported on HiveOS! To use the script, you can run the following commands in your HiveOS terminal:
 
-```bash
+```shell
 sudo selfupgrade
 ```
 
-```bash
-curl -fsSL https://raw.githubusercontent.com/dominant-strategies/quai-gpu-miner/main/miner_deploy_script.sh | bash
+```shell
+curl -fsSL https://raw.githubusercontent.com/dominant-strategies/quai-gpu-miner/main/miner_deploy_script.sh | shell
 ```
 
 Running this command will build and install all the necessary prerequisites for the miner. After this script has finished running, you can point your miner at your stratum proxy and start hashing with the following commands:
 
-```bash
+```shell
 cd /home/user/quai-gpu-miner/build
 ```
 
-```bash
+```shell
 ./ethcoreminer/ethcoreminer -G -P stratum://YOURPROXYIPADRESS:STRATUMPORT
 ```
 

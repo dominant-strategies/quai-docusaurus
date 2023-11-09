@@ -71,7 +71,7 @@ You'll need to replace:
 - `project-id`: replace `<project-id>` with your project ID.
   - **Example:** `--project voltaic-genie-374321`
 
-```bash
+```shell
 gcloud deployment-manager deployments create <deployment-name>
 --template quai-deployment.jinja \
 --properties region-param:<gcp-region>, \
@@ -113,7 +113,7 @@ You'll need to replace:
 - `project-id`: replace `<project-id>` with your project ID.
   - **Example:** `--project voltaic-genie-374321`
 
-```bash
+```shell
 gcloud deployment-manager deployments create <deployment-name>
 --template quai-deployment.jinja \
 --properties region-param:<gcp-region>, \

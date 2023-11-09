@@ -119,7 +119,7 @@ In the codebase, a slice is identified by its region and zone index. Region and 
 
 The `SLICES` parameter of the network.env file determines which slices of the network the node will run (i.e. determines whether the node will be a slice node, a multi-slice node, or a global node). To spin up a slice node, edit the network.env file to modify the slices you want to run. For example, if you wanted to run two slices, you would change the\_ `SLICES` line to the following (be aware of spacing):
 
-```bash
+```shell
 SLICES="[FIRST_REGION_NUM FIRST_ZONE_NUM],[SECOND_REGION_NUM SECOND_ZONE_NUM]"
 ```
 

@@ -46,6 +46,6 @@ html[data-theme='dark'] .header-github-link:before {
 		no-repeat;
 }
 
-.header-github-link:hover {
+.header-icon:hover {
 	opacity: 0.6;
 }
