@@ -38,7 +38,7 @@ NETWORK=colosseum
 - RPC Endpoints:
 
 | Zone Name | Zone Index | RPC Endpoint                              |
-| --------  | ---------- | ----------------------------------------- |
+| --------- | ---------- | ----------------------------------------- |
 | Cyprus-1  | [0 0]      | https://rpc.cyprus1.colosseum.quaiscan.io |
 | Cyprus-2  | [0 1]      | https://rpc.cyprus2.colosseum.quaiscan.io |
 | Cyprus-3  | [0 2]      | https://rpc.cyprus3.colosseum.quaiscan.io |
@@ -89,87 +89,21 @@ After changing the network flag, you can spin up a local node and miner as norma
 
 #### Networking Specifications
 
-<table>
-	<thead>
-		<tr>
-			<th
-				width='138'
-				align='center'
-			>
-				Chain
-			</th>
-			<th align='center'>Chain Index</th>
-			<th align='center'>HTTP Port</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td align='center'>Prime</td>
-			<td align='center'></td>
-			<td align='center'>8546</td>
-		</tr>
-		<tr>
-			<td align='center'>Cyprus</td>
-			<td align='center'></td>
-			<td align='center'>8578</td>
-		</tr>
-		<tr>
-			<td align='center'>Paxos</td>
-			<td align='center'></td>
-			<td align='center'>8580</td>
-		</tr>
-		<tr>
-			<td align='center'>Hydra</td>
-			<td align='center'></td>
-			<td align='center'>8582</td>
-		</tr>
-		<tr>
-			<td align='center'>Cyprus1</td>
-			<td align='center'>[0 0]</td>
-			<td align='center'>8610</td>
-		</tr>
-		<tr>
-			<td align='center'>Cyprus2</td>
-			<td align='center'>[0 1]</td>
-			<td align='center'>8542</td>
-		</tr>
-		<tr>
-			<td align='center'>Cyprus3</td>
-			<td align='center'>[0 2]</td>
-			<td align='center'>8674</td>
-		</tr>
-		<tr>
-			<td align='center'>Paxos1</td>
-			<td align='center'>[1 0]</td>
-			<td align='center'>8512</td>
-		</tr>
-		<tr>
-			<td align='center'>Paxos2</td>
-			<td align='center'>[1 1]</td>
-			<td align='center'>8544</td>
-		</tr>
-		<tr>
-			<td align='center'>Paxos3</td>
-			<td align='center'>[1 2]</td>
-			<td align='center'>8576</td>
-		</tr>
-		<tr>
-			<td align='center'>Hydra1</td>
-			<td align='center'>[2 0]</td>
-			<td align='center'>8614</td>
-		</tr>
-		<tr>
-			<td align='center'>Hydra2</td>
-			<td align='center'>[2 1]</td>
-			<td align='center'>8646</td>
-		</tr>
-		<tr>
-			<td align='center'>Hydra3</td>
-			<td align='center'>[2 2]</td>
-			<td align='center'>8678</td>
-		</tr>
-	</tbody>
-</table>
+| Chain Name | Chain Index | HTTP Port |
+| ---------- | ----------- | --------- |
+| Prime      |             | 8546      |
+| Cyprus     |             | 8578      |
+| Paxos      |             | 8580      |
+| Hydra      |             | 8582      |
+| Cyprus1    | [0 0]       | 8610      |
+| Cyprus2    | [0 1]       | 8542      |
+| Cyprus3    | [0 2]       | 8674      |
+| Paxos1     | [1 0]       | 8512      |
+| Paxos2     | [1 1]       | 8544      |
+| Paxos3     | [1 2]       | 8576      |
+| Hydra1     | [2 0]       | 8614      |
+| Hydra2     | [2 1]       | 8646      |
+| Hydra3     | [2 2]       | 8678      |
 
 :::danger
 Do not open the above HTTP ports for any reason. You will be putting your local network security at risk.
