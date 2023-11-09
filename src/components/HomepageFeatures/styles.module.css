@@ -1,0 +1,29 @@
+.features {
+	display: flex;
+	align-items: center;
+	padding: 2rem 0rem;
+	width: 100%;
+	flex-direction: column;
+	gap: 3rem;
+	color: var(--ifm-font-color-base);
+	text-decoration: none;
+}
+
+.featureSvg {
+	height: 200px;
+	width: 200px;
+}
+
+.featureCard {
+	padding: 0.5rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: smaller;
+	text-align: center;
+}
+
+[data-theme='dark'] .featureCard {
+	box-shadow: 4px 4px 4px rgba(255, 255, 255, 0.05);
+	background-color: var(--ifm-color-emphasis-200);
+}
