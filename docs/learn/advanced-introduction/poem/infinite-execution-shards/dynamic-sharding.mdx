@@ -1,6 +1,6 @@
 ---
 title: Dynamic Sharding
-description: The process of adding shards to Quai Network.
+description: The process of dynamically scaling to more shards in Quai Network.
 hide_table_of_contents: false
 ---
 
@@ -8,7 +8,7 @@ hide_table_of_contents: false
 
 Proof-of-Entropy-Minima (PoEM) allows Quai Network to coordinate infinite execution shards, with the network able to dynamically increase capacity to meet endless demand. **Dynamic sharding involves adding more execution shards to the network as needed to process a higher volume of transactions. This is handled by the protocol itself**. In Quai Network, dynamic sharding is done by creating the first blocks of a new Region chain and its related Zones, then connecting them to the network's overall consensus. Additionally, when dynamic sharding occurs, all existing Region chains will gain an additional subordinate Zone.
 
-![DynamicSharding](/img/DynamicSharding.png)
+![DynamicSharding](/img/DynamicSharding.jpg)
 
 Two network properties help the Quai protocol know when to add execution shards: the rate of uncle blocks, and the gas limit.
 

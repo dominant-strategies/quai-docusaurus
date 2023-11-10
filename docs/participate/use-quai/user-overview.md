@@ -3,6 +3,10 @@ title: User Overview
 description: Learn the basics of using Quai.
 hide_table_of_contents: false
 sidebar_position: 1
+keywords:
+  - quai network
+  - quai
+  - user
 ---
 
 Quai Network is a network of blockchains built to handle high load while keeping fees low for users. This page contains valuable information about how Quai Network functions from a user perspective.

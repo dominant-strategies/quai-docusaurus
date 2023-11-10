@@ -3,6 +3,10 @@ title: Stratum Proxy FAQ
 description: Answers to commonly asked questions about the Stratum Proxy.
 hide_table_of_contents: false
 sidebar_position: 3
+keywords:
+  - stratum proxy
+  - quai stratum
+  - faq
 ---
 
 ## Setup & Config

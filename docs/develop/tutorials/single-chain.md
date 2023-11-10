@@ -1,8 +1,13 @@
 ---
 title: Single-Chain Deployment Tutorial
-description: A guide to deploying a single-chain smart contract on Quai.
+description: A guide to deploying a simple single-chain smart contract on Quai Network.
 hide_table_of_contents: false
 sidebar_position: 1
+keywords:
+  - simple smart contract
+  - solidity
+  - hardhat
+  - greeter
 ---
 
 ## Introduction
@@ -148,7 +153,7 @@ PRIVKEY="0x0000000000000000000000000000000000000000000000000000000000000000"
 RPCURL="http://localhost:8610" # Cyprus1 URL
 ```
 
-Information on endpoints can be found in the [local network specifications](../../develop/networks.mdx#local-network) section for **local nodes** and the [testnet specifications](../../develop/networks.mdx#testnet) section for **remote nodes**.
+Information on endpoints can be found in the [local network specifications](../../develop/#local-network) section for **local nodes** and the [testnet specifications](../../develop/networks.md#testnet) section for **remote nodes**.
 
 After providing a private key and a desired RPC URL, we're now ready to securely consume them inside of `hardhat.config.js`.
 

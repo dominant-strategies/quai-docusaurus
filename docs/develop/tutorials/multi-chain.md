@@ -1,8 +1,14 @@
 ---
 title: Multi-Chain Deployment Tutorial
-description: A guide to deploying a multi-chain smart contract on Quai.
+description: A guide to deploying and linking  multi-chain smart contracts on Quai Network.
 hide_table_of_contents: false
 sidebar_position: 2
+keywords:
+  - multi chain smart contract
+  - solidityx
+  - hardhat
+  - QRC20
+  - QRC721
 ---
 
 ## Introduction
@@ -139,7 +145,7 @@ In this environment file, we've introduced private keys and RPC endpoint URLs fo
 
 **You'll need to change the chain specific keys and RPC endpoint URLs** for each of the chains you plan to deploy a contract on, i.e. if you want to deploy on Cyprus 1 and Paxos 2, you'll need to change the `CYRPUS1PK`, `PAXOS2PK`, `CYPRUS1URL`, and `PAXOS2URL` to deploy to those chains.
 
-Information on endpoints can be found in the [local network specifications](../../develop/networks.mdx#local-network) section for **local nodes** and the [testnet specifications](../../develop/networks.mdx#testnet) section for **remote nodes**.
+Information on endpoints can be found in the [local network specifications](../../develop/networks.md#local-network) section for **local nodes** and the [testnet specifications](../../develop/networks.md#testnet) section for **remote nodes**.
 
 ### SolidityX Compiler
 

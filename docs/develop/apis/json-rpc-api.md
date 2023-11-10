@@ -1,8 +1,12 @@
 ---
 title: JSON-RPC API
-description: Detailed specification of the Quai Network JSON-RPC API.
+description: Technical specification of Quai Network JSON-RPC API methods and usage.
 hide_table_of_contents: false
 sidebar_position: 1
+keywords:
+  - jsonrpc
+  - api
+  - rpc
 ---
 
 # JSON-RPC API
@@ -70,9 +74,9 @@ curl -X POST \
 http://127.0.0.1:8512 \
 -H 'Content-Type: application/json' \
 --data '{
-    "jsonrpc": "2.0", 
-    "method": "quai_gasPrice", 
-    "params": [], 
+    "jsonrpc": "2.0",
+    "method": "quai_gasPrice",
+    "params": [],
     "id": 1
 }'
 ```

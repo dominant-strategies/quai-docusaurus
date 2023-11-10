@@ -1,6 +1,6 @@
 ---
 title: Hierarchical Structure
-description: The architecture of Quai Network.
+description: Detailed specification of Quai Network's hierarchical structure.
 hide_table_of_contents: false
 sidebar_position: 2
 ---

@@ -3,6 +3,10 @@ title: Wallets
 description: Learn how to store, send, and receive assets on Quai Network.
 hide_table_of_contents: false
 sidebar_position: 2
+keywords:
+  - quai wallet
+  - pelagus wallet
+  - koala wallet
 ---
 
 Wallets are user-friendly pieces of software that help users manage blockchain accounts. Wallets can store private and public keys, help generate new keys, check account balances, sign transactions, and interact with smart contracts. Wallets are often essential for simple interfacing with blockchain networks, but they do not “hold” your cryptocurrency as a physical wallet holds cash; instead, they hold the keys you use to access and manage your blockchain account.

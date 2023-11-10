@@ -45,11 +45,18 @@ const config: Config = {
 					showLastUpdateTime: true,
 					remarkPlugins: [math],
 					rehypePlugins: [katex],
+					breadcrumbs: true,
+				},
+				sitemap: {
+					changefreq: 'weekly',
+					priority: 0.5,
+					ignorePatterns: ['/tags/**'],
+					filename: 'sitemap.xml',
 				},
 				theme: {
 					customCss: require.resolve('./src/css/custom.css'),
 				},
-			} satisfies Preset.Options,
+			},
 		],
 	],
 	stylesheets: [

@@ -20,4 +20,4 @@ PoEM solves this issue by measuring entropy removal, a defined physical property
 
 **By calculating total entropy reduction**, [PoEM provides statistical finality at a practical depth of 1 subordinate block (10s)](./statistical-finality.md). Existing Proof-of-Work systems like Bitcoin may need over 10 minutes to guarantee that data is canonical in the event of a fork. In contrast, Proof-of-Stake systems can't ever truly promise statistical finality because their commitments are subjective, not mathematically scarce.
 
-![WithholdingAttack](/img/WithholdingAttack.png)
+![WithholdingAttack](/img/WithholdingAttack.jpg)

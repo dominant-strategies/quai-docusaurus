@@ -3,6 +3,10 @@ title: Starting and Running a Stratum Proxy
 description: A guide on configuring, starting, and running a Stratum Proxy.
 hide_table_of_contents: false
 sidebar_position: 2
+keywords:
+  - quai stratum
+  - quai proxy
+  - tutorial
 ---
 
 ## Introduction

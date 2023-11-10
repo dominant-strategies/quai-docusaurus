@@ -1,8 +1,12 @@
 ---
 title: Miner Overview
-description: Overview of the implemenation of a Quai Network Miner.
+description: Overview of the implemenation of a Quai Network GPU Miner.
 hide_table_of_contents: false
 sidebar_position: 1
+keywords:
+  - gpu miner
+  - merged mining
+  - latency
 ---
 
 A miner is a computer performing complex mathematical calculations, known as hashing, in a competition to add the next block to a Quai blockchain. These ongoing competitions allow the network to reach consensus through the hierarchical longest chain rule (HLCR). Quai Network utilizes merged mining, which allows each miner to secure three Quai blockchains simultaneously. Further, Quai miners self-select the contexts they wish to mine, incentivizing reduced network latency via topological organization.
@@ -30,4 +34,4 @@ This is functionally achieved by combining block headers of slices in the hierar
 
 Quai miners self-select the 3 Quai chains that they merge-mine. Miners are incentivized to select the least latent chains to mine in order to minimize the production of uncle blocks. The incentive for each miner to optimize their own latency will minimize overall network latency as miners organize over time, maximizing the throughput of the network.
 
-![Latency Map](/img/LatencyMap.png)
+![Latency Map](/img/LatencyMap.jpg)

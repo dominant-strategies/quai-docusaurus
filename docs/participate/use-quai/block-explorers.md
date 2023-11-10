@@ -3,6 +3,10 @@ title: Block Explorers
 description: Learn how to track transactions on Quai Network.
 hide_table_of_contents: false
 sidebar_position: 3
+keywords:
+  - block explorer
+  - quai block explorer
+  - quaiscan
 ---
 
 Block explorers allow users to view block data, transactions, and smart contracts in real time with little to no development knowledge. Explorers can also be used to view account balances, verify smart contract code, and other on-chain analytics.
@@ -12,7 +16,7 @@ Block explorers allow users to view block data, transactions, and smart contract
 [QuaiScan](https://cyprus1.colosseum.quaiscan.io/), based on the [BlockScout infrastructure](https://www.blockscout.com/), allows users to view data from all Quai blockchains without running a node. Each Zone within Quai Network has a unique block explorer link -- the search functionality will automatically route users to the correct Zone explorer, creating a seamless user experience.
 
 | Zone Name | Zone Index | QuaiScan Link                          |
-| --------  | ---------- | -------------------------------------- |
+| --------- | ---------- | -------------------------------------- |
 | Cyprus-1  | [0 0]      | https://cyprus1.colosseum.quaiscan.io/ |
 | Cyprus-2  | [0 1]      | https://cyprus2.colosseum.quaiscan.io/ |
 | Cyprus-3  | [0 2]      | https://cyprus3.colosseum.quaiscan.io/ |
