@@ -421,11 +421,14 @@ make stop
 # This command will permanently delete all state that you have synced thus far
 rm -rf ~/.quai
 
+# Install pigz
+sudo apt install pigz
+
 # Expand compressed db into node
-tar -xzvf quai_backup.tar.gz
+tar -I pigz -xvf quai_colosseum_backup.tar.gz
 
 # Copy db into db directory
-cp -r quai_backup ~/.quai
+cp -r quai__colosseum_backup ~/.quai
 ```
 
 **MacOS Machines**
@@ -459,11 +462,14 @@ make stop
 # This command will permanently delete all state that you have synced thus far
 rm -rf ~/Library/Quai
 
+#Install pigz
+brew install pigz
+
 # Expand compressed db
-tar -xzvf quai_backup.tar.gz
+tar -I pigz -xvf quai_colosseum_backup.tar.gz
 
 # Copy db into db directory
-cp -r quai_backup ~/Library/Quai
+cp -r quai_colosseum_backup ~/Library/Quai
 ```
 
 ### Resetting/Clearing
