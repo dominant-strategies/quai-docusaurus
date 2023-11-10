@@ -1,6 +1,6 @@
 ---
 title: Latency
-description: How latency is minimized within Quai Network.
+description: How Quai Network optimizes geographical latency in order to scale.
 hide_table_of_contents: false
 sidebar_position: 2
 ---
@@ -19,7 +19,7 @@ Networking latencies have the largest impact on overall latency and throughput. 
 Quai minimizes networking latency through the creation of optimized sub networks. Each miner is incentivized to self-select the lowest-latency sub networks to mine. Miners are incentivized to mine lower-latency chains, as a higher latency to peers directly lowers profits due to the increased likelihood of producing uncle blocks.
 Miners will geographically organize over time due to this incentive, minimizing latency inside each sub network. Providing an initial suggestion for the geographic organization of miners will accelerate the convergence of miners into optimized sets.
 
-![Optimized Sub Networks](/img/LatencyMap.png)
+![Optimized Sub Networks](/img/LatencyMap.jpg)
 
 Quai's utilization of Proof-of-Entropy-Minima consensus further lowers network latency. PoEM ensures that only a single proof ever needs to be propagated throughout the network to achieve consensus. In contrast, Proof-of-Work requires a second proof to be shared before the network can reach consensus in a fork scenario. Proof-of-Stake consensus necessitates multiple rounds of propagation for each block to achieve consensus, as each proof must collect a specific number of social approvals to be considered valid. PoEM is an inherently faster method of reaching consensus than any alternative, as it minimizes both the amount of data transmitted and the number of trips that data must take through the network, thus optimizing network latency.
 

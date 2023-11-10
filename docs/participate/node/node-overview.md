@@ -3,6 +3,12 @@ title: Node Overview
 description: Overview of the implemenation of a Quai Network node.
 hide_table_of_contents: false
 sidebar_position: 1
+keywords:
+  - node
+  - slice
+  - global
+  - watcher
+  - multi-slice
 ---
 
 A node is a computer running an instance of Quai that communicates (peers) with other nodes. The web of communication between nodes makes up Quai Network.

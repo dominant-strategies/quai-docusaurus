@@ -3,6 +3,9 @@ title: Stratum Proxy Overview
 description: An overview of the Quai Stratum Proxy.
 hide_table_of_contents: false
 sidebar_position: 1
+keywords:
+  - stratum proxy
+  - quai stratum
 ---
 
 A Stratum proxy is a tool in cryptocurrency mining that connects miners' hardware (GPU rigs) to their personal blockchain nodes or a pool's node. The main role of a Stratum Proxy is to improve mining efficiency by streamlining the data exchange process.

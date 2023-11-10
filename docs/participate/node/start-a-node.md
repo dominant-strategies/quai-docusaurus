@@ -3,6 +3,11 @@ title: Starting and Running A Node
 description: How to start and run a Quai Network node.
 hide_table_of_contents: false
 sidebar_position: 2
+keywords:
+  - node
+  - run node
+  - tutorial
+  - quai node
 ---
 
 ## Introduction
@@ -172,7 +177,7 @@ ZONE_2_2_COINBASE=0xF39E7d05B5A1a2F934cC43221383f29e4794c822 # hydra3
 If you do not replace the addresses in the `network.env` with Quai addresses you generate and hold the private keys for, you will not receive any mining rewards.
 :::
 
-Set the `NETWORK` variable to the network you plan on running. Available network options can be found in the [network specifications page](../../develop/networks.mdx#important-links-and-specs).
+Set the `NETWORK` variable to the network you plan on running. Available network options can be found in the [network specifications page](../../develop/networks.md#important-links-and-specs).
 
 Set the `SLICES` parameter to whichever slices of the network you would like to run. To learn more about [running setups other than a global node, check out the FAQ](./node-faq.md#configuring-slices).
 
@@ -248,7 +253,7 @@ This will start up your slice node with the slices specified in your `network.en
 
 Node operators should self-select the slice least latent to them, in order to minimize their uncle rate and maximize network bandwidth. Providing an initial suggestion for geographic organization will expidite the minimization of latency.
 
-![Latency Map](/img/LatencyMap.png)
+![Latency Map](/img/LatencyMap.jpg)
 
 ### Logs
 

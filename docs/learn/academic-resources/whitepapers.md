@@ -1,8 +1,13 @@
 ---
 title: Whitepapers
-description: Research papers and whitepapers that define critical aspects of the Quai protocol.
+description: Research papers and whitepapers that detail fundamental aspects of the Quai protocol.
 hide_table_of_contents: false
 sidebar_position: 1
+keywords:
+  - whitepaper
+  - hashcore
+  - block reduce
+  - poem
 ---
 
 # Whitepapers

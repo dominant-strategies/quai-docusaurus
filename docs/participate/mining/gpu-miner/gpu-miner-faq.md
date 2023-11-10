@@ -3,6 +3,10 @@ title: GPU Miner FAQ
 description: Answers to frequently asked questions about the Quai GPU miner.
 hide_table_of_contents: false
 sidebar_position: 4
+keywords:
+  - gpu mining
+  - faq
+  - hardware
 ---
 
 ## Setup & Config
@@ -137,22 +141,22 @@ This flight sheet was created and is maintained by a Quai community member, not 
 
 1. In the "workers" menu, click "wallets".
 
-![Workers Menu](/img/FS1.png)
+![Workers Menu](/img/FS1.jpg)
 
 2. On the right side of the page, click "add wallet".
 
-![Add Wallet](/img/FS2.png)
+![Add Wallet](/img/FS2.jpg)
 
 3. On "Coin" field, type "Quai" then click on "Create Quai" in the drop-down menu.
 4. On "Address" field, copy/paste your wallet address.
 5. On "Name" field, type a name for your wallet.
 6. On bottom right corner, click "Create".
 
-![Create](/img/FS3.png)
+![Create](/img/FS3.jpg)
 
 7. In the "workers" menu, click "flight sheets".
 
-![Flight Sheets](/img/FS4.png)
+![Flight Sheets](/img/FS4.jpg)
 
 8. On "Miner name", type "quai_custom".
 9. On "Installation URL", copy/paste "[https://quai-gpu-releases.s3.eu-west-1.amazonaws.com/quai_custom-0.0.13.tar.gz](https://quai-gpu-releases.s3.eu-west-1.amazonaws.com/quai_custom-0.0.13.tar.gz)".
@@ -162,7 +166,7 @@ This flight sheet was created and is maintained by a Quai community member, not 
 13. On "Extra config arguments", type "-G -HWON 1 -P stratum://EXTERNALIPADDRESS:PORT".
 14. On bottom right corner, click "Apply Changes".
 
-![Apply Changes](/img/FS5.png)
+![Apply Changes](/img/FS5.jpg)
 
 15. Deploy flight sheet.
 

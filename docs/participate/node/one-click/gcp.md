@@ -2,6 +2,10 @@
 title: One-Click GCP Deployment
 description: One-click deployment for a Quai node on GCP.
 hide_table_of_contents: false
+keywords:
+  - one click deploy
+  - gcp
+  - google cloud
 ---
 
 ## Introduction
@@ -143,7 +147,7 @@ Now that your node and proxy are deployed to a GCP Compute Engine project, we're
 
 Navigate to your Compute Engine dashboard and locate your deployment instance.
 
-![GCP Deployment](/img/gcp-tutorial.png)
+![GCP Deployment](/img/gcp-tutorial.jpg)
 
 On the right of you instance, there should be an SSH button. Click the button to open an SSH-in-browser connection to your VM.
 

@@ -2,6 +2,12 @@
 title: Deploy
 description: How to deploy a smart contract to the Quai Network.
 sidebar_position: 3
+keywords:
+  - smart contract
+  - solidityx
+  - deploy
+  - hardhat
+  - quai hardhat
 ---
 
 # Deploy
@@ -19,7 +25,7 @@ To deploy a smart contract on Quai, you'll need a few things:
 - _QUAI to cover gas_: similar to a normal transaction, you'll need to set your gas limit. Be aware that contract deployment requires significantly more gas than a simple transfer.
 - _Contract Bytecode_: generated using a [compiler](https://www.alchemy.com/overviews/solidity-compiler).
 - _Deployment script or plugin_
-- _Access to a Quai node_: you can do this either by [running your own node](../../participate/node/start-a-node.md), [accessing a publicly available node](../networks.mdx), or through API key via a node service.
+- _Access to a Quai node_: you can do this either by [running your own node](../../participate/node/start-a-node.md), [accessing a publicly available node](../networks.md), or through API key via a node service.
 
 ### Deployment
 

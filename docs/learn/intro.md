@@ -1,7 +1,12 @@
 ---
 title: Introduction
-description: The basics of Quai Network.
+description: A high level overview of Quai Network's fundamental building blocks.
 hide_table_of_contents: false
+keywords:
+  - quai network
+  - merged mining
+  - blockchain
+  - consensus
 ---
 
 # Quai Network

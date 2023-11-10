@@ -3,6 +3,11 @@ title: Node FAQ
 description: Answers to commonly asked questions about Quai nodes.
 hide_table_of_contents: false
 sidebar_position: 4
+keywords:
+  - faq
+  - node
+  - slice
+  - global
 ---
 
 ## Setup & Config
