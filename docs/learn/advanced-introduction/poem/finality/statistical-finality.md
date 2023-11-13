@@ -7,7 +7,7 @@ sidebar_position: 2
 
 # Statistical Finality
 
-Finality, specified in this context as "statistical finality" to differentiate from economic finality, refers to the mathematical certainty that data added to the blockchain is immutable unless there's a 51% attack. The time taken for data to reach statistical finality is the duration needed for the majority of known participants to agree that the data is canonical.
+Finality, specified in this context as **"statistical finality"** to differentiate from economic finality, refers to the mathematical certainty that data added to the blockchain is immutable unless there's a 51% attack. The time taken for data to reach statistical finality is the duration needed for the majority of known participants to agree that the data is canonical.
 
 Under PoEM, the statistical finality of subordinate Zone blockchains doesn't depend on the production or inclusion of dominant blocks.
 

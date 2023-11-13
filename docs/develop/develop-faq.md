@@ -15,7 +15,7 @@ keywords:
 
 To deploy a smart contract on Quai, you'll need a few things:
 
-- QUAI to cover gas: similar to a normal transaction, you'll need to set your gas limit. Be aware that contract deployment requires significantly more gas than a simple transfer.\_
+- QUAI to cover gas: similar to a normal transaction, you'll need to set your gas limit. Be aware that contract deployment requires significantly more gas than a simple transfer.
 - Contract Bytecode: generated using a [compiler](https://www.alchemy.com/overviews/solidity-compiler)
 - Deployment script or plugin
 - Access to a Quai node: you can do this either by [running your own node](../participate/node/start-a-node.md), [accessing a publicly available node](./networks.md), or through API key via a node service.

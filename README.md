@@ -21,6 +21,7 @@ It may also be useful to use [npm](https://www.npmjs.com/) to preview your chang
 
 To use npm:<br>
 `npm install`<br>
+`npm i`<br>
 `npm start`<br>
 
 ### Docs Architecture

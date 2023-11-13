@@ -36,8 +36,19 @@ NETWORK=colosseum
 - `NONCE`: 5926993
 - [Colosseum Faucet](https://faucet.quai.network)
 - Explorer:
-  - Link Structure: \`https://\[SHARDNAME].colosseum.quaiscan.io
-  - [Cyprus1 Block Explorer](https://cyprus1.colosseum.quaiscan.io/)
+
+| Zone Name | Zone Index | QuaiScan Link                          |
+| --------- | ---------- | -------------------------------------- |
+| Cyprus-1  | [0 0]      | https://cyprus1.colosseum.quaiscan.io/ |
+| Cyprus-2  | [0 1]      | https://cyprus2.colosseum.quaiscan.io/ |
+| Cyprus-3  | [0 2]      | https://cyprus3.colosseum.quaiscan.io/ |
+| Paxos-1   | [1 0]      | https://paxos1.colosseum.quaiscan.io/  |
+| Paxos-2   | [1 1]      | https://paxos2.colosseum.quaiscan.io/  |
+| Paxos-3   | [1 2]      | https://paxos3.colosseum.quaiscan.io/  |
+| Hydra-1   | [2 0]      | https://hydra1.colosseum.quaiscan.io/  |
+| Hydra-2   | [2 1]      | https://hydra2.colosseum.quaiscan.io/  |
+| Hydra-3   | [2 2]      | https://hydra3.colosseum.quaiscan.io/  |
+
 - RPC Endpoints:
 
 | Zone Name | Zone Index | RPC Endpoint                              |

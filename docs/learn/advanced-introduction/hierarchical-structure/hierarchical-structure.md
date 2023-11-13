@@ -36,7 +36,7 @@ Quai's merge-mined hierarchy intertwines these many threads through [hash linked
 | Region     | 2 (middle)         | ~33%                  | ~100s       |
 | Zone       | 3 (bottom)         | ~11%                  | ~10s        |
 
-_† Block production in Quai Network is a stochastic process, meaning that real-world block times will have minor variance._
+† *Block production in Quai Network is a stochastic process, meaning that real-world block times will have minor variance.*
 
 ### Prime
 

@@ -111,13 +111,7 @@ If the issue is on a VPS rather than bare-metal, installing `nvidia-cuda-toolkit
 
 **I got the error "SIGSEGV encountered..." and my miner crashed. How do I fix this?**
 
-The Dominant Strategies team is actively investigating the source of this error/crash. If you have experienced this error, we would greatly appreciate your submission of the following form to assist in our triaging of the issue: [https://quai.typeform.com/sigsegv](https://quai.typeform.com/sigsegv).
-
-Some notes on troubleshooting this issue while we continue to investigate:
-
-- Try upping the voltage and dropping the core clock of your GPU(s). This will cause your GPU(s) to run in a more stable state, but also reduce the efficiency of the miner. It may be worth testing to see if running in a less-efficient, more-stable manner resolves the issue.
-- If you are still experiencing the SIGSEGV issue while running at high voltage and low core clock speeds, you should start looking into your GPU's drivers.
-- If you are not able to resolve the issue via the above suggestions, get in contact with our team via the [Quai Dev Discord](https://discord.gg/s8y8asPwNC) to share more information about your specific issue.
+The use of OpenCL is the cause of this error. This error can be perminantly resolved by following the CUDA installation instructions for [HiveOS](../gpu-miner/hive-manual/hive-manual-cuda.md) or [Ubuntu](../gpu-miner/ubuntu-manual/ubuntu-manual-cuda.md) in the Quai Docs rather than installing with OpenCL. 
 
 ### AMD Low Hash rate
 
