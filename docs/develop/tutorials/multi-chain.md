@@ -30,7 +30,7 @@ Here's an **overview of all of the dependencies** we'll install in the [Environm
 - [**Hardhat**](https://hardhat.org/) **+** [**Quai-Hardhat**](https://github.com/dominant-strategies/quai-hardhat)**:** An EVM development environment toolkit with bundled support for Quai Network opcodes and contracts.
 - [**SolidityX**](https://github.com/dominant-strategies/SolidityX)**:** Quai Network's implementation of Solidity with support for [cross-chain opcodes](../smart-contracts/opcode-additions.md).
 - [**quais.js**](https://www.npmjs.com/package/quais)**:** A javascript library for blockchain development on Quai Network.
-- [**quais-polling**](https://www.npmjs.com/package/quais-polling): A shim package that adds polling functionality back to quais.js for specific usecases.
+- [**quais-polling**](https://www.npmjs.com/package/quais-polling): A shim package that adds polling functionality back to quais.js for specific use cases.
 - [**Dotenv**](https://www.npmjs.com/package/dotenv): A zero-dependency module that securely loads environment variables.
 - [**NodeJS**](https://nodejs.org/en/download/)
 
@@ -143,7 +143,7 @@ HYDRA3URL="http://localhost:8678"
 
 In this environment file, we've introduced private keys and RPC endpoint URLs for each of the chains in Quai Network as well as the `CHAINID` variable to allow for easy configuration of the network environment you're deploying to.
 
-**You'll need to change the chain specific keys and RPC endpoint URLs** for each of the chains you plan to deploy a contract on, i.e. if you want to deploy on Cyprus 1 and Paxos 2, you'll need to change the `CYRPUS1PK`, `PAXOS2PK`, `CYPRUS1URL`, and `PAXOS2URL` to deploy to those chains.
+**You'll need to change the chain specific keys and RPC endpoint URLs** for each of the chains you plan to deploy a contract on, i.e. if you want to deploy on Cyprus 1 and Paxos 2, you'll need to change the `CYPRUS1PK`, `PAXOS2PK`, `CYPRUS1URL`, and `PAXOS2URL` to deploy to those chains.
 
 Information on endpoints can be found in the [local network specifications](../../develop/networks.md#local-network) section for **local nodes** and the [testnet specifications](../../develop/networks.md#testnet) section for **remote nodes**.
 
@@ -463,7 +463,7 @@ async function AddApprovedQRC20Address() {
 	const contractAddress = "contract address you want to change the address array for";            // define contract address to add approved address to
 	const contract = new quais.Contract(contractAddress, QRC20.abi, wallet);         // define contract from address and abi
 	const transactionData = await contract.populateTransaction.AddApprovedAddress(
-		integer addresss index,                                                      // index of address to add (0 = cyprus1, 1 = cyprus2, etc.)
+		integer address index,                                                      // index of address to add (0 = cyprus1, 1 = cyprus2, etc.)
 		'contract address you want to add to the address array '            // address to add to approved addresses
 	);
 	try {

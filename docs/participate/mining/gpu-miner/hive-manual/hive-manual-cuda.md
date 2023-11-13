@@ -188,7 +188,7 @@ Replace `PROXYIPADDRESS` with the IP address of your proxy. Replace `STRATUMPORT
 :::
 
 ```shell
-./ethcoreminer/ethcoreminer -U -P stratum://PROXYIPADRESS:STRATUMPORT
+./ethcoreminer/ethcoreminer -U -P stratum://PROXYIPADDRESS:STRATUMPORT
 ```
 
 The quai-gpu-miner should now be running and outputting logs to the terminal. Now that your miner is running, [learn how to optimize your miner in the FAQ](../gpu-miner-faq.md#optimization)!

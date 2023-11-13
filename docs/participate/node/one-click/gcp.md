@@ -122,7 +122,7 @@ gcloud deployment-manager deployments create <deployment-name>
 --template quai-deployment.jinja \
 --properties region-param:<gcp-region>, \
   node-type:slice, \
-  slice-stype:<slice>
+  slice-type:<slice>
   zone-0-0-coinbase-address:<zone-0-0-address>, \
   zone-0-1-coinbase-address:<zone-0-1-address>, \
   zone-0-2-coinbase-address:<zone-0-2-address>, \

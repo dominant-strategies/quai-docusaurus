@@ -251,7 +251,7 @@ You can check the status of your node using the previously mentioned nodelogs co
 **How do I delete my node's database and reset my state?**
 
 :::danger
-Do not do this without good reason! There should be no need to clear state for the vast majority of users participating in Testnet. Resetting a node is a NON-REVERSABLE PROCESS -- after you clear your database, you will need to completely re-sync your node from genesis.
+Do not do this without good reason! There should be no need to clear state for the vast majority of users participating in Testnet. Resetting a node is a NON-REVERSIBLE PROCESS -- after you clear your database, you will need to completely re-sync your node from genesis.
 :::
 
 Developers and node runners may find that situations arise where they need to completely clear their node of synced state and/or do a full reset in the case of an issue or bug. A full reset of a node involves stopping the node, clearing the current nodelogs, and removing all synced state.
