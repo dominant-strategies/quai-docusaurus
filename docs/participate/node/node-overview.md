@@ -25,10 +25,17 @@ If you're ready to start setting up your node now, check out [the written tutori
 
 A global node on Quai Network maintains the ledger and generates proposed blocks for mining in all shards. Global nodes operate by sending and receiving the latest blocks along with their header data to its peers in the network. Global nodes also have the ability to serve requests that query each of the shards through WebSockets and HTTP. Currently, global nodes on Quai Network serve as archive nodes since historical state is not pruned.
 
-The hardware requirement to run a global node during the Iron Age Testnet:
+The hardware requirement to run a global node when Quai is at low/no load:
 
 - Fast CPU with 8+ cores
 - 32GB+ RAM
+- Fast SSD with at least 3TB free space
+- 10+ MBit/sec download Internet service
+
+The hardware requirement to run a global node when Quai is at high/maximum load:
+
+- Fast CPU with 16+ cores
+- 64GB+ RAM
 - Fast SSD with at least 3TB free space
 - 10+ MBit/sec download Internet service
 
@@ -36,11 +43,18 @@ The hardware requirement to run a global node during the Iron Age Testnet:
 
 A slice node on the network is a subset of a global node that validates Prime, a single Region, and a single Zone. An example of a slice node would be the combination of Prime, Cyprus, and Cyprus1. The benefit to running a slice node is that a node needs fewer resources. The trade-off is that cross-node validation is delegated to the peered global nodes or coordinate slices. A slice node is the smallest subset of the network that a node can run and still trustlessly access the network.
 
-The hardware requirement to run a slice node:
+The hardware requirement to run a slice node when Quai is at low/no load:
 
 - CPU with 4+ cores
-- 16GB RAM
-- 1TB free storage space to sync
+- 16GB+ RAM
+- Fast SSD with at least 1TB free space
+- 10+ MBit/sec download Internet service
+
+The hardware requirement to run a slice node when Quai is at high/maximum load:
+
+- CPU with 8+ cores
+- 24GB+ RAM
+- Fast SSD with at least 1TB free space
 - 10+ MBit/sec download Internet service
 
 ### Multi-Slice Node

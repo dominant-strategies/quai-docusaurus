@@ -50,6 +50,10 @@ To run a **slice node** during the Iron Age Testnet, you'll need a MacOS or Ubun
 - 1TB free storage space to sync
 - 10+ MBit/sec download Internet service
 
+:::warning
+The above hardware specifications are for when Quai Network is operating at no/low load. To see the required hardware specifications when Quai Network is operating at high/maximum load, visit the [Node Overview page](node-overview.md#node-types) or the [Node FAQ](node-faq.md#node-hardware-specs).
+:::
+
 ### Common Troubleshooting Resources
 
 - [Resolving UPnP Errors](./node-faq.md#upnp-issues)

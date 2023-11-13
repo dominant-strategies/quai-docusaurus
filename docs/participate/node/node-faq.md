@@ -16,17 +16,31 @@ keywords:
 
 **What hardware specifications are required to run a slice node? What about a global node?**
 
-The hardware requirement to run a slice node during the Iron Age Testnet:
+The hardware requirement to run a slice node when Quai is at low/no load:
 
 - CPU with 4+ cores
-- 16GB RAM
-- 1TB free storage space to sync
+- 16GB+ RAM
+- Fast SSD with at least 1TB free space
 - 10+ MBit/sec download Internet service
 
-The hardware requirement to run a global node during the Iron Age Testnet:
+The hardware requirement to run a slice node when Quai is at high/maximum load:
+
+- CPU with 8+ cores
+- 24GB+ RAM
+- Fast SSD with at least 1TB free space
+- 10+ MBit/sec download Internet service
+
+The hardware requirement to run a global node when Quai is at low/no load:
 
 - Fast CPU with 8+ cores
 - 32GB+ RAM
+- Fast SSD with at least 3TB free space
+- 10+ MBit/sec download Internet service
+
+The hardware requirement to run a global node when Quai is at high/maximum load:
+
+- Fast CPU with 16+ cores
+- 64GB+ RAM
 - Fast SSD with at least 3TB free space
 - 10+ MBit/sec download Internet service
 
