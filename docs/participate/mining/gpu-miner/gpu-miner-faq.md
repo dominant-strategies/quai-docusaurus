@@ -105,7 +105,7 @@ If the issue is on a VPS rather than bare-metal, installing `nvidia-cuda-toolkit
 2. `sudo apt update && sudo apt upgrade -y`
 3. `sudo apt install -y git cmake build-essential mesa-common-dev`
 4. `sudo reboot`
-5. Re-join the mining guide starting from [configure and run](./hive-manual.md).
+5. Re-join the mining guide starting from [configure and run](./hive-manual/hive-manual.md).
 
 ### SIGSEGV
 

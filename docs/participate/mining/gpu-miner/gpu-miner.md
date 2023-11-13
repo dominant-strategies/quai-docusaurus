@@ -9,8 +9,8 @@ keywords:
   - hiveos
 ---
 
-| Page                                            | Description                                                         |
-| ----------------------------------------------- | ------------------------------------------------------------------- |
-| [Automatic HiveOS Installation](./hive-auto.md) | Install and configure a Quai GPU miner on HiveOS using a script.    |
-| [Manual HiveOS Installation](./hive-manual.md)  | Manually install and configure a Quai GPU miner on HiveOS.          |
-| [Ubuntu Installation](./ubuntu-manual.md)       | Install and configure a Quai GPU miner on Ubuntu Desktop or Server. |
+| Page                                                       | Description                                                         |
+| ---------------------------------------------------------- | ------------------------------------------------------------------- |
+| [Automatic HiveOS Installation](./hive-auto.md)            | Install and configure a Quai GPU miner on HiveOS using a script.    |
+| [Manual HiveOS Installation](./hive-manual/hive-manual.md) | Manually install and configure a Quai GPU miner on HiveOS.          |
+| [Ubuntu Installation](./ubuntu-manual/ubuntu-manual.md)    | Install and configure a Quai GPU miner on Ubuntu Desktop or Server. |

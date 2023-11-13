@@ -54,7 +54,7 @@ To run the quai-gpu-miner, you'll first need to install and configure HiveOS. In
 ### Installing via Script
 
 :::info
-Using the script is the recommended way to install and build the miner due to its simplicity. However, if you are running unique settings or need specific drivers, you may prefer the customization of [the non-script installation](./hive-manual.md).
+Using the script is the recommended way to install and build the miner due to its simplicity. However, if you are running unique settings or need specific drivers, you may prefer the customization of [the non-script installation](./hive-manual/hive-manual.md).
 :::
 
 There is a script to build the miner supported on HiveOS. To use the script, you can run the following commands in your HiveOS terminal:
