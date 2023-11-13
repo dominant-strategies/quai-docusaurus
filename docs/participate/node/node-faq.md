@@ -114,10 +114,6 @@ The `network.env` file can be edited with the following IDEs:
 - `NETWORK=garden` The development network of the Iron Age Testnet
 - `NETWORK=local` The local development environment
 
-:::warning
-The Garden developer network operates on the BLAKE3 hashing algorithm at low difficulty, meaning the Garden developer network has a significantly higher chance of reorgs than the main Colosseum network.
-:::
-
 ### Configuring Slices
 
 **How do I tell my node which slices to run?**

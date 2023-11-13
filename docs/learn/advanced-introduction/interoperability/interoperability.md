@@ -19,7 +19,7 @@ An External Transaction (ETX) is a transaction that trustlessly moves state betw
 
 The blockchain that the ETX is originally broadcast from is referred to as the "origin chain" of the ETX. The blockchain that the ETX has been sent to is referred to as the "destination chain" of the ETX. All ETXs must travel up the hierarchy from the origin chain to reach a dominant chain of the destination chain. After the ETX has reached a chain dominant to the destination, it must then travel back down the hierarchy into the subordinate destination chain. There are two kinds of ETXs: account initiated and contract initiated.
 
-## Multi-Chain Contracts
+## [Multi-Chain Contracts](../../../develop/smart-contracts/deploy.md#cross-chain-smart-contracts)
 
 Quai's architecture enables contracts deployed on different Quai chains to be objectively interlinked. Linking contracts deployed on different Quai blockchains together allows contracts to be aware of and interact with the state of the contracts it is linked to. Existing multi-chain architectures segment projects into single sub networks by not offering full interoperable composability between blockchains. In Quai Network, a project may deploy and interlink contracts across all blockchains in the ecosystem, allowing users to interact with the project from any point in the network.
 Further, contracts can be written to support external interactions. For example, an account located in Cyprus 1 may call the mint function of a contract deployed in Paxos 2. The resulting token(s) minted by the contract call could be sent cross-chain to return to the Cyprus 1 address that called the function.

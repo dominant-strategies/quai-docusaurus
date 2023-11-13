@@ -9,7 +9,7 @@ keywords:
   - latency
 ---
 
-A miner is a computer performing complex mathematical calculations, known as hashing, in a competition to add the next block to a Quai blockchain. These ongoing competitions allow the network to reach consensus through the hierarchical longest chain rule (HLCR). Quai Network utilizes merged mining, which allows each miner to secure three Quai blockchains simultaneously. Further, Quai miners self-select the contexts they wish to mine, incentivizing reduced network latency via topological organization.
+A miner is a computer performing complex mathematical calculations, known as hashing, in a competition to add the next block to a Quai blockchain. These ongoing competitions allow the network to reach consensus through [Proof-of-Entropy-Minima (PoEM)](../../learn/advanced-introduction/poem/poem.md). Quai Network utilizes merged mining, which allows each miner to secure three Quai blockchains simultaneously. Further, Quai miners self-select the contexts they wish to mine, incentivizing reduced network latency via topological organization.
 
 Mining in Quai Network can be performed via CPU miner or GPU miner. GPUs have a significant advantage in efficiency over CPUs when mining Quai.
 

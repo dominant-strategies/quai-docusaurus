@@ -13,7 +13,7 @@ Quai Network is a network of blockchains built to handle high load while keeping
 
 ## Addresses
 
-Within Quai Network, each address "lives" on one of the Zone chains. The first byte of each address is used to identify which blockchain is able to modify/change the state of the account. Information on how these bytes of data are interpreted can be found in the ["Sharding" page of the docs](../../learn/advanced-introduction/hierarchical-structure/sharding.mdx).
+Within Quai Network, each address "lives" on one of the Zone chains. The first byte of each address is used to identify which blockchain is able to modify/change the state of the account. Information on how these bytes of data are interpreted can be found in the [Sharding](../../learn/advanced-introduction/hierarchical-structure/sharding.mdx) page of the docs.
 
 **From a user perspective, this means that you need at least one Quai address that "lives" on each Quai blockchain you want to interact with.** For example, if you want to hold NFTs on Zone 1, buy NFTs on Zone 2, and hold Quai on Zone 3, you'll need three accounts.
 

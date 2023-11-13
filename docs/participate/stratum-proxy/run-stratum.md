@@ -179,7 +179,7 @@ The proxy by default listens for miner connections on the `3333` port. You can c
 ```
 
 :::info
-Changing the proxy listening port is useful for running multiple proxies on a single full node. If you're only mining on a single shard, there is no need to change the listening port.
+Changing the proxy listening port is useful for running multiple proxies on a single global node. If you're only mining on a single shard, there is no need to change the listening port.
 :::
 
 The proxy should begin streaming logs to the terminal that _look similar to below_.

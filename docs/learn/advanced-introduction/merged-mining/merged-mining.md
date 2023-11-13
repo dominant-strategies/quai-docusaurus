@@ -13,7 +13,7 @@ Merged mining is mining a combined header generated from multiple blockchains. T
 
 Merged mining occurs when a miner is able to check each nonce they hash against the difficulty threshold of multiple distinct blockchains. In practice, this allows a single computer to mine and secure many blockchains simultaneously with no increase in hardware requirements or energy consumption.
 
-Merged mining can be conducted only between blockchains utilizing the same hashing algorithm. All Quai blockchains use the Blake3 hashing algorithm, and third party chains that use Blake3 can decide to merge-mine with Quai. Each Quai miner merge-mines three blockchains simultaneously -- one from each tier of Quai's hierarchy.
+Merged mining can be conducted only between blockchains utilizing the same hashing algorithm. All Quai blockchains use the [ProgPoW hashing algorithm](../../../participate/mining/miner-overview.md#progpow-hashing-algorithm), and third party chains that use ProgPoW can decide to merge-mine with Quai. Each Quai miner merge-mines three blockchains simultaneously -- one from each tier of Quai's hierarchy.
 
 ## Coincident Blocks
 
@@ -27,7 +27,7 @@ Merged mining enables Quai to utilize miners at much greater efficiency, reducin
 
 ## Merge-Mined Parachains
 
-Quai allows [merge-mined parachains](./parachains.md) to derive security from Quai Network. While Quai's merged mining focuses on merge-mining many Quai-specific chains simultaneously, any blockchain that utilizes the Blake3 hashing algorithm can bootstrap security and trustless bridging by enabling merged mining with Quai.
+Quai allows [merge-mined parachains](./parachains.md) to derive security from Quai Network. While Quai's merged mining focuses on merge-mining many Quai-specific chains simultaneously, any blockchain that utilizes the [ProgPoW](../../../participate/mining/miner-overview.md#progpow-hashing-algorithm) hashing algorithm can bootstrap security and trustless bridging by enabling merged mining with Quai.
 
 All Quai block headers contain data fields for Prime, Region, and Zone in addition to a single empty data field. This empty field allows Quai miners to insert the block header of a parachain into a Quai block header, creating a valid Quai block and a valid parachain block simultaneously. The parachain coincident block serves the same purpose as intra-network coincident blocks, in that it provides a hash linked reference between chains, facilitating trustless state transfers.
 
