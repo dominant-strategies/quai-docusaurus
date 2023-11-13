@@ -123,7 +123,7 @@ Making sure your miner is running correctly is crucial to being successful as a 
 
 #### Updating
 
-Prior to updating your miner, make sure to kill any instances of quai-cpu-miner using the stop command above. After stopping your miner, pull any new code by running:
+Prior to updati your miner, make sure to kill any instances of quai-cpu-miner using the stop command above. After stopping your miner, pull any new code by running:
 
 ```shell
 git pull

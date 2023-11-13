@@ -1,4 +1,4 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-npx cspell --no-summary --no-progress --no-must-find-files --file-list stdin
+exec git diff --cached --name-only | npx cspell --no-summary --no-progress --no-must-find-files --file-list stdin
