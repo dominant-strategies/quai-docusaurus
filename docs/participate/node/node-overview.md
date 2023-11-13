@@ -1,6 +1,6 @@
 ---
 title: Node Overview
-description: Overview of the implemenation of a Quai Network node.
+description: Overview of the Implementation of a Quai Network node.
 hide_table_of_contents: false
 sidebar_position: 1
 keywords:

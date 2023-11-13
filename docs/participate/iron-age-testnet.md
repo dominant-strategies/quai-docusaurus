@@ -41,7 +41,7 @@ No individual mining address will be able to receive more than 5% of the mining 
 :::
 
 :::danger
-IMPORTANT NOTE FOR TESTNET MINERS: The Iron Age Testnet will support the creation of mining pools; however, our team at Dominant Strategies will not be maintaining or recommending any mining pools for this Testnet. Due to the way mining rewards are tracked and calculated, allocating your hashpower to a pool that you don’t control will lead to your mining rewards being earned by the pool operator.
+IMPORTANT NOTE FOR TESTNET MINERS: The Iron Age Testnet will support the creation of mining pools; however, our team at Dominant Strategies will not be maintaining or recommending any mining pools for this Testnet. Due to the way mining rewards are tracked and calculated, allocating your hash power to a pool that you don’t control will lead to your mining rewards being earned by the pool operator.
 :::
 
 Learn how to start mining Quai in the [GPU miner documentation](../participate/mining/miner-overview.md).

@@ -17,7 +17,7 @@ keywords:
 
 The Iron Age Testnet is running using the ProgPoW hashing algorithm for mining. The ProgPoW algorithm was chosen due to the difficulty of creating application-specific integrated circuits (ASICs) that can mine ProgPoW. The use of ASIC-able algorithms such as SHA-256 quickly renders consumer-grade hardware impractical, resulting in large barrier to entry for competitive mining.
 
-ProgPoW was developed as an EIP to replace Ethash, but was discarded due to the merge. The original ProgPoW EIP (EIP-1057) can be found [here](https://github.com/ethereum/EIPs/pull/1057). Additional information on ProgPoW can be found on the ETH Magicians forum [here](https://ethereum-magicians.org/t/progpow-a-compilation-of-reference-material/3040/3).
+ProgPoW was developed as an EIP to replace ethash, but was discarded due to the merge. The original ProgPoW EIP (EIP-1057) can be found [here](https://github.com/ethereum/EIPs/pull/1057). Additional information on ProgPoW can be found on the ETH Magicians forum [here](https://ethereum-magicians.org/t/progpow-a-compilation-of-reference-material/3040/3).
 
 ### Miner Hardware Specs
 
@@ -63,7 +63,7 @@ cd /home/user/quai-gpu-miner/build
 ```
 
 ```shell
-./ethcoreminer/ethcoreminer -G -P stratum://YOURPROXYIPADRESS:STRATUMPORT
+./ethcoreminer/ethcoreminer -G -P stratum://YOURPROXYIPADDRESS:STRATUMPORT
 ```
 
 ### Dedicated Hardware
@@ -78,7 +78,7 @@ No. While you can connect the GPU miner to a node on the same machine, it is rec
 
 **What happens if I start mining before my node is synced?**
 
-If you start mining before your node is synced, you will be mining a fork of the network. This will cause you to mine blocks that **all other nodes will reject, wasting hashrate**. Additionally, if your node repeatedly propagates blocks that other nodes consider to be invalid, you run the risk of being dropped as a peer, which would cause your node to never sync to the network.
+If you start mining before your node is synced, you will be mining a fork of the network. This will cause you to mine blocks that **all other nodes will reject, wasting **. Additionally, if your node repeatedly propagates blocks that other nodes consider to be invalid, you run the risk of being dropped as a peer, which would cause your node to never sync to the network.
 
 :::danger
 **Do not mine to a node that is not already synced to the tip of the network.**
@@ -105,7 +105,7 @@ If the issue is on a VPS rather than bare-metal, installing `nvidia-cuda-toolkit
 2. `sudo apt update && sudo apt upgrade -y`
 3. `sudo apt install -y git cmake build-essential mesa-common-dev`
 4. `sudo reboot`
-5. Re-join the mining guide starting from [configure and run](./hive-manual.md).
+5. Re-join the mining guide starting from [configure and run](./hive-manual/hive-manual.md).
 
 ### SIGSEGV
 
@@ -119,13 +119,13 @@ Some notes on troubleshooting this issue while we continue to investigate:
 - If you are still experiencing the SIGSEGV issue while running at high voltage and low core clock speeds, you should start looking into your GPU's drivers.
 - If you are not able to resolve the issue via the above suggestions, get in contact with our team via the [Quai Dev Discord](https://discord.gg/s8y8asPwNC) to share more information about your specific issue.
 
-### AMD Low Hashrate
+### AMD Low Hash rate
 
-**I am getting significantly lower hashrate than expected on AMD cards. How do I fix this?**
+**I am getting significantly lower hash rate than expected on AMD cards. How do I fix this?**
 
-Our team has noticed that many AMD graphics cards give significantly lower hashrate than expected when mining ProgPoW. The likely cause is that AMD builds are not currently optimized for ProgPoW. One troubleshooting tip to try is looking into the graphics-card-specific drivers and installing them for your GPUs. However, this may still not resolve your issue.
+Our team has noticed that many AMD graphics cards give significantly lower hash rate than expected when mining ProgPoW. The likely cause is that AMD builds are not currently optimized for ProgPoW. One troubleshooting tip to try is looking into the graphics-card-specific drivers and installing them for your GPUs. However, this may still not resolve your issue.
 
-At some point in the future, a more optimized quai-gpu-miner build for AMD cards will be released that addresses this discrepancy between expected and real hashrate.
+At some point in the future, a more optimized quai-gpu-miner build for AMD cards will be released that addresses this discrepancy between expected and real hash rate.
 
 ## Optimization
 
@@ -176,8 +176,8 @@ This flight sheet was created and is maintained by a Quai community member, not 
 
 There are two major factors that miners should consider when deciding which slice of the network to mine in the Iron Age Testnet:
 
-1. Difficulty - during the Iron Age, Mainnet Rewards for mining are determined based on each address's proportion of total blocks mined. Thus, miners are consistently incentivized to mine the lowest-difficulty slice of the network. The slice that has the lowest difficulty will change over time as miners come online and move their hashrate around; to find which chain currently has the lowest difficulty, you can check the [Quai Stats](https://stats.quai.network/) page.
-2. Latency - if all slices of the network are operating at approximately the same difficulty, miners may still be able to gain an additional advantage by selecting the slice of the network they have the lowest latency to. This will minimize a miner's chances of proposing blocks that get uncled, reducing wasted hashrate. Latency is a secondary optimization to difficulty -- it is up to miners to determine at what point they believe they can benefit from considering latency and which slice they have the lowest latency to.
+1. Difficulty - during the Iron Age, Mainnet Rewards for mining are determined based on each address's proportion of total blocks mined. Thus, miners are consistently incentivized to mine the lowest-difficulty slice of the network. The slice that has the lowest difficulty will change over time as miners come online and move their hash rate around; to find which chain currently has the lowest difficulty, you can check the [Quai Stats](https://stats.quai.network/) page.
+2. Latency - if all slices of the network are operating at approximately the same difficulty, miners may still be able to gain an additional advantage by selecting the slice of the network they have the lowest latency to. This will minimize a miner's chances of proposing blocks that get uncled, reducing wasted hash rate. Latency is a secondary optimization to difficulty -- it is up to miners to determine at what point they believe they can benefit from considering latency and which slice they have the lowest latency to.
 
 ### Tuning
 

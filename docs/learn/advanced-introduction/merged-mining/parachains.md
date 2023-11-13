@@ -8,9 +8,9 @@ sidebar_position: 3
 
 # Merge-Mined Parachains
 
-A merge-mined parachain is a distinct, non-Quai blockchain that uses merged mining with Quai to bootstrap hashpower and liveliness. Merge-mined parachains are distinct from merge-mined sidechains in that they not only inherit security from Quai, but are also hash linked to and interoperable with the canonical network.
+A merge-mined parachain is a distinct, non-Quai blockchain that uses merged mining with Quai to bootstrap hash power and liveliness. Merge-mined parachains are distinct from merge-mined sidechains in that they not only inherit security from Quai, but are also hash linked to and interoperable with the canonical network.
 
-Merge-mined parachains are aware of the Quai state tree due to the inclusion of an empty parachain datafield in all Quai blocks. This allows for the creation of hash linked references, which enables the transfer of state between Quai Network and merge-mined parachains.
+Merge-mined parachains are aware of the Quai state tree due to the inclusion of an empty parachain data field in all Quai blocks. This allows for the creation of hash linked references, which enables the transfer of state between Quai Network and merge-mined parachains.
 
 Parachains also experience atomic block progression and rollbacks. Atomicity is achieved through the implementation of an aging period on the protocol's entry/exit contract. This aging period will mandate some number of blocks to be produced before the exit of state to a parachain. Any Quai Network rollback will also cause parachain rollbacks, however parachain rollbacks do not cause Quai rollbacks.
 
@@ -23,7 +23,7 @@ Parachains also assist in maintaining the sustainability of Proof-of-Work. All i
 
 ## Bootstrapping Security
 
-Parachains are able to bootstrap hashpower by merged mining with Quai Network. Quai block headers include an empty data field for parachains to utilize, allowing for the creation of hash linked references between Quai blockchains and merge-mined parachains.
+Parachains are able to bootstrap hash power by merged mining with Quai Network. Quai block headers include an empty data field for parachains to utilize, allowing for the creation of hash linked references between Quai blockchains and merge-mined parachains.
 
 Parachains are able to leverage the existing and more powerful hash rate of any Quai blockchain by using a Quai blockchain's header as auxiliary data in parachain blocks and including a valid proof-of-work for a Quai blockchain in the header of a parachain block. Merged mining with Quai makes it more difficult for an attacker to carry out a 51% attack on a parachain, as they would also need to control 51% of the hash rate of the Quai blockchain.
 

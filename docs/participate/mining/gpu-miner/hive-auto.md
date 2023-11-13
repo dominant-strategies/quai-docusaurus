@@ -40,7 +40,7 @@ In order to run the quai-gpu-miner on HiveOS and mine valid blocks, you'll need 
 - [How to find the IP of a Stratum Proxy](../../stratum-proxy/stratum-faq.md#stratum-ip-address)
 - ["No usable mining devices found" error](./gpu-miner-faq.md#no-opencl-platforms-found--no-usable-mining-devices)
 - ["SIGSEGV encountered" error](./gpu-miner-faq.md#sigsegv)
-- [Low hashrate on AMD cards](./gpu-miner-faq.md#amd-low-hashrate)
+- [Low hash rate on AMD cards](./gpu-miner-faq.md#amd-low-hash-rate)
 - [Error on make and/or build step](./gpu-miner-faq.md#error-on-make-andor-build)
 
 Additional troubleshooting resources are available in the [GPU Miner FAQ](./gpu-miner-faq.md).
@@ -54,7 +54,7 @@ To run the quai-gpu-miner, you'll first need to install and configure HiveOS. In
 ### Installing via Script
 
 :::info
-Using the script is the recommended way to install and build the miner due to its simplicity. However, if you are running unique settings or need specific drivers, you may prefer the customization of [the non-script installation](./hive-manual.md).
+Using the script is the recommended way to install and build the miner due to its simplicity. However, if you are running unique settings or need specific drivers, you may prefer the customization of [the non-script installation](./hive-manual/hive-manual.md).
 :::
 
 There is a script to build the miner supported on HiveOS. To use the script, you can run the following commands in your HiveOS terminal:
@@ -90,7 +90,7 @@ Replace `PROXYIPADDRESS` with the IP address of your proxy. Replace `STRATUMPORT
 :::
 
 ```shell
-./ethcoreminer/ethcoreminer -G -P stratum://PROXYIPADRESS:STRATUMPORT
+./ethcoreminer/ethcoreminer -G -P stratum://PROXYIPADDRESS:STRATUMPORT
 ```
 
 The quai-gpu-miner should now be running and outputting logs to the terminal. Now that your miner is running, [learn how to optimize your miner in the FAQ](./gpu-miner-faq.md#optimization)!

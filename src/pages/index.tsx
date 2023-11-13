@@ -32,7 +32,7 @@ export default function Home(): JSX.Element {
 	return (
 		<Layout
 			title={`${siteConfig.title}`}
-			description='The offical open source documentation for Quai Network.'
+			description='The official open source documentation for Quai Network.'
 		>
 			<HomepageHeader />
 			<main>

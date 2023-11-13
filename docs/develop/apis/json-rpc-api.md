@@ -19,7 +19,7 @@ A [postman](https://www.postman.com/) library containing templates for all of th
 
 ## Conventions
 
-### Hexidecimal Encoding
+### Hexadecimal Encoding
 
 When making calls to a node, data can be passed or returned in two types via JSON. These types are quantities and unformatted byte arrays. Both utilize hex encoding for compact representation but have slightly different formatting requirements.
 
@@ -33,7 +33,7 @@ When encoding quantities like numbers and integers, use the following format:
 
 #### Unformatted Data
 
-To encode unformatted data such as addresses, byte arrays, hashes, etc. - use the folllowing format:
+To encode unformatted data such as addresses, byte arrays, hashes, etc. - use the following format:
 
 - Encode as a hexadecimal
 - Prefix with "0x"
@@ -578,7 +578,7 @@ The response for [`getBlockByNumber`](#quai_blockbynumber) is largely the same a
 
 - `extTransactions: []<Data>` - Array of 32 byte external transaction hashes.
 - `subManifest: []<Data>` - Array of all 32 byte subordinate block hashes since the last coincident block.
-- `transactions: []<Data>` - Array of 32 byter internal transaction hashes.
+- `transactions: []<Data>` - Array of 32 byte internal transaction hashes.
 - `uncles: []<Data>` - Array of **//TODO FIGURE THIS OUT AND GET A BLOCK THAT HAS AN UNCLE**
 
 :::note
@@ -1249,7 +1249,7 @@ Returns the raw transaction byte sequence for a given transaction hash.
 
 ### txpool_content
 
-Returns the current content of the trnasaction pool.
+Returns the current content of the transaction pool.
 
 #### Input Parameters
 

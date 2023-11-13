@@ -68,7 +68,7 @@ To run an instance of go-quai, you'll need to install a few dependencies. You ca
 
 #### Go v1.21.0+
 
-Ubuntu Snap Install (_snap is not default installed on all Linux Distros_):
+Ubuntu Snap Install (_snap is not default installed on all Linux distros_):
 
 ```shell
 # install snapd if you don't have it already
@@ -255,7 +255,7 @@ Running a slice node will start processes for all chains, but **only validate st
 
 This will start up your slice node with the slices specified in your `network.env`.
 
-Node operators should self-select the slice least latent to them, in order to minimize their uncle rate and maximize network bandwidth. Providing an initial suggestion for geographic organization will expidite the minimization of latency.
+Node operators should self-select the slice least latent to them, in order to minimize their uncle rate and maximize network bandwidth. Providing an initial suggestion for geographic organization will expedite the minimization of latency.
 
 ![Latency Map](/img/LatencyMap.jpg)
 
