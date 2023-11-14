@@ -38,7 +38,7 @@ To encode unformatted data such as addresses, byte arrays, hashes, etc. - use th
 - Encode as a hexadecimal
 - Prefix with "0x"
 - Two hex digits per byte of data, with an even number of digits only
-- Example: hello is encoded as "0x48656C6C6F"
+- Example: "Hello" is encoded as "0x48656C6C6F"
 
 ### Default Block Parameter
 
