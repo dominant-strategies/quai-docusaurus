@@ -95,6 +95,10 @@ Replace `PROXYIPADDRESS` with the IP address of your proxy. Replace `STRATUMPORT
 
 The quai-gpu-miner should now be running and outputting logs to the terminal. Now that your miner is running, [learn how to optimize your miner in the FAQ](./gpu-miner-faq.md#optimization)!
 
+:::info
+When running on HiveOS, you can use a community-built flight sheet to easily manage your rig(s). Learn how to configure and use the flight sheet in the [GPU miner FAQ](gpu-miner-faq.md#flight-sheet).
+:::
+
 :::danger
 Do not start the miner before [confirming your node has fully synced](../../node/node-faq.md#check-sync-status). Mining while your node is not synced will result in the mining of **invalid blocks** and **wasted hash**.
 :::
