@@ -1,14 +1,15 @@
 # README
 
-Thanks for your interest in contributing to the [Quai Network documentation](https://qu.ai/docs/)! This document contains information on how this repository is managed, and how to contribute to the documentation.
+Thanks for your interest in contributing to the [Quai Network documentation](https://qu.ai/docs/)! This document contains information on how this repository is managed, and how to contribute to the documentation. 
+
+To learn how to contribute to this repository, check out [CONTRIBUTING.md](./CONTRIBUTING.md)
 
 ## Table of Contents
 
 - [Who Owns This Repo?](#who-owns-this-repo)
-- [How To Contribute](#how-to-contribute)
-  - [Docs Architecture](#docs-architecture)
-  - [Markdown (.md & .mdx)](#markdown-md--mdx)
-  - [Images](#images)
+- [Docs Architecture](#docs-architecture)
+- [Markdown (.md & .mdx)](#markdown-md--mdx)
+- [Images](#images)
 
 ## Who Owns This Repo?
 
