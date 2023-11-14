@@ -4,7 +4,6 @@ about: Identify broken links so we can fix them!
 title: "\U0001F517[BROKEN LINK] In ____ Page"
 labels: ''
 assignees: ''
-
 ---
 
 **Where is the broken link?**

@@ -4,7 +4,6 @@ about: 'Let us know about any content in existing pages that needs to be updated
 title: "\U0001F5D2️[UPDATE CONTENT] Update ____ Page"
 labels: ''
 assignees: ''
-
 ---
 
 **What page needs its content updated?**

@@ -9,7 +9,7 @@ keywords:
   - mining
 ---
 
-There are two tutorials available for manually setting up a GPU Miner on HiveOS -- one utilizing OpenCL, and one utilizing CUDA. The automatic HiveOS installation will install with OpenCL. 
+There are two tutorials available for manually setting up a GPU Miner on HiveOS -- one utilizing OpenCL, and one utilizing CUDA. The automatic HiveOS installation will install with OpenCL.
 
 Users with Nvidia GPUs are recommended to utilize CUDA, especially if you have encountered the SIGSEGV issue while using OpenCL.
 

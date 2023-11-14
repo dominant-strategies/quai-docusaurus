@@ -4,7 +4,6 @@ about: Suggest an idea for a new page.
 title: "\U0001F4DD[PAGE REQUEST] Proposed Page Title Here"
 labels: ''
 assignees: ''
-
 ---
 
 **What is the title of your proposed page?**

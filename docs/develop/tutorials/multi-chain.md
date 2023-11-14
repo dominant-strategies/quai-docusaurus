@@ -180,82 +180,82 @@ This `hardhat.config.js` file is not the sole way to configure multi-chain contr
  * @type import('hardhat/config').HardhatUserConfig
  */
 
-require('@nomicfoundation/hardhat-toolbox')
-const dotenv = require('dotenv')
-dotenv.config({ path: '.env' })
+require('@nomicfoundation/hardhat-toolbox');
+const dotenv = require('dotenv');
+dotenv.config({ path: '.env' });
 
-const chainId = Number(process.env.CHAINID)
+const chainId = Number(process.env.CHAINID);
 
 module.exports = {
-	defaultNetwork: 'cyprus1',
-	networks: {
-		cyprus1: {
-			url: process.env.CYPRUS1URL.toString(),
-			accounts: [process.env.CYPRUS1PK],
-			chainId: chainId,
-		},
-		cyprus2: {
-			url: `${process.env.CYPRUS2URL}`,
-			accounts: [process.env.CYPRUS2PK],
-			chainId: chainId,
-		},
-		cyprus3: {
-			url: `${process.env.CYPRUS3URL}`,
-			accounts: [process.env.CYPRUS3PK],
-			chainId: chainId,
-		},
-		paxos1: {
-			url: `${process.env.PAXOS1URL}`,
-			accounts: [process.env.PAXOS1PK],
-			chainId: chainId,
-		},
-		paxos2: {
-			url: `${process.env.PAXOS2URL}`,
-			accounts: [process.env.PAXOS2PK],
-			chainId: chainId,
-		},
-		paxos3: {
-			url: `${process.env.PAXOS3URL}`,
-			accounts: [process.env.PAXOS3PK],
-			chainId: chainId,
-		},
-		hydra1: {
-			url: `${process.env.HYDRA1URL}`,
-			accounts: [process.env.HYDRA1PK],
-			chainId: chainId,
-		},
-		hydra2: {
-			url: `${process.env.HYDRA2URL}`,
-			accounts: [process.env.HYDRA2PK],
-			chainId: chainId,
-		},
-		hydra3: {
-			url: `${process.env.HYDRA3URL}`,
-			accounts: [process.env.HYDRA3PK],
-			chainId: chainId,
-		},
-	},
+  defaultNetwork: 'cyprus1',
+  networks: {
+    cyprus1: {
+      url: process.env.CYPRUS1URL.toString(),
+      accounts: [process.env.CYPRUS1PK],
+      chainId: chainId,
+    },
+    cyprus2: {
+      url: `${process.env.CYPRUS2URL}`,
+      accounts: [process.env.CYPRUS2PK],
+      chainId: chainId,
+    },
+    cyprus3: {
+      url: `${process.env.CYPRUS3URL}`,
+      accounts: [process.env.CYPRUS3PK],
+      chainId: chainId,
+    },
+    paxos1: {
+      url: `${process.env.PAXOS1URL}`,
+      accounts: [process.env.PAXOS1PK],
+      chainId: chainId,
+    },
+    paxos2: {
+      url: `${process.env.PAXOS2URL}`,
+      accounts: [process.env.PAXOS2PK],
+      chainId: chainId,
+    },
+    paxos3: {
+      url: `${process.env.PAXOS3URL}`,
+      accounts: [process.env.PAXOS3PK],
+      chainId: chainId,
+    },
+    hydra1: {
+      url: `${process.env.HYDRA1URL}`,
+      accounts: [process.env.HYDRA1PK],
+      chainId: chainId,
+    },
+    hydra2: {
+      url: `${process.env.HYDRA2URL}`,
+      accounts: [process.env.HYDRA2PK],
+      chainId: chainId,
+    },
+    hydra3: {
+      url: `${process.env.HYDRA3URL}`,
+      accounts: [process.env.HYDRA3PK],
+      chainId: chainId,
+    },
+  },
 
-	// path to locally built solc binaries
-	customCompilerPath: '/path/to/solc/',
+  // path to locally built solc binaries
+  customCompilerPath: '/path/to/solc/',
 
-	solidity: {
-		compilers: [
-			{
-				version: '0.8.0',
-			},
-		],
-	},
+  solidity: {
+    compilers: [
+      {
+        version: '0.8.0',
+      },
+    ],
+  },
 
-	paths: {
-		sources: './contracts',
-		cache: './cache',
-		artifacts: './artifacts',
-	},
-	mocha: {
-		timeout: 20000,
-	},
-}
+  paths: {
+    sources: './contracts',
+    cache: './cache',
+    artifacts: './artifacts',
+  },
+  mocha: {
+    timeout: 20000,
+  },
+};
 ```
 
 All changes made in your `.env` file will be auto-configured for deployments within the `hardhat.config.js` file and passed on to the dependent deploy scripts.
@@ -334,41 +334,41 @@ Compiled 1 Solidity file successfully
 The Hardhat sample project has a pre-made deployment script named `deploy.js` in the `scripts` directory. Copy the following into the `deploy.js` file.
 
 ```javascript title="deploy.js"
-const quais = require('quais')
-const hre = require('hardhat')
-const { pollFor } = require('quais-polling')
+const quais = require('quais');
+const hre = require('hardhat');
+const { pollFor } = require('quais-polling');
 
 async function main() {
-	const ethersContract = await hre.ethers.getContractFactory('QRC20')
-	const quaisProvider = new quais.providers.JsonRpcProvider(hre.network.config.url)
+  const ethersContract = await hre.ethers.getContractFactory('QRC20');
+  const quaisProvider = new quais.providers.JsonRpcProvider(hre.network.config.url);
 
-	const walletWithProvider = new quais.Wallet(hre.network.config.accounts[0], quaisProvider)
-	await quaisProvider.ready
+  const walletWithProvider = new quais.Wallet(hre.network.config.accounts[0], quaisProvider);
+  await quaisProvider.ready;
 
-	const QuaisContract = new quais.ContractFactory(
-		ethersContract.interface.fragments,
-		ethersContract.bytecode,
-		walletWithProvider
-	)
+  const QuaisContract = new quais.ContractFactory(
+    ethersContract.interface.fragments,
+    ethersContract.bytecode,
+    walletWithProvider
+  );
 
-	const quaisContract = await QuaisContract.deploy({ gasLimit: 4000000 })
+  const quaisContract = await QuaisContract.deploy({ gasLimit: 4000000 });
 
-	const deployReceipt = await pollFor(
-		quaisProvider, // provider passed to poller
-		'getTransactionReceipt', // method to call on provider
-		[quaisContract.deployTransaction.hash], // params to pass to method
-		1.5, // initial polling interval in seconds
-		1 // request timeout in seconds
-	)
-	console.log('Contract deployed to address: ', deployReceipt.contractAddress)
+  const deployReceipt = await pollFor(
+    quaisProvider, // provider passed to poller
+    'getTransactionReceipt', // method to call on provider
+    [quaisContract.deployTransaction.hash], // params to pass to method
+    1.5, // initial polling interval in seconds
+    1 // request timeout in seconds
+  );
+  console.log('Contract deployed to address: ', deployReceipt.contractAddress);
 }
 
 main()
-	.then(() => process.exit(0))
-	.catch((error) => {
-		console.error(error)
-		process.exit(1)
-	})
+  .then(() => process.exit(0))
+  .catch(error => {
+    console.error(error);
+    process.exit(1);
+  });
 ```
 
 `deploy.js` will pull the network configurations and deployment accounts from your `.env` and `hardhat.config.js` files via the [Hardhat Runtime Environment](https://hardhat.org/hardhat-runner/docs/advanced/hardhat-runtime-environment) based on the chain flag specified in your deployment command.
@@ -514,16 +514,16 @@ First, we're going to add the Cyprus 2 contract address to the `approveAddresses
 Change the `contractAddress` variable to our **Cyprus 1 contract address**:
 
 ```javascript
-const contractAddress = '0x1A3fA2C0B9c490a07a421d2b169E034C1bFcA601'
+const contractAddress = '0x1A3fA2C0B9c490a07a421d2b169E034C1bFcA601';
 ```
 
 Then, add the edit the `transactionData` with the Cyprus 2 chain index and contract address:
 
 ```javascript
 const transactionData = await contract.populateTransaction.AddApprovedAddress(
-	1, // Cyprus 2 chain index
-	'0x112C8693F5De667fb4867AD43f9c2FeFE1E95f03' // Cyprus 2 contract address
-)
+  1, // Cyprus 2 chain index
+  '0x112C8693F5De667fb4867AD43f9c2FeFE1E95f03' // Cyprus 2 contract address
+);
 ```
 
 Now, we're ready to run the script and finish the first part of the contract linkage. Make sure to pass the `--network cyprus1` flag **when sending transactions to the Cyprus 1 contract**.
@@ -546,16 +546,16 @@ To finish linking these two sister contracts, we'll need to _do the reverse and 
 Change the `contractAddress` variable to **our Cyprus 2 contract address**:
 
 ```javascript
-const contractAddress = '0x2F4C5243BEd5dC46787378894eDF662Db9FE4685'
+const contractAddress = '0x2F4C5243BEd5dC46787378894eDF662Db9FE4685';
 ```
 
 And edit the `transactionData` with the Cyprus 1 chain index and contract address:
 
 ```javascript
 const transactionData = await contract.populateTransaction.AddApprovedAddress(
-	0, // Cyprus 1 chain index
-	'0x1A3fA2C0B9c490a07a421d2b169E034C1bFcA601' // Cyprus 1 contract address
-)
+  0, // Cyprus 1 chain index
+  '0x1A3fA2C0B9c490a07a421d2b169E034C1bFcA601' // Cyprus 1 contract address
+);
 ```
 
 For the final step of the contract linkage, run the script with the `--network cyprus2` flag **to send the transaction to Cyprus 2**.

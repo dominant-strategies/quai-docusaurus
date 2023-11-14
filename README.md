@@ -32,5 +32,4 @@ Each **doc** is created in Markdown as a .md or .mdx file. To learn how to forma
 
 ### Images
 
-Images live in the /static/img/ folder of this repository. To add a new image, add the file to the /static/img/ folder and reference it in your Markdown doc(s) with the following:
-`![AltText](imagepath)`
+Images live in the /static/img/ folder of this repository. To add a new image, add the file to the /static/img/ folder and reference it in your Markdown doc(s) with the following: `![AltText](imagepath)`

@@ -111,7 +111,7 @@ If the issue is on a VPS rather than bare-metal, installing `nvidia-cuda-toolkit
 
 **I got the error "SIGSEGV encountered..." and my miner crashed. How do I fix this?**
 
-The use of OpenCL is the cause of this error. This error can be perminantly resolved by following the CUDA installation instructions for [HiveOS](../gpu-miner/hive-manual/hive-manual-cuda.md) or [Ubuntu](../gpu-miner/ubuntu-manual/ubuntu-manual-cuda.md) in the Quai Docs rather than installing with OpenCL. 
+The use of OpenCL is the cause of this error. This error can be permanently resolved by following the CUDA installation instructions for [HiveOS](../gpu-miner/hive-manual/hive-manual-cuda.md) or [Ubuntu](../gpu-miner/ubuntu-manual/ubuntu-manual-cuda.md) in the Quai Docs rather than installing with OpenCL.
 
 ### AMD Low Hash rate
 

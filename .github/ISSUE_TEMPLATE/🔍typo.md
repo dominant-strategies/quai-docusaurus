@@ -4,7 +4,6 @@ about: Report a typo so we can fix it!
 title: "\U0001F50D[TYPO] Typo in ____ Page"
 labels: ''
 assignees: ''
-
 ---
 
 **Edit The Title**
@@ -13,7 +12,7 @@ Let us know which page(s) the typo is in.
 **Incorrect Copy**
 Page: [e.g. intro.md]
 Line: [e.g. lines 50-51]
-Paste the line(s) of text that include the typo here: 
+Paste the line(s) of text that include the typo here:
 
 **What's Wrong With It?**
 Let us know why the copy you pasted above is incorrect, and what needs to be fixed.

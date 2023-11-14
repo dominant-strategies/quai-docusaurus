@@ -4,7 +4,6 @@ about: How could the Quai docs be improved?
 title: "\U0001F4A1[SUGGESTION] Your Idea"
 labels: ''
 assignees: ''
-
 ---
 
 **Is your feature request related to a problem? Please describe.**
