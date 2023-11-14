@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import styles from './Card.module.css';
+import React from 'react';
 
 export type CardItem = {
   title: string;
