@@ -168,53 +168,53 @@ Paste the following code into your `hardhat.config.js` file to configure deploym
  * @type import('hardhat/config').HardhatUserConfig
  */
 
-require('@nomicfoundation/hardhat-toolbox')
+require('@nomicfoundation/hardhat-toolbox');
 
-const dotenv = require('dotenv')
-dotenv.config({ path: '.env' })
+const dotenv = require('dotenv');
+dotenv.config({ path: '.env' });
 
 module.exports = {
-	defaultNetwork: 'colosseum',
-	networks: {
-		// testnet
-		colosseum: {
-			url: `${process.env.RPCURL}`,
-			accounts: [process.env.PRIVKEY],
-			chainId: 9000, // colosseum chainId
-		},
-		// devnet
-		garden: {
-			url: `${process.env.RPCURL}`,
-			accounts: [process.env.PRIVKEY],
-			chainId: 12000, // garden chainId
-		},
+  defaultNetwork: 'colosseum',
+  networks: {
+    // testnet
+    colosseum: {
+      url: `${process.env.RPCURL}`,
+      accounts: [process.env.PRIVKEY],
+      chainId: 9000, // colosseum chainId
+    },
+    // devnet
+    garden: {
+      url: `${process.env.RPCURL}`,
+      accounts: [process.env.PRIVKEY],
+      chainId: 12000, // garden chainId
+    },
 
-		// local
-		local: {
-			url: `${process.env.RPCURL}`,
-			accounts: [process.env.PRIVKEY],
-			chainId: 1337, // local chainId
-		},
-	},
+    // local
+    local: {
+      url: `${process.env.RPCURL}`,
+      accounts: [process.env.PRIVKEY],
+      chainId: 1337, // local chainId
+    },
+  },
 
-	// include compiler version defined in your smart contract
-	solidity: {
-		compilers: [
-			{
-				version: '0.8.9',
-			},
-		],
-	},
+  // include compiler version defined in your smart contract
+  solidity: {
+    compilers: [
+      {
+        version: '0.8.9',
+      },
+    ],
+  },
 
-	paths: {
-		sources: './contracts',
-		cache: './cache',
-		artifacts: './artifacts',
-	},
-	mocha: {
-		timeout: 20000,
-	},
-}
+  paths: {
+    sources: './contracts',
+    cache: './cache',
+    artifacts: './artifacts',
+  },
+  mocha: {
+    timeout: 20000,
+  },
+};
 ```
 
 ## Deploy
@@ -242,44 +242,44 @@ Compiled 1 Solidity file successfully
 The Hardhat sample project has a pre-made deployment script named `deploy.js` in the `scripts` directory. Copy the following into the `deploy.js` file.
 
 ```javascript title="deploy.js"
-const quais = require('quais')
-const { pollFor } = require('quais-polling')
-const hre = require('hardhat')
+const quais = require('quais');
+const { pollFor } = require('quais-polling');
+const hre = require('hardhat');
 
 async function main() {
-	const ethersContract = await hre.ethers.getContractFactory('Greeter')
-	const quaisProvider = new quais.providers.JsonRpcProvider(hre.network.config.url)
+  const ethersContract = await hre.ethers.getContractFactory('Greeter');
+  const quaisProvider = new quais.providers.JsonRpcProvider(hre.network.config.url);
 
-	const walletWithProvider = new quais.Wallet(hre.network.config.accounts[0], quaisProvider)
-	await quaisProvider.ready
+  const walletWithProvider = new quais.Wallet(hre.network.config.accounts[0], quaisProvider);
+  await quaisProvider.ready;
 
-	const QuaisContract = new quais.ContractFactory(
-		ethersContract.interface.fragments,
-		ethersContract.bytecode,
-		walletWithProvider
-	)
+  const QuaisContract = new quais.ContractFactory(
+    ethersContract.interface.fragments,
+    ethersContract.bytecode,
+    walletWithProvider
+  );
 
-	const quaisContract = await QuaisContract.deploy('Hello Quai', {
-		gasLimit: 1000000,
-	})
+  const quaisContract = await QuaisContract.deploy('Hello Quai', {
+    gasLimit: 1000000,
+  });
 
-	// Use quais-polling to wait for contract to be deployed
-	const deployReceipt = await pollFor(
-		quaisProvider, // provider passed to poller
-		'getTransactionReceipt', // method to call on provider
-		[quaisContract.deployTransaction.hash], // params to pass to method
-		1.5, // initial polling interval in seconds
-		1 // request timeout in seconds
-	)
-	console.log('Contract deployed to address: ', deployReceipt.contractAddress)
+  // Use quais-polling to wait for contract to be deployed
+  const deployReceipt = await pollFor(
+    quaisProvider, // provider passed to poller
+    'getTransactionReceipt', // method to call on provider
+    [quaisContract.deployTransaction.hash], // params to pass to method
+    1.5, // initial polling interval in seconds
+    1 // request timeout in seconds
+  );
+  console.log('Contract deployed to address: ', deployReceipt.contractAddress);
 }
 
 main()
-	.then(() => process.exit(0))
-	.catch((error) => {
-		console.error(error)
-		process.exit(1)
-	})
+  .then(() => process.exit(0))
+  .catch(error => {
+    console.error(error);
+    process.exit(1);
+  });
 ```
 
 Using `deploy.js`, we can set the initial greeting and log out the contract address upon deployment. Scripts can be used to automate many different functions other than deployment.

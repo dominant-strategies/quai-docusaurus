@@ -1,3 +1,5 @@
 # Add files here to ignore them from prettier formatting
 
 /build
+/docs/participate/iron-age-testnet-tos.md
+/docs/archive

@@ -147,7 +147,7 @@ cmake .. -DETHASHCUDA=ON && cmake --build .
 ```
 
 :::warning
-Running this command may take a while to complete, and will require about 10gb of RAM. If you don't have enough RAM on your rig to compile, some users have had success compiling on a different machine and sending the compiled binary to the rig. 
+Running this command may take a while to complete, and will require about 10gb of RAM. If you don't have enough RAM on your rig to compile, some users have had success compiling on a different machine and sending the compiled binary to the rig.
 :::
 
 ### Run
