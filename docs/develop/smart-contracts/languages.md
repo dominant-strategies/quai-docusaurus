@@ -10,7 +10,7 @@ keywords:
 
 ## Overview
 
-Quai Network runs a modified Ethereum Virtual Machine environment that provides internal *and* cross-chain smart contract execution across zone chain in the network. Each chain's EVM is capable of executing smart contracts written in Solidity, SolidityX, and other languages that compile to EVM bytecode.
+Quai Network runs a modified Ethereum Virtual Machine environment that provides internal _and_ cross-chain smart contract execution across zone chains in the network. Each chain's EVM is capable of executing smart contracts written in Solidity, SolidityX, and other languages that compile to EVM bytecode.
 
 Generic [Solidity](#solidity) smart contracts can be deployed to any single chain in the network and will function as expected. However, to take full advantage of Quai's cross-chain functionality, developers must use [SolidityX](#solidityx) based smart contracts.
 
