@@ -157,7 +157,7 @@ This flight sheet was created and is maintained by a Quai community member, not 
 10. On "Hash algorithm", type "progpow".
 11. On "Wallet and worker template", type "%WAL%.%WORKER_NAME%".
 12. On "Pool URL", type "stratum://EXTERNALIPADDRESS:PORT".
-13. On "Extra config arguments", type "-G -HWON 1 -P stratum://EXTERNALIPADDRESS:PORT".
+13. On "Extra config arguments", type "-G --HWON 1 -P stratum://EXTERNALIPADDRESS:PORT".
 14. On bottom right corner, click "Apply Changes".
 
 ![Apply Changes](/img/FS5.jpg)

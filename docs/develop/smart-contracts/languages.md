@@ -8,9 +8,13 @@ keywords:
   - smart contract languages
 ---
 
-# Languages
+## Overview
 
-## Solidity
+Quai Network runs a modified Ethereum Virtual Machine environment that provides internal _and_ cross-chain smart contract execution across zone chains in the network. Each chain's EVM is capable of executing smart contracts written in Solidity, SolidityX, and other languages that compile to EVM bytecode.
+
+Generic [Solidity](#solidity) smart contracts can be deployed to any single chain in the network and will function as expected. However, to take full advantage of Quai's cross-chain functionality, developers must use [SolidityX](#solidityx) based smart contracts.
+
+### Solidity
 
 Solidity is a contract-oriented, high-level programming language for creating smart contracts. It was influenced by C++, Python, and JavaScript and is designed to target the Ethereum Virtual Machine (EVM) environments. Solidity is statically typed, supports inheritance, and libraries. It allows developers to create smart contracts for a wide range of use cases and applications. Key features of Solidity include:
 
@@ -20,7 +24,7 @@ Solidity is a contract-oriented, high-level programming language for creating sm
 - Support for libraries and user-defined functions
 - Strong security features that ensure contract integrity.
 
-### Example Smart Contract
+#### Example Contract
 
 The Greeter contract shown below is written with [Solidity v0.8.0](https://docs.soliditylang.org/en/v0.8.0/). Greeter serves two functions:
 
@@ -47,12 +51,46 @@ contract Greeter {
 }
 ```
 
-### Resources
+#### Resources
 
 - [Solidity Homepage](https://soliditylang.org/)
 - [Solidity Documentation](https://docs.soliditylang.org/en/latest/)
 - [GitHub](https://github.com/ethereum/solidity)
 - [Examples](https://docs.soliditylang.org/en/latest/solidity-by-example.html)
+
+### SolidityX
+
+SolidityX is a fork of Solidity that adds additional features and functionality to the language. SolidityX is a superset of Solidity, meaning that all Solidity code is valid SolidityX code. _It retains all of the features of Solidity_, while adding support for **Quai Network's cross-chain functionality** natively into the EVM.
+
+The key additions to SolidityX include:
+
+- Support for cross-chain transactions via the [`etx`](./opcode-additions.md#etx) opcode.
+- Support for cross-chain address validation via the [`isaddrInternal`](./opcode-additions.md#isaddrinternal) opcode.
+
+Additional opcode usage is currently supported via [inline assembly](https://docs.soliditylang.org/en/latest/assembly.html). More details on usage of `ext` and `isaddrinternal` can be found on the [Opcode Additions page](./opcode-additions.md).
+
+#### Example Implementation
+
+Below is a simple implementation of the `isaddrinternal` opcode using inline assembly in a QRC20 contract. The function checks whether an address is on the same shard as the deployed contract and then decides whether to execute a local transfer or an external transfer.
+
+```solidity
+function transfer(address to, uint256 amount) public payable  returns (bool) {
+        bool isInternal;
+        assembly {
+            isInternal := isaddrinternal(to)  // This opcode returns true if an address is internal
+        }
+        require(isInternal, "Address is external. Use cross-chain transfer function.");
+        _transfer(msg.sender, to, amount);
+        return true;
+    }
+```
+
+#### Resources
+
+- [GitHub](https://github.com/dominant-strategies/SolidityX)
+- [QRC-20 Token](https://github.com/dominant-strategies/SolidityX-Contracts/blob/main/QRC20X.sol)
+- [QRC-721 Token](https://github.com/dominant-strategies/SolidityX-Contracts/blob/main/QRC721X.sol)
+- [Opcode Additions](./opcode-additions.md)
 
 ## Alternative Languages
 
