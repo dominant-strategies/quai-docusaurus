@@ -6,7 +6,7 @@ sidebar_position: 3
 
 # Merged Mining
 
-Merged mining is mining a combined header generated from multiple blockchains. The idea of merged mining was [first conceived by the pseudoanonymous Satoshi Nakamoto in December 2010](https://bitcointalk.org/index.php?topic=1790.msg28696#msg28696). Quai has extended Satoshi's concept with the implementation of merged mining in a network of blockchains which have the same shared protocol. This implementation allows all Quai chains to share security through the eventual commitment of all network hash power. In addition, the process of merged mining leads to the automatic creation of hash linked references between Quai chains which enable trustless cross-chain state transitions. By using merged mining to create a multithreaded execution environment, [Quai makes Proof-of-Work over 10,000 times more energy efficient than Bitcoin](/learn/advanced-introduction/merged-mining/energy-efficiency.mdx)\*.
+Merged mining is mining a combined header generated from multiple blockchains. The idea of merged mining was [first conceived by the pseudoanonymous Satoshi Nakamoto in December 2010](https://bitcointalk.org/index.php?topic=1790.msg28696#msg28696). Quai has extended Satoshi's concept with the implementation of merged mining in a network of blockchains which have the same shared protocol. This implementation allows all Quai chains to share security through the eventual commitment of all network hash power. In addition, the process of merged mining leads to the automatic creation of hash linked references between Quai chains which enable trustless cross-chain state transitions. By using merged mining to create a multithreaded execution environment, [Quai makes Proof-of-Work over 10,000 times more energy efficient than Bitcoin](/learn/advanced-introduction/merged-mining/energy-efficiency.mdx)*.
 
 ## What is Merged Mining?
 
@@ -32,4 +32,4 @@ All Quai block headers contain data fields for prime, region, and zone in additi
 
 Parachain liveliness is determined by market forces. Each block leaves only a single empty data field, creating a competitive environment for parachains to incentivize Quai miners.
 
-\*_Per transaction, assuming full transactional load and the same number of miners on both Quai Network and the Bitcoin Network._
+*_Per transaction, assuming full transactional load and the same number of miners on both Quai Network and the Bitcoin Network._
