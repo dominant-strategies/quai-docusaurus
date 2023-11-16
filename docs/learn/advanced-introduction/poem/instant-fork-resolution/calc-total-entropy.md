@@ -13,7 +13,7 @@ PoEM more accurately measures the property that PoW aimed to measure with "work"
 
 Total entropy is a better measure of accumulated energy expenditure than total difficulty. Both measure how unlikely a series of related events are. However, total entropy is calculated geometrically, meaning it multiplies events together. In contrast, PoW's total difficulty is calculated linearly, meaning it adds events together.
 
-The starting point for the calculation of entropy change is the bits of entropy removed from a block. This is computed using a measure of [intrinsic block weight](./intrinsic-block-weight.md).
+The starting point for the calculation of entropy change is the bits of entropy removed from a block. This is computed using a measure of [intrinsic block weight](/learn/advanced-introduction/poem/instant-fork-resolution/intrinsic-block-weight.md).
 
 ![TotalEntropy](/img/TotalEntropy.jpg)
 

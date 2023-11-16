@@ -31,10 +31,10 @@ Prefer a video tutorial? Check out a video walkthrough on setting up a stratum p
 
 ### Common Troubleshooting Resources
 
-- [What machine to run the Stratum Proxy on](./stratum-faq.md#keep-proxy-running)
-- [How to keep Stratum running](./stratum-faq.md#keep-proxy-running)
-- [How to find the IP of the Stratum Proxy](./stratum-faq.md#stratum-ip-address)
-- [How to run multiple Stratum Proxies at once](./stratum-faq.md#multiple-proxies-to-node)
+- [What machine to run the Stratum Proxy on](/participate/stratum-proxy/stratum-faq.md#keep-proxy-running)
+- [How to keep Stratum running](/participate/stratum-proxy/stratum-faq.md#keep-proxy-running)
+- [How to find the IP of the Stratum Proxy](/participate/stratum-proxy/stratum-faq.md#stratum-ip-address)
+- [How to run multiple Stratum Proxies at once](/participate/stratum-proxy/stratum-faq.md#multiple-proxies-to-node)
 
 ## Environment Setup
 
@@ -131,7 +131,7 @@ make quai-stratum
 
 Now that we've built the source, we can start our proxy. We recommend using a process manager like tmux or screen to run the proxy.
 
-To run the proxy, you'll need to select a shard to run against. More information on how and why to select shards can be found in the [GPU Miner FAQ](../mining/gpu-miner/gpu-miner-faq.md#slice-choice).
+To run the proxy, you'll need to select a shard to run against. More information on how and why to select shards can be found in the [GPU Miner FAQ](/participate/mining/gpu-miner/gpu-miner-faq.md#slice-choice).
 
 Start the proxy by passing either the corresponding **web socket ports** or **chain names** for the region and zone you've selected to run. Run with chain names using this command:
 
@@ -202,4 +202,4 @@ WARN[0000] One ethash cache must always be in memory requested=0
 
 **To stop the proxy, use CTRL+C in your terminal.**
 
-After configuring and pointing your proxy at a shard, you're now ready to point a [GPU miner](../mining/gpu-miner/gpu-miner.md) at it and start mining.
+After configuring and pointing your proxy at a shard, you're now ready to point a [GPU miner](/participate/mining/gpu-miner/gpu-miner.md) at it and start mining.

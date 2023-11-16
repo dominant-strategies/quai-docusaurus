@@ -21,10 +21,10 @@ The Iron Age Testnet is the third public test of the Quai protocol. The followin
 | [**Dominant Strategies Github**](https://github.com/dominant-strategies)                                           | The home of all Dominant Strategies repositories, including go-quai, quai-gpu-miner, and go-quai-stratum.  |
 | [**Testnet Schedule & Incentives Article**](https://qu.ai/blog/iron-age-testnet-schedule/)                         | A detailed schedule of the Iron Age Testnet.                                                               |
 | [**Network Stats Page**](https://stats.quai.network/)                                                              | An invite-only node stats page for RPC/infrastructure providers.                                           |
-| [**Node Setup Tutorial**](./node/start-a-node.md)                                                                  | Learn how to run a Testnet node.                                                                           |
-| [**GPU Miner Setup Tutorial**](./mining/gpu-miner/gpu-miner.md)                                                    | Learn how to run a GPU miner and connect it to a stratum proxy.                                            |
-| [**Contract Deployment Tutorial(s)**](../develop/tutorials/single-chain.md)                                        | Learn how to deploy single-chain or multi-chain smart contracts.                                           |
-| [**Testnet Terms of Use**](./iron-age-testnet-tos.md)                                                              | Disclaimers and policies for interacting with Quai Network testnets.                                       |
+| [**Node Setup Tutorial**](/participate/node/start-a-node.md)                                                       | Learn how to run a Testnet node.                                                                           |
+| [**GPU Miner Setup Tutorial**](/participate/mining/gpu-miner/gpu-miner.md)                                         | Learn how to run a GPU miner and connect it to a stratum proxy.                                            |
+| [**Contract Deployment Tutorial(s)**](/develop/tutorials/single-chain.md)                                          | Learn how to deploy single-chain or multi-chain smart contracts.                                           |
+| [**Testnet Terms of Use**](/participate/iron-age-testnet-tos.md)                                                   | Disclaimers and policies for interacting with Quai Network testnets.                                       |
 
 ## Incentivization
 
@@ -44,7 +44,7 @@ No individual mining address will be able to receive more than 5% of the mining 
 **IMPORTANT NOTE FOR TESTNET MINERS:** The Iron Age Testnet will support the creation of mining pools; however, our team at Dominant Strategies will not be maintaining or recommending any mining pools for this Testnet. Due to the way mining rewards are tracked and calculated, allocating your hash power to a pool that you don’t control will lead to your mining rewards being earned by the pool operator.
 :::
 
-Learn how to start mining Quai in the [GPU miner documentation](../participate/mining/miner-overview.md).
+Learn how to start mining Quai in the [GPU miner documentation](/participate/mining/miner-overview.md).
 
 ### Developers
 
@@ -55,4 +55,4 @@ Wave 1 of applications are open for [Quai Genesis, a Quai Network grants program
 
 The goal of Wave 1 is to incentivize and support the creation of foundational services/tooling on Quai. Later waves of the Genesis program will focus more broadly on smart contract creation and dApp deployment. Full details on how to apply to the Quai Genesis grants program can be found [on the Quai website](https://qu.ai/genesis/).
 
-Learn how to start developing on Quai in the [developer documentation](../develop/smart-contracts/deploy.md).
+Learn how to start developing on Quai in the [developer documentation](/develop/smart-contracts/deploy.md).

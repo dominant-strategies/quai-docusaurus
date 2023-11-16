@@ -34,4 +34,4 @@ The organization and scoped consensus of sub networks allows data to quickly ach
 ## Parallel Processing
 
 Quai Network's multithreaded execution environment achieves the parallel processing of transactions and contract interactions within the network by separating the write locks and computations of different subnets. Blocks are produced asynchronously in all Quai sub networks, allowing local consistency to be attained within many sub networks in parallel.
-Parallel processing allows Quai Network to process more than 50,000 transactions per second across all sub networks. Quai retains atomicity in a parallel processing environment by coordinating block production and rollbacks governed by [Proof-of-Entropy-Minima (PoEM) consensus](../advanced-introduction/poem/poem.md).
+Parallel processing allows Quai Network to process more than 50,000 transactions per second across all sub networks. Quai retains atomicity in a parallel processing environment by coordinating block production and rollbacks governed by [Proof-of-Entropy-Minima (PoEM) consensus](/learn/advanced-introduction/poem/poem.md).

@@ -13,7 +13,7 @@ Quai Network is a network of blockchains built to handle high load while keeping
 
 ## Addresses
 
-Within Quai Network, each address "lives" on one of the Zone chains. The first byte of each address is used to identify which blockchain is able to modify/change the state of the account. Information on how these bytes of data are interpreted can be found in the [Sharding](../../learn/advanced-introduction/hierarchical-structure/sharding.mdx) page of the docs.
+Within Quai Network, each address "lives" on one of the Zone chains. The first byte of each address is used to identify which blockchain is able to modify/change the state of the account. Information on how these bytes of data are interpreted can be found in the [Sharding](/learn/advanced-introduction/hierarchical-structure/sharding.mdx) page of the docs.
 
 **From a user perspective, this means that you need at least one Quai address that "lives" on each Quai blockchain you want to interact with.** For example, if you want to hold NFTs on Zone 1, buy NFTs on Zone 2, and hold Quai on Zone 3, you'll need three accounts.
 
@@ -23,7 +23,7 @@ When creating a new account in a wallet that supports Quai Network, you'll usual
 
 When sending a transaction to an address in the same Zone as the originating address, an "internal transaction" occurs. Internal transactions are transactions that modify the state of one Zone in a way that doesn't impact the state of any other Zones. Internal transactions are the quickest type of transaction within Quai Network, as they only require local consensus (within the Zone) to settle.
 
-When sending a transaction to an address in a different Zone from the originating address, an "external transaction" is emitted. External transactions are transactions that modify the state of multiple Zones. **External transactions are slower than internal transactions, as they require global consensus (amongst all affected Zones) to settle as opposed to just local consensus.** [The time an external transaction takes to settle](../../learn/advanced-introduction/poem/infinite-execution-shards/dynamic-sharding.mdx) is the primary tradeoff of Quai Network -- as more chains are added to the network (adding more throughput), cross-chain settlement times increase.
+When sending a transaction to an address in a different Zone from the originating address, an "external transaction" is emitted. External transactions are transactions that modify the state of multiple Zones. **External transactions are slower than internal transactions, as they require global consensus (amongst all affected Zones) to settle as opposed to just local consensus.** [The time an external transaction takes to settle](/learn/advanced-introduction/poem/infinite-execution-shards/dynamic-sharding.mdx) is the primary tradeoff of Quai Network -- as more chains are added to the network (adding more throughput), cross-chain settlement times increase.
 
 ## Gas
 

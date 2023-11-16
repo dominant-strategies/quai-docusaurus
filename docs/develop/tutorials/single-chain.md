@@ -12,7 +12,7 @@ keywords:
 
 ## Introduction
 
-This article shows how to **deploy a simple smart contract using Hardhat** on any of Quai Network's 9 chains. This tutorial covers deploying a **simple, non SolidityX** based smart contract to a single chain within Quai Network. For more complex deployments involving SolidityX or multi-chain deployments, visit the [Multi-Chain Deploy Tutorial page](./single-chain.md).
+This article shows how to **deploy a simple smart contract using Hardhat** on any of Quai Network's 9 chains. This tutorial covers deploying a **simple, non SolidityX** based smart contract to a single chain within Quai Network. For more complex deployments involving SolidityX or multi-chain deployments, visit the [Multi-Chain Deploy Tutorial page](/develop/tutorials/single-chain.md).
 
 :::warning
 If you want to skip basic environment setup for contract deployment, the [hardhat-example](https://github.com/dominant-strategies/hardhat-example) repository provides a **pre-configured environment for deploying smart contracts on Quai Network**. Clone the repository on your local machine to get started.
@@ -32,11 +32,11 @@ Hardhat also supports yarn usage.
 
 ### Quai Network and Solidity
 
-It is useful to have basic knowledge of both [Quai Network](#introduction) and [Solidity](https://docs.soliditylang.org/en/latest/). Quai Network utilizes a modified version of Solidity named [SolidityX](https://github.com/dominant-strategies/SolidityX) that provides support for [additional opcodes](../smart-contracts/opcode-additions.md).
+It is useful to have basic knowledge of both [Quai Network](/learn/intro.md) and [Solidity](https://docs.soliditylang.org/en/latest/). Quai Network utilizes a modified version of Solidity named [SolidityX](https://github.com/dominant-strategies/SolidityX) that provides support for [additional opcodes](/develop/smart-contracts/opcode-additions.md).
 
 Deployment of a smart contract on a Quai Network chain requires:
 
-- An active instance of a [Quai Network node](../../participate/node/start-a-node.md) or a remote node's RPC endpoint.
+- An active instance of a [Quai Network node](/participate/node/start-a-node.md) or a remote node's RPC endpoint.
 - Sufficient balance in the address that you are deploying with.
 
 ## Environment Setup
@@ -46,7 +46,7 @@ Deployment of a smart contract on a Quai Network chain requires:
 Hardhat is utilized through a local installation within individual project directories. Start by creating an `npm` project.
 
 :::warning
-For the purposed of this simplified tutorial, **we'll be installing the generic version of Hardhat that does not support SolidityX contracts with cross-chain capabilities.** If you're interested in deploying a contract that utilizes SolidityX's cross-chain capabilities, visit the [Multi-Chain Smart Contract Tutorial](./multi-chain.md).
+For the purposed of this simplified tutorial, **we'll be installing the generic version of Hardhat that does not support SolidityX contracts with cross-chain capabilities.** If you're interested in deploying a contract that utilizes SolidityX's cross-chain capabilities, visit the [Multi-Chain Smart Contract Tutorial](/develop/tutorials/multi-chain.md).
 :::
 
 ```shell
@@ -153,7 +153,7 @@ PRIVKEY="0x0000000000000000000000000000000000000000000000000000000000000000"
 RPCURL="http://localhost:8610" # Cyprus1 URL
 ```
 
-Information on endpoints can be found in the [local network specifications](../../develop/#local-network) section for **local nodes** and the [testnet specifications](../../develop/networks.md#testnet) section for **remote nodes**.
+Information on endpoints can be found in the [local network specifications](/develop/networks.md#local-network) section for **local nodes** and the [testnet specifications](/develop/networks.md#testnet) section for **remote nodes**.
 
 After providing a private key and a desired RPC URL, we're now ready to securely consume them inside of `hardhat.config.js`.
 
@@ -304,7 +304,7 @@ Congratulations, you've now deployed a simple smart contract to Quai Network!
 
 ## Interact with a Smart Contract
 
-Hardhat console does not currently offer support for interaction with smart contracts on Quai Network. In order to interact with your smart contract, you'll need to utilize the the [client JSON RPC](../apis/json-rpc-api.md) or [quais.js](https://www.npmjs.com/package/quais) library, which functions similar to [ethers.js](https://www.npmjs.com/package/ethers).
+Hardhat console does not currently offer support for interaction with smart contracts on Quai Network. In order to interact with your smart contract, you'll need to utilize the the [client JSON RPC](/develop/apis/json-rpc-api.md) or [quais.js](https://www.npmjs.com/package/quais) library, which functions similar to [ethers.js](https://www.npmjs.com/package/ethers).
 
 ## Summary
 

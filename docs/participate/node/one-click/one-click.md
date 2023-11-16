@@ -8,6 +8,6 @@ keywords:
   - gcp
 ---
 
-| Page                             | Description                                                               |
-| -------------------------------- | ------------------------------------------------------------------------- |
-| [GCP One-Click Deploy](./gcp.md) | Instantly deploy a node and stratum proxy with the Google Cloud Platform. |
+| Page                                                       | Description                                                               |
+| ---------------------------------------------------------- | ------------------------------------------------------------------------- |
+| [GCP One-Click Deploy](/participate/node/one-click/gcp.md) | Instantly deploy a node and stratum proxy with the Google Cloud Platform. |
