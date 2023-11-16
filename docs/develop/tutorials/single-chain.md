@@ -153,7 +153,7 @@ PRIVKEY="0x0000000000000000000000000000000000000000000000000000000000000000"
 RPCURL="http://localhost:8610" # Cyprus1 URL
 ```
 
-Information on endpoints can be found in the [local network specifications](../../develop/networks.md#local-network) section for **local nodes** and the [testnet specifications](/develop/networks.md#testnet) section for **remote nodes**.
+Information on endpoints can be found in the [local network specifications](/develop/networks.md#local-network) section for **local nodes** and the [testnet specifications](/develop/networks.md#testnet) section for **remote nodes**.
 
 After providing a private key and a desired RPC URL, we're now ready to securely consume them inside of `hardhat.config.js`.
 

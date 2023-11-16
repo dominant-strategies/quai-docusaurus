@@ -13,9 +13,9 @@ Here, we'll be installing quai-cpu-miner, the Go implementation of a Quai Networ
 
 ### Install Dependencies
 
-To run an instance of quai-cpu-miner, you'll need to have installed and configured a Quai node. The [prerequisites](../../participate/node/start-a-node.md#install-dependencies) to install and run the miner are the same as a node.
+To run an instance of quai-cpu-miner, you'll need to have installed and configured a Quai node. The [prerequisites](/participate/node/start-a-node.md#install-dependencies) to install and run the miner are the same as a node.
 
-If you haven't set up your node, we recommend going through the [Run A Node page](../../participate/node/start-a-node.md) before proceeding.
+If you haven't set up your node, we recommend going through the [Run A Node page](/participate/node/start-a-node.md) before proceeding.
 
 ### Install quai-cpu-miner
 
@@ -57,7 +57,7 @@ make quai-cpu-miner
 
 Prior to running the miner, you must connect to a fully synced node, either local or remote. Once you've connected to a synced node, you can spin up an instance of the miner.
 
-Similar to a [slice node](../../participate/node/node-overview.md#slice-node), a miner mines a "slice" down the network hierarchy that includes prime, one region, and one zone chain. To start the miner, you'll need to specify the region, and zone chains that you'd like to mine. Region and zone indices are 0-indexed and range from 0-2.
+Similar to a [slice node](/participate/node/node-overview.md#slice-node), a miner mines a "slice" down the network hierarchy that includes prime, one region, and one zone chain. To start the miner, you'll need to specify the region, and zone chains that you'd like to mine. Region and zone indices are 0-indexed and range from 0-2.
 
 To start the miner, select a region and zone index and run:
 
@@ -74,7 +74,7 @@ When choosing which contexts to mine, there are a few important things to consid
 - Block difficulty in each context (lower difficulty = higher chance of finding a block)
 - Peer connection latency (related to geographic distance from peers)
 
-Optimizing for latency **drastically decreases** the chance of finding an uncle block for which a decreased block reward is awarded. Miners who select contexts with the **lowest block difficulties** in tandem with **minimizing peer latencies** will generally be the most successful. Our team has provided a [guide to inform optimal context selection](../../learn/advanced-introduction/hierarchical-structure/latency.md#networking-latencies) based on your geographical location for miners.
+Optimizing for latency **drastically decreases** the chance of finding an uncle block for which a decreased block reward is awarded. Miners who select contexts with the **lowest block difficulties** in tandem with **minimizing peer latencies** will generally be the most successful. Our team has provided a [guide to inform optimal context selection](/learn/advanced-introduction/hierarchical-structure/latency.md#networking-latencies) based on your geographical location for miners.
 
 ### Verify
 
