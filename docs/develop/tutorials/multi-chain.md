@@ -13,7 +13,7 @@ keywords:
 
 ## Introduction
 
-In this article, we'll detail how to **deploy, link, and interact with multi-chain smart contracts** across 2 different shards on Quai Network. _This_ _method can be extended to deploy trustless cross-chain contracts across all 9 shards._
+In this article, we'll detail how to **deploy, link, and interact with multi-chain smart contracts** across 2 different shards on Quai Network. _This method can be extended to deploy trustless cross-chain contracts across all 9 shards._
 
 We'll be using the basic implementation of a QRC20 token, an adapted version of the [ERC-20 standard](https://eips.ethereum.org/EIPS/eip-20), to showcase cross-chain contracts for this tutorial.
 
@@ -28,7 +28,7 @@ To deploy multi-chain smart contracts, we'll need a few tool-kits and dependenci
 Here's an **overview of all of the dependencies** we'll install in the [Environment Setup section](#environment-setup):
 
 - [**Hardhat**](https://hardhat.org/) **+** [**Quai-Hardhat**](https://github.com/dominant-strategies/quai-hardhat)**:** An EVM development environment toolkit with bundled support for Quai Network opcodes and contracts.
-- [**SolidityX**](https://github.com/dominant-strategies/SolidityX)**:** Quai Network's implementation of Solidity with support for [cross-chain opcodes](../smart-contracts/opcode-additions.md).
+- [**SolidityX**](https://github.com/dominant-strategies/SolidityX)**:** Quai Network's implementation of Solidity with support for [cross-chain opcodes](/develop/smart-contracts/opcode-additions.md).
 - [**quais.js**](https://www.npmjs.com/package/quais)**:** A javascript library for blockchain development on Quai Network.
 - [**quais-polling**](https://www.npmjs.com/package/quais-polling): A shim package that adds polling functionality back to quais.js for specific use cases.
 - [**Dotenv**](https://www.npmjs.com/package/dotenv): A zero-dependency module that securely loads environment variables.
@@ -145,7 +145,7 @@ In this environment file, we've introduced private keys and RPC endpoint URLs fo
 
 **You'll need to change the chain specific keys and RPC endpoint URLs** for each of the chains you plan to deploy a contract on, i.e. if you want to deploy on Cyprus 1 and Paxos 2, you'll need to change the `CYPRUS1PK`, `PAXOS2PK`, `CYPRUS1URL`, and `PAXOS2URL` to deploy to those chains.
 
-Information on endpoints can be found in the [local network specifications](../../develop/networks.md#local-network) section for **local nodes** and the [testnet specifications](../../develop/networks.md#testnet) section for **remote nodes**.
+Information on endpoints can be found in the [local network specifications](/develop/networks.md#local-network) section for **local nodes** and the [testnet specifications](/develop/networks.md#testnet) section for **remote nodes**.
 
 ### SolidityX Compiler
 

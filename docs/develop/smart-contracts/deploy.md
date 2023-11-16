@@ -25,13 +25,13 @@ To deploy a smart contract on Quai, you'll need a few things:
 - _QUAI to cover gas_: similar to a normal transaction, you'll need to set your gas limit. Be aware that contract deployment requires significantly more gas than a simple transfer.
 - _Contract Bytecode_: generated using a [compiler](https://www.alchemy.com/overviews/solidity-compiler).
 - _Deployment script or plugin_
-- _Access to a Quai node_: you can do this either by [running your own node](../../participate/node/start-a-node.md), [accessing a publicly available node](../networks.md), or through API key via a node service.
+- _Access to a Quai node_: you can do this either by [running your own node](/participate/node/start-a-node.md), [accessing a publicly available node](/develop/networks.md), or through API key via a node service.
 
 ### Deployment
 
 Smart contracts on Quai Network can be deployed using a number of different methods. The most straightforward and widely used methods are using deployment tools like Hardhat. Contracts can also be deployed using the quais.js library, which offers increased flexibility and the ability to deploy via frontend or simple script.
 
-Information on how to deploy a simple smart contract with hardhat can be found in the [Single-Chain Deployment Tutorial](../tutorials/single-chain.md).
+Information on how to deploy a simple smart contract with hardhat can be found in the [Single-Chain Deployment Tutorial](/develop/tutorials/single-chain.md).
 
 ## Cross-Chain Smart Contracts
 
@@ -47,4 +47,4 @@ Sister contracts are created by deploying contracts across all chains that the p
 
 Contracts intended to function across many chains will contain initially empty slots for the addresses of its sisters. If a contract intends to maintain functionality across the initial network of 13 chains, 12 slots are required for all 12 sister contracts to be referenced.
 
-Information on how to deploy a multi-chain smart contracts with hardhat can be found in the [Multi-Chain Deployment Tutorial](../tutorials/multi-chain.md).
+Information on how to deploy a multi-chain smart contracts with hardhat can be found in the [Multi-Chain Deployment Tutorial](/develop/tutorials/multi-chain.md).

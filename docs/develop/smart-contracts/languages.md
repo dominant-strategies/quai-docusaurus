@@ -64,10 +64,10 @@ SolidityX is a fork of Solidity that adds additional features and functionality 
 
 The key additions to SolidityX include:
 
-- Support for cross-chain transactions via the [`etx`](./opcode-additions.md#etx) opcode.
-- Support for cross-chain address validation via the [`isaddrInternal`](./opcode-additions.md#isaddrinternal) opcode.
+- Support for cross-chain transactions via the [`etx`](/develop/smart-contracts/opcode-additions.md#etx) opcode.
+- Support for cross-chain address validation via the [`isaddrInternal`](/develop/smart-contracts/opcode-additions.md#isaddrinternal) opcode.
 
-Additional opcode usage is currently supported via [inline assembly](https://docs.soliditylang.org/en/latest/assembly.html). More details on usage of `ext` and `isaddrinternal` can be found on the [Opcode Additions page](./opcode-additions.md).
+Additional opcode usage is currently supported via [inline assembly](https://docs.soliditylang.org/en/latest/assembly.html). More details on usage of `ext` and `isaddrinternal` can be found on the [Opcode Additions page](/develop/smart-contracts/opcode-additions.md).
 
 #### Example Implementation
 
@@ -90,10 +90,10 @@ function transfer(address to, uint256 amount) public payable  returns (bool) {
 - [GitHub](https://github.com/dominant-strategies/SolidityX)
 - [QRC-20 Token](https://github.com/dominant-strategies/SolidityX-Contracts/blob/main/QRC20X.sol)
 - [QRC-721 Token](https://github.com/dominant-strategies/SolidityX-Contracts/blob/main/QRC721X.sol)
-- [Opcode Additions](./opcode-additions.md)
+- [Opcode Additions](/develop/smart-contracts/opcode-additions.md)
 
 ## Alternative Languages
 
 The EVM supports a wide variety of other languages such as [Yul](https://docs.soliditylang.org/en/latest/yul.html) and [Yul+](https://github.com/FuelLabs/yulp), and [Huff](https://docs.huff.sh/tutorial/overview/) through the use of compilers/transpilers. Yul and Huff are lower level languages that offer developers the ability to write assembly-like syntax or direct bytecode.
 
-For any of the above languages to be used on Quai Network, support for Quai's additional EVM opcodes [`isaddrInternal`](./opcode-additions.md#isaddrinternal) and [`etx`](./opcode-additions.md#etx) must be added to their respective compilers. More details on using the Quai specific opcodes can be found on the [Opcode Additions page](./opcode-additions.md). Quai Network is exploring full opcode support for these alternative languages in the future.
+For any of the above languages to be used on Quai Network, support for Quai's additional EVM opcodes [`isaddrInternal`](/develop/smart-contracts/opcode-additions.md#isaddrinternal) and [`etx`](/develop/smart-contracts/opcode-additions.md#etx) must be added to their respective compilers. More details on using the Quai specific opcodes can be found on the [Opcode Additions page](/develop/smart-contracts/opcode-additions.md). Quai Network is exploring full opcode support for these alternative languages in the future.

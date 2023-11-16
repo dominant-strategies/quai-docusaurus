@@ -98,7 +98,7 @@ The `network.env` file can be thought of as the configuration file for your node
 - `NETWORK` : the network (testnet [colosseum], devnet [garden], etc.) your node is running on.
 - `SLICES` : This parameter determines which slices of the network the node will run (i.e. determines whether the node will be a slice node, a multi-slice node, or a global node).
 
-The [“Starting and Running a Node”](./start-a-node.md) page contains information on the most important things to change in this file.
+The [“Starting and Running a Node”](/participate/node/start-a-node.md) page contains information on the most important things to change in this file.
 
 The `network.env` file can be edited with the following IDEs:
 
@@ -282,7 +282,7 @@ After running one of the two above commands, the node has been fully reset and i
 
 If you got this error, it means your router does not have UPNP enabled. Enabling UPNP (Universal Plug and Play) allows other devices (namely other Quai nodes) to discover your node and establish proper networking.
 
-While each router has a different protocol for enabling UPNP, [this guide](https://www.lifewire.com/enable-upnp-on-a-router-5206124) covers how to enable UPNP on routers from many common ISPs. You can also get help turning on UPNP on your router in the [Starting and Running a Node page](./start-a-node.md#router-configuration).
+While each router has a different protocol for enabling UPNP, [this guide](https://www.lifewire.com/enable-upnp-on-a-router-5206124) covers how to enable UPNP on routers from many common ISPs. You can also get help turning on UPNP on your router in the [Starting and Running a Node page](/participate/node/start-a-node.md#router-configuration).
 
 If you do not want to enable UPNP on your router, you can specifically open peering ports 30303 through 30315 for both TCP and UDP. You can learn how to open specific ports on your router [here](https://nordvpn.com/blog/open-ports-on-router/). If you decide not to enable UPNP, you will need to modify your `network.env` file to reflect `ENABLE_NAT=true` and specify your external IP address in `EXT_IP`.
 
@@ -328,7 +328,7 @@ cat nodelogs/*.log | grep Appended
 tail -f nodelogs/*.log | grep Appended
 ```
 
-You can also check the progress of your node's sync using the **client JSON RPC API**. The [quai_syncing](../../develop/apis/json-rpc-api.md#quai_syncing) API method can be used easily in the [Quai Postman Workspace](https://documenter.getpostman.com/view/19820580/2s935iv7GU) or via the command line. If the API returns `false`, your node has synced to the current tip of the chain.
+You can also check the progress of your node's sync using the **client JSON RPC API**. The [quai_syncing](/develop/apis/json-rpc-api.md#quai_syncing) API method can be used easily in the [Quai Postman Workspace](https://documenter.getpostman.com/view/19820580/2s935iv7GU) or via the command line. If the API returns `false`, your node has synced to the current tip of the chain.
 
 Once you’ve determined what block your node has most recently appended, check whether the block height on your node corresponds to the latest maximal block height for the same chain on the Kibana dashboard or Quaiscan. If they are the same, your node has synced! If your node’s block height is less than the block height of Kibana/Quaiscan, you are still syncing.
 

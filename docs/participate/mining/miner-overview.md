@@ -9,12 +9,12 @@ keywords:
   - latency
 ---
 
-A miner is a computer performing complex mathematical calculations, known as hashing, in a competition to add the next block to a Quai blockchain. These ongoing competitions allow the network to reach consensus through [Proof-of-Entropy-Minima (PoEM)](../../learn/advanced-introduction/poem/poem.md). Quai Network utilizes merged mining, which allows each miner to secure three Quai blockchains simultaneously. Further, Quai miners self-select the contexts they wish to mine, incentivizing reduced network latency via topological organization.
+A miner is a computer performing complex mathematical calculations, known as hashing, in a competition to add the next block to a Quai blockchain. These ongoing competitions allow the network to reach consensus through [Proof-of-Entropy-Minima (PoEM)](/learn/advanced-introduction/poem/poem.md). Quai Network utilizes merged mining, which allows each miner to secure three Quai blockchains simultaneously. Further, Quai miners self-select the contexts they wish to mine, incentivizing reduced network latency via topological organization.
 
 Mining in Quai Network can be performed via CPU miner or GPU miner. GPUs have a significant advantage in efficiency over CPUs when mining Quai.
 
-- [Learn how to set up a GPU Miner](./gpu-miner/gpu-miner.md)
-- [Learn how to connect a GPU miner to a node with the Stratum Proxy](../stratum-proxy/run-stratum.md)
+- [Learn how to set up a GPU Miner](/participate/mining/gpu-miner/gpu-miner.md)
+- [Learn how to connect a GPU miner to a node with the Stratum Proxy](/participate/stratum-proxy/run-stratum.md)
 
 ## ProgPoW Hashing Algorithm
 

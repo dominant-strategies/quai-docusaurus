@@ -34,7 +34,7 @@ To run a GPU miner, you’ll need:
 
 **Can I input the same address to mine to for all of the coinbase addresses in my node's network.env?**
 
-No. Within any node's network.env, each coinbase address must be unique and properly map to the shard it has been inputted for. You can learn more about how Quai Network uses a sharded address structure [here](../../../learn/advanced-introduction/hierarchical-structure/sharding.mdx).
+No. Within any node's network.env, each coinbase address must be unique and properly map to the shard it has been inputted for. You can learn more about how Quai Network uses a sharded address structure [here](/learn/advanced-introduction/hierarchical-structure/sharding.mdx).
 
 ### Mining OS
 
@@ -105,13 +105,13 @@ If the issue is on a VPS rather than bare-metal, installing `nvidia-cuda-toolkit
 2. `sudo apt update && sudo apt upgrade -y`
 3. `sudo apt install -y git cmake build-essential mesa-common-dev`
 4. `sudo reboot`
-5. Re-join the mining guide starting from [configure and run](./hive-manual/hive-manual.md).
+5. Re-join the mining guide starting from [configure and run](/participate/mining/gpu-miner/hive-manual/hive-manual.md).
 
 ### SIGSEGV
 
 **I got the error "SIGSEGV encountered..." and my miner crashed. How do I fix this?**
 
-The use of OpenCL is the cause of this error. This error can be permanently resolved by following the CUDA installation instructions for [HiveOS](../gpu-miner/hive-manual/hive-manual-cuda.md) or [Ubuntu](../gpu-miner/ubuntu-manual/ubuntu-manual-cuda.md) in the Quai Docs rather than installing with OpenCL.
+The use of OpenCL is the cause of this error. This error can be permanently resolved by following the CUDA installation instructions for [HiveOS](/participate/mining/gpu-miner/hive-manual/hive-manual-cuda.md) or [Ubuntu](/participate/mining/gpu-miner/ubuntu-manual/ubuntu-manual-cuda.md) in the Quai Docs rather than installing with OpenCL.
 
 ### AMD Low Hash rate
 
