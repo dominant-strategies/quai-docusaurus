@@ -194,7 +194,7 @@ Returns the fee history for a specific range of blocks.
 Returns an indicator of whether the client is actively syncing.
 
 :::warning
-`quai_syncing` will only return correct data for the Prime chain. If it returns false for Prime, the node is synced in Prime, but may not be synced in all other regions and zones. Always check the sync progress of all chains against the current tip.
+`quai_syncing` will only return correct data for the prime chain. If it returns false for prime, the node is synced in prime, but may not be synced in all other regions and zones. Always check the sync progress of all chains against the current tip.
 :::
 
 #### Input Parameters

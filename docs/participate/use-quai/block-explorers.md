@@ -12,7 +12,7 @@ Block explorers allow users to view block data, transactions, and smart contract
 
 ## QuaiScan
 
-[QuaiScan](https://cyprus1.colosseum.quaiscan.io/), based on the [BlockScout infrastructure](https://www.blockscout.com/), allows users to view data from all Quai blockchains without running a node. Each Zone within Quai Network has a unique block explorer link -- the search functionality will automatically route users to the correct Zone explorer, creating a seamless user experience.
+[QuaiScan](https://cyprus1.colosseum.quaiscan.io/), based on the [BlockScout infrastructure](https://www.blockscout.com/), allows users to view data from all Quai blockchains without running a node. Each zone within Quai Network has a unique block explorer link -- the search functionality will automatically route users to the correct zone explorer, creating a seamless user experience.
 
 | Zone Name | Zone Index | QuaiScan Link                          |
 | --------- | ---------- | -------------------------------------- |
