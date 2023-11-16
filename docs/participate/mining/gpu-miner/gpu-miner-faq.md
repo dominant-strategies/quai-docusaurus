@@ -1,7 +1,6 @@
 ---
 title: GPU Miner FAQ
 description: Answers to frequently asked questions about the Quai GPU miner.
-hide_table_of_contents: false
 sidebar_position: 4
 keywords:
   - gpu mining

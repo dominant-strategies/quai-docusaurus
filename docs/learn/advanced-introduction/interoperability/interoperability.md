@@ -1,7 +1,6 @@
 ---
 title: Interoperability
 description: Specifications of Quai Network's interoperability between shards.
-hide_table_of_contents: false
 sidebar_position: 5
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: Merged Mining
 description: How merged mining has been adapted and used to scale in Quai Network.
-hide_table_of_contents: false
 sidebar_position: 3
 ---
 

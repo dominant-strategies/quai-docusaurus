@@ -1,7 +1,6 @@
 ---
 title: Block Explorers
 description: Learn how to track transactions on Quai Network.
-hide_table_of_contents: false
 sidebar_position: 3
 keywords:
   - block explorer

@@ -1,7 +1,6 @@
 ---
 title: CUDA
 description: Manually install and run a CUDA Quai Network GPU miner on HiveOS.
-hide_table_of_contents: false
 sidebar-position: 2
 keywords:
   - hiveos

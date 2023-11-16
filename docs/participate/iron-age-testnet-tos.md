@@ -1,7 +1,7 @@
 ---
 title: Testnet Terms of Use
 description: Terms of Use for the Quai Network Testnet.
-hide_table_of_contents: false
+hide_table_of_contents: true
 sidebar_position: 3
 ---
 

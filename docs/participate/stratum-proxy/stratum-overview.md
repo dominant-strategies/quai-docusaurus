@@ -1,7 +1,6 @@
 ---
 title: Stratum Proxy Overview
 description: An overview of the Quai Stratum Proxy.
-hide_table_of_contents: false
 sidebar_position: 1
 keywords:
   - stratum proxy

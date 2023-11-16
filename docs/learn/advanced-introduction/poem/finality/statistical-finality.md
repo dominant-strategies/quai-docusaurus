@@ -1,7 +1,6 @@
 ---
 title: Statistical Finality
 description: How Quai Network achieves faster statistical finality.
-hide_table_of_contents: false
 sidebar_position: 2
 ---
 

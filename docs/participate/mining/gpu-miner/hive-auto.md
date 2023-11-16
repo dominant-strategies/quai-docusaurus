@@ -1,7 +1,6 @@
 ---
 title: HiveOS Automatic Installation
 description: Automatically install and run a Quai Network GPU miner on HiveOS.
-hide_table_of_contents: false
 sidebar_position: 1
 keywords:
   - hiveos

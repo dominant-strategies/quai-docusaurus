@@ -1,7 +1,6 @@
 ---
 title: Iron Age Testnet
 description: Important links, resources, and routing for Quai Network's Iron Age Testnet.
-hide_table_of_contents: false
 sidebar_position: 2
 keywords:
   - quai testnet

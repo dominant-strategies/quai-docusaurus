@@ -1,7 +1,6 @@
 ---
 title: Starting and Running A Node
 description: How to start and run a Quai Network node.
-hide_table_of_contents: false
 sidebar_position: 2
 keywords:
   - node

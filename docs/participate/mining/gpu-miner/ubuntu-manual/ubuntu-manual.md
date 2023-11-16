@@ -1,7 +1,6 @@
 ---
 title: Ubuntu Installation
 description: How to install and run a Quai Network GPU miner on Ubuntu.
-hide_table_of_contents: false
 sidebar_position: 3
 keywords:
   - ubuntu

@@ -1,7 +1,6 @@
 ---
 title: User FAQ
 description: See the answers to frequently-asked-questions about Quai.
-hide_table_of_contents: false
 sidebar_position: 4
 keywords:
   - user faq

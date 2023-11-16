@@ -1,7 +1,6 @@
 ---
 title: Wallets
 description: Learn how to store, send, and receive assets on Quai Network.
-hide_table_of_contents: false
 sidebar_position: 2
 keywords:
   - quai wallet

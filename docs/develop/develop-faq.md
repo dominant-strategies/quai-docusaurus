@@ -1,7 +1,6 @@
 ---
 title: Development FAQ
 description: Answers to frequently asked questions about developing on Quai Network.
-hide_table_of_contents: false
 keywords:
   - faq
   - rpc endpoints

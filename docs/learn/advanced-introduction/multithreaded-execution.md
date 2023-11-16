@@ -1,8 +1,7 @@
 ---
 title: Multithreaded Execution
 description: How Quai Network processes transactions in parallel.
-hide_table_of_contents: false
-sidebar_position: 4
+sidebar_position: 3
 ---
 
 # Multithreaded Execution

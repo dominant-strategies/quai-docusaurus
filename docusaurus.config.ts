@@ -126,11 +126,15 @@ const config: Config = {
               },
               {
                 label: 'Participate',
-                to: '/docs/participate/intro',
+                to: '/docs/participate/iron-age-testnet',
               },
               {
                 label: 'Develop',
-                to: '/docs/develop/intro',
+                to: '/docs/develop/networks',
+              },
+              {
+                label: 'Wiki',
+                to: '/docs/wiki/',
               },
             ],
           },

@@ -1,7 +1,6 @@
 ---
 title: One-Click GCP Deployment
 description: One-click deployment for a Quai node on GCP.
-hide_table_of_contents: false
 keywords:
   - one click deploy
   - gcp

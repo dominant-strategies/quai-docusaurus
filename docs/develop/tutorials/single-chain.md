@@ -1,7 +1,6 @@
 ---
 title: Single-Chain Deployment Tutorial
 description: A guide to deploying a simple single-chain smart contract on Quai Network.
-hide_table_of_contents: false
 sidebar_position: 1
 keywords:
   - simple smart contract

@@ -1,7 +1,6 @@
 ---
 title: Instantaneous Fork Resolution
 description: How the PoEM consensus mechanism eliminated consensus-based forks.
-hide_table_of_contents: false
 sidebar_position: 1
 ---
 

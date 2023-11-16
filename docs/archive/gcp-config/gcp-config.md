@@ -1,7 +1,7 @@
 ---
 title: Manual GCP Firewall Configuration
 description: Manual firewall configuration for a Quai node on GCP.
-hide_table_of_contents: false
+
 ---
 
 # Manual GCP Firewall Configuration

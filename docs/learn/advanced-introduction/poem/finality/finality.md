@@ -1,7 +1,6 @@
 ---
 title: Faster Finality
 description: How transactions achieve finality in Quai Network.
-hide_table_of_contents: false
 sidebar_position: 2
 ---
 

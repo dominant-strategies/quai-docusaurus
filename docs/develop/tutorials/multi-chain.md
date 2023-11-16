@@ -1,7 +1,6 @@
 ---
 title: Multi-Chain Deployment Tutorial
 description: A guide to deploying and linking  multi-chain smart contracts on Quai Network.
-hide_table_of_contents: false
 sidebar_position: 2
 keywords:
   - multi chain smart contract

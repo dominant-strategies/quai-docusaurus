@@ -1,7 +1,6 @@
 ---
 title: Calculating Total Entropy
 description: How total entropy accumulates in Quai Network.
-hide_table_of_contents: false
 sidebar_position: 2
 ---
 
