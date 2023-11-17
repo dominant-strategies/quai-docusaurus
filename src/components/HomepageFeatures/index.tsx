@@ -1,5 +1,5 @@
 import Card, { type CardItem } from '../Card/Card';
-
+import ChatbaseScript from '../Chat';
 const FeatureList: CardItem[] = [
   {
     title: 'Introduction to Quai',
@@ -58,6 +58,7 @@ export default function HomepageFeatures(): JSX.Element {
           </div>
         </div>
       </section>
+      <ChatbaseScript />
     </div>
   );
 }
