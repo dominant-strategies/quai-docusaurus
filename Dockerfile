@@ -1,42 +1,32 @@
-# ---- Build Stage ----
-FROM node:16.14 AS builder 
+# Use an official Node.js runtime as the base image
+FROM node:18-slim
 
-# Set working directory
+# Set the working directory inside the container
 WORKDIR /app
 
-# In the builder stage
-ENV NODE_ENV=production
-
-# Copy package.json and package-lock.json
+# Copy the package.json and package-lock.json to the container
 COPY package*.json ./
 
-# Install dependencies
-RUN npm install
+# Install the dependencies in the container
+RUN yarn install --frozen-lockfile
 
-# Copy the rest of your application code
+# Copy the rest of the application to the container
 COPY . .
 
-# Build the docusaurus app
-RUN npm run build
+# Build the static site
+RUN yarn build
 
-# ---- Run Stage ----
-FROM node:16.14-slim
+# Use an Nginx image to serve the built static site
+FROM nginx:alpine
 
-# Set working directory
-WORKDIR /app
+# Copy the built static site from the build stage to the nginx html directory
+COPY --from=0 /app/build/ /usr/share/nginx/html/docs
 
-# Copy built app and required files/directories from the previous stage
-COPY --from=builder /app/src ./src
-COPY --from=builder /app/build ./build
-COPY --from=builder /app/package*.json ./
-COPY --from=builder /app/docusaurus.config.js ./docusaurus.config.js
-COPY --from=builder /app/sidebars.js ./sidebars.js
-COPY --from=builder /app/node_modules ./node_modules
+# Copy custom nginx configuration to set up routes
+COPY ./nginx-custom-config.conf /etc/nginx/conf.d/default.conf
 
+# Expose port 80
+EXPOSE 80
 
-# Start the application using 'serve'
-CMD ["npm", "run", "serve"]
-
-# Expose port 3000
-EXPOSE 3000
-
+# Start nginx with global directives and daemon off so it stays in the foreground
+CMD ["nginx", "-g", "daemon off;"]
