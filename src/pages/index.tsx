@@ -23,7 +23,7 @@ function HomepageHeader() {
 export default function Home(): JSX.Element {
   const { siteConfig } = useDocusaurusContext();
   return (
-    <Layout title={`${siteConfig.title}`} description="The official open source documentation for Quai Network.">
+    <Layout title={`${siteConfig.title}`} description="Open-source documentation for the Quai Network protocol.">
       <HomepageHeader />
       <main>
         <HomepageFeatures />

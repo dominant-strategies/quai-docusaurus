@@ -16,7 +16,7 @@ const katex = require('rehype-katex');
 /** @type {import('@docusaurus/types').Config} */
 const config: Config = {
   title: 'Quai Network Documentation',
-  tagline: 'The open-source documentation of the Quai Network protocol.',
+  tagline: 'Open-source documentation for the Quai Network protocol.',
   favicon: 'img/favicon.ico',
   url: 'https://qu.ai/',
   baseUrl: '/docs/',
