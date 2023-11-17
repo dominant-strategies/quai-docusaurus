@@ -48,7 +48,7 @@ Hardhat is utilized through a local installation within individual project direc
 For the purposed of this simplified tutorial, **we'll be installing the generic version of Hardhat that does not support SolidityX contracts with cross-chain capabilities.** If you're interested in deploying a contract that utilizes SolidityX's cross-chain capabilities, visit the [Multi-Chain Smart Contract Tutorial](/develop/tutorials/multi-chain.md).
 :::
 
-```shell
+```bash
 mkdir deploy-simple-quai-contract
 cd deploy-simple-quai-contract
 npm init -y
@@ -58,25 +58,25 @@ Running `npm init` will prompt you to name your project and configure a few othe
 
 Install Hardhat by running:
 
-```shell
+```bash
 npm install --save-dev hardhat
 ```
 
 Install dependencies:
 
-```shell
+```bash
 npm install dotenv quais quais-polling
 ```
 
 Initialize the Hardhat development process using:
 
-```shell
+```bash
 npx hardhat
 ```
 
 After running this command, Hardhat will output a number of options below:
 
-```shell
+```bash
 888    888                      888 888               888
 888    888                      888 888               888
 888    888                      888 888               888
@@ -136,13 +136,13 @@ To prevent committing your private keys or RPC endpoints, create an environment 
 
 Use the following command to create an environment file:
 
-```shell
+```bash
 touch .env
 ```
 
 After creating the `.env` file, paste the following code into it.
 
-```shell title=".env"
+```bash title=".env"
 ## Sample environment file - change all values as needed
 
 # Privkey
@@ -224,13 +224,13 @@ Smart contract compilation with Hardhat is simple and can be done using `npx` in
 
 Compile the `Greeter.sol` contract using:
 
-```shell
+```bash
 npx hardhat compile
 ```
 
 Which should output:
 
-```shell
+```bash
 Downloading compiler 0.8.9
 
 Compiled 1 Solidity file successfully
@@ -287,13 +287,13 @@ Using `deploy.js`, we can set the initial greeting and log out the contract addr
 
 To deploy `Greeter.sol` to the local network set in your `hardhat.config.js`, run:
 
-```shell
+```bash
 npx hardhat run scripts/deploy.js --network local
 ```
 
 Which should output:
 
-```shell
+```bash
 Found address 0x0f12d55D09D5E53DB2941a6119d27aa83cFD11f7 on shard zone-0-0 for shard zone-0-0
 Deploying contract with address: [object Object]
 Deployed at: 0x13d8c5fc0AB5A87870353f3C0409c102f2a772A9

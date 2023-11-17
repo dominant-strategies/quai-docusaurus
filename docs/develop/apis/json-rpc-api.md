@@ -68,7 +68,7 @@ You might encounter an error message related to the content type, as the --data 
 
 A complete curl request including these additional data would look like:
 
-```shell
+```bash
 curl -X POST \
 http://127.0.0.1:8512 \
 -H 'Content-Type: application/json' \

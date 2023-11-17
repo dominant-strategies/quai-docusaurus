@@ -7,3 +7,7 @@ keywords:
   - quai
   - contribute
 ---
+
+:::info
+Translations are currently under construction. We're excited to offer the Quai Network docs in **your local language** soon! If you're interested in contributing docs translations, please reach out to us on [Discord](https://discord.gg/s8y8asPwNC).
+:::

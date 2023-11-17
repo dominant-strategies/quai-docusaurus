@@ -39,15 +39,15 @@ Example:
 }
 ```
 
-### Shell
+### bash
 
-- Specify `shell` as the language for shell commands.
+- Specify `bash` as the language for bash commands.
 - Break multiple commands into separate code blocks. If applicable, use `&&` or `\` to run multiple commands in succession.
-- Put the output of shell commands in a separate code block with the language specified as `text`.
+- Put the output of bash commands in a separate code block with the language specified as `text`.
 
 Example:
 
-```shell
+```bash
 # This is a comment
 echo 'example'
 ```

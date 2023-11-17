@@ -64,25 +64,25 @@ Once you've installed and set up HiveOS on your rig, you'll need to update drive
 
 Prior to starting updates and installs, we need to switch users. Do this by running:
 
-```shell
+```bash
 sudo su user
 ```
 
 To upgrade HiveOS, run:
 
-```shell
+```bash
 sudo selfupgrade
 ```
 
 To update and install necessary graphics card drivers, run:
 
-```shell
+```bash
 sudo nvidia-driver-update
 ```
 
 Once drivers have been installed and updated, we'll need to install OpenCL:
 
-```shell
+```bash
 sudo amd-ocl-install 22.20
 ```
 
@@ -90,7 +90,7 @@ sudo amd-ocl-install 22.20
 
 Prior to installing any dependencies, you'll first want to make sure the system is up to date. We can do this by running:
 
-```shell
+```bash
 sudo apt update && sudo apt upgrade -y
 ```
 
@@ -103,13 +103,13 @@ After Ubuntu has updated, we can begin installing the following dependencies:
 
 Install all dependencies using the following command:
 
-```shell
+```bash
 sudo apt install -y git cmake build-essential mesa-common-dev
 ```
 
 Finally, after installing all necessary dependencies and drivers, reboot your machine to ensure all updates are applied correctly using:
 
-```shell
+```bash
 sreboot
 ```
 
@@ -119,19 +119,19 @@ Now that the **environment and dependencies** are fully configured, we can start
 
 First, make sure you're in the home directory for the correct user. You can do this by running:
 
-```shell
+```bash
 sudo su user -
 ```
 
 Now, clone the `quai-gpu-miner` and navigate to the `quai-gpu-miner` directory:
 
-```shell
+```bash
 git clone https://github.com/dominant-strategies/quai-gpu-miner && cd quai-gpu-miner
 ```
 
 To install and update external repository dependencies, run the following:
 
-```shell
+```bash
 git submodule update --init --recursive
 ```
 
@@ -141,13 +141,13 @@ This will ensure that all the submodules referenced in the repository are **prop
 
 Start by making a directory named `build` and navigating to it:
 
-```shell
+```bash
 mkdir build && cd build
 ```
 
 Inside of the build directory, we'll need to install all of the build dependencies using `cmake` and then build and compile the miner:
 
-```shell
+```bash
 cmake .. && cmake --build .
 ```
 
@@ -169,7 +169,7 @@ Once you have the address and port and are in the `build` directory, run the fol
 Replace `PROXYIPADDRESS` with the IP address of your proxy. Replace `STRATUMPORT` with the websocket port of your proxy, which is [default set to `3333`](/participate/stratum-proxy/stratum-faq.md#stratum-port)
 :::
 
-```shell
+```bash
 ./ethcoreminer/ethcoreminer -G -P stratum://PROXYIPADDRESS:STRATUMPORT
 ```
 

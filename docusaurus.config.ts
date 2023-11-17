@@ -3,15 +3,16 @@
 // docusaurus type definitions
 import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
+import { themes } from 'prism-react-renderer';
+import math from 'remark-math';
+import katex from 'rehype-katex';
 
 // prism configuration
-const { themes } = require('prism-react-renderer');
+
 const lightTheme = themes.github;
 const darkTheme = themes.dracula;
 
 // remark and rehype plugins for math
-const math = require('remark-math');
-const katex = require('rehype-katex');
 
 /** @type {import('@docusaurus/types').Config} */
 const config: Config = {
@@ -186,7 +187,8 @@ const config: Config = {
       prism: {
         theme: lightTheme,
         darkTheme: darkTheme,
-        additionalLanguages: ['solidity', 'diff', 'json'],
+        defaultLanguage: 'bash',
+        additionalLanguages: ['solidity', 'diff', 'json', 'bash'],
       },
     } satisfies Preset.ThemeConfig,
 };

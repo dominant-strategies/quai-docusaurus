@@ -16,7 +16,7 @@ keywords:
 
 To find the IP of your stratum proxy, you can run the following command:
 
-```shell
+```bash
 curl ifconfig.me
 ```
 
@@ -38,7 +38,7 @@ Programs like [tmux](https://github.com/tmux/tmux/wiki) or [screen](https://www.
 
 Yes. In order for your GPU miner to be able to use the stratum proxy to connect to your node, the stratum proxy and node must be running simultaneously on the same machine.
 
-```shell
+```bash
 # REGION-WS-PORT and ZONE-WS-PORT should be replaced with the correct ports.
 ./build/bin/quai-stratum --region=REGION-WS-PORT --zone=ZONE-WS-PORT
 ```

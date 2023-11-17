@@ -68,7 +68,7 @@ Once you've installed and configured Ubuntu on your machine, open the terminal.
 
 Prior to installing any dependencies, you'll first want to make sure Ubuntu is up to date. We can do this by running:
 
-```shell
+```bash
 sudo apt update && sudo apt upgrade -y
 ```
 
@@ -83,17 +83,17 @@ After Ubuntu has updated, we can begin installing the following dependencies:
 
 Install dependencies using the following command:
 
-```shell
+```bash
 sudo apt install -y git cmake build-essential mesa-common-dev nvidia-driver-535
 ```
 
 Install CUDA with the following commands:
 
-```shell
+```bash
 wget https://developer.download.nvidia.com/compute/cuda/12.1.0/local_installers/cuda_12.1.0_530.30.02_linux.run
 ```
 
-```shell
+```bash
 sudo sh cuda_12.1.0_530.30.02_linux.run
 ```
 
@@ -109,7 +109,7 @@ After completing this step, you may see a warning saying that the CUDA compatibl
 
 After installing dependencies, reboot your machine to ensure all updates are applied correctly.
 
-```shell
+```bash
 sudo reboot
 ```
 
@@ -119,13 +119,13 @@ Now that the **environment and dependencies** are fully configured, we can start
 
 To install the miner, open up the terminal, clone the `quai-gpu-miner` repository, and navigate to the `quai-gpu-miner` directory:
 
-```shell
+```bash
 git clone https://github.com/dominant-strategies/quai-gpu-miner && cd quai-gpu-miner
 ```
 
 To install and update external repository dependencies, run the following:
 
-```shell
+```bash
 git submodule update --init --recursive
 ```
 
@@ -135,13 +135,13 @@ This will ensure that all the submodules referenced in the repository are **prop
 
 Start by making a directory named `build` and navigating to it:
 
-```shell
+```bash
 mkdir build && cd build
 ```
 
 Inside of the build directory, we'll need to install all of the build dependencies using `cmake` and then build and compile the miner.
 
-```shell
+```bash
 cmake .. -DETHASHCUDA=ON && cmake --build .
 ```
 
@@ -161,7 +161,7 @@ Once you have the address and port and are in the `build` directory, run the fol
 Replace `PROXYIPADDRESS` with the IP address of your proxy. Replace `STRATUMPORT` with the websocket port of your proxy, which is [default set to `3333`](/participate/stratum-proxy/stratum-faq.md#stratum-port). Note that the start command for CUDA utilizes a `-U` flag instead of the `-G` flag utilized for OpenCL.
 :::
 
-```shell
+```bash
 ./ethcoreminer/ethcoreminer -U -P stratum://PROXYIPADDRESS:STRATUMPORT
 ```
 

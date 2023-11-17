@@ -43,7 +43,7 @@ We'll be installing a slightly modified version of Hardhat called [quai-hardhat]
 
 Hardhat is typically utilized through local installations within individual project directories. Start by creating an `npm` project.
 
-```shell
+```bash
 mkdir deploy-multi-chain-contract
 cd deploy-multi-chain-contract
 npm init -y
@@ -51,25 +51,25 @@ npm init -y
 
 Install quai-hardhat with:
 
-```shell
+```bash
 npm install --save-dev git@github.com:dominant-strategies/quai-hardhat.git
 ```
 
 Install quais, quais-polling, and dotenv:
 
-```shell
+```bash
 npm install dotenv quais quais-polling
 ```
 
 Lastly, initialize Hardhat:
 
-```shell
+```bash
 npx hardhat
 ```
 
 This command will display a number of project initialization options like below:
 
-```shell
+```bash
 888    888                      888 888               888
 888    888                      888 888               888
 888    888                      888 888               888
@@ -104,13 +104,13 @@ Private key safety is paramount and you should ensure that when deploying, your 
 
 To create an `.env` file, run the following command:
 
-```shell
+```bash
 touch .env
 ```
 
 After creating your environment file, we'll need to configure it for multi-chain deployments. This can be done by pasting the following code into the file:
 
-```shell title=".env"
+```bash title=".env"
 ## Sample environment file - change all values as needed
 ## Default local deployment config
 
@@ -152,7 +152,7 @@ To be able to properly compile and deploy SolidityX contracts, we'll need to clo
 
 Clone the [SolidityX repository](https://github.com/dominant-strategies/SolidityX) to your machine with and navigate to it with:
 
-```shell
+```bash
 git clone https://github.com/dominant-strategies/SolidityX.git && cd SolidityX
 ```
 
@@ -271,13 +271,13 @@ Before configuring and deploying the QRC-20, we recommend getting familiar with 
 
 Start by removing the sample `Lock.sol` contract provide by Hardhat in the `contracts` directory.
 
-```shell
+```bash
 rm -rf contracts/Lock.sol
 ```
 
 After `Lock.sol` has been removed, create a new contract in the same directory named `QRC20.sol`.
 
-```shell
+```bash
 touch contracts/QRC20.sol
 ```
 
@@ -310,19 +310,19 @@ We've now configured our QRC-20 contract and are ready to start deploying to dif
 
 If you've used Hardhat before in this directory, you'll need to reset your compilers before compiling any SolidityX based contracts. You can do this with the following command:
 
-```shell
+```bash
 npx hardhat clean --global
 ```
 
 Now that we've reset our compilers, we can go ahead and compile the `QRC20.sol` contract using the SolidityX compiler:
 
-```shell
+```bash
 npx hardhat compile
 ```
 
 Which should output:
 
-```shell
+```bash
 Downloading compiler 0.8.0
 
 Compiled 1 Solidity file successfully
@@ -384,13 +384,13 @@ For this tutorial, we'll be deploying **two instances** of our QRC-20 contract o
 
 We'll be deploying on QRC-20 contract to the Cyprus-1 chain. To do this, we'll pass `cyprus1` as the network flag in the deployment command like below:
 
-```shell
+```bash
 npx hardhat run scripts/deploy.js --network cyprus1
 ```
 
 Running this should output:
 
-```shell
+```bash
 Found address 0x1A3fA2C0B9c490a07a421d2b169E034C1bFcA601 on shard zone-0-0 for shard zone-0-0
 Deploying contract with address: [object Object]
 Deployed at: 0x1A3fA2C0B9c490a07a421d2b169E034C1bFcA601
@@ -398,13 +398,13 @@ Deployed at: 0x1A3fA2C0B9c490a07a421d2b169E034C1bFcA601
 
 Now, we can deploy an identical QRC-20 contract to another shard within Quai, like Cyprus-2. Like before, you'll pass `cyprus2` as the network flag in the deployment command.
 
-```shell
+```bash
 npx hardhat run scripts/deploy.js --network cyprus2
 ```
 
 Which again should output something like this:
 
-```shell
+```bash
 Found address 0x2F4C5243BEd5dC46787378894eDF662Db9FE4685 on shard zone-0-1 for shard zone-0-1
 Deploying contract with address: [object Object]
 Deployed at: 0x2F4C5243BEd5dC46787378894eDF662Db9FE4685
@@ -444,7 +444,7 @@ Once the sister contract addresses have been added to the respective `ApprovedAd
 
 To link the sister contracts, we'll utilize `quais.js` and some of the Hardhat Runtime Environment that we used in the deploy script. Start by creating another file in the scripts directory named `addApprovedAddress.js`.
 
-```shell
+```bash
 touch scripts/addApprovedAddress.js
 ```
 
@@ -503,7 +503,7 @@ Now that we've set up our script, we're ready to link our two deployed contracts
 
 Start by grabbing the addresses of the two contracts we deployed in the [deploy section](#deploy-your-contracts).
 
-```shell
+```bash
 Cyprus 1 contract address: 0x1A3fA2C0B9c490a07a421d2b169E034C1bFcA601
 Cyprus 2 contract address: 0x2F4C5243BEd5dC46787378894eDF662Db9FE4685
 ```
@@ -527,13 +527,13 @@ const transactionData = await contract.populateTransaction.AddApprovedAddress(
 
 Now, we're ready to run the script and finish the first part of the contract linkage. Make sure to pass the `--network cyprus1` flag **when sending transactions to the Cyprus 1 contract**.
 
-```shell
+```bash
 npx hardhat run scripts/addApprovedAddress.js --network cyprus1
 ```
 
 The script should output something like this:
 
-```shell
+```bash
 Transaction sent: 0x2a499178c3f0046b4d44a57a966f9e224759c1b3158af984fcb5a1432b16ee8e
 Transaction mined with hash: 0x2a499178c3f0046b4d44a57a966f9e224759c1b3158af984fcb5a1432b16ee8e
 ```
