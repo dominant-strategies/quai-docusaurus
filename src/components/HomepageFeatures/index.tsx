@@ -2,17 +2,17 @@ import Card, { type CardItem } from '../Card/Card';
 import ChatbaseScript from '../Chat';
 const FeatureList: CardItem[] = [
   {
-    title: 'Introduction to Quai',
+    title: '📖 Introduction to Quai',
     link: '/docs/learn/intro/',
     description: <>Learn the basics of how Quai Network scales infinitely.</>,
   },
   {
-    title: 'Use Quai',
+    title: '🌐 Use Quai',
     link: '/docs/category/use-quai/',
     description: <>Explore wallets, block explorers, and Testnet faucets.</>,
   },
   {
-    title: 'Academic Resources',
+    title: '🧑‍🎓 Academic Resources',
     link: '/docs/category/academic-resources/',
     description: <>Read the research papers that detail the new technologies introduced by Quai.</>,
   },
@@ -20,17 +20,17 @@ const FeatureList: CardItem[] = [
 
 const DocList: CardItem[] = [
   {
-    title: 'Run A Node',
+    title: '💻 Run A Node',
     link: '/docs/category/run-a-node/',
     description: <>Become an active participant in the network to interact with Quai trustlessly.</>,
   },
   {
-    title: 'Become A Miner',
+    title: '⛏️ Become A Miner',
     link: '/docs/category/run-a-miner/',
     description: <>Start mining Quai's ASIC-resistant algorithm to contribute to network security.</>,
   },
   {
-    title: 'Develop on Quai',
+    title: '🧑‍💻 Develop on Quai',
     link: '/docs/category/tutorials/',
     description: <>Build decentralized applications that aren't bottle-necked by Layer-1 scalability.</>,
   },
