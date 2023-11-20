@@ -15,7 +15,7 @@ keywords:
 - Refrain from putting commands and the respective response in the same code block.
 - Add titles to code blocks when referencing a specific file.
 
-### Javascript
+## Javascript
 
 - Add semi-colons to the end of each line. (The formatter will handle this for you.)
 - Use single quotes.
@@ -26,7 +26,7 @@ Example:
 const example = 'example';
 ```
 
-### JSON
+## JSON
 
 - Use double quotes.
 - Don't add comments to JSON code blocks.
@@ -39,7 +39,7 @@ Example:
 }
 ```
 
-### bash
+## bash
 
 - Specify `bash` as the language for bash commands.
 - Break multiple commands into separate code blocks. If applicable, use `&&` or `\` to run multiple commands in succession.

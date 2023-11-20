@@ -9,7 +9,7 @@ keywords:
   - style
 ---
 
-### Guidelines
+## Guidelines
 
 - List items should be consistent, either all complete sentences or all fragments.
 - Always use punctuation at the end of list items if they are complete sentences.

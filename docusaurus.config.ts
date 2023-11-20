@@ -8,7 +8,6 @@ import math from 'remark-math';
 import katex from 'rehype-katex';
 
 // prism configuration
-
 const lightTheme = themes.github;
 const darkTheme = themes.dracula;
 
