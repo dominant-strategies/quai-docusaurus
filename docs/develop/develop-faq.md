@@ -1,7 +1,6 @@
 ---
 title: Development FAQ
 description: Answers to frequently asked questions about developing on Quai Network.
-hide_table_of_contents: false
 keywords:
   - faq
   - rpc endpoints
@@ -26,7 +25,7 @@ To deploy a smart contract on Quai, you'll need a few things:
 
 You can use either. Importantly, however, if you are deploying your contracts using your own local node, you must be synced to the tip of each blockchain you wish to deploy a contract on.
 
-In practice, this means that if you are operating a slice node, you’ll need to use RPC endpoints to deploy to any chains other than the single Zone chain that your node maintains. On the other hand, if you are running a global node, you will be able to deploy against your local node in all chains and will not need to use an RPC endpoint for any chain.
+In practice, this means that if you are operating a slice node, you’ll need to use RPC endpoints to deploy to any chains other than the single zone chain that your node maintains. On the other hand, if you are running a global node, you will be able to deploy against your local node in all chains and will not need to use an RPC endpoint for any chain.
 
 RPC endpoints:
 

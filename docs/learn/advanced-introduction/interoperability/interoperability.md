@@ -1,13 +1,12 @@
 ---
 title: Interoperability
 description: Specifications of Quai Network's interoperability between shards.
-hide_table_of_contents: false
 sidebar_position: 5
 ---
 
 # Interoperability
 
-All Quai chains are interoperable and composed into a coordinated network. Transactions can be sent from any Quai Zone chain to any Quai Zone chain, ensuring Quai's usability as a single, composable network.
+All Quai chains are interoperable and composed into a coordinated network. Transactions can be sent from any Quai zone chain to any Quai zone chain, ensuring Quai's usability as a single, composable network.
 
 Cross-chain transactions in Quai are referred to as [external transactions (ETXs)](/learn/advanced-introduction/interoperability/etxs.md), and use [hash linked references](/learn/advanced-introduction/merged-mining/coincident-blocks.mdx) to ensure atomic state transitions across chains. Quai Network uses [new EVM opcodes to facilitate ETXs](/develop/smart-contracts/opcode-additions.md). The braided structure of Quai Network also enables multi-chain smart contracts and cross-chain contract interactions. While contracts can be deployed to a single Quai thread in a similar way that contracts are traditionally deployed on a single-threaded blockchain, developers also have the ability to deploy contracts across multiple or all Quai chains to maintain the operability of dapps across the network.
 

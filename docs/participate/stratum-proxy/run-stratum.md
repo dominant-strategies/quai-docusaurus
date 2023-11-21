@@ -1,7 +1,6 @@
 ---
 title: Starting and Running a Stratum Proxy
 description: A guide on configuring, starting, and running a Stratum Proxy.
-hide_table_of_contents: false
 sidebar_position: 2
 keywords:
   - quai stratum
@@ -52,7 +51,7 @@ If you've already installed go-quai, you already have all the necessary dependen
 
 Snap Install (_snapd is not installed by default on all Linux Distros_):
 
-```shell
+```bash
 # install snapd if you don't have it already
 sudo apt install snapd
 
@@ -62,7 +61,7 @@ sudo snap install go --classic
 
 MacOS Install:
 
-```shell
+```bash
 brew install go
 ```
 
@@ -72,13 +71,13 @@ If you're not on Ubuntu or MacOS, instructions on how to install go directly can
 
 Linux install:
 
-```shell
+```bash
 sudo apt install git make
 ```
 
 MacOS install:
 
-```shell
+```bash
 brew install git make
 ```
 
@@ -88,7 +87,7 @@ Now that you've installed the base dependencies, we can go ahead and clone the [
 
 To clone the go-quai-stratum repo and navigate to it, run the following commands:
 
-```shell
+```bash
 git clone https://github.com/dominant-strategies/go-quai-stratum
 cd go-quai-stratum
 ```
@@ -97,13 +96,13 @@ This command installs the _main branch_ to your local machine. Unless you intend
 
 You can find the latest release on the [go-quai-stratum releases page](https://github.com/dominant-strategies/go-quai-stratum/tags). Then, check out the latest release with:
 
-```shell
+```bash
 git checkout put-latest-release-here
 ```
 
 For example (this not the latest release, check the releases page for the latest release number):
 
-```shell
+```bash
 git checkout v01.2.3-rc.4
 ```
 
@@ -111,7 +110,7 @@ git checkout v01.2.3-rc.4
 
 To run the Quai stratum proxy, you'll need to do some minor configuration. Start by copying the example configuration file to a local configuration file:
 
-```shell
+```bash
 cp config/config.example.json config/config.json
 ```
 
@@ -123,7 +122,7 @@ Within the `config.json` file, you'll be able to configure networking settings a
 
 Before running the proxy, we need to build the source. You can build via Makefile by running the following command:
 
-```shell
+```bash
 make quai-stratum
 ```
 
@@ -135,7 +134,7 @@ To run the proxy, you'll need to select a shard to run against. More information
 
 Start the proxy by passing either the corresponding **web socket ports** or **chain names** for the region and zone you've selected to run. Run with chain names using this command:
 
-```shell
+```bash
 ./build/bin/quai-stratum --region=REGION-NAME --zone=ZONE-NAME
 ```
 
@@ -174,7 +173,7 @@ If you're running a version of `go-quai-stratum` prior to [v0.9.0-rc.0](https://
 
 The proxy by default listens for miner connections on the `3333` port. You can change the port the proxy listens on by passing it in with the `--stratum` flag in the run command if you'd like.
 
-```shell
+```bash
 ./build/bin/quai-stratum --region=REGION-NAME --zone=ZONE-NAME --stratum=LISTENING-PORT
 ```
 
@@ -184,7 +183,7 @@ Changing the proxy listening port is useful for running multiple proxies on a si
 
 The proxy should begin streaming logs to the terminal that _look similar to below_.
 
-```shell
+```bash
 WARN[0000] One ethash cache must always be in memory requested=0
 2023/09/06 13:47:17 main.go:45: Loading config: 0x14000032970
 2023/09/06 13:47:17 main.go:84: Running with 4 threads

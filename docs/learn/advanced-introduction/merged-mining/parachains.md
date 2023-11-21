@@ -1,7 +1,6 @@
 ---
 title: Merge-Mined Parachains
 description: How Quai Network can support custom blockchains.
-hide_table_of_contents: false
 sidebar_position: 3
 ---
 

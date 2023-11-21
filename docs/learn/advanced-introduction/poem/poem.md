@@ -1,7 +1,6 @@
 ---
 title: Proof-of-Entropy-Minima (PoEM)
 description: Quai Network's Proof-of-Entropy-Minima consensus mechanism.
-hide_table_of_contents: false
 sidebar_position: 1
 ---
 

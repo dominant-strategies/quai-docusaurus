@@ -1,7 +1,7 @@
 ---
 title: CPU Miner
 description: How to install and run a Quai Network GPU miner.
-hide_table_of_contents: false
+
 sidebar_position: 1
 ---
 
@@ -23,7 +23,7 @@ Now that we've installed the base dependencies and configured our node, we can g
 
 To install quai-cpu-miner and navigate to its directory, run the following commands:
 
-```shell
+```bash
 git clone https://github.com/dominant-strategies/quai-cpu-miner.git
 cd quai-cpu-miner
 ```
@@ -34,7 +34,7 @@ This will install the main branch to your local machine.
 
 Simply copy the configuration template file `config.yaml.dist` into a local configuration file named `config.yaml`. This can be done by navigating to the config directory and running:
 
-```shell
+```bash
 cp config.yaml.dist config.yaml
 ```
 
@@ -49,7 +49,7 @@ Before continuing, make sure to navigate back to the quai-cpu-miner root directo
 Similar to the node, we'll need to build the source to run the miner.
 To build the source via Makefile, run:
 
-```shell
+```bash
 make quai-cpu-miner
 ```
 
@@ -61,7 +61,7 @@ Similar to a [slice node](/participate/node/node-overview.md#slice-node), a mine
 
 To start the miner, select a region and zone index and run:
 
-```shell
+```bash
 # run in terminal
 make run-mine region=0 zone=1
 
@@ -82,7 +82,7 @@ Depending on whether or not the miner is running in background, logs will be vie
 
 If you're running in the terminal, logs will be piped directly to the terminal and will not be saved. If the miner is running in the background, the miner output will be piped to a mining location specific .log file with the path `logs/slice-R-Z.log`. To view the last 100 lines of log output in Cyprus-1, run:
 
-```shell
+```bash
 tail -f 100 logs/slice-0-0.log
 ```
 
@@ -90,7 +90,7 @@ You can also easily view miner logs via your favorite IDE, we recommend using th
 
 A miner that is actively mining should have log outputs similar to:
 
-```shell
+```bash
 2023/01/11 12:51:23 Mining Block:   [16 22 78] location [0 0] difficulty [29209917 7353733 1913341]
 2023/01/11 12:51:25 Zone block  :   [16 22 78] 0x0000086297dd6d1f635b01e3dc3d0c27d0ed9a571ae4e3e22ba89e876e71e398
 2023/01/11 12:51:25 Mining Block:   [16 22 79] location [0 0] difficulty [29209917 7353733 1914275]
@@ -111,7 +111,7 @@ The miner logs provide the current block being mined, block type, the hash/secon
 
 You should stop the miner anytime you plan to pull an update, stop your node for any reason, or are shutting down your machine. A miner instance running the in background can be terminated by running:
 
-```shell
+```bash
 make stop
 ```
 
@@ -125,13 +125,13 @@ Making sure your miner is running correctly is crucial to being successful as a 
 
 Prior to updating your miner, make sure to kill any instances of quai-cpu-miner using the stop command above. After stopping your miner, pull any new code by running:
 
-```shell
+```bash
 git pull
 ```
 
 After pulling the latest code, you'll need to rebuild the source by running:
 
-```shell
+```bash
 make quai-cpu-miner
 ```
 
@@ -141,6 +141,6 @@ After completing the steps above, you can restart the miner and continue mining.
 Starting the miner update process while the node or miner are running could cause issues. Make sure to stop all processes before updating.
 :::
 
-```shell
+```bash
 
 ```

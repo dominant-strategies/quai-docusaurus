@@ -1,7 +1,6 @@
 ---
 title: Merged Mining
 description: How merged mining has been adapted and used to scale in Quai Network.
-hide_table_of_contents: false
 sidebar_position: 3
 ---
 
@@ -19,7 +18,7 @@ Merged mining can be conducted only between blockchains utilizing the same hashi
 
 [Coincident blocks](/learn/advanced-introduction/merged-mining/coincident-blocks.mdx) are blocks that are valid in multiple Quai blockchains. Coincident blocks create atomic, hash linked references between chains. When merged mining multiple blockchains, miners will occasionally find nonces that fulfill the difficulty requirements of multiple blockchains. Thus, coincident blocks are a natural byproduct of merged mining, and require no mechanism outside of Proof-of-Work mining to be created.
 
-Coincident blocks keep all Quai blockchains interlinked by periodically pegging subordinate chains to the work of the Prime chain, and allow for data to be transmitted between chains in a trustless environment through the creation of hash linked references.
+Coincident blocks keep all Quai blockchains interlinked by periodically pegging subordinate chains to the work of the prime chain, and allow for data to be transmitted between chains in a trustless environment through the creation of hash linked references.
 
 ## Energy Efficiency
 
@@ -29,7 +28,7 @@ Merged mining enables Quai to utilize miners at much greater efficiency, reducin
 
 Quai allows [merge-mined parachains](/learn/advanced-introduction/merged-mining/parachains.md) to derive security from Quai Network. While Quai's merged mining focuses on merge-mining many Quai-specific chains simultaneously, any blockchain that utilizes the [ProgPoW](/participate/mining/miner-overview.md#progpow-hashing-algorithm) hashing algorithm can bootstrap security and trustless bridging by enabling merged mining with Quai.
 
-All Quai block headers contain data fields for Prime, Region, and Zone in addition to a single empty data field. This empty field allows Quai miners to insert the block header of a parachain into a Quai block header, creating a valid Quai block and a valid parachain block simultaneously. The parachain coincident block serves the same purpose as intra-network coincident blocks, in that it provides a hash linked reference between chains, facilitating trustless state transfers.
+All Quai block headers contain data fields for prime, region, and zone in addition to a single empty data field. This empty field allows Quai miners to insert the block header of a parachain into a Quai block header, creating a valid Quai block and a valid parachain block simultaneously. The parachain coincident block serves the same purpose as intra-network coincident blocks, in that it provides a hash linked reference between chains, facilitating trustless state transfers.
 
 Parachain liveliness is determined by market forces. Each block leaves only a single empty data field, creating a competitive environment for parachains to incentivize Quai miners.
 

@@ -1,7 +1,6 @@
 ---
 title: One-Click GCP Deployment
 description: One-click deployment for a Quai node on GCP.
-hide_table_of_contents: false
 keywords:
   - one click deploy
   - gcp
@@ -75,7 +74,7 @@ You'll need to replace:
 - `project-id`: replace `<project-id>` with your project ID.
   - **Example:** `--project voltaic-genie-374321`
 
-```shell
+```bash
 gcloud deployment-manager deployments create <deployment-name>
 --template quai-deployment.jinja \
 --properties region-param:<gcp-region>, \
@@ -117,7 +116,7 @@ You'll need to replace:
 - `project-id`: replace `<project-id>` with your project ID.
   - **Example:** `--project voltaic-genie-374321`
 
-```shell
+```bash
 gcloud deployment-manager deployments create <deployment-name>
 --template quai-deployment.jinja \
 --properties region-param:<gcp-region>, \

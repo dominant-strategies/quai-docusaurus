@@ -1,7 +1,6 @@
 ---
 title: GPU Miner
 description: How to install and run a Quai Network GPU miner.
-hide_table_of_contents: false
 sidebar_position: 2
 keywords:
   - gpu miner

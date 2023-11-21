@@ -1,7 +1,6 @@
 ---
 title: Iron Age Testnet
 description: Important links, resources, and routing for Quai Network's Iron Age Testnet.
-hide_table_of_contents: false
 sidebar_position: 2
 keywords:
   - quai testnet
@@ -34,7 +33,7 @@ The Iron Age Testnet offers incentives in Mainnet Quai tokens to [Quai miners wh
 
 8 million Mainnet Quai tokens will be distributed to individuals who mine valid blocks on canonical Quai Network chains throughout the Iron Age Testnet.
 
-The Mainnet rewards earned by each address will be determined by calculating what proportion of total Testnet blocks were mined by the address. For example, if a Zone 1 address mined 10 blocks and a total of 1,000 blocks were mined for the duration of the Iron Age Testnet in Zone 1, that address would receive 1% of mining rewards for Zone 1, or 8,888.889 Quai. All rewards will be tracked, calculated, and distributed via on-chain data – be sure to hold onto the private keys for the address(es) you use to mine!
+The Mainnet rewards earned by each address will be determined by calculating what proportion of total Testnet blocks were mined by the address. For example, if a zone 1 address mined 10 blocks and a total of 1,000 blocks were mined for the duration of the Iron Age Testnet in zone 1, that address would receive 1% of mining rewards for zone 1, or 8,888.889 Quai. All rewards will be tracked, calculated, and distributed via on-chain data – be sure to hold onto the private keys for the address(es) you use to mine!
 
 :::warning
 No individual mining address will be able to receive more than 5% of the mining rewards for a single slice. Each individual will be able to KYC/claim a maximum of one mining address per chain on Mainnet.

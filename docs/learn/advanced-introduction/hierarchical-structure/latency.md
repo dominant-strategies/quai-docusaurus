@@ -1,7 +1,6 @@
 ---
 title: Latency
 description: How Quai Network optimizes geographical latency in order to scale.
-hide_table_of_contents: false
 sidebar_position: 2
 ---
 

@@ -1,8 +1,6 @@
 ---
 title: Hierarchical Structure
 description: Detailed specification of Quai Network's hierarchical structure.
-hide_table_of_contents: false
-sidebar_position: 2
 ---
 
 # Hierarchical Structure
@@ -40,15 +38,15 @@ Quai's merge-mined hierarchy intertwines these many threads through [hash linked
 
 ### Prime
 
-The highest tier of the hierarchy is Prime. The single Prime chain is mined by all miners, and has a high difficulty in order to ensure a high security guarantee behind each block. The Prime Chain is a header chain used exclusively to coordinate sub networks, and does not maintain any state. There are no accounts or transactions on the Prime chain.
+The highest tier of the hierarchy is prime. The single prime chain is mined by all miners, and has a high difficulty in order to ensure a high security guarantee behind each block. The prime Chain is a header chain used exclusively to coordinate sub networks, and does not maintain any state. There are no accounts or transactions on the prime chain.
 
 ### Region
 
-Quai's single Prime chain organizes many Region chains, which are the second level of the hierarchy. With N Region chains, each Region chain will contain approximately 1/Nth of the total network hashrate. Through merged mining, Region chains are periodically hash linked to the Prime chain (and thus the remainder of the network). Quai Network's initial structure consists of 3 Region chains: Cyprus, Paxos, and Hydra. Similar to the Prime chain, Region chains do not carry any state, and exist exclusively to coordinate Zone chains.
+Quai's single prime chain organizes many region chains, which are the second level of the hierarchy. With N region chains, each region chain will contain approximately 1/Nth of the total network hashrate. Through merged mining, region chains are periodically hash linked to the prime chain (and thus the remainder of the network). Quai Network's initial structure consists of 3 region chains: Cyprus, Paxos, and Hydra. Similar to the prime chain, region chains do not carry any state, and exist exclusively to coordinate zone chains.
 
 ### Zone
 
-The bottom level of the hierarchy is Zone. Each of Quai's Region chains coordinate many Zone chains. Similar to Region chains, Zone chains are hash linked to dominant Prime/Region blocks through merged mining. Quai's initial structure consists of 9 Zone chains: Cyprus 1-3, Paxos 1-3, and Hydra 1-3. Zone chains are the only type of chain in Quai Network that maintain state and process transactions. Each Zone chain is a single execution thread, making all of Quai Network a [composable multithreaded execution environment](/learn/advanced-introduction/multithreaded-execution.md).
+The bottom level of the hierarchy is zone. Each of Quai's region chains coordinate many zone chains. Similar to region chains, zone chains are hash linked to dominant prime/region blocks through merged mining. Quai's initial structure consists of 9 zone chains: Cyprus 1-3, Paxos 1-3, and Hydra 1-3. zone chains are the only type of chain in Quai Network that maintain state and process transactions. Each zone chain is a single execution thread, making all of Quai Network a [composable multithreaded execution environment](/learn/advanced-introduction/multithreaded-execution.md).
 
 ## Hash Linked References
 

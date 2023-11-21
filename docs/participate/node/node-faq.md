@@ -1,7 +1,6 @@
 ---
 title: Node FAQ
 description: Answers to commonly asked questions about Quai nodes.
-hide_table_of_contents: false
 sidebar_position: 4
 keywords:
   - faq
@@ -60,11 +59,11 @@ Many users have experienced issues specifically with Contabo VPNs. We recommend 
 
 The go-quai client currently supports full nodes (nodes that store the entire state of the network, and verify each new state transition from genesis) of the following constructions:
 
-_Single-Slice (or just Slice):_ A node running the Prime chain, a self-selected Region chain, and a self-selected Zone chain.
+_Single-Slice (or just Slice):_ A node running the prime chain, a self-selected region chain, and a self-selected zone chain.
 
-_Multi-Slice:_ A node running the Prime chain, one or more self-selected Region chains, and two or more self-selected Zone chains.
+_Multi-Slice:_ A node running the prime chain, one or more self-selected region chains, and two or more self-selected zone chains.
 
-_Global:_ A node running the Prime chain, all Region chains, and all Zone chains.
+_Global:_ A node running the prime chain, all region chains, and all zone chains.
 
 The go-quai client currently does not support the following node types:
 
@@ -134,7 +133,7 @@ In the codebase, a slice is identified by its region and zone index. Region and 
 
 The `SLICES` parameter of the network.env file determines which slices of the network the node will run (i.e. determines whether the node will be a slice node, a multi-slice node, or a global node). To spin up a slice node, edit the network.env file to modify the slices you want to run. For example, if you wanted to run two slices, you would change the\_ `SLICES` line to the following (be aware of spacing):
 
-```shell
+```bash
 SLICES="[FIRST_REGION_NUM FIRST_ZONE_NUM],[SECOND_REGION_NUM SECOND_ZONE_NUM]"
 ```
 
@@ -199,11 +198,11 @@ tail -f nodelogs/*.log | grep Appended
 
 ### Nodelogs By Chain
 
-**What is the difference between checking Prime, Region, and Zone nodelogs? Which nodelogs should I check?**
+**What is the difference between checking prime, region, and zone nodelogs? Which nodelogs should I check?**
 
-Quai Network runs a hierarchy of chains. All nodes run the Prime chain and a minimum of one Region and Zone chain.
+Quai Network runs a hierarchy of chains. All nodes run the prime chain and a minimum of one region and Zone chain.
 
-Slices are identified by Zones. Thus, when checking nodelogs, you should check the logs for the Zone(s) that your node is running. Since block time for Zones are the fastest, checking the Zone nodelogs provides the most accurate understanding of where your node has synced to/what is happening in your node at any given point in time.
+Slices are identified by zones. Thus, when checking nodelogs, you should check the logs for the zone(s) that your node is running. Since block time for zones are the fastest, checking the zone nodelogs provides the most accurate understanding of where your node has synced to/what is happening in your node at any given point in time.
 
 ### Updating a Node
 

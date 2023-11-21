@@ -1,7 +1,6 @@
 ---
 title: User FAQ
 description: See the answers to frequently-asked-questions about Quai.
-hide_table_of_contents: false
 sidebar_position: 4
 keywords:
   - user faq
@@ -15,15 +14,15 @@ keywords:
 
 **Same Zone:** Referred to as an “internal” transaction. These transactions receive settlement in ~10 seconds.
 
-**Near-Coordinate:** A near-coordinate transaction is an “external” transaction that traverses from one Zone to another Zone under the same Region. For example, a transaction from Cyprus-1 to Cyprus-2 is considered “near-coordinate.” Near-coordinate transactions receive settlement in ~300 seconds.
+**Near-Coordinate:** A near-coordinate transaction is an “external” transaction that traverses from one zone to another zone under the same region. For example, a transaction from Cyprus-1 to Cyprus-2 is considered “near-coordinate.” Near-coordinate transactions receive settlement in ~300 seconds.
 
-**Far-Coordinate:** A far-coordinate transaction is an “external” transaction that traverses from one Zone to another Zone under a different Region. For example, a transaction from Cyprus-1 to Paxos-1 is considered “far-coordinate. Far-coordinate transactions receive settlement in ~3,300 seconds.
+**Far-Coordinate:** A far-coordinate transaction is an “external” transaction that traverses from one zone to another zone under a different region. For example, a transaction from Cyprus-1 to Paxos-1 is considered “far-coordinate. Far-coordinate transactions receive settlement in ~3,300 seconds.
 
 | Transaction Type | ETX Emitted? | Description                                                                                                                | Settlement Time† |
 | ---------------- | ------------ | -------------------------------------------------------------------------------------------------------------------------- | ---------------- |
-| Same Zone        | No           | A transaction where the originating Zone and the destination Zone are the same.                                            | ~10s             |
-| Near-Coordinate  | Yes          | A transaction where the originating Zone and the destination Zone are different, but are subordinate to the same Region.   | ~300s            |
-| Far-Coordinate   | Yes          | A transaction where the originating Zone and the destination zone are different, and are subordinate to different Regions. | ~3300s.          |
+| Same Zone        | No           | A transaction where the originating zone and the destination zone are the same.                                            | ~10s             |
+| Near-Coordinate  | Yes          | A transaction where the originating zone and the destination zone are different, but are subordinate to the same Region.   | ~300s            |
+| Far-Coordinate   | Yes          | A transaction where the originating zone and the destination zone are different, and are subordinate to different Regions. | ~3300s.          |
 
 _† Settlement time is given in averages. Block production in Quai Network is a stochastic process, meaning that real-world settlement times will have minor variance._
 

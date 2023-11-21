@@ -1,7 +1,6 @@
 ---
 title: Node Overview
 description: Overview of the Implementation of a Quai Network node.
-hide_table_of_contents: false
 sidebar_position: 1
 keywords:
   - node
@@ -41,7 +40,7 @@ The hardware requirement to run a global node when Quai is at high/maximum load:
 
 ### Slice Node
 
-A slice node on the network is a subset of a global node that validates Prime, a single Region, and a single Zone. An example of a slice node would be the combination of Prime, Cyprus, and Cyprus1. The benefit to running a slice node is that a node needs fewer resources. The trade-off is that cross-node validation is delegated to the peered global nodes or coordinate slices. A slice node is the smallest subset of the network that a node can run and still trustlessly access the network.
+A slice node on the network is a subset of a global node that validates prime, a single region, and a single zone. An example of a slice node would be the combination of prime, Cyprus, and Cyprus1. The benefit to running a slice node is that a node needs fewer resources. The trade-off is that cross-node validation is delegated to the peered global nodes or coordinate slices. A slice node is the smallest subset of the network that a node can run and still trustlessly access the network.
 
 The hardware requirement to run a slice node when Quai is at low/no load:
 

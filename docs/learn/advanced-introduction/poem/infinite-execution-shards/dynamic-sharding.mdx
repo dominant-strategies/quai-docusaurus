@@ -1,12 +1,11 @@
 ---
 title: Dynamic Sharding
 description: The process of dynamically scaling to more shards in Quai Network.
-hide_table_of_contents: false
 ---
 
 # Dynamic Sharding
 
-Proof-of-Entropy-Minima (PoEM) allows Quai Network to coordinate infinite execution shards, with the network able to dynamically increase capacity to meet endless demand. **Dynamic sharding involves adding more execution shards to the network as needed to process a higher volume of transactions. This is handled by the protocol itself**. In Quai Network, dynamic sharding is done by creating the first blocks of a new Region chain and its related Zones, then connecting them to the network's overall consensus. Additionally, when dynamic sharding occurs, all existing Region chains will gain an additional subordinate Zone.
+Proof-of-Entropy-Minima (PoEM) allows Quai Network to coordinate infinite execution shards, with the network able to dynamically increase capacity to meet endless demand. **Dynamic sharding involves adding more execution shards to the network as needed to process a higher volume of transactions. This is handled by the protocol itself**. In Quai Network, dynamic sharding is done by creating the first blocks of a new region chain and its related zones, then connecting them to the network's overall consensus. Additionally, when dynamic sharding occurs, all existing region chains will gain an additional subordinate zone.
 
 ![DynamicSharding](/img/DynamicSharding.jpg)
 
@@ -15,7 +14,7 @@ Two network properties help the Quai protocol know when to add execution shards:
 ## Uncle Rate
 
 In blockchain protocols, uncle blocks are blocks that meet the blockchain's difficulty level when proposed but don't end up as part of the canonical chain. Uncle blocks occur when several miners find and propose valid blocks at nearly the same time; one block is chosen for the canonical chain and the others become "uncles." Uncle blocks in hash-based chains are a result of excessive throughput, reducing hash efficiency and slowing both statistical and economic finality.
-The Quai protocol can measure the rate of uncle blocks. If a certain ratio of uncle to canonical blocks is reached over a sustained period, the protocol triggers the creation of the first blocks for an additional Region and its related Zone chains. These are woven into global consensus. **By adding more execution shards, the network's throughput increases and congestion in the rest of the network eases. This brings down the rate of uncle blocks, allowing the Quai protocol to keep a high hash-efficiency that offers quick finality guarantees**.
+The Quai protocol can measure the rate of uncle blocks. If a certain ratio of uncle to canonical blocks is reached over a sustained period, the protocol triggers the creation of the first blocks for an additional region and its related zone chains. These are woven into global consensus. **By adding more execution shards, the network's throughput increases and congestion in the rest of the network eases. This brings down the rate of uncle blocks, allowing the Quai protocol to keep a high hash-efficiency that offers quick finality guarantees**.
 
 ## Gas Limit
 
@@ -25,17 +24,17 @@ Quai Network can keep transaction fees permanently under $0.01 by adding new exe
 
 ## Time To Global Settlement
 
-When Quai Network expands, a new Region chain is added, along with its new Zone chains. Also, a new Zone chain is added to each existing Region. So, if Quai starts with a 3x3 layout (3 Regions, 3 Zones per Region), it will become a 4x4 layout when it expands. Another expansion would make Quai a 5x5 layout. **This pattern of adding more execution shards (and thus throughput) can be repeated endlessly**. The tradeoff of expanding the network in Quai is a longer time to global settlement.
+When Quai Network expands, a new region chain is added, along with its new zone chains. Also, a new zone chain is added to each existing region. So, if Quai starts with a 3x3 layout (3 regions, 3 zones per region), it will become a 4x4 layout when it expands. Another expansion would make Quai a 5x5 layout. **This pattern of adding more execution shards (and thus throughput) can be repeated endlessly**. The tradeoff of expanding the network in Quai is a longer time to global settlement.
 
-In this context, settlement is different from finality. Finality is when a transaction is known to be either canonical or not worth rolling back, while settlement is when the transaction's destination address can spend the received funds. In Quai Network, transactions in Zone chains achieve statistical and economic finality separate from settlement times. **So, a transaction can be known to be canonical (statistically finalized) and not worth rolling back (economically finalized) before the transaction's funds can be spent at the destination address (settled)**.
+In this context, settlement is different from finality. Finality is when a transaction is known to be either canonical or not worth rolling back, while settlement is when the transaction's destination address can spend the received funds. In Quai Network, transactions in zone chains achieve statistical and economic finality separate from settlement times. **So, a transaction can be known to be canonical (statistically finalized) and not worth rolling back (economically finalized) before the transaction's funds can be spent at the destination address (settled)**.
 
-Average time to Global (Prime) settlement can be measured by the following equation, where:
+Average time to Global (prime) settlement can be measured by the following equation, where:
 
-- **TSₚ** = Average time to Global (Prime) settlement (in seconds)
-- **nₛ** = Number of Zones per Region
-- **tᵣ** = Average Region block time (in seconds) = 100
-- **nᵣ** = Number of Regions in the system
-- **tₚ** = Average Prime block time (in seconds) = 1,000
+- **TSₚ** = Average time to Global (prime) settlement (in seconds)
+- **nₛ** = Number of zones per region
+- **tᵣ** = Average region block time (in seconds) = 100
+- **nᵣ** = Number of regions in the system
+- **tₚ** = Average prime block time (in seconds) = 1,000
 
 $$
 TS_{p} = (n_{s} * t_{r}) + (n_{r} * t_{p})
@@ -55,4 +54,4 @@ $$
 | 9                 | 81                         | 900s                         | 9,900s                     |
 | 10                | 100                        | 1,000s                       | 11,000s                    |
 
-† _Time to Regional and Global settlement are given in averages. Block production in Quai Network is a stochastic process, meaning that real-world settlement times will have minor variance._
+† _Time to regional and Global settlement are given in averages. Block production in Quai Network is a stochastic process, meaning that real-world settlement times will have minor variance._

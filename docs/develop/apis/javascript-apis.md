@@ -1,7 +1,6 @@
 ---
 title: JavaScript APIs
 description: An overview of the JavaScript APIs available for interacting with Quai Network.
-hide_table_of_contents: false
 sidebar_position: 1
 keywords:
   - sdk

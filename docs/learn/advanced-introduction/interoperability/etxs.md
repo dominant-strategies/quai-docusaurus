@@ -1,7 +1,6 @@
 ---
 title: External Transactions (ETXs)
 description: How cross-chain transactions are processed in Quai Network.
-hide_table_of_contents: false
 ---
 
 # External Transactions (ETXs)
@@ -20,7 +19,7 @@ Two data fields are included in the headers of all Quai blocks that allow ETXs t
 2. The TX is mined on the origin chain, removing the balance from the sending address and potentially emitting a number of ETXs.
 3. The ETX(s) is propagated to dominant peers.
 4. When a coincident block is found, dominant peers collect all pending ETXs linked through the subordinate manifest.
-5. If the destination chain still has a dominant chain (i.e. is a Region chain), steps 3 and 4 are repeated.
+5. If the destination chain still has a dominant chain (i.e. is a region chain), steps 3 and 4 are repeated.
 
 ### Propagate Back Down The Hierarchy
 
@@ -37,7 +36,7 @@ Two data fields are included in the headers of all Quai blocks that allow ETXs t
 2. If ISADDRINTERNAL returns FALSE, (or another trigger occurs) a number of ETXs may be emitted from contract by triggering OP_ETX
 3. The ETX(s) is propagated to dominant peers.
 4. When a coincident block is found, dominant peers collect all pending ETXs linked through the subordinate manifest.
-5. If the destination chain still has a dominant chain (i.e. is a Region chain), steps 3 and 4 are repeated.
+5. If the destination chain still has a dominant chain (i.e. is a region chain), steps 3 and 4 are repeated.
 
 ### Propagate Back Down The Hierarchy
 

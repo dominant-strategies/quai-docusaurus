@@ -1,7 +1,6 @@
 ---
 title: JSON-RPC API
 description: Technical specification of Quai Network JSON-RPC API methods and usage.
-hide_table_of_contents: false
 sidebar_position: 2
 keywords:
   - jsonrpc
@@ -69,7 +68,7 @@ You might encounter an error message related to the content type, as the --data 
 
 A complete curl request including these additional data would look like:
 
-```shell
+```bash
 curl -X POST \
 http://127.0.0.1:8512 \
 -H 'Content-Type: application/json' \
@@ -195,7 +194,7 @@ Returns the fee history for a specific range of blocks.
 Returns an indicator of whether the client is actively syncing.
 
 :::warning
-`quai_syncing` will only return correct data for the Prime chain. If it returns false for Prime, the node is synced in Prime, but may not be synced in all other regions and zones. Always check the sync progress of all chains against the current tip.
+`quai_syncing` will only return correct data for the prime chain. If it returns false for prime, the node is synced in prime, but may not be synced in all other regions and zones. Always check the sync progress of all chains against the current tip.
 :::
 
 #### Input Parameters
