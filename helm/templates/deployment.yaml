@@ -32,7 +32,7 @@ spec:
           timeoutSeconds: 1
         name: {{ $name }}
         ports:
-        - containerPort: 3000
+        - containerPort: 80
           name: http
           protocol: TCP
         resources: {}
