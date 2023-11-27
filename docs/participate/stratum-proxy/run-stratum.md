@@ -1,5 +1,5 @@
 ---
-title: Starting and Running a Stratum Proxy
+title: Run a Stratum Proxy
 description: A guide on configuring, starting, and running a Stratum Proxy.
 sidebar_position: 2
 keywords:

@@ -97,7 +97,7 @@ The `network.env` file can be thought of as the configuration file for your node
 - `NETWORK` : the network (testnet [colosseum], devnet [garden], etc.) your node is running on.
 - `SLICES` : This parameter determines which slices of the network the node will run (i.e. determines whether the node will be a slice node, a multi-slice node, or a global node).
 
-The [“Starting and Running a Node”](/participate/node/start-a-node.md) page contains information on the most important things to change in this file.
+The [“Run a Node”](/participate/node/start-a-node.md) page contains information on the most important things to change in this file.
 
 The `network.env` file can be edited with the following IDEs:
 
@@ -281,7 +281,7 @@ After running one of the two above commands, the node has been fully reset and i
 
 If you got this error, it means your router does not have UPNP enabled. Enabling UPNP (Universal Plug and Play) allows other devices (namely other Quai nodes) to discover your node and establish proper networking.
 
-While each router has a different protocol for enabling UPNP, [this guide](https://www.lifewire.com/enable-upnp-on-a-router-5206124) covers how to enable UPNP on routers from many common ISPs. You can also get help turning on UPNP on your router in the [Starting and Running a Node page](/participate/node/start-a-node.md#router-configuration).
+While each router has a different protocol for enabling UPNP, [this guide](https://www.lifewire.com/enable-upnp-on-a-router-5206124) covers how to enable UPNP on routers from many common ISPs. You can also get help turning on UPNP on your router in the [Run A Node page](/participate/node/start-a-node.md#router-configuration).
 
 If you do not want to enable UPNP on your router, you can specifically open peering ports 30303 through 30315 for both TCP and UDP. You can learn how to open specific ports on your router [here](https://nordvpn.com/blog/open-ports-on-router/). If you decide not to enable UPNP, you will need to modify your `network.env` file to reflect `ENABLE_NAT=true` and specify your external IP address in `EXT_IP`.
 
@@ -412,7 +412,7 @@ cp network.env.dist network.env
 
 Once you've re-copied and re-configured the network.env file, you should be able to run your node.
 
-If, when you run `git status`, you are NOT on the correct branch, be sure to update your node following the instructions in the FAQ/Starting and Running a Node page and then come back here to re-copy the `network.env`.
+If, when you run `git status`, you are NOT on the correct branch, be sure to update your node following the instructions in the FAQ/Running A Node page and then come back here to re-copy the `network.env`.
 
 ### Unclean Shutdown
 
