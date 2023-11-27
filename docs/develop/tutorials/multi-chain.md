@@ -52,7 +52,7 @@ npm init -y
 Install Hardhat with:
 
 ```bash
-npm install --save-dev hardhat
+npm install hardhat --save-dev
 ```
 
 Install quais, quais-polling, quai-hardhat-plugin and dotenv:
