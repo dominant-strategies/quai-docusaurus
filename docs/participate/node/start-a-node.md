@@ -1,5 +1,5 @@
 ---
-title: Starting and Running A Node
+title: Run A Node
 description: How to start and run a Quai Network node.
 sidebar_position: 2
 keywords:

@@ -11,4 +11,4 @@ A Stratum proxy is a tool in cryptocurrency mining that connects miners' hardwar
 
 In technical terms, the Stratum proxy takes block data from the miner's node, turns it into workable formats, and sends it to the mining hardware. It then collects the completed work and sends it back to the node. This process reduces network traffic and ensures miners consistently work on the latest tasks, which is essential for effective mining operations.
 
-Learn how to set up a Stratum Proxy to mine Quai in the [Starting and Running a Stratum Proxy](/participate/stratum-proxy/run-stratum.md) page.
+Learn how to set up a Stratum Proxy to mine Quai in the [Run a Stratum Proxy](/participate/stratum-proxy/run-stratum.md) page.

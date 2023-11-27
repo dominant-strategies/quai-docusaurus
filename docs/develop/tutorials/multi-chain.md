@@ -26,7 +26,7 @@ To deploy multi-chain smart contracts, we'll need a few tool-kits and dependenci
 
 Here's an **overview of all of the dependencies** we'll install in the [Environment Setup section](#environment-setup):
 
-- [**Hardhat**](https://hardhat.org/) **+** [**Quai-Hardhat**](https://github.com/dominant-strategies/quai-hardhat)**:** An EVM development environment toolkit with bundled support for Quai Network opcodes and contracts.
+- [**Hardhat**](https://hardhat.org/) **+** [**quai-hardhat-plugin**](https://www.npmjs.com/package/quai-hardhat-plugin)**:** An EVM development environment toolkit with plugin support for Quai Network opcodes and contracts.
 - [**SolidityX**](https://github.com/dominant-strategies/SolidityX)**:** Quai Network's implementation of Solidity with support for [cross-chain opcodes](/develop/smart-contracts/opcode-additions.md).
 - [**quais.js**](https://www.npmjs.com/package/quais)**:** A javascript library for blockchain development on Quai Network.
 - [**quais-polling**](https://www.npmjs.com/package/quais-polling): A shim package that adds polling functionality back to quais.js for specific use cases.
@@ -39,7 +39,7 @@ Ensure you have NodeJS installed prior to moving on. **We'll install all other r
 
 ## Environment Setup
 
-We'll be installing a slightly modified version of Hardhat called [quai-hardhat](https://github.com/dominant-strategies/quai-hardhat) that provides support for utilizing locally built Solidity compilers like [SolidityX](https://github.com/dominant-strategies/SolidityX/).
+We'll be installing Hardhat with the accompanying [quai-hardhat-plugin](https://www.npmjs.com/package/quai-hardhat-plugin) that provides support for utilizing locally built Solidity compilers like [SolidityX](https://github.com/dominant-strategies/SolidityX/).
 
 Hardhat is typically utilized through local installations within individual project directories. Start by creating an `npm` project.
 
@@ -49,16 +49,16 @@ cd deploy-multi-chain-contract
 npm init -y
 ```
 
-Install quai-hardhat with:
+Install Hardhat with:
 
 ```bash
-npm install --save-dev git@github.com:dominant-strategies/quai-hardhat.git
+npm install --save-dev hardhat
 ```
 
-Install quais, quais-polling, and dotenv:
+Install quais, quais-polling, quai-hardhat-plugin and dotenv:
 
 ```bash
-npm install dotenv quais quais-polling
+npm install dotenv quais quais-polling quai-hardhat-plugin --save-dev
 ```
 
 Lastly, initialize Hardhat:
@@ -168,7 +168,7 @@ Hardhat uses `hardhat.config.js` to configure smart contract deployments. The co
 
 For multi-chain deployments, we've created a specialized `hardhat.config.js` file that contains routing for each shard within Quai Network based on your defined environment variables.
 
-The `hardhat.config.js` will also allow us to pass in our locally built SolidityX compiler for use with cross-chain enabled contracts. Replace the `customCompilerPath` variable with the path to your locally built `solc` from the [previous section](#solidityx-compiler).
+With the help of `quai-hardhat-plugin`, `hardhat.config.js` allows us to pass in our locally built SolidityX compiler for use with cross-chain enabled contracts. Replace the `compilerPath` variable with the path to your locally built `solc` from the [previous section](#solidityx-compiler).
 
 :::info
 This `hardhat.config.js` file is not the sole way to configure multi-chain contract deployments, but provides a template for easily executing them in efficient manner.
@@ -180,6 +180,7 @@ This `hardhat.config.js` file is not the sole way to configure multi-chain contr
  */
 
 require('@nomicfoundation/hardhat-toolbox');
+require('quai-hardhat-plugin');
 const dotenv = require('dotenv');
 dotenv.config({ path: '.env' });
 
@@ -235,8 +236,11 @@ module.exports = {
     },
   },
 
-  // path to locally built solc binaries
-  customCompilerPath: '/path/to/solc/',
+  // MacOS path to local solc (uncomment if using MacOS)
+  solidityx: { compilerPath: '/usr/local/bin/solc' },
+
+  // common Linux path to local solc (uncomment and edit path if using Linux)
+  // solidityx: { compilerPath: '/path/to/SolidityX/build/solc/solc' },
 
   solidity: {
     compilers: [
