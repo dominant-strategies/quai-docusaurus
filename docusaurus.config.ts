@@ -104,12 +104,12 @@ const config: Config = {
           },
         ],
       },
-      // algolia: {
-      // 	appId: '',
-      // 	// Public API key: it is safe to commit it
-      // 	apiKey: '',
-      // 	indexName: 'quaidocs',
-      // },
+      algolia: {
+      	appId: '2ASPDCZIG5',
+      	// Public API key: it is safe to commit it
+      	apiKey: '094810e4b3b0687cc347c073326f19e6',
+      	indexName: 'qu',
+      },
       colorMode: {
         defaultMode: 'light',
         disableSwitch: false,
