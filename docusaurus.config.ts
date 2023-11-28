@@ -107,7 +107,7 @@ const config: Config = {
       algolia: {
       	appId: '2ASPDCZIG5',
       	// Public API key: it is safe to commit it
-      	apiKey: '094810e4b3b0687cc347c073326f19e6',
+      	apiKey: 'c099d6b0b125a85eac1a68ad2fe84d6d',
       	indexName: 'qu',
       },
       colorMode: {
