@@ -16,7 +16,7 @@ Nodes are responsible for validating and propagating transactions across Quai Ne
 
 There are 4 unique kinds of nodes that exist within Quai Network that manage different subsets of data, serve different purposes, and have differing hardware requirements.
 
-If you're ready to start setting up your node now, check out [the written tutorial in the Quai docs](/participate/node/start-a-node.md), or [the video tutorial on the Quai YouTube](https://www.youtube.com/watch?v=eKk8b5-7TMk).
+If you're ready to start setting up your node now, check out [the written tutorial in the Quai docs](/participate/node/run-a-node.md), or [the video tutorial on the Quai YouTube](https://www.youtube.com/watch?v=eKk8b5-7TMk).
 
 ## Node Types
 

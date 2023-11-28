@@ -150,4 +150,4 @@ Navigate to your Compute Engine dashboard and locate your deployment instance.
 
 On the right of you instance, there should be an SSH button. Click the button to open an SSH-in-browser connection to your VM.
 
-**Once the SSH connection has loaded, you can follow the** [**Run A Node tutorial**](/participate/node/start-a-node.md) **and** [**Run a Stratum Proxy tutorial**](participate/stratum-proxy/run-stratum.md) **to start your node and proxy.**
+**Once the SSH connection has loaded, you can follow the** [**Run A Node tutorial**](/participate/node/run-a-node.md) **and** [**Run a Stratum Proxy tutorial**](participate/stratum-proxy/run-stratum.md) **to start your node and proxy.**
