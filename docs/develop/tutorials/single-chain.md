@@ -35,7 +35,7 @@ It is useful to have basic knowledge of both [Quai Network](/learn/intro.md) and
 
 Deployment of a smart contract on a Quai Network chain requires:
 
-- An active instance of a [Quai Network node](/participate/node/start-a-node.md) or a remote node's RPC endpoint.
+- An active instance of a [Quai Network node](/participate/node/run-a-node.md) or a remote node's RPC endpoint.
 - Sufficient balance in the address that you are deploying with.
 
 ## Environment Setup

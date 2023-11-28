@@ -31,7 +31,7 @@ If you are mining for Testnet Rewards, be sure to **KEEP THE PRIVATE KEYS OF THE
 
 In order to run the quai-gpu-miner on Ubuntu 20.04 and mine valid blocks, you'll need the following:
 
-- [A synced go-quai node](/participate/node/start-a-node.md)
+- [A synced go-quai node](/participate/node/run-a-node.md)
 - [A stratum proxy connected to your go-quai node](/participate/stratum-proxy/run-stratum.md)
 - A machine running Ubuntu 20.04 with:
   - At least one AMD or Nvidia GPU

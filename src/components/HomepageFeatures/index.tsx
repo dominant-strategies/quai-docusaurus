@@ -21,12 +21,12 @@ const FeatureList: CardItem[] = [
 const DocList: CardItem[] = [
   {
     title: '💻 Run A Node',
-    link: '/docs/category/run-a-node/',
+    link: '/docs/category/node/',
     description: <>Become an active participant in the network to interact with Quai trustlessly.</>,
   },
   {
     title: '⛏️ Become A Miner',
-    link: '/docs/category/run-a-miner/',
+    link: '/docs/category/miner/',
     description: <>Start mining Quai's ASIC-resistant algorithm to contribute to network security.</>,
   },
   {
@@ -39,19 +39,19 @@ const DocList: CardItem[] = [
 export default function HomepageFeatures(): JSX.Element {
   return (
     <div style={{ display: 'flex', flexDirection: 'column' }}>
-      <section className="container margin-top--lg margin-bottom--lg">
+      <section className='container margin-top--lg margin-bottom--lg'>
         <h2></h2>
-        <div className="container">
-          <div className="row">
+        <div className='container'>
+          <div className='row'>
             {FeatureList.map((props, idx) => (
               <Card key={idx} {...props} />
             ))}
           </div>
         </div>
       </section>
-      <section className="container margin-top--lg margin-bottom--lg">
-        <div className="container">
-          <div className="row">
+      <section className='container margin-top--lg margin-bottom--lg'>
+        <div className='container'>
+          <div className='row'>
             {DocList.map((props, idx) => (
               <Card key={idx} {...props} />
             ))}

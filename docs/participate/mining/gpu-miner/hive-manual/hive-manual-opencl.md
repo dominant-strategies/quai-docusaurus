@@ -29,7 +29,7 @@ If you are mining for Testnet Rewards, be sure to **KEEP THE PRIVATE KEYS OF THE
 
 In order to run the quai-gpu-miner on HiveOS and mine valid blocks, you'll need the following:
 
-- [A synced go-quai node](/participate/node/start-a-node.md)
+- [A synced go-quai node](/participate/node/run-a-node.md)
 - [A stratum proxy connected to your go-quai node](/participate/stratum-proxy/run-stratum.md)
 - A machine running HiveOS with:
   - At least one AMD or Nvidia GPU

@@ -13,9 +13,9 @@ Here, we'll be installing quai-cpu-miner, the Go implementation of a Quai Networ
 
 ### Install Dependencies
 
-To run an instance of quai-cpu-miner, you'll need to have installed and configured a Quai node. The [prerequisites](/participate/node/start-a-node.md#install-dependencies) to install and run the miner are the same as a node.
+To run an instance of quai-cpu-miner, you'll need to have installed and configured a Quai node. The [prerequisites](/participate/node/run-a-node.md#install-dependencies) to install and run the miner are the same as a node.
 
-If you haven't set up your node, we recommend going through the [Run A Node page](/participate/node/start-a-node.md) before proceeding.
+If you haven't set up your node, we recommend going through the [Run A Node page](/participate/node/run-a-node.md) before proceeding.
 
 ### Install quai-cpu-miner
 
