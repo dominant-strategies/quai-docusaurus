@@ -5,7 +5,11 @@ description: How cross-chain transactions are processed in Quai Network.
 
 # External Transactions (ETXs)
 
-An External Transaction (ETX) is a transaction that trustlessly moves state between two Quai chains. ETXs are facilitated by hash linked references between chains. Two new opcodes have been added to the EVM to facilitate contract-based ETXs.
+An External Transaction (ETX) is a transaction that trustlessly moves state between two Quai chains. ETXs are facilitated by hash linked references between chains. Two new opcodes have been added to the EVM to facilitate contract-based ETXs. ETXs always pass through a dominant chain in the hierarchy, whether it be a Region chain or the Prime chain. The following diagrams demonstrate how state traverses through the network in a trustless manner:
+
+![Cross-Chain through Prime](/img/Cross-Prime-TXNS.png)
+
+![Cross-Chain through Region](/img/Cross-Region-TXNS.png))
 
 The blockchain that the ETX is originally broadcast from is referred to as the "origin chain" of the ETX. The blockchain that the ETX has been sent to is referred to as the "destination chain" of the ETX. All ETXs must travel up the hierarchy from the origin chain to reach a dominant chain of the destination chain. After the ETX has reached a chain dominant to the destination, it must then travel back down the hierarchy into the subordinate destination chain. There are two kinds of ETXs: account initiated and contract initiated.
 
