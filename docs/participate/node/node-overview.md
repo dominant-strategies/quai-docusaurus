@@ -20,6 +20,8 @@ If you're ready to start setting up your node now, check out [the written tutori
 
 ## Node Types
 
+![Global vs. Slice Nodes](/img/GlobalvSliceNode.png)
+
 ### Global Node
 
 A global node on Quai Network maintains the ledger and generates proposed blocks for mining in all shards. Global nodes operate by sending and receiving the latest blocks along with their header data to its peers in the network. Global nodes also have the ability to serve requests that query each of the shards through WebSockets and HTTP. Currently, global nodes on Quai Network serve as archive nodes since historical state is not pruned.
