@@ -17,6 +17,9 @@ To use the GCP one-click deploy, you'll need:
 
 - [Google Cloud account](https://cloud.google.com/)
 - [Google Cloud SDK](https://cloud.google.com/cli?)
+- [Quai Deployment Package](https://storage.googleapis.com/colosseum-db/quai-v26-fix-deployment-package.tar.gz)
+
+### Google Cloud SLI
 
 To install the Google Cloud CLI SDK, follow the [installation guide](https://cloud.google.com/sdk/docs/install-sdk/) for your specific operating system.
 
@@ -38,7 +41,7 @@ This will create a directory named `google-cloud-sdk`. To finish the installatio
 ./google-cloud-sdk/install.sh
 ```
 
-### Initialize Project
+#### Initialize Project
 
 Now that we've installed the `google-cloud-sdk`, we'll need to initialize `gcloud-cli`. You can do this by running:
 
@@ -47,6 +50,28 @@ Now that we've installed the `google-cloud-sdk`, we'll need to initialize `gclou
 ```
 
 This will walk you through authenticating your Google Cloud account as well as defining your current project.
+
+### Quai Deployment Package
+
+The Quai Deployment Package is a `.tar.gz` file that contains everything you need to deploy a Quai Network node and proxy to GCP. To install it on your machine, run:
+
+```sh
+wget https://storage.googleapis.com/colosseum-db/quai-v26-fix-deployment-package.tar.gz
+```
+
+After downloading the package, decompress the file using:
+
+```sh
+tar -xzvf quai-v26-fix-deployment-package.tar.gz
+```
+
+This will create a directory named `quai-v26-fix-deployment-package`. Navigate to the directory with:
+
+```sh
+cd quai-v26-fix-deployment-package
+```
+
+Now the we've installed the Quai Deployment Package, we're ready to deploy a node to GCP. All commands related to the Quai Deployment Package should be run inside of the `quai-v26-fix-deployment-package` directory.
 
 ## Deploy
 
@@ -121,7 +146,7 @@ gcloud deployment-manager deployments create <deployment-name>
 --template quai-deployment.jinja \
 --properties region-param:<gcp-region>, \
   node-type:slice, \
-  slice-type:<slice>
+  slice-type:<slice-type>
   zone-0-0-coinbase-address:<zone-0-0-address>, \
   zone-0-1-coinbase-address:<zone-0-1-address>, \
   zone-0-2-coinbase-address:<zone-0-2-address>, \
