@@ -50,7 +50,7 @@ The hardware requirement to run a global node when Quai is at high/maximum load:
 Yes. However, be cautious with how much VPS/virtual GPUs can end up costing, especially with the current hardware requirements to run a node. Additionally, be aware of the terms and conditions of your chosen service, as many VPS providers explicitly ban cryptocurrency mining.
 
 :::warning
-Many users have experienced issues specifically with Contabo VPNs. We recommend against the use of Contabo VPNs to run a node or mine in the Iron Age Testnet.
+Many users have experienced issues specifically with Contabo VPSs. We recommend against the use of Contabo VPSs to run a node or mine in the Iron Age Testnet.
 :::
 
 ### Node Types
