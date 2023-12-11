@@ -525,7 +525,7 @@ Then, add the edit the `transactionData` with the Cyprus 2 chain index and contr
 ```javascript
 const transactionData = await contract.populateTransaction.AddApprovedAddress(
   1, // Cyprus 2 chain index
-  '0x112C8693F5De667fb4867AD43f9c2FeFE1E95f03' // Cyprus 2 contract address
+  '0x2F4C5243BEd5dC46787378894eDF662Db9FE4685' // Cyprus 2 contract address
 );
 ```
 
