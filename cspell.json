@@ -111,7 +111,8 @@
     "ERCOT's",
     "hashers",
     "Infi",
-    "ChatBase"
+    "ChatBase",
+    "ACSAC"
   ],
   "flagWords": ["hte", "addresss"]
 }
