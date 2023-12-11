@@ -8,7 +8,7 @@ keywords:
   - quai testnet
 ---
 
-The [Quai Faucet](https://dashboard.quai.network/faucet) allows all Testnet participants to receive small amounts of testnet Quai at no cost.
+The [Quai Faucet](https://fauce.quai.network) allows all Testnet participants to receive small amounts of testnet Quai at no cost.
 
 Just paste your Quai address from any zone into the text bar and press the button. The faucet transaction will be confirmed on-chain and appear in your wallet shortly after.
 
