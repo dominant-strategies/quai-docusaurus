@@ -128,7 +128,7 @@ At some point in the future, a more optimized quai-gpu-miner build for AMD cards
 
 There is a community-made flight sheet, but not one directly from the Dominant Strategies team. You can set up with a Quai mining flight sheet created by a Quai community member by following these instructions:
 
-:::warning
+:::danger
 This flight sheet was created and is maintained by a Quai community member, not the Dominant Strategies team. While it has been tested by our team before being put in this documentation, use of this flight sheet is at your own risk.
 :::
 
