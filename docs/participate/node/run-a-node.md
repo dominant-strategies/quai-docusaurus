@@ -411,7 +411,7 @@ rm -rf ~/.quai/*/quai/nodekey
 rm -rf ~/.quai/*/quai/LOCK
 
 # Archive and compress database
-tar -czvf quai_backup_$(date +%Y.%m.%d_%H.%M.%S).tar.gz .quai
+tar -I 'zstd -T0' -cvf quai_colosseum_backup.tar.zst .quai
 ```
 
 To restore your database from a snapshot on **Linux**, use:
@@ -424,14 +424,11 @@ make stop
 # This command will permanently delete all state that you have synced thus far
 rm -rf ~/.quai
 
-# Install pigz
-sudo apt install pigz
-
 # Expand compressed db into node
-tar -I pigz -xvf quai_colosseum_backup.tar.gz
+tar -I 'zstd -T0' -xvf quai_colosseum_backup.tar.zst
 
 # Copy db into db directory
-cp -r quai__colosseum_backup ~/.quai
+cp -r quai-colosseum-backup ~/.quai
 ```
 
 **MacOS Machines**
@@ -441,6 +438,9 @@ Following a similar process as above with a different file structure:
 ```bash
 # Stop node
 make stop
+
+# install zstd
+brew install zstd
 
 # Remove peer database
 rm -rf ~/Library/Quai/*/quai/nodes
@@ -452,7 +452,7 @@ rm -rf ~/Library/Quai/*/quai/nodekey
 rm -rf ~/Library/Quai/*/quai/LOCK
 
 # Archive and compress database
-tar -czvf quai_backup_$(date +%Y.%m.%d_%H.%M.%S).tar.gz ~/Library/Quai
+tar -I 'zstd -T0' -cvf quai_colosseum_backup.tar.zst ~/Library/Quai
 ```
 
 To restore your database from a snapshot on on **MacOS**, use:
@@ -465,14 +465,14 @@ make stop
 # This command will permanently delete all state that you have synced thus far
 rm -rf ~/Library/Quai
 
-#Install pigz
-brew install pigz
+# install zstd
+brew install zstd
 
 # Expand compressed db
-tar -I pigz -xvf quai_colosseum_backup.tar.gz
+tar -I 'zstd -T0' -xvf quai_colosseum_backup.tar.zst
 
 # Copy db into db directory
-cp -r quai_colosseum_backup ~/Library/Quai
+cp -r quai-colosseum-backup ~/Library/Quai
 ```
 
 ### Resetting/Clearing

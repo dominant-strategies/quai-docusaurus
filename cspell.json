@@ -112,7 +112,8 @@
     "hashers",
     "Infi",
     "ChatBase",
-    "ACSAC"
+    "ACSAC",
+    "zstd"
   ],
   "flagWords": ["hte", "addresss"]
 }
