@@ -137,6 +137,7 @@ The `network.env` file houses a number of important parameters that we will conf
 - `COINBASE`: the address in each chain (location) that mining rewards are paid to. Note that there is one coinbase address per shard.
 - `NETWORK`: the network (testnet, devnet, etc.) your node is running on.
 - `SLICES`: the slices of the network that the node will run. Note that the default configuration is for a global node, and that this parameter must be modified to run a slice node.
+- `ENABLE_ARCHIVE`: whether or not the node will run in archive mode. Note that archive mode is required during the iron age testnet.
 
 :::info
 This file also contains a number of more advanced parameters that _will not be covered_ in this article.
@@ -179,6 +180,12 @@ ZONE_2_2_COINBASE=0xF39E7d05B5A1a2F934cC43221383f29e4794c822 # hydra3
 :::danger
 If you do not replace the addresses in the `network.env` with Quai addresses you generate and hold the private keys for, you will not receive any mining rewards.
 :::
+
+Make sure to set the `ENABLE_ARCHIVE` variable to `true` in your `network.env` file. This will ensure that your node is running in archive mode, which is required for the Iron Age Testnet. It is default set to `false`.
+
+```bash
+ENABLE_ARCHIVE=true
+```
 
 Set the `NETWORK` variable to the network you plan on running. Available network options can be found in the [network specifications page](/develop/networks.md#important-links-and-specs).
 
