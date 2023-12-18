@@ -400,6 +400,12 @@ Please be aware that when you are syncing from a snapshot, you are trusting the 
 - Reducing syncing times
 - Restarting a node on a new machine/drive
 
+You can download the latest snapshot by visiting https://archive.quai.network in your browser, or by running:
+
+```bash
+wget https://storage.googleapis.com/colosseum-db/quai_colosseum_backup.tar.zst
+```
+
 **Linux Machines**
 
 You can backup your node's database by running:
