@@ -14,7 +14,7 @@ keywords:
 
 In this article, we'll detail how to **deploy, link, and interact with multi-chain smart contracts** across 2 different shards on Quai Network. _This method can be extended to deploy trustless cross-chain contracts across all 9 shards._
 
-We'll be using the basic implementation of a QRC20 token, an adapted version of the [ERC-20 standard](https://eips.ethereum.org/EIPS/eip-20), to showcase cross-chain contracts for this tutorial.
+We'll be using the basic implementation of a [QRC20 token](https://github.com/dominant-strategies/SolidityX-Contracts/blob/main/QRC20X.sol), an adapted version of the [ERC-20 standard](https://eips.ethereum.org/EIPS/eip-20), to showcase cross-chain contracts for this tutorial.
 
 :::warning
 If you want to skip basic environment setup for contract deployment, the [hardhat-example](https://github.com/dominant-strategies/hardhat-example) repository provides a **pre-configured environment for deploying smart contracts on Quai Network**. Clone the repository on your local machine to get started.
@@ -26,12 +26,12 @@ To deploy multi-chain smart contracts, we'll need a few tool-kits and dependenci
 
 Here's an **overview of all of the dependencies** we'll install in the [Environment Setup section](#environment-setup):
 
+- [**NodeJS**](https://nodejs.org/en/download/): Javascript runtime environment.
 - [**Hardhat**](https://hardhat.org/) **+** [**quai-hardhat-plugin**](https://www.npmjs.com/package/quai-hardhat-plugin)**:** An EVM development environment toolkit with plugin support for Quai Network opcodes and contracts.
 - [**SolidityX**](https://github.com/dominant-strategies/SolidityX)**:** Quai Network's implementation of Solidity with support for [cross-chain opcodes](/develop/smart-contracts/opcode-additions.md).
 - [**quais.js**](https://www.npmjs.com/package/quais)**:** A javascript library for blockchain development on Quai Network.
 - [**quais-polling**](https://www.npmjs.com/package/quais-polling): A shim package that adds polling functionality back to quais.js for specific use cases.
 - [**Dotenv**](https://www.npmjs.com/package/dotenv): A zero-dependency module that securely loads environment variables.
-- [**NodeJS**](https://nodejs.org/en/download/)
 
 :::info
 Ensure you have NodeJS installed prior to moving on. **We'll install all other relevant dependencies in the Environment Setup section.**
@@ -112,7 +112,6 @@ After creating your environment file, we'll need to configure it for multi-chain
 
 ```bash title=".env"
 ## Sample environment file - change all values as needed
-## Default local deployment config
 
 # Privkey for each deployment address
 CYPRUS1PK="0x0000000000000000000000000000000000000000000000000000000000000000"
@@ -126,18 +125,18 @@ HYDRA2PK="0x0000000000000000000000000000000000000000000000000000000000000000"
 HYDRA3PK="0x0000000000000000000000000000000000000000000000000000000000000000"
 
 # Chain ID (local: 1337, testnet: 9000, devnet: 12000)
-CHAINID="1337"
+CHAINID="9000"
 
-# Default local node RPC endpoints
-CYPRUS1URL="http://localhost:8610"
-CYPRUS2URL="http://localhost:8542"
-CYPRUS3URL="http://localhost:8674"
-PAXOS1URL="http://localhost:8512"
-PAXOS2URL="http://localhost:8544"
-PAXOS3URL="http://localhost:8576"
-HYDRA1URL="http://localhost:8614"
-HYDRA2URL="http://localhost:8646"
-HYDRA3URL="http://localhost:8678"
+# RPC endpoints
+CYPRUS1URL="https://rpc.cyprus1.colosseum.quaiscan.io"
+CYPRUS2URL="https://rpc.cyprus2.colosseum.quaiscan.io"
+CYPRUS3URL="https://rpc.cyprus3.colosseum.quaiscan.io"
+PAXOS1URL="https://rpc.paxos1.colosseum.quaiscan.io"
+PAXOS2URL="https://rpc.paxos2.colosseum.quaiscan.io"
+PAXOS3URL="https://rpc.paxos3.colosseum.quaiscan.io"
+HYDRA1URL="https://rpc.hydra1.colosseum.quaiscan.io"
+HYDRA2URL="https://rpc.hydra2.colosseum.quaiscan.io"
+HYDRA3URL="https://rpc.hydra3.colosseum.quaiscan.io"
 ```
 
 In this environment file, we've introduced private keys and RPC endpoint URLs for each of the chains in Quai Network as well as the `CHAINID` variable to allow for easy configuration of the network environment you're deploying to.
@@ -148,15 +147,22 @@ Information on endpoints can be found in the [local network specifications](/dev
 
 ### SolidityX Compiler
 
-To be able to properly compile and deploy SolidityX contracts, we'll need to clone and compile [SolidityX](https://github.com/dominant-strategies/SolidityX).
+To be able to properly compile and deploy SolidityX contracts, we'll need the [SolidityX](https://github.com/dominant-strategies/SolidityX).There are two methods of installing the SolidityX compiler for use with Hardhat:
 
-Clone the [SolidityX repository](https://github.com/dominant-strategies/SolidityX) to your machine with and navigate to it with:
+- Install the SolidityX compiler via [`quai-hardhat-plugin`](https://www.npmjs.com/package/quai-hardhat-plugin) (**Recommended**)
+- Install and build the SolidityX compiler from source
 
-```bash
-git clone https://github.com/dominant-strategies/SolidityX.git && cd SolidityX
-```
+#### Installing via Plugin
 
-After you've cloned and navigated to the SolidityX directory, follow the build and compile instructions in the [SolidityX readme.md](https://github.com/dominant-strategies/SolidityX#the-solidity-contract-oriented-programming-language) file. This should create the `solc` and `soltest` directories on your machine.
+If you've installed `quai-hardhat-plugin` already, the SolidityX compiler will be installed automatically when you run `npx hardhat compile` for MacOS and Linux users. Windows is not currently supported by the plugin.
+
+#### Installing from Source
+
+**Note:** Building the compiler from source still requires the `quai-hardhat-plugin` to be installed.
+
+Visit the [SolidityX Repository](https://github.com/dominant-strategies/SolidityX) for instructions on how to clone and build the SolidityX compiler for your specific operating system.
+
+Once you've built the SolidityX compiler, you'll need to add path to your `solc` binary into the `customCompilerPath` variable in the `hardhat.config.js` file. The file already includes common paths for MacOS and Linux as comments.
 
 :::info
 Take note of the file location of the resultant location of the `solc` binaries. We'll need it in the next section.
@@ -236,9 +242,10 @@ module.exports = {
     },
   },
 
-  // MacOS path to local solc (uncomment if using MacOS)
-  solidityx: { compilerPath: '/usr/local/bin/solc' },
+  // optional solidityx config for locally built solcx, if not specified solcx will be downloaded
 
+  // common macOS path to local solc (uncomment and edit path if using macOS)
+  // solidityx: { compilerPath: '/usr/local/bin/solc' },
   // common Linux path to local solc (uncomment and edit path if using Linux)
   // solidityx: { compilerPath: '/path/to/SolidityX/build/solc/solc' },
 
@@ -287,27 +294,6 @@ touch contracts/QRC20.sol
 
 Copy the [QRC-20 Token code](https://github.com/dominant-strategies/SolidityX-Contracts/blob/main/QRC20X.sol) and paste it into the `QRC20.sol` file.
 
-#### QRC-20 Configuration
-
-Now that we've got our contract pasted inside of the contracts folder, we'll need to configure it for deployment. To start, edit the `_name`, `_symbol`, and `_totalSupply` variables in the constructor to your desired token name, symbol, and total supply.
-
-```solidity title="QRC20.sol"
-constructor() {
-        _name = "Quai Cross-Chain Token"; // Change to your token name
-        _symbol = "QXC"; // Change to your token symbol
-        _deployer = msg.sender;
-        _totalSupply = 1000E18; // 1000 tokens // Change to your desired token supply
-        _mint(_deployer, _totalSupply);
-        ...
-}
-```
-
-:::info
-Note, the `_totalSupply` variable is specific to each chain's contract deployment. Deploying the same contract with the same `_totalSupply` will mint the same total supply to each chain.
-:::
-
-We've now configured our QRC-20 contract and are ready to start deploying to different shards.
-
 ## Deploy
 
 ### Compile with Hardhat + SolidityX
@@ -336,26 +322,41 @@ Compiled 1 Solidity file successfully
 
 The Hardhat sample project has a pre-made deployment script named `deploy.js` in the `scripts` directory. Copy the following into the `deploy.js` file.
 
+In the `deploy.js` script below, you can configure your token deployment details via the `constructorArgs` object. The `constructorArgs` object contains the following parameters:
+
+- `name`: The name of your token
+- `symbol`: The symbol of your token
+- `totalSupply`: The total supply of your token
+
+:::info
+Note, the `_totalSupply` variable is specific to each chain's contract deployment. Deploying the same contract with the same `_totalSupply` will mint the same total supply to each chain.
+:::
+
 ```javascript title="deploy.js"
-const quais = require('quais');
 const hre = require('hardhat');
+const quais = require('quais');
 const { pollFor } = require('quais-polling');
+const QRC20Json = require('../artifacts/contracts/QRC20.sol/QRC20.json');
+
+const constructorArgs = {
+  name: 'Test Token',
+  symbol: 'TSTK',
+  totalSupply: 10000000,
+};
 
 async function main() {
-  const ethersContract = await hre.ethers.getContractFactory('QRC20');
   const quaisProvider = new quais.providers.JsonRpcProvider(hre.network.config.url);
-
   const walletWithProvider = new quais.Wallet(hre.network.config.accounts[0], quaisProvider);
-  await quaisProvider.ready;
 
-  const QuaisContract = new quais.ContractFactory(
-    ethersContract.interface.fragments,
-    ethersContract.bytecode,
-    walletWithProvider
+  const QuaisContract = new quais.ContractFactory(QRC20Json.abi, QRC20Json.bytecode, walletWithProvider);
+  const quaisContract = await QuaisContract.deploy(
+    constructorArgs.name,
+    constructorArgs.symbol,
+    constructorArgs.totalSupply,
+    {
+      gasLimit: 5000000,
+    }
   );
-
-  const quaisContract = await QuaisContract.deploy({ gasLimit: 4000000 });
-
   const deployReceipt = await pollFor(
     quaisProvider, // provider passed to poller
     'getTransactionReceipt', // method to call on provider
@@ -363,7 +364,7 @@ async function main() {
     1.5, // initial polling interval in seconds
     1 // request timeout in seconds
   );
-  console.log('Contract deployed to address: ', deployReceipt.contractAddress);
+  console.log('Contract deployed. Transaction hash: ', deployReceipt.transactionHash);
 }
 
 main()
@@ -379,7 +380,7 @@ main()
 While this `deploy.js` script is configured for manual deployments to each desired shard, automating larger deployments is trivial. An example of a deployment configuration that automates deployments to all shards within Quai Network can be found in [Dominant Strategies' hardhat-example repo](https://github.com/dominant-strategies/hardhat-example/tree/main/scripts).
 
 :::warning
-Note, we've hardcoded the `gasLimit` in this deploy script to 4 million gas for sake of simplicity. When deploying a contract, it's generally more efficient to use [quais.js](https://www.npmjs.com/package/quais) to estimate the gas required for a deployment.
+Note, we've hardcoded the `gasLimit` in this deploy script to 5 million gas for sake of simplicity. When deploying a contract, it's generally more efficient to use [quais.js](https://www.npmjs.com/package/quais) to estimate the gas required for a deployment.
 :::
 
 ### Deploy Your Contracts
@@ -396,8 +397,7 @@ Running this should output:
 
 ```bash
 Found address 0x1A3fA2C0B9c490a07a421d2b169E034C1bFcA601 on shard zone-0-0 for shard zone-0-0
-Deploying contract with address: [object Object]
-Deployed at: 0x1A3fA2C0B9c490a07a421d2b169E034C1bFcA601
+Contract deployed. Transaction hash: 0xb3c0a0d0f3bc47f4bcd5df67666d76246636741afb6134c2ba4145c51ed030d3
 ```
 
 Now, we can deploy an identical QRC-20 contract to another shard within Quai, like Cyprus-2. Like before, you'll pass `cyprus2` as the network flag in the deployment command.
@@ -410,8 +410,7 @@ Which again should output something like this:
 
 ```bash
 Found address 0x2F4C5243BEd5dC46787378894eDF662Db9FE4685 on shard zone-0-1 for shard zone-0-1
-Deploying contract with address: [object Object]
-Deployed at: 0x2F4C5243BEd5dC46787378894eDF662Db9FE4685
+Contract deployed. Transaction hash: 0xf6802822b4f1994d0be4ae03e2b1302ed42f3b95bf0c4607f3fae671f9719333
 ```
 
 We've now deployed our "Quai Cross-Chain Token" to both the Cyprus-1 and Cyprus-2 chains!

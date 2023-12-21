@@ -45,7 +45,7 @@ Deployment of a smart contract on a Quai Network chain requires:
 Hardhat is utilized through a local installation within individual project directories. Start by creating an `npm` project.
 
 :::warning
-For the purposed of this simplified tutorial, **we'll be installing the generic version of Hardhat that does not support SolidityX contracts with cross-chain capabilities.** If you're interested in deploying a contract that utilizes SolidityX's cross-chain capabilities, visit the [Multi-Chain Smart Contract Tutorial](/develop/tutorials/multi-chain.md).
+For the purposed of this simplified tutorial, **we'll be installing the generic version of Solidity that does not support cross-chain capabilities.** If you're interested in deploying a contract that utilizes SolidityX's cross-chain capabilities, visit the [Multi-Chain Smart Contract Tutorial](/develop/tutorials/multi-chain.md).
 :::
 
 ```bash
@@ -65,7 +65,7 @@ npm install --save-dev hardhat
 Install dependencies:
 
 ```bash
-npm install dotenv quais quais-polling
+npm install dotenv quais quais-polling quai-hardhat-plugin
 ```
 
 Initialize the Hardhat development process using:
@@ -149,7 +149,7 @@ After creating the `.env` file, paste the following code into it.
 PRIVKEY="0x0000000000000000000000000000000000000000000000000000000000000000"
 
 # RPC
-RPCURL="http://localhost:8610" # Cyprus1 URL
+RPCURL="http://localhost:8610" # local node cyprus1 URL
 ```
 
 Information on endpoints can be found in the [local network specifications](/develop/networks.md#local-network) section for **local nodes** and the [testnet specifications](/develop/networks.md#testnet) section for **remote nodes**.
@@ -241,23 +241,17 @@ Compiled 1 Solidity file successfully
 The Hardhat sample project has a pre-made deployment script named `deploy.js` in the `scripts` directory. Copy the following into the `deploy.js` file.
 
 ```javascript title="deploy.js"
+const hre = require('hardhat');
 const quais = require('quais');
 const { pollFor } = require('quais-polling');
-const hre = require('hardhat');
+const GreeterJson = require('../artifacts/contracts/Greeter.sol/Greeter.json');
 
 async function main() {
-  const ethersContract = await hre.ethers.getContractFactory('Greeter');
   const quaisProvider = new quais.providers.JsonRpcProvider(hre.network.config.url);
-
   const walletWithProvider = new quais.Wallet(hre.network.config.accounts[0], quaisProvider);
   await quaisProvider.ready;
 
-  const QuaisContract = new quais.ContractFactory(
-    ethersContract.interface.fragments,
-    ethersContract.bytecode,
-    walletWithProvider
-  );
-
+  const QuaisContract = new quais.ContractFactory(GreeterJson.abi, GreeterJson.bytecode, walletWithProvider);
   const quaisContract = await QuaisContract.deploy('Hello Quai', {
     gasLimit: 1000000,
   });
@@ -295,8 +289,7 @@ Which should output:
 
 ```bash
 Found address 0x0f12d55D09D5E53DB2941a6119d27aa83cFD11f7 on shard zone-0-0 for shard zone-0-0
-Deploying contract with address: [object Object]
-Deployed at: 0x13d8c5fc0AB5A87870353f3C0409c102f2a772A9
+Contract deployed to address: 0x13d8c5fc0AB5A87870353f3C0409c102f2a772A9
 ```
 
 Congratulations, you've now deployed a simple smart contract to Quai Network!
