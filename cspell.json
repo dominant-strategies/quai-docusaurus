@@ -113,7 +113,9 @@
     "Infi",
     "ChatBase",
     "ACSAC",
-    "zstd"
+    "zstd",
+    "solcx",
+    "TSTK"
   ],
   "flagWords": ["hte", "addresss"]
 }
