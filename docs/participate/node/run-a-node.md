@@ -423,6 +423,9 @@ rm -rf ~/.quai/*/quai/nodekey
 # Remove database lock
 rm -rf ~/.quai/*/quai/LOCK
 
+# install zstd if you don't have it already
+sudo apt install zstd
+
 # Archive and compress database
 tar -I 'zstd -T0' -cvf quai_colosseum_backup.tar.zst .quai
 ```
@@ -436,6 +439,9 @@ make stop
 # Remove current db
 # This command will permanently delete all state that you have synced thus far
 rm -rf ~/.quai
+
+# install zstd if you don't have it already
+sudo apt install zstd
 
 # Expand compressed db into node
 tar -I 'zstd -T0' -xvf quai_colosseum_backup.tar.zst
@@ -465,7 +471,7 @@ rm -rf ~/Library/Quai/*/quai/nodekey
 rm -rf ~/Library/Quai/*/quai/LOCK
 
 # Archive and compress database
-tar -I 'zstd -T0' -cvf quai_colosseum_backup.tar.zst ~/Library/Quai
+tar -cf - ~/Library/Quai | zstd > quai_colosseum_backup.tar.zst
 ```
 
 To restore your database from a snapshot on on **MacOS**, use:
@@ -482,7 +488,7 @@ rm -rf ~/Library/Quai
 brew install zstd
 
 # Expand compressed db
-tar -I 'zstd -T0' -xvf quai_colosseum_backup.tar.zst
+zstd -d -c quai_colosseum_backup.tar.zst | tar -xf -
 
 # Copy db into db directory
 cp -r quai-colosseum-backup ~/Library/Quai
