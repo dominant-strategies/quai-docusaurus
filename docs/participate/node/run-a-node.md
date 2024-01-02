@@ -403,7 +403,7 @@ Please be aware that when you are syncing from a snapshot, you are trusting the 
 You can download the latest snapshot by visiting https://archive.quai.network in your browser, or by running:
 
 ```bash
-wget https://storage.googleapis.com/colosseum-db/quai_colosseum_backup.tar.zst
+wget http://backup.colosseum.quai.network/quai_colosseum_backup.tar.zst
 ```
 
 **Linux Machines**
