@@ -12,5 +12,5 @@ There are two tutorials available for manually setting up a GPU Miner on Ubuntu 
 
 | Page                                                                          | Description                                                                 |
 | ----------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| [OpenCL](/participate/mining/gpu-miner/ubuntu-manual/ubuntu-manual-opencl.md) | Open-source. Known to face SIGSEGV error.                                   |
-| [CUDA](/participate/mining/gpu-miner/ubuntu-manual/ubuntu-manual-cuda.md)     | Proprietary. Known to resolve SIGSEGV error. Recommended for Nvidia miners. |
+| [OpenCL](/participate/mining/gpu-miner/ubuntu-manual/ubuntu-manual-opencl.md) | Build with open source drivers. Known to face SIGSEGV error on some Nvidia cards.                                   |
+| [CUDA](/participate/mining/gpu-miner/ubuntu-manual/ubuntu-manual-cuda.md)     | Build with proprietary Nvidia drivers. Known to resolve SIGSEGV error. Only compatible with and recommended for Nvidia cards. |
