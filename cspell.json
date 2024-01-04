@@ -76,7 +76,7 @@
     "triaging",
     "progpow",
     "EXTERNALIPADDRESS",
-    "HWON",
+    "HWMON",
     "volting",
     "hiveos",
     "sreboot",
@@ -117,5 +117,8 @@
     "solcx",
     "TSTK"
   ],
-  "flagWords": ["hte", "addresss"]
+  "flagWords": [
+    "hte",
+    "addresss"
+  ]
 }
