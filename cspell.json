@@ -115,10 +115,8 @@
     "ACSAC",
     "zstd",
     "solcx",
-    "TSTK"
+    "TSTK",
+    "pubkey"
   ],
-  "flagWords": [
-    "hte",
-    "addresss"
-  ]
+  "flagWords": ["hte", "addresss"]
 }

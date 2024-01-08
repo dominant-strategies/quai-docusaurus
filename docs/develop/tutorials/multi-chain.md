@@ -111,18 +111,16 @@ touch .env
 After creating your environment file, we'll need to configure it for multi-chain deployments. This can be done by pasting the following code into the file:
 
 ```bash title=".env"
-## Sample environment file - change all values as needed
-
-# Privkey for each deployment address
-CYPRUS1PK="0x0000000000000000000000000000000000000000000000000000000000000000"
-CYPRUS2PK="0x0000000000000000000000000000000000000000000000000000000000000000"
-CYPRUS3PK="0x0000000000000000000000000000000000000000000000000000000000000000"
-PAXOS1PK="0x0000000000000000000000000000000000000000000000000000000000000000"
-PAXOS2PK="0x0000000000000000000000000000000000000000000000000000000000000000"
-PAXOS3PK="0x0000000000000000000000000000000000000000000000000000000000000000"
-HYDRA1PK="0x0000000000000000000000000000000000000000000000000000000000000000"
-HYDRA2PK="0x0000000000000000000000000000000000000000000000000000000000000000"
-HYDRA3PK="0x0000000000000000000000000000000000000000000000000000000000000000"
+# Unique Privkey for each deployment address
+CYPRUS1PK="0x3700000000000000000000000000000000000000000000000000000000000000" # For pubkey starting with 0x00 - 0x1D
+CYPRUS2PK="0x9400000000000000000000000000000000000000000000000000000000000000" # For pubkey starting with 0x1E - 0x3A
+CYPRUS3PK="0x0200000000000000000000000000000000000000000000000000000000000000" # For pubkey starting with 0x3B - 0x57
+PAXOS1PK="0x7100000000000000000000000000000000000000000000000000000000000000" # For pubkey starting with 0x58 - 0x73
+PAXOS2PK="0x8500000000000000000000000000000000000000000000000000000000000000" # For pubkey starting with 0x74 - 0x8F
+PAXOS3PK="0x0400000000000000000000000000000000000000000000000000000000000000" # For pubkey starting with 0x90 - 0xAB
+HYDRA1PK="0x9100000000000000000000000000000000000000000000000000000000000000" # For pubkey starting with 0xAC - 0xC7
+HYDRA2PK="0x5900000000000000000000000000000000000000000000000000000000000000" # For pubkey starting with 0xC8 - 0xE3
+HYDRA3PK="0xa700000000000000000000000000000000000000000000000000000000000000" # For pubkey starting with 0xE4 - 0xFF
 
 # Chain ID (local: 1337, testnet: 9000, devnet: 12000)
 CHAINID="9000"
@@ -423,86 +421,83 @@ Make sure to save these two contract addresses, we'll need them in the next sect
 
 To complete our cross-chain token deployment, we'll need to link the two deployed contracts.
 
-"Linking" the two QRC-20 contracts can be done by adding the contract addresses to the approved contracts within each token. This is done using either the `AddApprovedAddress` which accepts a _single address_ or the `AddApprovedAddresses` method which only accepts an _array of 9 addresses_.
+_"Linking"_ the two QRC-20 contracts can be done by adding their deployed contract addresses to the approved contracts array within each token contract. This can be done using the `AddApprovedAddresses` method. It accepts 2 arrays as arguments: chain indexes and approved addresses.
 
-Since we're only adding a single contract address on each chain, we'll access the `AddApprovedAddress` method which can be seen below:
+The `AddApprovedAddresses` method seen below can be used to add as few as 1 or as many as 8 sister contracts to the `approvedAddresses` array of a QRC-20 contract.
 
 ```solidity title="QRC20.sol"
-function AddApprovedAddress(uint8 chain, address addr) public {
-        bool isInternal;
-        assembly {
-            isInternal := isaddrinternal(addr)
-        }
-        require(!isInternal, "Address is not external");
-        require(msg.sender == _deployer, "Sender is not deployer");
-        require(chain < 9, "Max 9 zones");
-        require(ApprovedAddresses[chain] == address(0), "The approved address for this zone already exists");
-        ApprovedAddresses[chain] = addr;
+function AddApprovedAddresses(uint8[] calldata chain, address[] calldata addr) external {
+    require(msg.sender == _deployer, "Sender is not deployer");
+    require(chain.length == addr.length, "chain and address arrays must be the same length");
+    for(uint8 i = 0; i < chain.length; i++) {
+        require(chain[i] < 9, "Max 9 zones");
+        require(ApprovedAddresses[chain[i]] == address(0), "The approved address for this zone already exists");
+        ApprovedAddresses[chain[i]] = addr[i];
+    }
 }
 ```
 
-Once the sister contract addresses have been added to the respective `ApprovedAddresses` of QRC-20 contracts, the `crossChainTransfer` method becomes available, which allows anyone who owns the QRC-20 token to trustlessly send their balance between the shards that the contracts are deployed to.
+Once the sister contract addresses have been added to the respective `ApprovedAddresses` of each of the QRC-20 contracts, the `crossChainTransfer` method becomes available, which allows anyone who owns the QRC-20 token to trustlessly send their balance between the shards that the contracts are deployed to.
 
 #### Script
 
-To link the sister contracts, we'll utilize `quais.js` and some of the Hardhat Runtime Environment that we used in the deploy script. Start by creating another file in the scripts directory named `addApprovedAddress.js`.
+To link the sister contracts, we'll utilize `quais.js` and some of the Hardhat Runtime Environment that we used in the deploy script. Start by creating another file in the scripts directory named `addApprovedAddresses.js`.
 
 ```bash
-touch scripts/addApprovedAddress.js
+touch scripts/addApprovedAddresses.js
 ```
 
-Then, paste the following code into `addApprovedAddress.js`:
+Then, paste the following code into `addApprovedAddresses.js`:
 
-```javascript title="addApprovedAddress.js"
+```javascript title="addApprovedAddresses.js"
 const quais = require('quais');
-const { pollFor } = require('quais-polling')
+const { pollFor } = require('quais-polling');
 const QRC20 = require('../artifacts/contracts/QRC20.sol/QRC20.json');
 
-async function AddApprovedQRC20Address() {
-	const provider = new quais.providers.JsonRpcProvider(hre.network.config.url);    // grab network config from hre
-	const privateKey = hre.network.config.accounts[0];                               // grab wallet from hre
-	const wallet = new quais.Wallet(privateKey, provider);                           // create wallet from key and provider
-	const contractAddress = "contract address you want to change the address array for";            // define contract address to add approved address to
-	const contract = new quais.Contract(contractAddress, QRC20.abi, wallet);         // define contract from address and abi
-	const transactionData = await contract.populateTransaction.AddApprovedAddress(
-		integer address index,                                                      // index of address to add (0 = cyprus1, 1 = cyprus2, etc.)
-		'contract address you want to add to the address array '            // address to add to approved addresses
-	);
-	try {
-		const tx = transactionData;                             // define transaction data
-		const txResponse = await wallet.sendTransaction(tx);	// send transaction
-		console.log('Transaction sent:', txResponse.hash);      // log transaction hash
-		const transactionReceipt = await pollFor(
-			provider, // provider passed to poller
-			'getTransactionReceipt', // method to call on provider
-			[txResponse.hash], // params to pass to method
-			1.5, // initial polling interval in seconds
-			1 // request timeout in seconds
-		)
-		console.log('Transaction mined with hash', transactionReceipt.hash);
-	} catch (error) {
-		console.error('Error sending transaction:', error);
-	}
+async function AddApprovedQRC20Addresses() {
+  const provider = new quais.providers.JsonRpcProvider(hre.network.config.url); // grab network config from hre
+  const privateKey = hre.network.config.accounts[0]; // grab wallet from hre
+  const wallet = new quais.Wallet(privateKey, provider); // create wallet from key and provider
+  const contractAddress = 'contract address you want to change the address array for'; // contract address to add approved addresses to
+  const qrc20 = new quais.Contract(contractAddress, QRC20.abi, wallet); // define contract from address and abi
+
+  try {
+    const transaction = await qrc20.AddApprovedAddresses(
+      [0, 1], // chain indexes (cyprus1 is 0, cyprus2 is 1, etc.)
+      ['0x1...', '0x2....'] // contract addresses (must be in same order as chain indexes)
+    );
+    console.log('Transaction sent:', transaction.hash); // log transaction hash
+    const transactionReceipt = await pollFor(
+      provider, // provider passed to poller
+      'getTransactionReceipt', // method to call on provider
+      [txResponse.hash], // params to pass to method
+      1.5, // initial polling interval in seconds
+      1 // request timeout in seconds
+    );
+    console.log('Transaction mined with hash', transactionReceipt.hash);
+  } catch (error) {
+    console.error('Error sending transaction:', error);
+  }
 }
 
-AddApprovedQRC20Address();
+AddApprovedQRC20Addresses();
 ```
 
-The `addApprovedAddress.js` script uses the `QRC20.sol` ABI to compose and send a contract transaction that inserts a new address to the `approvedAddresses` array in any deployed QRC20 contract.
+The `addApprovedAddresses.js` script uses the `QRC20.sol` ABI to compose and send a transaction that inserts new addresses to the `approvedAddresses` array in any deployed QRC20 contract.
 
-The script composes the contract interaction transaction by:
+The script works by:
 
 1. First, creating a quais `provider` with our specified network configuration from Hardhat
 2. Creating a quais `wallet` with our `provider` and key config from Hardhat
 3. Defining the contract we'd like to add an approved address to with the imported `QRC20.sol` ABI, contract address, and `wallet`
-4. Composing the `addApprovedAddress` transaction with the inputs
-   1. `chainIndex`: integer chain index (cyprus1 is 0, cyprus2 is 1, etc.)
-   2. `address`: the contract address on another shard that we'd like to add to `approvedAddresses`
+4. Composing the `addApprovedAddresses` transaction with the inputs
+   1. `chainIndex` array: integer chain indices corresponding to the addresses we'd like to add to `approvedAddresses`
+   2. `address` array: the contract addresses that we'd like to add to `approvedAddresses`
 5. Sending the transaction and waiting for inclusion in a block.
 
-#### Link Contracts
+#### Transaction Data
 
-Now that we've set up our script, we're ready to link our two deployed contracts.
+Now that we've set up our script, **we're ready to link our two deployed contracts**.
 
 Start by grabbing the addresses of the two contracts we deployed in the [deploy section](#deploy-your-contracts).
 
@@ -511,27 +506,42 @@ Cyprus 1 contract address: 0x1A3fA2C0B9c490a07a421d2b169E034C1bFcA601
 Cyprus 2 contract address: 0x2F4C5243BEd5dC46787378894eDF662Db9FE4685
 ```
 
-First, we're going to add the Cyprus 2 contract address to the `approveAddresses` of our Cyprus 1 contract. In your `addApprovedAddresses.js` script, make the following changes:
+We'll take these contract addresses and use them to build the transaction data passed to the `addApprovedAddresses` method.
 
-Change the `contractAddress` variable to our **Cyprus 1 contract address**:
+:::tip
+**You can pass the same transaction data to every contract you want to link**, as the `addApprovedAddresses` method **can take in and handle its own contract address as an argument**. This removes the need to alter the transaction data for each contract you want to link.
+:::
+
+The transaction data we'll need to pass to the `addApprovedAddresses` method is **(notice the order of the arrays)**:
+
+- `chainIndex` array: `[0, 1]`
+- `address` array: `['0x1A3fA2C0B9c490a07a421d2b169E034C1bFcA601', '0x2F4C5243BEd5dC46787378894eDF662Db9FE4685']
+
+The built transaction should look similar to this:
+
+```javascript
+const transactionData = await contract.populateTransaction.AddApprovedAddress(
+  [0, 1], // chain indexes [cyprus1, cyprus2]
+  ['0x1A3fA2C0B9c490a07a421d2b169E034C1bFcA601', '0x2F4C5243BEd5dC46787378894eDF662Db9FE4685'] // contract addresses [cyprus1, cyprus2]
+);
+```
+
+:::info
+You can extend this transaction data structure to link as many contracts as you'd like by adding additional chain indexes and contract addresses to the arrays. **Always make sure to add the same number of chain indexes and contract addresses to the arrays in matching order**.
+:::
+
+#### Linking Contracts
+
+First, we're going to send the linking transaction to our Cyprus 1 contract. To do this, start by changing the `contractAddress` variable to our **Cyprus 1 contract address** in the `addApprovedAddresses.js` script:
 
 ```javascript
 const contractAddress = '0x1A3fA2C0B9c490a07a421d2b169E034C1bFcA601';
 ```
 
-Then, add the edit the `transactionData` with the Cyprus 2 chain index and contract address:
-
-```javascript
-const transactionData = await contract.populateTransaction.AddApprovedAddress(
-  1, // Cyprus 2 chain index
-  '0x2F4C5243BEd5dC46787378894eDF662Db9FE4685' // Cyprus 2 contract address
-);
-```
-
-Now, we're ready to run the script and finish the first part of the contract linkage. Make sure to pass the `--network cyprus1` flag **when sending transactions to the Cyprus 1 contract**.
+Now, we're ready to run the script and complete the Cyprus 1 contract linkage. Make sure to pass the `--network cyprus1` flag **when sending transactions to the Cyprus 1 contract**.
 
 ```bash
-npx hardhat run scripts/addApprovedAddress.js --network cyprus1
+npx hardhat run scripts/addApprovedAddresses.js --network cyprus1
 ```
 
 The script should output something like this:
@@ -541,35 +551,26 @@ Transaction sent: 0x2a499178c3f0046b4d44a57a966f9e224759c1b3158af984fcb5a1432b16
 Transaction mined with hash: 0x2a499178c3f0046b4d44a57a966f9e224759c1b3158af984fcb5a1432b16ee8e
 ```
 
-We've now approved the address of our Cyprus 2 contract inside of the Cyprus 1 contract!
+We've now linked our Cyprus 1 contract to our Cyprus 2 contract, but we're not done yet.
 
-To finish linking these two sister contracts, we'll need to _do the reverse and approve the address of our Cyprus 1 contract inside the Cyprus 2 contract_. Go back to our `addApprovedAddress.js` script and make the following changes:
-
-Change the `contractAddress` variable to **our Cyprus 2 contract address**:
+To finish linking these two sister contracts, we'll need to send the exact same transaction data to the Cyprus 2 contract. In the `addApprovedAddresses.js` script, change the `contractAddress` variable to **our Cyprus 2 contract address**:
 
 ```javascript
 const contractAddress = '0x2F4C5243BEd5dC46787378894eDF662Db9FE4685';
 ```
 
-And edit the `transactionData` with the Cyprus 1 chain index and contract address:
+Lastly, send the linkage transaction to our Cyprus 2 token by running the script with the `--network cyprus2` flag:
 
-```javascript
-const transactionData = await contract.populateTransaction.AddApprovedAddress(
-  0, // Cyprus 1 chain index
-  '0x1A3fA2C0B9c490a07a421d2b169E034C1bFcA601' // Cyprus 1 contract address
-);
-```
-
-For the final step of the contract linkage, run the script with the `--network cyprus2` flag **to send the transaction to Cyprus 2**.
-
-```
+```bash
 Transaction sent: 0x348e8dea20b73089b51e6b3d2b3abd8a9e8ca63e06be20375cf721e13aabd590
 Transaction mined with hash: 0x348e8dea20b73089b51e6b3d2b3abd8a9e8ca63e06be20375cf721e13aabd590
 ```
 
-**Once the script completes, our two QRC20 contracts have been successfully linked across chains.** You can now send your "Quai Cross Chain Token" from Cyprus 1 to Cyprus 2 without a bridge or external service!
+**Once the second transaction is confirmed, our two QRC20 contracts have been successfully linked across chains.** You can now send your "Quai Cross Chain Token" from Cyprus 1 to Cyprus 2 without a bridge or external service!
 
-This deployment and linking process can be repeated for any number of chains within Quai Network to create a network wide QRC20 token that can be **sent trustlessly to any shard**.
+This deployment and linking process can be repeated for any number of chains within Quai Network purely by deploying the contract to the desired chains and linking them with the `addApprovedAddresses` method. **You now have the tools to deploy and link contracts across all 9 shards within Quai Network**.
+
+For a more detailed example on how to deploy and link contracts across all shards within Quai Network, check out the [Dominant Strategies' quais-by-example repo](https://github.com/dominant-strategies/quais-by-example/tree/main/contract-qrc20).
 
 :::info
 The same deploy and link method can be used for any other SolidityX based contract with cross-chain logic, including the [QRC-721 Token Standard](https://github.com/dominant-strategies/SolidityX-Contracts/blob/main/QRC721X.sol).
