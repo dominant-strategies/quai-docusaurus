@@ -21,6 +21,7 @@ JavaScript APIs and SDKs offer a simplified interface for web applications to in
 
   - [GitHub](https://github.com/dominant-strategies/quais5.js)
   - [Package](https://www.npmjs.com/package/quais)
+  - [Example usage](https://github.com/dominant-strategies/quais-by-example)
 
 - **quais-polling -** A polling shim-package that adds polling capabilities back to Quais.js in a simple but highly visible way.
 
