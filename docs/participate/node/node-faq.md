@@ -354,7 +354,7 @@ Your node may briefly stop appending blocks for certain periods of time — this
 
 **How can I check the syncing status of all of my node's slices at once?**
 
-To check the syncing status of all of your node's slices at the same time, you can use this community-made script: [https://github.com/satman81/guides/blob/main/quai/quaiblockheight.py](https://github.com/satman81/guides/blob/main/quai/quaiblockheight.py).
+To check the syncing status of all of your node's slices at the same time, you can use this [community-made script](https://gist.github.com/saiaman/ad509a23d8a4211da01aa5403ec9dab3).
 
 ### Time to Sync
 
