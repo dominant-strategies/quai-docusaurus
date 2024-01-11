@@ -381,6 +381,45 @@ make go-quai
 
 After pulling any new code and rebuilding the source, you can safely restart the node and continue running.
 
+### Downloading Snapshot
+
+**You can download the latest official snapshot via torrent.** To get the torrent link, visit the [Quai Network Discord Announcements](https://discord.gg/YpuuAxmJc6) channel for details on the latest snapshot.
+
+There are two ways to download the snapshot via torrent:
+
+- Using Brave Browser
+- Using a CLI torrent client
+
+#### Using Brave Browser
+
+**Using Brave Browser is the simplest way to download the snapshot via torrent.** All you need to do is grab the torrent file link for the most recent snapshot from the Quai Network Discord Announcements channel and paste it into Brave Browser. This will take you to a torrent download page. From there, you can initiate the snapshot download.
+
+#### Using a CLI Torrent Client
+
+We recommend using an open source torrent client like [Transmission](https://transmissionbt.com/) to download the snapshot. To install Transmission and download the snapshot, follow the steps below:
+
+```bash
+# Install transmission
+sudo apt-get install transmission-cli transmission-common transmission-daemon
+
+# Start transmission daemon
+transmission-daemon
+
+# Download snapshot - note the date in the file name, this will change with each snapshot
+transmission-remote -a quai_colosseum_backup-1-8-24.tar.zst.torrent
+
+# Check download progress
+transmission-remote  -l
+```
+
+The snapshot will be downloaded to the `~/Downloads` directory, **please leave it there if you have the space available as it helps speed up torrent downloads for other users**.
+
+:::note
+You can also use other torrent clients like [qBittorrent](https://www.qbittorrent.org/). We recommend only using open source torrent clients to download the snapshot like Transmission or qBittorrent.
+:::
+
+After your torrent client has finished downloading the snapshot, follow the instructions below to import the snapshot into your node.
+
 ### Archiving And Syncing From a Snapshot
 
 To archive/backup your node's database you'll first need to **stop your node** by running `make stop`.
@@ -393,18 +432,12 @@ Common reasons for backing up your node's database include:
 
 Common reasons for syncing from a snapshot/database include:
 
-:::warning
-Please be aware that when you are syncing from a snapshot, you are trusting the contents of the snapshot. For your node to fully verify the network, you have to sync from genesis.
-:::
-
 - Reducing syncing times
 - Restarting a node on a new machine/drive
 
-You can download the latest snapshot by visiting https://archive.quai.network in your browser, or by running:
-
-```bash
-wget http://backup.colosseum.quai.network/quai_colosseum_backup.tar.zst
-```
+:::warning
+Please be aware that when you are syncing from a snapshot, you are trusting the contents of the snapshot. For your node to fully verify the network, you must sync from genesis.
+:::
 
 **Linux Machines**
 
