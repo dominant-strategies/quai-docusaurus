@@ -396,7 +396,7 @@ There are two ways to download the snapshot via torrent:
 
 #### Using a CLI Torrent Client
 
-We recommend using an open source torrent client like [Transmission](https://transmissionbt.com/) to download the snapshot. To install Transmission and download the snapshot, follow the steps below:
+We recommend using an open source torrent client like [Transmission](https://transmissionbt.com/) to download the snapshot. You can also use other torrent clients like [qBittorrent](https://www.qbittorrent.org/). To install Transmission and download the snapshot, follow the steps below:
 
 ```bash
 # Install transmission
@@ -412,10 +412,8 @@ transmission-remote -a quai_colosseum_backup-1-8-24.tar.zst.torrent
 transmission-remote  -l
 ```
 
-The snapshot will be downloaded to the `~/Downloads` directory, **please leave it there if you have the space available as it helps speed up torrent downloads for other users**.
-
 :::note
-You can also use other torrent clients like [qBittorrent](https://www.qbittorrent.org/). We recommend only using open source torrent clients to download the snapshot like Transmission or qBittorrent.
+The snapshot will be downloaded to the `~/Downloads` directory, **please leave it there if you have the space available as it helps speed up torrent downloads for other users**.
 :::
 
 After your torrent client has finished downloading the snapshot, follow the instructions below to import the snapshot into your node.
