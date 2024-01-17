@@ -37,16 +37,16 @@ Quai consists of many "slices," or execution shards, that work together to form 
 
 To run a **global node** during the Iron Age Testnet, you'll need a MacOS or Ubuntu machine with the following specifications:
 
-- Fast CPU with 8+ cores
-- 32GB+ RAM
+- Fast CPU with 16+ cores
+- 64GB+ RAM
 - Fast SSD with at least 3TB free space
 - 10+ MBit/sec download Internet service
 
 To run a **slice node** during the Iron Age Testnet, you'll need a MacOS or Ubuntu machine with the following specifications:
 
-- CPU with 4+ cores
-- 16GB RAM
-- 1TB free storage space to sync
+- CPU with 8+ cores
+- 24GB+ RAM
+- Fast SSD with at least 1TB free space
 - 10+ MBit/sec download Internet service
 
 :::warning
