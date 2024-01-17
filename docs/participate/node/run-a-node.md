@@ -137,6 +137,7 @@ The `network.env` file houses a number of important parameters that we will conf
 - `COINBASE`: the address in each chain (location) that mining rewards are paid to. Note that there is one coinbase address per shard.
 - `NETWORK`: the network (testnet, devnet, etc.) your node is running on.
 - `SLICES`: the slices of the network that the node will run. Note that the default configuration is for a global node, and that this parameter must be modified to run a slice node.
+- `ENABLE_ARCHIVE`: whether or not the node will run in archive mode. Note that archive mode is required during the iron age testnet.
 
 :::info
 This file also contains a number of more advanced parameters that _will not be covered_ in this article.
@@ -179,6 +180,12 @@ ZONE_2_2_COINBASE=0xF39E7d05B5A1a2F934cC43221383f29e4794c822 # hydra3
 :::danger
 If you do not replace the addresses in the `network.env` with Quai addresses you generate and hold the private keys for, you will not receive any mining rewards.
 :::
+
+Make sure to set the `ENABLE_ARCHIVE` variable to `true` in your `network.env` file. This will ensure that your node is running in archive mode, which is required for the Iron Age Testnet. It is default set to `false`.
+
+```bash
+ENABLE_ARCHIVE=true
+```
 
 Set the `NETWORK` variable to the network you plan on running. Available network options can be found in the [network specifications page](/develop/networks.md#important-links-and-specs).
 
@@ -374,6 +381,43 @@ make go-quai
 
 After pulling any new code and rebuilding the source, you can safely restart the node and continue running.
 
+### Downloading Snapshot
+
+**You can download the latest official snapshot via torrent.** To get the torrent link, visit the [Quai Network Discord Announcements](https://discord.gg/YpuuAxmJc6) channel for details on the latest snapshot.
+
+There are two ways to download the snapshot via torrent:
+
+- Using Brave Browser
+- Using a CLI torrent client
+
+#### Using Brave Browser
+
+**Using Brave Browser is the simplest way to download the snapshot via torrent.** All you need to do is grab the torrent file link for the most recent snapshot from the Quai Network Discord Announcements channel and paste it into Brave Browser. This will take you to a torrent download page. From there, you can initiate the snapshot download.
+
+#### Using a CLI Torrent Client
+
+We recommend using an open source torrent client like [Transmission](https://transmissionbt.com/) to download the snapshot. You can also use other torrent clients like [qBittorrent](https://www.qbittorrent.org/). To install Transmission and download the snapshot, follow the steps below:
+
+```bash
+# Install transmission
+sudo apt-get install transmission-cli transmission-common transmission-daemon
+
+# Start transmission daemon
+transmission-daemon
+
+# Download snapshot - note the date in the file name, this will change with each snapshot
+transmission-remote -a quai_colosseum_backup-1-8-24.tar.zst.torrent
+
+# Check download progress
+transmission-remote  -l
+```
+
+:::note
+The snapshot will be downloaded to the `~/Downloads` directory, **please leave it there if you have the space available as it helps speed up torrent downloads for other users**.
+:::
+
+After your torrent client has finished downloading the snapshot, follow the instructions below to import the snapshot into your node.
+
 ### Archiving And Syncing From a Snapshot
 
 To archive/backup your node's database you'll first need to **stop your node** by running `make stop`.
@@ -386,12 +430,12 @@ Common reasons for backing up your node's database include:
 
 Common reasons for syncing from a snapshot/database include:
 
-:::warning
-Please be aware that when you are syncing from a snapshot, you are trusting the contents of the snapshot. For your node to fully verify the network, you have to sync from genesis.
-:::
-
 - Reducing syncing times
 - Restarting a node on a new machine/drive
+
+:::warning
+Please be aware that when you are syncing from a snapshot, you are trusting the contents of the snapshot. For your node to fully verify the network, you must sync from genesis.
+:::
 
 **Linux Machines**
 
@@ -410,8 +454,11 @@ rm -rf ~/.quai/*/quai/nodekey
 # Remove database lock
 rm -rf ~/.quai/*/quai/LOCK
 
+# install zstd if you don't have it already
+sudo apt install zstd
+
 # Archive and compress database
-tar -czvf quai_backup_$(date +%Y.%m.%d_%H.%M.%S).tar.gz .quai
+tar -I 'zstd -T0' -cvf quai_colosseum_backup.tar.zst .quai
 ```
 
 To restore your database from a snapshot on **Linux**, use:
@@ -424,14 +471,14 @@ make stop
 # This command will permanently delete all state that you have synced thus far
 rm -rf ~/.quai
 
-# Install pigz
-sudo apt install pigz
+# install zstd if you don't have it already
+sudo apt install zstd
 
 # Expand compressed db into node
-tar -I pigz -xvf quai_colosseum_backup.tar.gz
+tar -I 'zstd -T0' -xvf quai_colosseum_backup.tar.zst
 
 # Copy db into db directory
-cp -r quai__colosseum_backup ~/.quai
+cp -r quai-colosseum-backup ~/.quai
 ```
 
 **MacOS Machines**
@@ -441,6 +488,9 @@ Following a similar process as above with a different file structure:
 ```bash
 # Stop node
 make stop
+
+# install zstd
+brew install zstd
 
 # Remove peer database
 rm -rf ~/Library/Quai/*/quai/nodes
@@ -452,7 +502,7 @@ rm -rf ~/Library/Quai/*/quai/nodekey
 rm -rf ~/Library/Quai/*/quai/LOCK
 
 # Archive and compress database
-tar -czvf quai_backup_$(date +%Y.%m.%d_%H.%M.%S).tar.gz ~/Library/Quai
+tar -cf - ~/Library/Quai | zstd > quai_colosseum_backup.tar.zst
 ```
 
 To restore your database from a snapshot on on **MacOS**, use:
@@ -465,14 +515,14 @@ make stop
 # This command will permanently delete all state that you have synced thus far
 rm -rf ~/Library/Quai
 
-#Install pigz
-brew install pigz
+# install zstd
+brew install zstd
 
 # Expand compressed db
-tar -I pigz -xvf quai_colosseum_backup.tar.gz
+zstd -d -c quai_colosseum_backup.tar.zst | tar -xf -
 
 # Copy db into db directory
-cp -r quai_colosseum_backup ~/Library/Quai
+cp -r quai-colosseum-backup ~/Library/Quai
 ```
 
 ### Resetting/Clearing

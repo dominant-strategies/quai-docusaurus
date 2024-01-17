@@ -50,7 +50,7 @@ The hardware requirement to run a global node when Quai is at high/maximum load:
 Yes. However, be cautious with how much VPS/virtual GPUs can end up costing, especially with the current hardware requirements to run a node. Additionally, be aware of the terms and conditions of your chosen service, as many VPS providers explicitly ban cryptocurrency mining.
 
 :::warning
-Many users have experienced issues specifically with Contabo VPNs. We recommend against the use of Contabo VPNs to run a node or mine in the Iron Age Testnet.
+Many users have experienced issues specifically with Contabo VPSs. We recommend against the use of Contabo VPSs to run a node or mine in the Iron Age Testnet.
 :::
 
 ### Node Types
@@ -354,7 +354,7 @@ Your node may briefly stop appending blocks for certain periods of time — this
 
 **How can I check the syncing status of all of my node's slices at once?**
 
-To check the syncing status of all of your node's slices at the same time, you can use this community-made script: [https://github.com/satman81/guides/blob/main/quai/quaiblockheight.py](https://github.com/satman81/guides/blob/main/quai/quaiblockheight.py).
+To check the syncing status of all of your node's slices at the same time, you can use this [community-made script](https://gist.github.com/saiaman/ad509a23d8a4211da01aa5403ec9dab3).
 
 ### Time to Sync
 
