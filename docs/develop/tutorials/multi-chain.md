@@ -470,7 +470,7 @@ async function AddApprovedQRC20Addresses() {
     const transactionReceipt = await pollFor(
       provider, // provider passed to poller
       'getTransactionReceipt', // method to call on provider
-      [txResponse.hash], // params to pass to method
+      [transaction.hash], // params to pass to method
       1.5, // initial polling interval in seconds
       1 // request timeout in seconds
     );
