@@ -23,7 +23,7 @@ The protocol sets some difficulty at time T for upcoming period P, and then adju
 At time T, a difficulty T is set such that: if hashrate P = hashrate P-1 , then blocktime P = expected blocktime. At time T+1, difficulty is adjusted in proportion to how much faster or slower blocks were produced than the expected or desired interval during period P. Thus:
 
 $$
-△DIFFICULTY_{T} → T+1 = 𝑓(BLOCKTIME_{P}:BLOCKTIME_{EXPECTED})
+△DIFFICULTY_{T → T+1} = 𝑓(BLOCKTIME_{P}:BLOCKTIME_{EXPECTED})
 $$
 
 Another formulation of this is:
@@ -44,4 +44,4 @@ The same flow works in the reverse as well, when less than expected miner hashra
 
 Changes in hashrate are driven by market demand. Simply put, miners will deploy more when they’re paid more. With this framing, we can see that mining processes and the difficulty adjustment are best understood as a reactive market supply and demand matching function.
 
-Quai Network makes difficulty adjustments on a rolling basis over a previous set of blocks (instead of in sequential periods), to best match the supply of hashrate and demand for network security. 
+**Quai Network makes difficulty adjustments on a rolling basis over a previous set of blocks (instead of in sequential periods), to best match the supply of hashrate and demand for network security.**

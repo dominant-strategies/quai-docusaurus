@@ -13,7 +13,7 @@ keywords:
 
 Quai is a digitally scarce asset designed to function as a programmable store-of-value within Quai Network. Quai has an effectively fixed supply in the sense that inflation trends toward zero and there will be a terminal supply amount -- however, [this terminal supply amount will be determined by market dynamics, and is not predefined](/learn/tokenomics/token-dynamics/supply-growth/supply-growth.md).  
 
-## [Quai Emissions](/learn/tokenomics/token-dynamics/block-rewards/block-rewards.md)
+## Quai Emissions
 
 Quai rewards are issued in proportion to the “bits” of difficulty that a valid block hash achieved, approximately represented by the number of leading zeros in the target value.
 
@@ -21,7 +21,7 @@ $$
 Block Reward_{Quai}  ∝ log_{2}(Difficulty)
 $$ 
 
-Note that there is a proportionality constant/variable in the Quai block reward function above, the exact calculus for which will be shared publicly closer to Mainnet launch.
+Note that there is a proportionality constant/variable in the Quai [block reward](/learn/tokenomics/token-dynamics/block-rewards/block-rewards.md) function above, the exact calculus for which will be shared publicly closer to Mainnet launch.
 
 ## Quai Supply
 

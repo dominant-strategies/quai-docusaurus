@@ -1,5 +1,5 @@
 ---
-title: Overview
+title: Token Overview
 description: A high level overview of Quai Network's two-token system.
 sidebar_position: 1
 keywords:
@@ -10,7 +10,7 @@ keywords:
   - qi
 ---
 
-# Tokenomics Overview: Quai & Qi
+# Token Overview: Quai & Qi
 
 The Quai Network protocol has two different native tokens: [Quai](/learn/tokenomics/tokenomics-overview/quai/quai.md) & [Qi](/learn/tokenomics/tokenomics-overview/qi/qi.md). 
 
@@ -26,7 +26,7 @@ Both Quai and Qi are natively emitted by the Quai protocol, and function as the 
 
 ## Token Mechanics
 
-All post-genesis supply issuance of both Quai and Qi occurs through the following mechanics. There will be a pre-set allotment of Quai supply generated and allocated as part of the Genesis block, as outlined in the [Genesis Allocations](/learn/tokenomics/genesis-allocations/genesis-allocations.md) page.
+All post-genesis supply issuance of both Quai and Qi occurs through the following mechanics. There will be a pre-set allotment of Quai supply generated and allocated as part of the Genesis block, as outlined in the [genesis allocations page](/learn/tokenomics/genesis-allocations/genesis-allocations.md).
 
 ### Emissions
 

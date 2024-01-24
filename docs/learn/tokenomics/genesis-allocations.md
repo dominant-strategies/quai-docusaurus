@@ -21,8 +21,6 @@ A pre-allotted amount of 3 billion Quai will be generated as part of the genesis
 
 ![Genesis Quai Distributions](/img/GenesisQuaiDistribution.png)
 
-The following are described in order of proportion of Genesis supply:
-
 ## Foundation
 **Purpose: Maximize adoption of the Quai protocol.**
 
