@@ -123,7 +123,7 @@ Within the `config.json` file, you'll be able to configure networking settings a
 Before running the proxy, we need to build the source. You can build via Makefile by running the following command:
 
 ```bash
-make quai-stratum
+make go-quai-stratum
 ```
 
 ### Run
@@ -135,13 +135,13 @@ To run the proxy, you'll need to select a shard to run against. More information
 Start the proxy by passing either the corresponding **web socket ports** or **chain names** for the region and zone you've selected to run. Run with chain names using this command:
 
 ```bash
-./build/bin/quai-stratum --region=REGION-NAME --zone=ZONE-NAME
+./build/bin/go-quai-stratum --region=REGION-NAME --zone=ZONE-NAME
 ```
 
 Or to run with ports use:
 
 ```sh
-./build/bin/quai-stratum --region=REGION-WS-PORT --zone=ZONE-WS-PORT
+./build/bin/go-quai-stratum --region=REGION-WS-PORT --zone=ZONE-WS-PORT
 ```
 
 :::warning
