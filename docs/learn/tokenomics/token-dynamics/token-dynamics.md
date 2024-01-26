@@ -14,7 +14,7 @@ keywords:
 
 # Token Dynamics
 
-There are a variety of dynamics between the [Quai](/learn/tokenomics/tokenomics-overview/quai/quai.md) and [Qi](/learn/tokenomics/tokenomics-overview/qi/qi.md) tokens that position Quai as an [increasingly-scarce store-of-value](/learn/tokenomics/token-dynamics/supply-growth/supply-growth.md), and Qi as a "flat token," loosely tied to the cost of generating a hash.  
+There are a variety of dynamics between the [Quai](/learn/tokenomics/tokenomics-overview/quai/quai.md) and [Qi](/learn/tokenomics/tokenomics-overview/qi/qi.md) tokens that position Quai as an [increasingly-scarce store-of-value](/learn/tokenomics/token-dynamics/supply-growth/supply-growth.md), and Qi as a medium of exchange, loosely tied to the cost of generating a hash (and thus the cost of energy).  
 
 The primary mechanisms used to achieve these features are emissions (primarily through block rewards), conversions (between Qi and Quai), and a highly responsive difficulty algorithm.
 

@@ -16,23 +16,6 @@ Work-based protocols are simply systems for regulating supply-side production fu
 
 The mechanism works by adjusting system values such as difficulty for an upcoming period based on the previous period of activity's deviation from some expectation or optimization. 
 
-![Image of difficulty adjustments over periods (P) at specific times (T)](/img/PT.png)
-
-The protocol sets some difficulty at time T for upcoming period P, and then adjusts again at time T+1 to the degree that certain actual activity during P exceeds expected or desired activity. Mechanically speaking, the difficulty adjustment re-establishes some rate of block production (e.g. Bitcoin’s 10-minute block intervals).
-
-At time T, a difficulty T is set such that: if hashrate P = hashrate P-1 , then blocktime P = expected blocktime. At time T+1, difficulty is adjusted in proportion to how much faster or slower blocks were produced than the expected or desired interval during period P. Thus:
-
-$$
-△DIFFICULTY_{T → T+1} = 𝑓(BLOCKTIME_{P}:BLOCKTIME_{EXPECTED})
-$$
-
-Another formulation of this is:
-
-$$
-△DIFFICULTY = 𝑓(△HASHRATE) 
-$$
-
-The following may also be a slightly more useful restatement in terms of the actual purpose or function of the mechanic and its underlying dynamics:
 1. Difficulty set to achieve certain blocktimes based on existing hashrate 
 2. More than expected miner hashrate deployed 
 3. Faster blocktimes 

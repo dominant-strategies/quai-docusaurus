@@ -11,7 +11,7 @@ keywords:
 
 # Conversions
 
-While the election to receive block rewards in Quai or Qi is reserved for miners, the ability to convert Qi and Quai tokens is embedded natively in the protocol, and is available to any network participant to exploit at any time. The conversion ratio is defined by the ratio of the current block reward of both Quai and Qi.
+While the election to receive block rewards in Quai or Qi is reserved for miners, the ability to convert Qi and Quai tokens is embedded natively in the protocol, and is available to any network participant to utilize at any time. The conversion ratio is defined by the ratio of the current block reward of both Quai and Qi.
 
 For example, if the current Quai block reward is 1 and the current Qi block reward is 2, any network participant would be able to burn Qi tokens to mint new Quai tokens at a rate of 2:1.
 
