@@ -7,9 +7,9 @@ const FeatureList: CardItem[] = [
     description: <>Learn the basics of how Quai Network scales infinitely.</>,
   },
   {
-    title: '🌐 Use Quai',
-    link: '/docs/category/use-quai/',
-    description: <>Explore wallets, block explorers, and Testnet faucets.</>,
+    title: '🪙 Tokenomics',
+    link: '/docs/category/tokenomics/',
+    description: <>Learn about the two native tokens of Quai Network: Quai and Qi.</>,
   },
   {
     title: '🧑‍🎓 Academic Resources',

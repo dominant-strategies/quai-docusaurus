@@ -116,7 +116,14 @@
     "zstd",
     "solcx",
     "TSTK",
-    "pubkey"
+    "pubkey",
+    "UTXO",
+    "chee",
+    "tokenomics",
+    "collateralization",
+    "blocktimes",
+    "blocktime",
+    "EVMs"
   ],
   "flagWords": ["hte", "addresss"]
 }
