@@ -24,7 +24,7 @@ These illustrative examples assume:
   * **Example 2**: also Bitcoin’s growth from 2011 through 2023, but spreads it out over 20 years.
   * **Example 3**: Bitcoin’s growth between 2011 through 2016, spread out over 20 years.
 
-These examples also take into account the [3 billion initial Quai tokens minted and allocated in the genesis block](/learn/tokenomics/genesis-allocations/genesis-allocations.md).
+These examples also take into account the [3 billion initial Quai tokens minted and allocated in the genesis block](/learn/tokenomics/genesis-allocations.md).
 
 ![Difficulty Scenarios](/img/DifficultyScenarios.png)
 
