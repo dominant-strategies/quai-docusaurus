@@ -11,7 +11,9 @@ keywords:
 
 # The Quai Token
 
-Quai is a digitally scarce asset designed to function as a programmable store-of-value within Quai Network. Quai has an effectively fixed supply in the sense that inflation trends toward zero and there will be a terminal supply amount -- however, [this terminal supply amount will be determined by market dynamics, and is not predefined](/learn/tokenomics/token-dynamics/supply-growth/supply-growth.md).  
+Quai is a digitally scarce asset designed to function as a programmable store-of-value within Quai Network. Quai has an effectively fixed supply in the sense that inflation trends toward zero and there will be a terminal supply amount -- however, [this terminal supply amount will be determined by market dynamics, and is not predefined](/learn/tokenomics/token-dynamics/supply-growth/supply-growth.md). 
+
+Quai is the native token of the account-based shards within Quai Network, supporting smart-contracting capabilities with modified EVMs.
 
 ## Quai Emissions
 
@@ -33,6 +35,6 @@ $$
 
 The block reward function only defines how many Quai tokens can *potentially* be emitted. Actual, realized supply emissions from block rewards are determined by the choices miners must make to receive only either Quai or Qi, a selection they may change going forward at any time.
 
-In addition to the effects from this new flow of Quai and/or Qi issuance, the respective supply stock of Quai is affected by the [initial genesis allocation of Quai](/learn/tokenomics/genesis-allocations/genesis-allocations.md) and the [conversion feature between existing Qi and Quai](/learn/tokenomics/token-dynamics/conversions/conversions.md) at the current block mining rewards ratio (e.g. between the # of Quai tokens/block and # of Qi tokens/block), which is accessible to anyone -- not just miners. 
+In addition to the effects from this new flow of Quai and/or Qi issuance, the respective supply stock of Quai is affected by the [initial genesis allocation of Quai](/learn/tokenomics/genesis-allocations.md) and the [conversion feature between existing Qi and Quai](/learn/tokenomics/token-dynamics/conversions/conversions.md) at the current block mining rewards ratio (e.g. between the # of Quai tokens/block and # of Qi tokens/block), which is accessible to anyone -- not just miners. 
 
-As such, the supply of Quai at any given time is the cumulative result of the [genesis allocation](/learn/tokenomics/genesis-allocations/genesis-allocations.md), [miner-selected emissions](/learn/tokenomics/token-dynamics/block-rewards/block-rewards.md), and [token conversions](/learn/tokenomics/token-dynamics/conversions/conversions.md).
+As such, the supply of Quai at any given time is the cumulative result of the [genesis allocation](/learn/tokenomics/genesis-allocations.md), [miner-selected emissions](/learn/tokenomics/token-dynamics/block-rewards/block-rewards.md), and [token conversions](/learn/tokenomics/token-dynamics/conversions/conversions.md).

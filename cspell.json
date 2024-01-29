@@ -122,7 +122,8 @@
     "tokenomics",
     "collateralization",
     "blocktimes",
-    "blocktime"
+    "blocktime",
+    "EVMs"
   ],
   "flagWords": ["hte", "addresss"]
 }

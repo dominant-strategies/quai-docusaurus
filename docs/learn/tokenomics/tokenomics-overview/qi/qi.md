@@ -13,6 +13,8 @@ keywords:
 
 Qi is a token designed to enable and scale the use of cryptocurrency as a unit measure and medium of exchange within Quai Network. Qi has a highly responsive and accommodative supply, with an issuance and inflation rate in direct proportion to demand. 
 
+Qi is the native token of the UTXO shards within Quai Network, with fixed denominations and no scripting capabilities.
+
 ## Qi Emissions
 
 Qi rewards are issued in direct linear proportion to “hashes” of difficulty, or the expected number of hashes needed to mine a block at the current difficulty. If difficulty rises (the expected number of hashes needed to find a block goes up), the Qi reward of blocks will also begin to rise. Inversely, if the difficulty lowers (the expected number of hashes needed to find a block goes down), the Qi reward of blocks will begin to lower.  
