@@ -26,7 +26,7 @@ Both Quai and Qi are natively emitted by the Quai protocol, and function as the 
 
 ## Token Mechanics
 
-All post-genesis supply issuance of both Quai and Qi occurs through the following mechanics. There will be a pre-set allotment of Quai supply generated and allocated as part of the Genesis block, as outlined in the [genesis allocations page](/learn/tokenomics/genesis-allocations/genesis-allocations.md).
+All post-genesis supply issuance of both Quai and Qi occurs through the following mechanics. There will be a pre-set allotment of Quai supply generated and allocated as part of the Genesis block, as outlined in the [genesis allocations page](/learn/tokenomics/genesis-allocations.md).
 
 ### Emissions
 
