@@ -98,7 +98,7 @@ Welcome to Hardhat v2.17.2
 For this article, we will select the `Create a Javascript project` option. This will provide you with a preset basic Hardhat project structure with simple smart contracts, tests, and example scripts written in Javascript.
 
 :::info
-Selecting this option allows you to automatically install `@nomicfoundation/hardhat-toolbox`.
+Selecting this option allows you to optionally install `@nomicfoundation/hardhat-toolbox`.
 :::
 
 ### Smart Contracts
@@ -145,12 +145,16 @@ After creating the `.env` file, paste the following code into it.
 ```bash title=".env"
 ## Sample environment file - change all values as needed
 
-# Privkey
+# Privkey - priv key for the account you want to deploy from
 PRIVKEY="0x0000000000000000000000000000000000000000000000000000000000000000"
 
-# RPC
-RPCURL="http://localhost:8610" # local node cyprus1 URL
+# RPC - change this based on shard you want to deploy to
+RPCURL="http://rpc.cyprus3.colosseum.quaiscan.io" # cyprus 3 colosseum rpc endpoint
 ```
+
+:::info
+The `PRIVKEY` and `RPCURL` values must be configured for the same shard, i.e. a Cyprus 3 RPC endpoint and a Cyprus 3 private key must be used together. **Using a Cyprus 3 RPC endpoint with a Cyprus 2 (or any other shard's) private key will result in an error.**
+:::
 
 Information on endpoints can be found in the [local network specifications](/develop/networks.md#local-network) section for **local nodes** and the [testnet specifications](/develop/networks.md#testnet) section for **remote nodes**.
 
@@ -168,7 +172,6 @@ Paste the following code into your `hardhat.config.js` file to configure deploym
  */
 
 require('@nomicfoundation/hardhat-toolbox');
-
 const dotenv = require('dotenv');
 dotenv.config({ path: '.env' });
 
@@ -241,7 +244,6 @@ Compiled 1 Solidity file successfully
 The Hardhat sample project has a pre-made deployment script named `deploy.js` in the `scripts` directory. Copy the following into the `deploy.js` file.
 
 ```javascript title="deploy.js"
-const hre = require('hardhat');
 const quais = require('quais');
 const { pollFor } = require('quais-polling');
 const GreeterJson = require('../artifacts/contracts/Greeter.sol/Greeter.json');
@@ -279,16 +281,15 @@ Using `deploy.js`, we can set the initial greeting and log out the contract addr
 
 ### Deploy Your Contract
 
-To deploy `Greeter.sol` to the local network set in your `hardhat.config.js`, run:
+To deploy `Greeter.sol` to the colosseum network (configured for Cyprus 3 in your env) set in your `hardhat.config.js`, run:
 
 ```bash
-npx hardhat run scripts/deploy.js --network local
+npx hardhat run scripts/deploy.js --network colosseum
 ```
 
 Which should output:
 
 ```bash
-Found address 0x0f12d55D09D5E53DB2941a6119d27aa83cFD11f7 on shard zone-0-0 for shard zone-0-0
 Contract deployed to address: 0x13d8c5fc0AB5A87870353f3C0409c102f2a772A9
 ```
 
@@ -296,8 +297,8 @@ Congratulations, you've now deployed a simple smart contract to Quai Network!
 
 ## Interact with a Smart Contract
 
-Hardhat console does not currently offer support for interaction with smart contracts on Quai Network. In order to interact with your smart contract, you'll need to utilize the the [client JSON RPC](/develop/apis/json-rpc-api.md) or [quais.js](https://www.npmjs.com/package/quais) library, which functions similar to [ethers.js](https://www.npmjs.com/package/ethers).
+Hardhat console does not currently offer support for interaction with smart contracts on Quai Network. In order to interact with your smart contract, you'll need to utilize the the [client JSON RPC](/develop/apis/json-rpc-api.md) or [quais.js](https://www.npmjs.com/package/quais) library. You can find quais examples in the [quais-by-example](https://github.com/dominant-strategies/quais-by-example) repository.
 
 ## Summary
 
-Now you have all the tools you need to launch a local instance of Quai Network, create a simple Hardhat project, deploy, and interact with your own smart contracts.
+Now you have all the tools you need to create a simple Hardhat project, deploy, and interact with your own smart contracts.
