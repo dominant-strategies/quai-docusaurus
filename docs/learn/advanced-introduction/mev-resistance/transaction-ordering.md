@@ -6,7 +6,7 @@ sidebar_position: 1
 
 # Transaction Ordering
 
-Within Quai Network, the order of transactions within a block is determined based on the **work done to each transaction**, instead of allowing block constructors to order transactions arbitrarily. Allowing block constructors to arbitrarily order transactions inevitably results in ordering based on priority fee, creating malincentives within the network that result in both value extraction from users and potential for MEV incentives to disrupt cooperative mining and extension of the chain.
+Transaction ordering within Quai Network is objectively determined based on the **work done to each transaction**, instead of allowing block constructors to order transactions arbitrarily. Allowing block constructors to arbitrarily order transactions inevitably results in ordering based on priority fee, creating malincentives within the network that result in both value extraction from users and potential for MEV incentives to disrupt cooperative mining and extension of the chain.
 
 ![Transaction Ordering Diagram](/img/TransactionOrdering.png)
 
