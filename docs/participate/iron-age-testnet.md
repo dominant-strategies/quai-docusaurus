@@ -31,9 +31,21 @@ The Iron Age Testnet offers incentives in Mainnet Quai tokens to [Quai miners wh
 
 ### Miners
 
-8 million Mainnet Quai tokens will be distributed to individuals who mine valid blocks on canonical Quai Network chains throughout the Iron Age Testnet.
+#### Phase 1
+
+In phase 1 of the Iron Age Testnet mining rewards, 8 million Mainnet Quai tokens will be distributed to individuals who mine valid blocks on canonical Quai Network chains. This period of mining incentivization will last up until Iron Age Testnet block 600,000 in each zone.
 
 The Mainnet rewards earned by each address will be determined by calculating what proportion of total Testnet blocks were mined by the address. For example, if a zone 1 address mined 10 blocks and a total of 1,000 blocks were mined for the duration of the Iron Age Testnet in zone 1, that address would receive 1% of mining rewards for zone 1, or 8,888.889 Quai. All rewards will be tracked, calculated, and distributed via on-chain data – be sure to hold onto the private keys for the address(es) you use to mine!
+
+:::note
+Phase 1 of the Iron Age Testnet has ended, check below for details on Phase 2.
+:::
+
+#### Phase 2
+
+In phase 2 of the Iron Age Testnet mining rewards, 4 million Mainnet Quai tokens have been allocated for distribution to individuals who mine valid blocks on canonical Quai Network chains throughout the Iron Age Testnet up to block 1,200,000 in each zone or until the launch of the Golden Age Testnet, whichever comes first.
+
+Miners can mine up to 180,000 per address per shard during this phase. Mining additional blocks past 180,000 will result in wasted hash. Mainnet rewards will still be determined based on the proportion of total Testnet blocks mined by each address.
 
 :::warning
 No individual mining address will be able to receive more than 5% of the mining rewards for a single slice. Each individual will be able to KYC/claim a maximum of one mining address per chain on Mainnet.
