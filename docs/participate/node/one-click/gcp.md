@@ -56,22 +56,22 @@ This will walk you through authenticating your Google Cloud account as well as d
 The Quai Deployment Package is a `.tar.gz` file that contains everything you need to deploy a Quai Network node and proxy to GCP. To install it on your machine, run:
 
 ```sh
-wget https://storage.googleapis.com/colosseum-db/quai-v26-fix-deployment-package.tar.gz
+wget http://archive.quai.network/quai-v0.28.2-deployment-package.tar.gz
 ```
 
 After downloading the package, decompress the file using:
 
 ```sh
-tar -xzvf quai-v26-fix-deployment-package.tar.gz
+tar -xzvf quai-v0.28.2-deployment-package.tar.gz
 ```
 
-This will create a directory named `quai-v26-fix-deployment-package`. Navigate to the directory with:
+This will create a directory named `quai-v0.28.2-deployment-package`. Navigate to the directory with:
 
 ```sh
-cd quai-v26-fix-deployment-package
+cd quai-v0.28.2-deployment-package
 ```
 
-Now the we've installed the Quai Deployment Package, we're ready to deploy a node to GCP. All commands related to the Quai Deployment Package should be run inside of the `quai-v26-fix-deployment-package` directory.
+Now the we've installed the Quai Deployment Package, we're ready to deploy a node to GCP. All commands related to the Quai Deployment Package should be run inside of the `quai-v0.28.2-deployment-package` directory.
 
 ## Deploy
 
