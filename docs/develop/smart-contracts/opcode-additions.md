@@ -1,7 +1,7 @@
 ---
 title: Opcode Additions
 description: Specification of the isaddrinternal and etx opcodes additions on Quai Network.
-sidebar_position: 1
+sidebar_position: 3
 keywords:
   - solidityx
   - quai virtual machine

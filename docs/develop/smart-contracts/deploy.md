@@ -1,7 +1,7 @@
 ---
 title: Deploy
 description: How to deploy a smart contract to the Quai Network.
-sidebar_position: 3
+sidebar_position: 2
 keywords:
   - smart contract
   - solidityx
