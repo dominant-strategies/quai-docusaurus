@@ -1,7 +1,7 @@
 ---
 title: Languages
 description: Smart contract development languages supported on Quai Network.
-sidebar_position: 2
+sidebar_position: 1
 keywords:
   - solidity
   - solidityx

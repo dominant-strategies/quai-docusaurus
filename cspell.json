@@ -125,7 +125,8 @@
     "blocktime",
     "EVMs",
     "timeframe",
-    "malincentives"
+    "malincentives",
+    "INITIALSUPPLY"
   ],
   "flagWords": ["hte", "addresss"]
 }

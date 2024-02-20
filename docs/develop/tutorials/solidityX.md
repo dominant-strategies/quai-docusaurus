@@ -1,5 +1,5 @@
 ---
-title: Multi-Chain Deployment Tutorial
+title: Deploy with SolidityX
 description: A guide to deploying and linking  multi-chain smart contracts on Quai Network.
 sidebar_position: 2
 keywords:
