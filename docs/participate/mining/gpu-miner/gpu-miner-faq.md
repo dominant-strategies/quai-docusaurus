@@ -152,7 +152,7 @@ This flight sheet was created and is maintained by a Quai community member, not 
 ![Flight Sheets](/img/FS4.jpg)
 
 8. On "Miner name", type "quai_custom".
-9. On "Installation URL", copy/paste "[https://quai-gpu-releases.s3.eu-west-1.amazonaws.com/quai_custom-0.3.3.tar.gz](https://quai-gpu-releases.s3.eu-west-1.amazonaws.com/quai_custom-0.3.3.amd.tar.gz)".
+9. On "Installation URL", copy/paste "[https://quai-gpu-releases.s3.eu-west-1.amazonaws.com/quai_custom-0.3.3.amd.tar.gz](https://quai-gpu-releases.s3.eu-west-1.amazonaws.com/quai_custom-0.3.3.amd.tar.gz)" if you have AMD cards and "[https://quai-gpu-releases.s3.eu-west-1.amazonaws.com/quai_custom-0.3.2.tar.gz](https://quai-gpu-releases.s3.eu-west-1.amazonaws.com/quai_custom-0.3.2.tar.gz)" if you have NVIDIA cards.
 10. On "Hash algorithm", type "progpow".
 11. On "Wallet and worker template", type "%WAL%.%WORKER_NAME%".
 12. On "Pool URL", type "stratum://EXTERNALIPADDRESS:PORT".
