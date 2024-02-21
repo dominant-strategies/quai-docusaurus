@@ -14,6 +14,29 @@ Quai Network runs a modified Ethereum Virtual Machine environment that provides 
 
 Generic [Solidity](#solidity) smart contracts can be deployed to any single chain in the network and will function as expected. However, to take full advantage of Quai's cross-chain functionality, developers must use [SolidityX](#solidityx) based smart contracts.
 
+### Choosing Solidity vs SolidityX
+
+There are a few main differences between Solidity and SolidityX that developers should consider when choosing which language to use for smart contract development on Quai Network.
+
+#### Solidity
+
+- **Recommended for developers new to Quai Network**
+- Single chain deployments without cross-chain functionality
+- Easier to use, deploy, and test + compatible with existing Solidity tooling
+- Supports any previously existing Solidity compiler version
+- Compatible with existing Solidity contract libraries like [OpenZeppelin](https://www.openzeppelin.com/contracts) and [Solady](https://github.com/Vectorized/solady).
+- **Recommended for most use cases**
+
+#### SolidityX
+
+- **Recommended for more advanced developers looking to experiment with cross-chain functionality**
+- Enables cross-chain contract deployments
+- Requires the [SolidityX compiler](https://github.com/dominant-strategies/SolidityX/releases/tag/0.8.19-solidityx) and additional configuration (can be difficult to set up)
+- Not compatible with pre-existing Solidity contract libraries.
+- Will be forward compatible with [dynamic scaling events](/learn/advanced-introduction/poem/infinite-execution-shards/dynamic-sharding.mdx)
+
+## Language Details
+
 ### Solidity
 
 Solidity is a contract-oriented, high-level programming language for creating smart contracts. It was influenced by C++, Python, and JavaScript and is designed to target the Ethereum Virtual Machine (EVM) environments. Solidity is statically typed, supports inheritance, and libraries. It allows developers to create smart contracts for a wide range of use cases and applications. Key features of Solidity include:
