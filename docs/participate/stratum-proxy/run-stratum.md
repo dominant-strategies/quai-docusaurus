@@ -152,20 +152,20 @@ Available options for `REGION-NAME`, `ZONE-NAME`, `REGION-PORT`, and `ZONE-PORT`
 
 If you're running a version of `go-quai-stratum` prior to [v0.9.0-rc.0](https://github.com/dominant-strategies/go-quai-stratum/releases/tag/v0.9.0-rc.0), you'll need to pass in the corresponding web socket ports as chain names are not supported prior to this version.
 
-| Chain Name | Type   | Chain Index | Web Socket Port | Stratum Command                                         |
-| ---------- | ------ | ----------- | --------------- | ------------------------------------------------------- |
-| Cyprus     | Region |             | 8579            |                                                         |
-| Paxos      | Region |             | 8581            |                                                         |
-| Hydra      | Region |             | 8583            |                                                         |
-| Cyprus-1   | Zone   | [0 0]       | 8611            | ./build/bin/quai-stratum --region=cyprus --zone=cyprus1 |
-| Cyprus-2   | Zone   | [0 1]       | 8643            | ./build/bin/quai-stratum --region=cyprus --zone=cyprus2 |
-| Cyprus-3   | Zone   | [0 2]       | 8675            | ./build/bin/quai-stratum --region=cyprus --zone=cyprus3 |
-| Paxos-1    | Zone   | [1 0]       | 8613            | ./build/bin/quai-stratum --region=paxos --zone=paxos1   |
-| Paxos-2    | Zone   | [1 1]       | 8645            | ./build/bin/quai-stratum --region=paxos --zone=paxos2   |
-| Paxos-3    | Zone   | [1 2]       | 8677            | ./build/bin/quai-stratum --region=paxos --zone=paxos3   |
-| Hydra-1    | Zone   | [2 0]       | 8615            | ./build/bin/quai-stratum --region=hydra --zone=hydra1   |
-| Hydra-2    | Zone   | [2 1]       | 8647            | ./build/bin/quai-stratum --region=hydra --zone=hydra2   |
-| Hydra-3    | Zone   | [2 2]       | 8679            | ./build/bin/quai-stratum --region=hydra --zone=hydra3   |
+| Chain Name | Type   | Chain Index | Web Socket Port | Stratum Command                                            |
+| ---------- | ------ | ----------- | --------------- | ---------------------------------------------------------- |
+| Cyprus     | Region |             | 8579            |                                                            |
+| Paxos      | Region |             | 8581            |                                                            |
+| Hydra      | Region |             | 8583            |                                                            |
+| Cyprus-1   | Zone   | [0 0]       | 8611            | ./build/bin/go-quai-stratum --region=cyprus --zone=cyprus1 |
+| Cyprus-2   | Zone   | [0 1]       | 8643            | ./build/bin/go-quai-stratum --region=cyprus --zone=cyprus2 |
+| Cyprus-3   | Zone   | [0 2]       | 8675            | ./build/bin/go-quai-stratum --region=cyprus --zone=cyprus3 |
+| Paxos-1    | Zone   | [1 0]       | 8613            | ./build/bin/go-quai-stratum --region=paxos --zone=paxos1   |
+| Paxos-2    | Zone   | [1 1]       | 8645            | ./build/bin/go-quai-stratum --region=paxos --zone=paxos2   |
+| Paxos-3    | Zone   | [1 2]       | 8677            | ./build/bin/go-quai-stratum --region=paxos --zone=paxos3   |
+| Hydra-1    | Zone   | [2 0]       | 8615            | ./build/bin/go-quai-stratum --region=hydra --zone=hydra1   |
+| Hydra-2    | Zone   | [2 1]       | 8647            | ./build/bin/go-quai-stratum --region=hydra --zone=hydra2   |
+| Hydra-3    | Zone   | [2 2]       | 8679            | ./build/bin/go-quai-stratum --region=hydra --zone=hydra3   |
 
 :::danger
 **Do not open the above web socket ports except** in the specific case where your miner is on a different network than your node/stratum (and even then, be sure to only open the port to the necessary machine). You may be putting your local network security at risk.
@@ -174,7 +174,7 @@ If you're running a version of `go-quai-stratum` prior to [v0.9.0-rc.0](https://
 The proxy by default listens for miner connections on the `3333` port. You can change the port the proxy listens on by passing it in with the `--stratum` flag in the run command if you'd like.
 
 ```bash
-./build/bin/quai-stratum --region=REGION-NAME --zone=ZONE-NAME --stratum=LISTENING-PORT
+./build/bin/go-quai-stratum --region=REGION-NAME --zone=ZONE-NAME --stratum=LISTENING-PORT
 ```
 
 :::info
