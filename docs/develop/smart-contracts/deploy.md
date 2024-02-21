@@ -45,6 +45,8 @@ Contrary to monolithic blockchains, Quai Network's multi-threaded architecture a
 
 Sister contracts are created by deploying contracts across all chains that the project intends to support. After the deployment of these sister contracts, a trust on first-use (TOFU) strategy is used to link the contracts together, allowing each contract to be aware of the state and activities of all of its sisters. Each sister contract contains an objective reference to the public address of every other sister contract.
 
-Contracts intended to function across many chains will contain initially empty slots for the addresses of its sisters. If a contract intends to maintain functionality across the initial network of 13 chains, 12 slots are required for all 12 sister contracts to be referenced.
+Contracts intended to function across many chains will contain initially empty slots for the addresses of its sisters. If a contract intends to maintain functionality across the initial network of 9 chains, 8 slots are required for all 8 sister contracts to be referenced.
 
-Information on how to deploy a multi-chain smart contracts with hardhat can be found in the [Multi-Chain Deployment Tutorial](/develop/tutorials/multi-chain.md).
+Tutorials on how to deploy a multi-chain smart contracts with hardhat can be found in the [Multi-Chain Deployment Tutorial](/develop/tutorials/multi-chain.md).
+
+Resources for automated cross-chain deployment and sister contract linking and be found in the [`quais-by-example` repository](https://github.com/dominant-strategies/quais-by-example/tree/main).

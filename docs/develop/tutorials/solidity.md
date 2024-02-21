@@ -26,7 +26,7 @@ Here's an **overview of all of the dependencies** we'll be using:
 
 ### Dependencies
 
-Start by cloning the `hardhat-example` repository, navigating to the `Solidity` directory we'll be using for this tutorial, and installing the dependencies via `npm`.
+Start by cloning the `hardhat-example` repository, **navigating to the `Solidity` directory** we'll be using for this tutorial, and installing the dependencies via `npm`.
 
 ```bash
 git clone https://github.com/dominant-strategies/hardhat-example.git
@@ -58,7 +58,7 @@ cp ../.env.dist ../.env
 
 Open the `.env` file and add your private keys, RPC URLs, and token args for the contract you'd like to deploy. The `.env` file should look like this:
 
-```env
+```bash title=".env"
 # Unique Privkey for each deployment address
 CYPRUS1PK="0x3700000000000000000000000000000000000000000000000000000000000000" # For pubkey starting with 0x00 - 0x1D
 CYPRUS2PK="0x9400000000000000000000000000000000000000000000000000000000000000" # For pubkey starting with 0x1E - 0x3A
