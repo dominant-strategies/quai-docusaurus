@@ -127,7 +127,8 @@
     "timeframe",
     "malincentives",
     "INITIALSUPPLY",
-    "solady"
+    "solady",
+    "BASEURI"
   ],
   "flagWords": ["hte", "addresss"]
 }
