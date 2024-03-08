@@ -1,16 +1,24 @@
-name: Test Use of Common Prod Workflow
+name: Deploy to Prod
 on: workflow_dispatch
 jobs:
   call-common-workflow:
-    uses: dominant-strategies/quai-cicd/.github/workflows/deploy-prod-common.yml@main
+    uses: dominant-strategies/quai-cicd/.github/workflows/deploy-sandbox-common.yml@main
     with:
       needs_build: true
+      needs_docker: true
       install_command: "npm ci"
       cloud_deploy: true
       skip_deploy: false
+      env: "quai-prod"
+      gcp_project_id: "flash-gasket-349320"
+      token_secret_name: "gke-prod-token"
+      update_version: true
     secrets:
       DOCKER: ${{ secrets.DOCKER }}
       GH_PAT: ${{ secrets.GH_PAT }}
       KUBE_CONFIG: ${{ secrets.KUBECONFIG_PROD }}
       BUILD_ARGS: ''
       DOCKER_BUILD_ARGS: ''
+      GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY2 }}
+      GPG_KEY_ID: ${{ secrets.GPG_KEY_ID }}
+      GH_GCP_TOKEN: ${{ secrets.GH_GCP_TOKEN }}
