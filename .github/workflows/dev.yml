@@ -1,4 +1,4 @@
-name: Test Use of Common Dev Workflow
+name: Auto Dev Workflow
 on:
   pull_request:
     types: [closed]
@@ -11,9 +11,8 @@ jobs:
       install_command: "npm ci"
       cloud_deploy: false
       skip_deploy: true
+      update_version: false
+      needs_docker: false
     secrets:
-      DOCKER: ${{ secrets.DOCKER }}
       GH_PAT: ${{ secrets.GH_PAT }}
-      KUBE_CONFIG: ${{ secrets.KUBECONFIG_LOCAL }}
       BUILD_ARGS: ''
-      DOCKER_BUILD_ARGS: ''

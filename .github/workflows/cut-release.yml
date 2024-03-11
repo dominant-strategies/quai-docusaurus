@@ -1,4 +1,4 @@
-name: Test Use of Common Cut Release Workflow
+name: Cut Release To Sandbox
 on:
   workflow_dispatch:
     inputs:
@@ -12,12 +12,20 @@ jobs:
     with:
       branch: main
       needs_build: true
+      needs_docker: true
       install_command: "npm ci"
-      cloud_deploy: false
-      skip_deploy: true
+      cloud_deploy: true
+      skip_deploy: false
+      env: "quai-sandbox"
+      gcp_project_id: "flash-gasket-349320"
+      token_secret_name: "gke-sandbox-token"
+      update_version: true
     secrets:
       DOCKER: ${{ secrets.DOCKER }}
       GH_PAT: ${{ secrets.GH_PAT }}
-      KUBE_CONFIG: ${{ secrets.KUBECONFIG_LOCAL }}
+      KUBE_CONFIG: ${{ secrets.KUBECONFIG_SANDBOX }}
       BUILD_ARGS: ''
       DOCKER_BUILD_ARGS: ''
+      GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY2 }}
+      GPG_KEY_ID: ${{ secrets.GPG_KEY_ID }}
+      GH_GCP_TOKEN: ${{ secrets.GH_GCP_TOKEN }}
