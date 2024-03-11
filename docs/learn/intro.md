@@ -3,6 +3,7 @@ title: Introduction
 description: A high level overview of Quai Network's fundamental building blocks.
 keywords:
   - quai network
+  - energy based money
   - merged mining
   - blockchain
   - consensus
@@ -10,48 +11,55 @@ keywords:
 
 # Quai Network
 
-Quai Network is the only decentralized cryptocurrency with the capacity to scale to **all global commerce**.
+**Quai Network is a new Layer-1 that unifies all proven use-cases of cryptocurrency into a single, infinitely scalable network.** 
 
-Quai is a [merge-mined](/learn/advanced-introduction/merged-mining/merged-mining.md) network of blockchains. This network is able to [coordinate an infinite number of blockchains (execution shards)](/learn/advanced-introduction/poem/infinite-execution-shards/infinite-execution-shards.md) by using the [Proof-of-Entropy-Minima (PoEM) consensus mechanism](/learn/advanced-introduction/poem/poem.md), which eliminates all consensus-based contention. The ability for PoEM to coordinate a perpetually growing set of blockchains allows the network to process **more than 50,000 transactions per second**. The architecture is a composable [multithreaded execution](/learn/advanced-introduction/multithreaded-execution.md) environment with blocks being produced approximately every 1.1 seconds in a [9-shard construction](/learn/advanced-introduction/poem/infinite-execution-shards/dynamic-sharding.mdx).
+## Unification of Crypto Use-Cases
+Cryptocurrencies, over their 15-year lifespan, have found three key product-market fits:
+* Sovereign store-of-value (Digital Gold)
+* Programmable base-layer (Digital Finance)
+* Borderless medium-of-exchange (Digital Cash)
 
-All blockchains in the network can transfer and receive state through the process of [merged mining](/learn/advanced-introduction/merged-mining/merged-mining.md), which asynchronously produces [hash linked references between chains](/learn/advanced-introduction/merged-mining/coincident-blocks.mdx). Quai extends traditional work-based block production to enable transfers between blockchains without introducing new trusted validation mechanisms.
+![Quai Unifies Crypto Use-Cases](/img/QuaiUnified.jpeg)
 
-Quai provides truly infinite scalability by [dynamically sharding](/learn/advanced-introduction/poem/infinite-execution-shards/dynamic-sharding.mdx) to add more execution shards to the network as demand for block space increases. This enables Quai to support low-cost day-to-day transactions as the user-base grows in perpetuity.
+Each of these use cases has been siloed into distinct networks – Bitcoin as a sovereign store-of-value, Ethereum and Solana as programmable base-layers, and USDC and Tether as borderless mediums-of-exchange. 
 
-While blockchain technology has shown its potential to enable a widely-used digital currency, existing solutions reintroduce subjectivity while only achieving limited scale. Quai is unlike other multi-chain solutions which require a trusted set of validators that create weak security guarantees when moving between chains.
+Quai Network unifies these distinct use-cases into a single network through the use of a [novel two-token system](/learn/tokenomics/tokenomics-overview), with one token ([Quai](/learn/tokenomics/tokenomics-overview/quai)) designed to function as a programmable store-of-value and the other ([Qi](/learn/tokenomics/tokenomics-overview/qi)) designed to function as a non-programmable, energy-linked medium-of-exchange.
 
-Quai addresses issues with scalability while maintaining decentralization to create an un-censorable network which can be ubiquitously used as money.
+### Sovereign Store-of-Value
+Within Quai Network’s two-token system, the [Quai token](/learn/tokenomics/tokenomics-overview/quai) functions as a [decreasingly inflationary](/learn/tokenomics/token-dynamics/supply-growth) and [programmable](/develop/smart-contracts/languages) store-of-value, using a [modernized, work-based consensus mechanism](/learn/advanced-introduction/poem) to ensure long-term sovereignty and decentralization. 
 
-![Hierarchical Structure](/img/HierarchicalStructure.jpg)
+### Programmable Base-Layer
+The Quai token supports [EVM-based smart contracts](/develop/smart-contracts/languages), enabling the use of Quai Network to host real-world assets, utility tokens, and NFTs. 
 
-## What does "Quai" mean?
+### Borderless Medium-of-Exchange 
+The [Qi token](/learn/tokenomics/tokenomics-overview/qi) functions as an [energy-linked](/learn/tokenomics/tokenomics-overview), non-programmable medium-of-exchange designed to replace USDC and USDT in on-chain commerce. The design of the Quai/Qi two-token system utilizes [simple yet effective dynamics](/learn/tokenomics/token-dynamics) to keep the Qi token linked to the cost of energy in a completely decentralized manner. 
 
-The word Quai derives its origin from the word kuai (块 – kuài). "Kuai" is a colloquial measure word for money, like "quid" in the UK and "buck" in the US, but it is the word used in everyday Mandarin. The use of the word "kuai", literally means "piece", and is the word used historically for coins made of silver or copper.
+## Infinite Scalability
+Quai Network achieves infinite scale by [extending Proof-of-Work](/learn/advanced-introduction/poem) to enable a variety of new innovations at the Layer-1 level.
 
-## Key Features
+![Visualization of Quai Network's Hierarchical Structure](/img/HierarchicalStructure.jpg)
 
-### Merged-Mined Hierarchy
+### Execution Sharding
+Through the use of an extension of Proof-of-Work consensus called [Proof-of-Entropy-Minima](/learn/advanced-introduction/poem), Quai Network is able to remain in consensus while coordinating an [infinitely growing number of execution shards](/learn/advanced-introduction/poem/infinite-execution-shards). This property allows Quai Network to [dynamically add shards to the network](/learn/advanced-introduction/poem/infinite-execution-shards/dynamic-sharding) in order to meet perpetually growing demand. The only tradeoff to adding shards to Quai (and thus increasing throughput) is an increased time to cross-shard settlement.
 
-All of Quai blockchains are organized into a three-tiered network hierarchy. Each miner must mine three blockchains within the network simultaneously. Merged mining allows miners to increase throughput while also reusing hash to secure multiple blockchains, making mining up to [10,000 times more energy efficient](/learn/advanced-introduction/merged-mining/energy-efficiency.mdx#energy-calculation)†.
+Quai Network’s native, pre-defined scaling creates a mechanism for congestion to be alleviated as demand increases, keeping fees permanently low even with growing usage. 
 
-### Multithreaded
+### Trustless Bridging
+All shards in the network can natively transfer and receive state through the process of [merged mining](/learn/advanced-introduction/merged-mining), which asynchronously produces [objective links between shards](/learn/advanced-introduction/merged-mining/coincident-blocks). Quai extends traditional work-based block production to enable transfers between shards without introducing new trusted validation mechanisms.
 
-Current blockchains are unable to provide enough block space to find reasonable market equivalence with demand, leading to high gas fees during periods of sustained usage. Quai Network introduces [multithreaded blockchain execution](/learn/advanced-introduction/multithreaded-execution.md), which drastically increases the available supply of block space across many interconnected blockchains.
+Native and objective cross-chard communication ensures that Quai is not reliant on third-party bridges or validator sets at scale. 
 
-Through the use of multithreaded execution, Quai Network is able to process upwards of 50,000 transactions per second.
+### MEV Resistance 
+Instead of using priority fee to order transactions, which inevitably incentivizes MEV, Quai Network uses [Proof-of-Work to order transactions within each block](/learn/advanced-introduction/mev-resistance/transaction-ordering). Under this new ordering mechanism, users can mine transactions with enough work to make their transactions [functionally impossible to MEV](/learn/advanced-introduction/mev-resistance).
 
-### Infinitely Scalable
-
-Through the use of the [Proof-of-Entropy-Minima consensus mechanism](/learn/advanced-introduction/poem/poem.md), which eliminates all contention from consensus, Quai Network is able to remain in consensus while [coordinating an infinitely growing number of execution shards](/learn/advanced-introduction/poem/infinite-execution-shards/infinite-execution-shards.md). This property allows Quai Network to algorithmically add execution shards to the network in order to meet perpetually growing demand. The only tradeoff to adding execution shards to Quai (and thus increasing throughput) is an [increased time to global settlement](/learn/advanced-introduction/poem/infinite-execution-shards/dynamic-sharding.mdx).
+The ability for users to send MEV-proof transactions positions Quai as an optimal Layer-1 for high-value DeFi activity. 
 
 ## Testnets
 
-Currently, Quai Network is in the **testnet and development phase**. The roadmap for Quai Network includes three remaining testnets prior to Mainnet launch:
+Currently, Quai Network is in the **testnet and development phase**. The roadmap for Quai Network includes two remaining testnets prior to Mainnet launch:
 
-1. [Iron Age Testnet (currently live)](/participate/iron-age-testnet.md)
-2. Golden Age Testnet
-3. Silicon Age Testnet
+1. Golden Age Testnet
+2. Silicon Age Testnet
 
 For each of these Testnets, our team at [Dominant Strategies](https://dominantstrategies.io) expects to run both a Testnet and Devnet, in addition to providing tools such as [block explorers](/participate/use-quai/block-explorers.md), [network statistics pages](https://stats.quai.network), and [faucets](/participate/use-quai/testnet-faucet.md).
 
-†[_Per transaction, assuming full transactional load and the same number of miners on both Quai Network and the Bitcoin Network_](/learn/advanced-introduction/merged-mining/energy-efficiency.mdx#energy-calculation).

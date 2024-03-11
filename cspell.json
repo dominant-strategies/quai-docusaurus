@@ -128,7 +128,9 @@
     "malincentives",
     "INITIALSUPPLY",
     "solady",
-    "BASEURI"
+    "BASEURI",
+    "Solana",
+    "Borderless"
   ],
   "flagWords": ["hte", "addresss"]
 }
