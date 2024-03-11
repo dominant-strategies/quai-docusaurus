@@ -29,7 +29,7 @@ Quai Network unifies these distinct use-cases into a single network through the 
 Within Quai Network’s two-token system, the [Quai token](/learn/tokenomics/tokenomics-overview/quai) functions as a [decreasingly inflationary](/learn/tokenomics/token-dynamics/supply-growth) and [programmable](/develop/smart-contracts/languages) store-of-value, using a [modernized, work-based consensus mechanism](/learn/advanced-introduction/poem) to ensure long-term sovereignty and decentralization. 
 
 ### Programmable Base-Layer
-The Quai token supports [EVM-based smart contracts](/develop/smart-contracts/languages), enabling the use of Quai Network to host real-world assets, utility tokens, and NFTs. 
+The Quai token can be utilized in [EVM-based smart contracts](/develop/smart-contracts/languages), enabling the use of Quai Network to host real-world assets, utility tokens, NFTs, and decentralized finance protocols. 
 
 ### Borderless Medium-of-Exchange 
 The [Qi token](/learn/tokenomics/tokenomics-overview/qi) functions as an [energy-linked](/learn/tokenomics/tokenomics-overview), non-programmable medium-of-exchange designed to replace USDC and USDT in on-chain commerce. The design of the Quai/Qi two-token system utilizes [simple yet effective dynamics](/learn/tokenomics/token-dynamics) to keep the Qi token linked to the cost of energy in a completely decentralized manner. 
