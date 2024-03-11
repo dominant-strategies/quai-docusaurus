@@ -1,6 +1,6 @@
 quaiDocs:
   image:
     name: quainetwork/quai-docs
-    version: v0.24.1
+    version: v0.24.2
   env: quai-dev
   replicas: 1
