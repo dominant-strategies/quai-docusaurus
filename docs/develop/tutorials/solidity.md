@@ -42,7 +42,7 @@ We'll be using the `ERC20.sol` sample contract for this tutorial, but you can al
 
 ### Environment Variables
 
-We've included a sample environment file, [`.env.dist`](https://github.com/dominant-strategies/hardhat-example/blob/main/.env.dist), file at the root of the `hardhat-example` repo to hold token details, private keys, and RPC URLs in a secure fashion.
+We've included a sample environment file, [`.env.dist`](https://github.com/dominant-strategies/hardhat-example/blob/main/.env.dist), file at the root of the `hardhat-example` repo to manage token details, private keys, and RPC URLs in a secure fashion.
 
 :::note
 The `.env.dist` file is a template file and should not be used as is. You should copy the `.env.dist` file to a new `.env` file in the repository root using the following command:
@@ -219,7 +219,7 @@ The `deployERC721.js` script functions in a similar manner, but with different c
 The deploy script takes in a `--network` flag to specify the network you'd like to deploy to (available options can be found [here](#hardhat-configuration)). For this tutorial, we'll be deploying to `cyprus1`.
 
 ```bash
-npx hardhat run scripts/deploy.js --network cyprus1
+npx hardhat run scripts/deployERC20.js --network cyprus1
 ```
 
 Which should output:

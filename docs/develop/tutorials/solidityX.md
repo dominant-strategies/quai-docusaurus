@@ -277,7 +277,7 @@ When deploying QRC721s, we recommend changing the `baseURI` variable for each ch
 :::
 
 ```bash
-npx hardhat run scripts/deploy.js --network cyprus2
+npx hardhat run scripts/deployQRC721.js --network cyprus2
 ```
 
 Which again should output something like this:
