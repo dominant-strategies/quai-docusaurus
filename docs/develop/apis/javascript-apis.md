@@ -19,7 +19,7 @@ JavaScript APIs and SDKs offer a simplified interface for web applications to in
 
 - **Quais.js -** A complete Quai Network interaction library for JavaScript and TypeScript.
 
-  - [GitHub](https://github.com/dominant-strategies/quais5.js)
+  - [GitHub](https://github.com/dominant-strategies/quais-5.js)
   - [Package](https://www.npmjs.com/package/quais)
   - [Example usage](https://github.com/dominant-strategies/quais-by-example)
 
