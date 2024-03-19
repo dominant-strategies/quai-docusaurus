@@ -22,7 +22,7 @@ The Iron Age Testnet is the third public test of the Quai protocol. The followin
 | [**Network Stats Page**](https://stats.quai.network/)                                                              | An invite-only node stats page for RPC/infrastructure providers.                                           |
 | [**Node Setup Tutorial**](/participate/node/run-a-node.md)                                                         | Learn how to run a Testnet node.                                                                           |
 | [**GPU Miner Setup Tutorial**](/participate/mining/gpu-miner/gpu-miner.md)                                         | Learn how to run a GPU miner and connect it to a stratum proxy.                                            |
-| [**Contract Deployment Tutorial(s)**](/develop/tutorials/single-chain.md)                                          | Learn how to deploy single-chain or multi-chain smart contracts.                                           |
+| [**Contract Deployment Tutorial(s)**](/develop/tutorials/solidity.md)                                              | Learn how to deploy single-chain or multi-chain smart contracts.                                           |
 | [**Testnet Terms of Use**](/participate/iron-age-testnet-tos.md)                                                   | Disclaimers and policies for interacting with Quai Network testnets.                                       |
 
 ## Incentivization
