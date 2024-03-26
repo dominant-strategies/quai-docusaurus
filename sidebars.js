@@ -82,6 +82,10 @@ const sidebars = {
   developSidebar: [
     {
       type: 'doc',
+      id: 'develop/development-intro',
+    },
+    {
+      type: 'doc',
       id: 'develop/networks',
     },
     {

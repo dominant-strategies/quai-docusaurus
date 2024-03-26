@@ -31,7 +31,7 @@ const DocList: CardItem[] = [
   },
   {
     title: '🧑‍💻 Develop on Quai',
-    link: '/docs/category/tutorials/',
+    link: '/docs/develop/development-intro/',
     description: <>Build decentralized applications that aren't bottle-necked by Layer-1 scalability.</>,
   },
 ];
