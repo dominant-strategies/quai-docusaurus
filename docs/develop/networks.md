@@ -1,7 +1,7 @@
 ---
 title: Networks
 description: Network specifications for development and testing environments. Specifications include RPC endpoints, chain IDs, and more.
-sidebar_position: 1
+sidebar_position: 2
 keywords:
   - testnet
   - mainnet
