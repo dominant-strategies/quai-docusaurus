@@ -130,7 +130,14 @@
     "solady",
     "BASEURI",
     "Solana",
-    "Borderless"
+    "Borderless",
+    "Viem",
+    "Taho",
+    "userbase",
+    "bottlenecked",
+    "Hacash",
+    "Themelio",
+    "stablecoins"
   ],
   "flagWords": ["hte", "addresss"]
 }

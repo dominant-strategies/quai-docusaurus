@@ -11,50 +11,36 @@ keywords:
 
 # Quai Network
 
-**Quai Network is a new Layer-1 that unifies all proven use-cases of cryptocurrency into a single, infinitely scalable network.** 
+**Quai Network is crypto for the global and compute economies.**
 
-## Unification of Crypto Use-Cases
-Cryptocurrencies, over their 15-year lifespan, have found three key product-market fits:
-* Sovereign store-of-value (Digital Gold)
-* Programmable base-layer (Digital Finance)
-* Borderless medium-of-exchange (Digital Cash)
+**Quai is the only fully scalable and programmable Proof-of-Work Layer-1.** Through the implementation of a variety of **new Proof-of-Work primitives**, including a category-creating native “stablecoin” connected to the cost of energy, Quai brings reliable, real-world value on-chain to function as financial infrastructure for a compute-centric economy.
 
-![Quai Unifies Crypto Use-Cases](/img/QuaiUnified.jpeg)
+* **Transaction Mining** to create a profitable outlet for idle compute
+* **Energy-Based “Stablecoin”** to function as decentralized money for the compute economy
+* **Infinite Scalability** to accommodate an infinitely growing userbase of humans and AI agents
 
-Each of these use cases has been siloed into distinct networks – Bitcoin as a sovereign store-of-value, Ethereum and Solana as programmable base-layers, and USDC and Tether as borderless mediums-of-exchange. 
+![Placeholder Image](/img/HierarchicalStructure.jpg)
 
-Quai Network unifies these distinct use-cases into a single network through the use of a [novel two-token system](/learn/tokenomics/tokenomics-overview), with one token ([Quai](/learn/tokenomics/tokenomics-overview/quai)) designed to function as a programmable store-of-value and the other ([Qi](/learn/tokenomics/tokenomics-overview/qi)) designed to function as a non-programmable, energy-linked medium-of-exchange.
+## Transaction Mining
+Instead of using priority fee to order transactions, which inevitably incentivizes MEV, **Quai Network uses [Proof-of-Work to order transactions](/learn/advanced-introduction/mev-resistance/transaction-ordering.md) within each block**. Under this new ordering mechanism, users can [mine transactions](/learn/advanced-introduction/mev-resistance/mined-transactions.md) with enough work to make their transactions functionally impossible to MEV. This feature allows users to **completely avoid frontrunning and sandwich attacks** when participating in DeFi on Quai.
 
-### Sovereign Store-of-Value
-Within Quai Network’s two-token system, the [Quai token](/learn/tokenomics/tokenomics-overview/quai) functions as a [decreasingly inflationary](/learn/tokenomics/token-dynamics/supply-growth) and [programmable](/develop/smart-contracts/languages) store-of-value, using a [modernized, work-based consensus mechanism](/learn/advanced-introduction/poem) to ensure long-term sovereignty and decentralization. 
+[This new utilization of Proof-of-Work](/learn/advanced-introduction/mev-resistance/mev-resistance.md) not only allows miners to achieve additional revenue by mining transactions, but creates new demand (and thus a profitable outlet) for smaller amounts of idle compute. This new demand can take advantage of the large amounts of computing power idling in distributed compute hubs like Render Network and io.net, which are currently largely bottlenecked by demand rather than supply. 
 
-### Programmable Base-Layer
-The Quai token can be utilized in [EVM-based smart contracts](/develop/smart-contracts/languages), enabling the use of Quai Network to host real-world assets, utility tokens, NFTs, and decentralized finance protocols. 
+## Energy-Based “Stablecoin”
+Within Quai, Proof-of-Work is used not only to secure the network from attackers, but also to function as an [oracle for real-world demand and energy costs](/learn/tokenomics/token-dynamics/token-dynamics.md), allowing for the creation of a **completely [decentralized “stablecoin” tied to energy](/learn/tokenomics/tokenomics-overview/qi/qi.md)**. This token is not pegged to or backed by any asset, and exclusively uses [market incentives](/learn/tokenomics/token-dynamics/token-dynamics.md) to consistently drive the token’s price towards the cost of energy. 
 
-### Borderless Medium-of-Exchange 
-The [Qi token](/learn/tokenomics/tokenomics-overview/qi) functions as an [energy-linked](/learn/tokenomics/tokenomics-overview), non-programmable medium-of-exchange designed to replace USDC and USDT in on-chain commerce. The design of the Quai/Qi two-token system utilizes [simple yet effective dynamics](/learn/tokenomics/token-dynamics) to keep the Qi token linked to the cost of energy in a completely decentralized manner. 
+Energy, as a major input to most human activity and as the main input for AI activity, has **intrinsic value to both humans and machines**, and is thus an ideal foundation for a new currency to be built around.
+
+Quai Network joins protocols like [Hacash](https://hacash.money/) and [Themelio](https://docs.themelio.org/whitepapers/melmint-v2/) as a leader in the emerging category of decentralized Proof-of-Work “stablecoins.”
 
 ## Infinite Scalability
-Quai Network achieves infinite scale by [extending Proof-of-Work](/learn/advanced-introduction/poem) to enable a variety of new innovations at the Layer-1 level.
+Through the use of a new Proof-of-Work fork-choice rule named [Proof-of-Entropy-Minima (PoEM)](/learn/advanced-introduction/poem/poem.md), Quai Network is able to remain in consensus while coordinating an [infinitely growing number of execution shards](/learn/advanced-introduction/poem/infinite-execution-shards/infinite-execution-shards.md). This property allows Quai Network to **add shards to the network as needed** in order to meet perpetually growing demand. The only tradeoff to adding shards to Quai (and thus increasing throughput) is an [increased time to cross-shard settlement](/learn/advanced-introduction/poem/infinite-execution-shards/dynamic-sharding.mdx). 
 
-![Visualization of Quai Network's Hierarchical Structure](/img/HierarchicalStructure.jpg)
+Trustless bridging between all shards in the network is achieved by [using miners to create objective links between shards](/learn/advanced-introduction/merged-mining/coincident-blocks.mdx). 
 
-### Execution Sharding
-Through the use of an extension of Proof-of-Work consensus called [Proof-of-Entropy-Minima](/learn/advanced-introduction/poem), Quai Network is able to remain in consensus while coordinating an [infinitely growing number of execution shards](/learn/advanced-introduction/poem/infinite-execution-shards). This property allows Quai Network to [dynamically add shards to the network](/learn/advanced-introduction/poem/infinite-execution-shards/dynamic-sharding) in order to meet perpetually growing demand. The only tradeoff to adding shards to Quai (and thus increasing throughput) is an increased time to cross-shard settlement.
+Quai Network’s native, pre-defined scaling creates a mechanism for congestion to be alleviated as demand increases, **keeping fees permanently low** even with growing usage. 
 
-Quai Network’s native, pre-defined scaling creates a mechanism for congestion to be alleviated as demand increases, keeping fees permanently low even with growing usage. 
-
-### Trustless Bridging
-All shards in the network can natively transfer and receive state through the process of [merged mining](/learn/advanced-introduction/merged-mining), which asynchronously produces [objective links between shards](/learn/advanced-introduction/merged-mining/coincident-blocks). Quai extends traditional work-based block production to enable transfers between shards without introducing new trusted validation mechanisms.
-
-Native and objective cross-chard communication ensures that Quai is not reliant on third-party bridges or validator sets at scale. 
-
-### MEV Resistance 
-Instead of using priority fee to order transactions, which inevitably incentivizes MEV, Quai Network uses [Proof-of-Work to order transactions within each block](/learn/advanced-introduction/mev-resistance/transaction-ordering). Under this new ordering mechanism, users can mine transactions with enough work to make their transactions [functionally impossible to MEV](/learn/advanced-introduction/mev-resistance).
-
-The ability for users to send MEV-proof transactions positions Quai as an optimal Layer-1 for high-value DeFi activity. 
-
-## Testnets
+# Testnets
 
 Currently, Quai Network is in the **testnet and development phase**. The roadmap for Quai Network includes two remaining testnets prior to Mainnet launch:
 
