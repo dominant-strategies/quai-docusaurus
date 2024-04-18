@@ -134,22 +134,22 @@ This flight sheet was created and is maintained by a Quai community member, not 
 
 1. In the "workers" menu, click "wallets".
 
-![Workers Menu](/img/FS1.jpg)
+![Workers Menu](/img/FlightSheet/FS1.jpg)
 
 2. On the right side of the page, click "add wallet".
 
-![Add Wallet](/img/FS2.jpg)
+![Add Wallet](/img/FlightSheet/FS2.jpg)
 
 3. On "Coin" field, type "Quai" then click on "Create Quai" in the drop-down menu.
 4. On "Address" field, copy/paste your wallet address.
 5. On "Name" field, type a name for your wallet.
 6. On bottom right corner, click "Create".
 
-![Create](/img/FS3.jpg)
+![Create](/img/FlightSheet/FS3.jpg)
 
 7. In the "workers" menu, click "flight sheets".
 
-![Flight Sheets](/img/FS4.jpg)
+![Flight Sheets](/img/FlightSheet/FS4.jpg)
 
 8. On "Miner name", type "quai_custom".
 9. On "Installation URL", copy/paste "[https://quai-gpu-releases.s3.eu-west-1.amazonaws.com/quai_custom-0.3.3.amd.tar.gz](https://quai-gpu-releases.s3.eu-west-1.amazonaws.com/quai_custom-0.3.3.amd.tar.gz)" if you have AMD cards and "[https://quai-gpu-releases.s3.eu-west-1.amazonaws.com/quai_custom-0.3.2.tar.gz](https://quai-gpu-releases.s3.eu-west-1.amazonaws.com/quai_custom-0.3.2.tar.gz)" if you have NVIDIA cards.
@@ -160,7 +160,7 @@ This flight sheet was created and is maintained by a Quai community member, not 
 14. On "Extra config arguments", type "-U --HWMON 1 -P stratum://EXTERNALIPADDRESS:PORT" for NVIDIA cards.    
 15. On bottom right corner, click "Apply Changes".
 
-![Apply Changes](/img/FS5.jpg)
+![Apply Changes](/img/FlightSheet/FS5.jpg)
 
 15. Deploy flight sheet.
 

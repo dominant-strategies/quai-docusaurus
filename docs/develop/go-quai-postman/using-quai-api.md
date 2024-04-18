@@ -29,7 +29,7 @@ Making requests to a go-quai client via the Quai Postman collection is straightf
 
 To make your first request to a go-quai client, open the Quai Postman Collection in the left sidebar of Postman and select a request from the collection. For example, let's select the `getBalance` request under the `quai` folder:
 
-![Postman Request](/img/PostmanRequest.jpg)
+![Postman Request](/img/Postman/PostmanRequest.jpg)
 
 Once you've selected `getBalance`, you'll be directed to the `Params` tab for the request. To edit the parameters for the request, choose the `Body` tab to see the JSON-RPC request body:
 

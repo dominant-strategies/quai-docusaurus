@@ -27,17 +27,17 @@ As mentioned above, Postman is available as both a desktop application and web a
 
 To download the Postman desktop application, visit the [Postman website](https://www.postman.com/downloads/) and download the version for your operating system. Once downloaded, it is recommended that you sign up with an email address to save and sync your collections across devices and platforms.
 
-![Postman Download](/img/PostmanDownload.jpg)
+![Postman Download](/img/Postman/PostmanDownload.jpg)
 
 ### Import Quai API Collection
 
 Postman supports raw collection imports from a URL or a local file. To import the Quai Postman collection, click the `Import` button in the top left corner of the Postman application:
 
-![Postman Import](/img/PostmanImportButton.png)
+![Postman Import](/img/Postman/PostmanImportButton.png)
 
 This will open the import options modal:
 
-![Postman Import URL](/img/PostmanImportModal.png)
+![Postman Import URL](/img/Postman/PostmanImportModal.png)
 
 To import the Quai Postman collection, paste the following URL into the `Paste cURL, Raw Text, or URL...` field:
 
@@ -47,7 +47,7 @@ https://raw.githubusercontent.com/dominant-strategies/quai-postman-collection/ma
 
 Once the import has completed, you'll see the **Quai Postman Collection** in the left sidebar of the Postman application:
 
-![Postman Collection](/img/PostmanCollection.png)
+![Postman Collection](/img/Postman/PostmanCollection.png)
 
 ### Import Environment Variables
 
@@ -59,11 +59,11 @@ https://raw.githubusercontent.com/dominant-strategies/quai-postman-collection/ma
 
 Postman will automatically recognize the format of the environment variables file. When the import is complete, you should see this modal in the left right corner of the Postman application:
 
-![Postman Import Success](/img/PostmanImportSuccess.png)
+![Postman Import Success](/img/Postman/PostmanImportSuccess.png)
 
 Lastly, you'll need to select the `Example Quai Postman Environment` from the dropdown in the top right corner of the Postman application:
 
-![Postman Environment Select](/img/PostmanEnvironmentSelect.png)
+![Postman Environment Select](/img/Postman/PostmanEnvironmentSelect.png)
 
 Your environment variables are now **set as the active environment** and ready to use. When set as the active environment, the Quai Postman collection will be correctly configured with RPC endpoints, addresses, and hashes!
 

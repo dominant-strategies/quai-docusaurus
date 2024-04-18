@@ -26,6 +26,6 @@ These illustrative examples assume:
 
 These examples also take into account the [3 billion initial Quai tokens minted and allocated in the genesis block](/learn/tokenomics/genesis-allocations.md).
 
-![Difficulty Scenarios](/img/DifficultyScenarios.png)
+![Difficulty Scenarios](/img/Tokenomics/DifficultyScenarios.png)
 
-![QuaiSupplyScenarios](/img/QuaiSupplyScenarios.png)
+![QuaiSupplyScenarios](/img/Tokenomics/QuaiSupplyScenarios.png)

@@ -19,7 +19,7 @@ Further information about these allocation groupings, details and vesting/unlock
 
 A pre-allotted amount of 3 billion Quai will be generated as part of the genesis block. 
 
-![Genesis Quai Distributions](/img/GenesisQuaiDistribution.png)
+![Genesis Quai Distributions](/img/Tokenomics/GenesisQuaiDistribution.png)
 
 ## Foundation
 **Purpose: Maximize adoption of the Quai protocol.**

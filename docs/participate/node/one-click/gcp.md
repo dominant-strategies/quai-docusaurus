@@ -171,7 +171,7 @@ Now that your node and proxy are deployed to a GCP Compute Engine project, we're
 
 Navigate to your Compute Engine dashboard and locate your deployment instance.
 
-![GCP Deployment](/img/gcp-tutorial.jpg)
+![GCP Deployment](/img/GCP/gcp-tutorial.jpg)
 
 On the right of you instance, there should be an SSH button. Click the button to open an SSH-in-browser connection to your VM.
 
