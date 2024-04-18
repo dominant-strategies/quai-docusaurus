@@ -38,7 +38,7 @@ This guide assumes you have already installed Postman and imported the [Example 
 
 The pre-configured environment variables can be accessed via the `Environment` tab in the top left of the Postman application:
 
-![PostmanEnvironmentVariables](/img/PostmanEnvironmentVariables.png)
+![PostmanEnvironmentVariables](/img/Postman/PostmanEnvironmentVariables.png)
 
 To add your own environment variable, simply type your variable name in the `Add new variable` field at the bottom of the list and fill it in with the desired value.
 
@@ -82,4 +82,4 @@ The same principle applies to any other defined environment variable. For exampl
 
 When the request is sent, Postman will automatically replace `{{chain}}` with the value of the `chain` environment variable. You can hover over the `{{}}` to see the resolved value:
 
-![PostmanVariableHover](/img/PostmanVariableHover.png)
+![PostmanVariableHover](/img/Postman/PostmanVariableHover.png)

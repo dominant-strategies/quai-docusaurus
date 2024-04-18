@@ -16,7 +16,7 @@ The Quai Network protocol has two different native tokens: [Quai](/learn/tokenom
 
 This two-token system is designed to spur the usage of Qi as a medium of exchange, while still accommodating for store-of-value and programmable money use-cases with Quai. 
 
-![Quai and Qi at a glance](/img/QuaiQi.png)
+![Quai and Qi at a glance](/img/Tokenomics/QuaiQi.png)
 
 Quai (pronounced “k-why”) comes from the character 块, which roughly translates as a colloquial word for money, equivalent to “buck” or “quid” in English.
 
