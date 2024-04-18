@@ -51,3 +51,11 @@ html[data-theme='dark'] .header-github-link:before {
 .header-icon:hover {
   opacity: 0.6;
 }
+
+li hr {
+  height: 2px;
+  margin: 0.6em auto;
+  width: 90%;
+  border-width: 0;
+  opacity: 0.2;
+}
