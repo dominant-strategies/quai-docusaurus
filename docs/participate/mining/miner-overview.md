@@ -2,6 +2,7 @@
 title: Miner Overview
 description: Overview of the Implementation of a Quai Network GPU Miner.
 sidebar_position: 1
+sidebar_label: Overview
 keywords:
   - gpu miner
   - merged mining

@@ -2,6 +2,7 @@
 title: Stratum Proxy FAQ
 description: Answers to commonly asked questions about the Stratum Proxy.
 sidebar_position: 3
+sidebar_label: FAQ
 keywords:
   - stratum proxy
   - quai stratum
@@ -47,11 +48,11 @@ To properly run this command, you'll need to replace `REGION-WS-PORT` and `ZONE-
 
 To find the correct WS ports, you can either check the [Run a Stratum Proxy](/participate/stratum-proxy/run-stratum.md#run) page, or alternatively use the following table to immediately find the correct command:
 
-| Chain Name | Type   | Chain Index | Web Socket Port | Stratum Command                                         |
-| ---------- | ------ | ----------- | --------------- | ------------------------------------------------------- |
-| Cyprus     | Region |             | 8579            |                                                         |
-| Paxos      | Region |             | 8581            |                                                         |
-| Hydra      | Region |             | 8583            |                                                         |
+| Chain Name | Type   | Chain Index | Web Socket Port | Stratum Command                                            |
+| ---------- | ------ | ----------- | --------------- | ---------------------------------------------------------- |
+| Cyprus     | Region |             | 8579            |                                                            |
+| Paxos      | Region |             | 8581            |                                                            |
+| Hydra      | Region |             | 8583            |                                                            |
 | Cyprus-1   | Zone   | [0 0]       | 8611            | ./build/bin/go-quai-stratum --region=cyprus --zone=cyprus1 |
 | Cyprus-2   | Zone   | [0 1]       | 8643            | ./build/bin/go-quai-stratum --region=cyprus --zone=cyprus2 |
 | Cyprus-3   | Zone   | [0 2]       | 8675            | ./build/bin/go-quai-stratum --region=cyprus --zone=cyprus3 |

@@ -1,7 +1,7 @@
 ---
 title: One-Click Deployments
 description: The different one-click node deployments for Quai Network.
-sidebar_position: 3
+sidebar_position: 4
 keywords:
   - one click deploy
   - gcp
