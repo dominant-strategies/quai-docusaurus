@@ -2,6 +2,7 @@
 title: Node Overview
 description: Overview of the Implementation of a Quai Network node.
 sidebar_position: 1
+sidebar_label: Overview
 keywords:
   - node
   - slice

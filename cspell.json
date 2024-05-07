@@ -137,7 +137,11 @@
     "bottlenecked",
     "Hacash",
     "Themelio",
-    "stablecoins"
+    "stablecoins",
+    "Grafana",
+    "adduser",
+    "libfontconfig",
+    "dpkg"
   ],
   "flagWords": ["hte", "addresss"]
 }

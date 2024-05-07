@@ -1,7 +1,8 @@
 ---
 title: Node FAQ
 description: Answers to commonly asked questions about Quai nodes.
-sidebar_position: 4
+sidebar_position: 5
+sidebar_label: FAQ
 keywords:
   - faq
   - node
