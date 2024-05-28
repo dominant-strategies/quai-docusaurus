@@ -85,4 +85,4 @@ Ensure that the block number or transaction hash you are providing **exists on t
 
 ## Conclusion
 
-Now that you've made your first request to a go-quai client using the Quai Postman Collection, you're ready to start exploring the full range of API requests available in the collection. For specifications on available methods and parameters, refer to the [Quai JSON-RPC API documentation](/develop/apis/json-rpc) or the [Quai Postman Collection](https://documenter.getpostman.com/view/19820580/2s935iv7GU).
+Now that you've made your first request to a go-quai client using the Quai Postman Collection, you're ready to start exploring the full range of API requests available in the collection. For specifications on available methods and parameters, refer to the [Quai JSON-RPC API documentation](/develop/apis/json-rpc-api/) or the [Quai Postman Collection](https://docs.api.qu.ai/).
