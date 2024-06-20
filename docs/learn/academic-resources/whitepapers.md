@@ -13,11 +13,11 @@ keywords:
 
 ## PoEM: Proof-of-Entropy-Minima
 
-**Published 8 March 2023**
+**Published 1 July 2023**
 
 Nakamoto consensus has been incredibly influential in enabling robust blockchain systems, and one of its components is the so-called heaviest chain rule (HCR). Within this rule, the calculation of the weight of the chain tip is performed by adding the difficulty threshold value to the previous total difficulty. Current difficulty based weighting systems do not take the intrinsic block weight into account. This paper proposes a new mechanism based on entropy differences, named proof of entropy minima (POEM), which incorporates the intrinsic block weight in a manner that significantly reduces the orphan rate of the blockchain while simultaneously accelerating finalization. Finally, POEM helps to understand blockchain as a static time-independent sequence of committed events.
 
-Read the full paper on [arxiv.org](https://arxiv.org/abs/2303.04305).
+Read the full paper on [iacr.org](https://eprint.iacr.org/2024/200.pdf).
 
 ## Scalable Multi-Chain Coordination via the Hierarchical Longest Chain Rule
 
