@@ -156,7 +156,7 @@ Returns the fee history for a specific range of blocks.
 
 - `blockCount: Quantity` - Integer block count to be queried. Maximum value of 1024.
 - `blockNumber: Quantity` - Latest integer block number to be queried.
-- `rewardPercentiles: Array` - Array of integer reward percentiles. A monotonically increasing list of percentile values to sample from each block's effect priority fees per gas in ascending order, weighted by gas used.
+- `rewardPercentiles: Array` - Array of integer reward percentiles. A monotonically increasing list of percentile values to sample from each block's effect priority fees per gas in ascending order, weighted by the gas used.
 
 ### Example Request
 
