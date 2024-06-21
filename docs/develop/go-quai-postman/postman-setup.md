@@ -11,7 +11,7 @@ keywords:
 
 # Setting Up Postman
 
-Our team has created a [Postman collection for Quai Network](https://documenter.getpostman.com/view/19820580/2s935iv7GU), which includes **all of the publicly available API calls for go-quai** bundled with documentation, examples, and environment variables. Postman provides a user-friendly interface for making API requests to a go-quai node without have to deal with long `curl` commands or JSON-RPC payloads. A JSON formatted version of the Quai Postman collection can be found in the [`quai-postman-collection` repository](https://github.com/dominant-strategies/quai-postman-collection).
+Our team has created a [Postman collection for Quai Network](https://documenter.getpostman.com/view/19820580/2s935iv7GU), which includes **all of the publicly available API calls for go-quai** bundled with documentation, examples, and environment variables. Postman provides a user-friendly interface for making API requests to a go-quai node without having to deal with long `curl` commands or JSON-RPC payloads. A JSON formatted version of the Quai Postman collection can be found in the [`quai-postman-collection` repository](https://github.com/dominant-strategies/quai-postman-collection).
 
 ## Introduction to Postman
 
