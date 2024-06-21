@@ -75,7 +75,7 @@ If this is the case, it's likely that the **params you are passing to the method
 
 ### Non-Existent Data
 
-When sending request related to blocks or transactions, often times the node will return an error related to `method handler crashed` or `no data found`. This is often due to the **block or transaction hash not existing on the chain** you are sending the request to.
+When sending requests related to blocks or transactions, often times the node will return an error related to `method handler crashed` or `no data found`. This is often due to the **block or transaction hash not existing on the chain** you are sending the request to.
 
 Ensure that the block number or transaction hash you are providing **exists on the canonical chain** you are querying.
 
