@@ -23,7 +23,7 @@ Quai Network's implementation of the EVM introduces two new opcodes for develope
 - `isaddrinternal` - Checks if provided address is within smart contract's context
 - `etx` - Emits an external transaction from the smart contract
 
-Each of these opcodes serve a very specific purpose within Quai Network's VM. isaddrinternal allows smart contracts to determine whether a contract interaction can occur entirely within a single context or whether an ETX needs to occur. Based on the boolean response from isaddrinternal, a smart contract can continue on as normal with a local interaction, or can emit an ETX using the etx opcode.
+Each of these opcodes serves a very specific purpose within Quai Network's VM. isaddrinternal allows smart contracts to determine whether a contract interaction can occur entirely within a single context or whether an ETX needs to occur. Based on the boolean response from isaddrinternal, a smart contract can continue on as normal with a local interaction, or can emit an ETX using the etx opcode.
 
 ## Implementation
 
