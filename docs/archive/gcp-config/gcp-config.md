@@ -19,7 +19,7 @@ The Quai Network [GCP one-click deploy](/participate/node/one-click/gcp.md) proc
 To run an instance of a Quai Network node and proxy, we'll need to configure some firewall rules that will allow the node to connect to other nodes and the proxy to connect to a miner.
 
 - Both global nodes and slice nodes require **TCP/UDP ports 30303 through 30315** to be open for inbound peer connections.
-- The stratum proxy requires a single TCP/UDP port to be open to listen for inbound miner connections. For the purpose of this tutorial, we'll be **opening the default stratum port 3333** for incoming connections. If you'd like to run multiple proxies you'll need open further ports and [specify them in your proxy run command as a flag](/participate/stratum-proxy/run-stratum.md).
+- The stratum proxy requires a single TCP/UDP port to be open to listen for inbound miner connections. For the purpose of this tutorial, we'll be **opening the default stratum port 3333** for incoming connections. If you'd like to run multiple proxies you'll need to open further ports and [specify them in your proxy run command as a flag](/participate/stratum-proxy/run-stratum.md).
 
 Opening the ports can be done by setting firewall rules within the GCP Compute Engine API. Start by navigating to your [Compute Engine dashboard](https://console.cloud.google.com/compute/instances).
 
