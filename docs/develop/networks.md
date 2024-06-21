@@ -21,7 +21,7 @@ Testnet serves as a place to experiment with new features and ensure they are st
 
 QUAI on the testnet has no real value and thus testing deployments, interactions, and smart contracts are virtually free. As testnet QUAI has no value, there are _no markets_ to purchase testnet tokens.
 
-Developers looking to test can easily mint testnet QUAI from the [testnet faucet](https://faucet.quai.network). Faucets generally are a simple web interfaces that you can input an address where you'd like tokens to be sent. Additionally, you can spin up a miner and mine blocks to acquire testnet QUAI tokens.
+Developers looking to test can easily mint testnet QUAI from the [testnet faucet](https://faucet.quai.network). Faucets generally are a simple web interfaces which you can input an address where you'd like tokens to be sent. Additionally, you can spin up a miner and mine blocks to acquire testnet QUAI tokens.
 
 The Quai Network testnet is named `colosseum` as it's where network upgrades go to "fight it out" prior to being pushed up to mainnet. To point your node and miner to testnet, you'll have to edit your `network.env` file to:
 
