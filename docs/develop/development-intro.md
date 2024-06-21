@@ -55,7 +55,7 @@ The Quais SDK is built to support Quai specific features that are not found in a
 
 ### Migration
 
-Quais.js is a fork of [Ethers v5.7.2](https://docs.ethers.org/v5/). Because of this, syntax in Quais is almost identical to Ethers with the caveat that the above changes have been applied. If your application is currently built with Viem or Web3.js, these guides are helpful to understand syntax mapping of your existing code to Quais:
+Quais.js is a fork of [Ethers v5.7.2](https://docs.ethers.org/v5/). Because of this, syntax in Quais is almost identical to Ethers with the caveat that the above changes have been applied. If your application is currently built with Viem or Web3.js, these guides are helpful in understanding syntax mapping of your existing code to Quais:
 * [**Viem to Ethers Guide**](https://viem.sh/docs/ethers-migration)
 * [**Web3.js to Ethers Guide**](https://docs.ethers.org/v5/migration/web3/)
 
