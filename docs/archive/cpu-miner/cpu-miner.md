@@ -28,7 +28,7 @@ git clone https://github.com/dominant-strategies/quai-cpu-miner.git
 cd quai-cpu-miner
 ```
 
-This will install the main branch to your local machine.
+This will install the main branch on your local machine.
 
 ### Configuration
 
