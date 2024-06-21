@@ -90,7 +90,7 @@ The key additions to SolidityX include:
 - Support for cross-chain transactions via the [`etx`](/develop/smart-contracts/opcode-additions.md#etx) opcode.
 - Support for cross-chain address validation via the [`isaddrInternal`](/develop/smart-contracts/opcode-additions.md#isaddrinternal) opcode.
 
-Additional opcode usage is currently supported via [inline assembly](https://docs.soliditylang.org/en/latest/assembly.html). More details on usage of `ext` and `isaddrinternal` can be found on the [Opcode Additions page](/develop/smart-contracts/opcode-additions.md).
+Additional opcode usage is currently supported via [inline assembly](https://docs.soliditylang.org/en/latest/assembly.html). More details on the usage of `ext` and `isaddrinternal` can be found on the [Opcode Additions page](/develop/smart-contracts/opcode-additions.md).
 
 #### Example Implementation
 
