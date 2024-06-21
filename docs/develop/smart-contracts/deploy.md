@@ -37,7 +37,7 @@ Information on how to deploy a simple smart contract with hardhat can be found i
 
 Contrary to monolithic blockchains, Quai Network's multi-threaded architecture allows for the deployment of multi-chain smart contracts. These are smart contracts present in a single network context that contain references to sister contracts in alternate context(s). Multi-chain referencing smart contracts allow you as a developer to create seamless cross-chain applications that can:
 
-- Asynchronously track state of contracts within other chains in the network
+- Asynchronously track the state of contracts within other chains in the network
 - Natively transfer value and tokens to different contexts without bridges
 - Create a network secured mesh of smart contracts
 
