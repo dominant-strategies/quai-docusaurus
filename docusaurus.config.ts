@@ -130,7 +130,7 @@ const config: Config = {
               },
               {
                 label: 'Develop',
-                to: '/docs/develop/development-intro.md',
+                to: 'docs/develop/development-intro',
               },
               {
                 label: 'Wiki',
