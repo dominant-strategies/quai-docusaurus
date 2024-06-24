@@ -15,16 +15,10 @@ keywords:
 
 **Quai is the only fully scalable and programmable Proof-of-Work Layer-1.** Through the implementation of a variety of **new Proof-of-Work primitives**, including a category-creating native “stablecoin” connected to the cost of energy, Quai brings reliable, real-world value on-chain to function as financial infrastructure for a compute-centric economy.
 
-* **Transaction Mining** to create a profitable outlet for idle compute
 * **Energy-Based “Stablecoin”** to function as decentralized money for the compute economy
 * **Infinite Scalability** to accommodate an infinitely growing userbase of humans and AI agents
 
 ![Placeholder Image](/img/HierarchicalStructure.jpg)
-
-## Transaction Mining
-Instead of using priority fee to order transactions, which inevitably incentivizes MEV, **Quai Network uses [Proof-of-Work to order transactions](/learn/advanced-introduction/mev-resistance/transaction-ordering.md) within each block**. Through this new ordering mechanism, users can [mine transactions](/learn/advanced-introduction/mev-resistance/mined-transactions.md) with enough work to make their transactions functionally impossible to MEV. This feature allows users to **completely avoid frontrunning and sandwich attacks** when participating in DeFi on Quai.
-
-[This new utilization of Proof-of-Work](/learn/advanced-introduction/mev-resistance/mev-resistance.md) not only provides miners with an additional revenue stream where they can mine transactions in tandem with blocks, but also creates new demand for idle compute. This new demand can take advantage of the large amounts of computing power idling in distributed compute hubs like Render Network and io.net, which are currently bottlenecked by demand rather than supply. 
 
 ## Energy-Based “Stablecoin”
 Within Quai, Proof-of-Work is used not only to secure the network from attackers, but also to function as an [oracle for real-world demand and energy costs](/learn/tokenomics/token-dynamics/token-dynamics.md), allowing for the creation of a **completely [decentralized “stablecoin” tied to energy](/learn/tokenomics/tokenomics-overview/qi/qi.md)**. This token is not pegged to or backed by any asset, but rather exclusively uses [market incentives](/learn/tokenomics/token-dynamics/token-dynamics.md) to consistently drive the token’s price towards the cost of energy. 
