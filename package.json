@@ -1,6 +1,6 @@
 {
   "name": "quai-docs",
-  "version": "v0.31.0-pre",
+  "version": "v0.31.0",
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
