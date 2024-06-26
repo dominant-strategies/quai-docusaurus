@@ -11,13 +11,21 @@ keywords:
 
 # Whitepapers
 
+## A Better Proof-of-Work Fork Choice Rule
+
+**Published 9 February 2024**
+
+We propose a modification to the fork choice rule of proof-of-work blockchains. Instead of choosing the heaviest chain, we choose the chain with the most intrinsic work. The intrinsic work of a block is roughly the number of zeroes at the front of its hash. This modification allows us to safely decrease the confirmations required, yielding a improvement in confirmation delay or, dually, safely increase the block production rate, yielding a improvement in throughput, as compared to the vanilla Bitcoin proof-of-work fork choice rule. Our modification is at the level of the proof-of-work inequality, and thus can be composed with any other methods to improve latency or throughput that have been proposed in the literature. We report the experimental findings by measuring them on a production-grade implementation of our system, whose testnet is already deployed in the wild. Lastly, we formally prove the security of our new protocol in the Bitcoin Backbone model.
+
+Read the full paper on [iacr.org](https://eprint.iacr.org/2024/200).
+
 ## PoEM: Proof-of-Entropy-Minima
 
-**Published 1 July 2023**
+**Published 20 March 2023**
 
 Nakamoto consensus has been incredibly influential in enabling robust blockchain systems, and one of its components is the so-called heaviest chain rule (HCR). Within this rule, the calculation of the weight of the chain tip is performed by adding the difficulty threshold value to the previous total difficulty. Current difficulty based weighting systems do not take the intrinsic block weight into account. This paper proposes a new mechanism based on entropy differences, named proof of entropy minima (POEM), which incorporates the intrinsic block weight in a manner that significantly reduces the orphan rate of the blockchain while simultaneously accelerating finalization. Finally, POEM helps to understand blockchain as a static time-independent sequence of committed events.
 
-Read the full paper on [iacr.org](https://eprint.iacr.org/2024/200.pdf).
+Read the full paper on [arxiv.org](https://arxiv.org/abs/2303.04305).
 
 ## Scalable Multi-Chain Coordination via the Hierarchical Longest Chain Rule
 
